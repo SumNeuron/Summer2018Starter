@@ -1,0 +1,96 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframDesktop 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       161,          7]
+NotebookDataLength[      2687,         88]
+NotebookOptionsPosition[      2019,         66]
+NotebookOutlinePosition[      2394,         83]
+CellTagsIndexPosition[      2351,         80]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["UpSetChart", "Title",
+ CellChangeTimes->{{3.739297284999774*^9, 
+  3.739297291615484*^9}},ExpressionUUID->"e9b38418-42b2-42f2-957e-\
+c807907e1ebc"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Prepend", "[", 
+   RowBox[{
+    RowBox[{"$Path", "[", "]"}], ",", 
+    RowBox[{"NotebookDirectory", "[", "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Prepend", "[", 
+   RowBox[{
+    RowBox[{"$ContextPath", "[", "]"}], ",", 
+    RowBox[{"NotebookDirectory", "[", "]"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"<<", "UpSetChart`"}]}], "Input",
+ CellChangeTimes->{{3.739297374553677*^9, 3.739297384194499*^9}, {
+  3.739297423148387*^9, 3.739297528446789*^9}, {3.7392975656634903`*^9, 
+  3.739297571305924*^9}},
+ CellLabel->"In[57]:=",ExpressionUUID->"d9c108dc-cd85-44b7-9871-77a3b97d7b87"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Get","noopen",
+   "\"Cannot open \
+\\!\\(\\*RowBox[{\\\"\\\\\\\"UpSetChart`\\\\\\\"\\\"}]\\).\"",2,59,18,
+   22433927876722163936,"Local2"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{{3.739297571489768*^9, 3.739297595437541*^9}},
+ CellLabel->
+  "During evaluation of \
+In[57]:=",ExpressionUUID->"4fc8845d-6c5f-4250-a7f3-2340bfbea37f"],
+
+Cell[BoxData["$Failed"], "Output",
+ CellChangeTimes->{{3.739297571497023*^9, 3.739297595479679*^9}},
+ CellLabel->"Out[59]=",ExpressionUUID->"a74977c7-37e4-4734-bdc2-79957caf6aef"]
+}, Open  ]]
+}, Open  ]]
+},
+Evaluator->"Local2",
+WindowSize->{1280, 687},
+WindowMargins->{{0, Automatic}, {Automatic, -1}},
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 7, \
+2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[583, 22, 153, 3, 98, "Title",ExpressionUUID->"e9b38418-42b2-42f2-957e-c807907e1ebc"],
+Cell[CellGroupData[{
+Cell[761, 29, 661, 17, 73, "Input",ExpressionUUID->"d9c108dc-cd85-44b7-9871-77a3b97d7b87"],
+Cell[1425, 48, 384, 10, 24, "Message",ExpressionUUID->"4fc8845d-6c5f-4250-a7f3-2340bfbea37f"],
+Cell[1812, 60, 179, 2, 34, "Output",ExpressionUUID->"a74977c7-37e4-4734-bdc2-79957caf6aef"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
