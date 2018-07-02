@@ -7,6 +7,8 @@ IndicatorGrid::usage = StringJoin[
 ]
 
 Begin["`Private`"]
+$IndicatorFilled=Black;
+$IndicatorNotFilled=Lighter@Lighter@Gray;
 (* Helper function for whether or not to fill the circle *)
 indicateQ[comparison_, set_] := MemberQ[comparison, set];
 TooltipOfGridDisk[comparison_, set_]:=

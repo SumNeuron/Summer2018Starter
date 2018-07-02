@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       161,          7]
-NotebookDataLength[     69514,       1725]
-NotebookOptionsPosition[     64700,       1631]
-NotebookOutlinePosition[     65054,       1647]
-CellTagsIndexPosition[     65011,       1644]
+NotebookDataLength[     63924,       1609]
+NotebookOptionsPosition[     57637,       1493]
+NotebookOutlinePosition[     57991,       1509]
+CellTagsIndexPosition[     57948,       1506]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -31,9 +31,9 @@ Cell[BoxData[
  CellChangeTimes->{{3.739536233719233*^9, 3.7395362358012657`*^9}, {
   3.7395411087744513`*^9, 3.7395411100044107`*^9}, {3.739541140161318*^9, 
   3.739541152079722*^9}, {3.739541189657877*^9, 3.73954119694523*^9}, {
-  3.739541235005816*^9, 3.7395412558356857`*^9}},
- CellLabel->
-  "In[265]:=",ExpressionUUID->"864d6512-575a-48ad-95f9-f7cdfb5eb69a"],
+  3.739541235005816*^9, 3.7395412558356857`*^9}, {3.739560546969146*^9, 
+  3.739560560680005*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"864d6512-575a-48ad-95f9-f7cdfb5eb69a"],
 
 Cell[BoxData[
  RowBox[{
@@ -41,21 +41,21 @@ Cell[BoxData[
    RowBox[{"Prepend", "[", 
     RowBox[{"$Path", ",", 
      RowBox[{"NotebookDirectory", "[", "]"}]}], "]"}]}], ";"}]], "Input",
- CellChangeTimes->{{3.739541269006742*^9, 3.739541271804338*^9}, {
-  3.7395413045349894`*^9, 3.739541312637692*^9}},
- CellLabel->"In[1]:=",ExpressionUUID->"4bcd7e13-60ce-4261-82b3-29deca244d90"],
-
-Cell[BoxData[
- RowBox[{"<<", "UpSetChart`Data`"}]], "Input",
- CellLabel->"In[2]:=",ExpressionUUID->"7ce1fe4c-ef4c-471f-85eb-bbc427b15132"],
+ CellChangeTimes->{{3.739536233719233*^9, 3.7395362358012657`*^9}, {
+  3.7395411087744513`*^9, 3.7395411100044107`*^9}, {3.739541140161318*^9, 
+  3.739541152079722*^9}, {3.739541189657877*^9, 3.73954119694523*^9}, {
+  3.739541235005816*^9, 3.7395412558356857`*^9}, {3.739560546969146*^9, 
+  3.739560560680005*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"26cc3eea-bf05-4154-ba9a-9dac9c68e4eb"],
 
 Cell[CellGroupData[{
 
-Cell[BoxData[
+Cell[BoxData[{
+ RowBox[{"<<", "UpSetChart`Data`"}], "\n", 
  RowBox[{"sets", "=", 
-  RowBox[{"DummyData", "[", "1", "]"}]}]], "Input",
- CellChangeTimes->{{3.739535912257444*^9, 3.7395359156345577`*^9}},
- CellLabel->"In[3]:=",ExpressionUUID->"34d68955-9fa9-4fe9-8f0f-7f9d1986ab5e"],
+  RowBox[{"DummyData", "[", "1", "]"}]}]}], "Code",
+ CellChangeTimes->{3.739560387667983*^9},
+ CellLabel->"In[2]:=",ExpressionUUID->"7ce1fe4c-ef4c-471f-85eb-bbc427b15132"],
 
 Cell[BoxData[
  RowBox[{"\[LeftAssociation]", 
@@ -81,9 +81,11 @@ Cell[BoxData[
     RowBox[{"{", 
      RowBox[{"72", ",", "97", ",", "15", ",", "55", ",", "87"}], "}"}]}]}], 
   "\[RightAssociation]"}]], "Output",
- CellChangeTimes->{3.739535915987698*^9, 3.7395413293819923`*^9, 
-  3.739551498979636*^9},
- CellLabel->"Out[3]=",ExpressionUUID->"e2495aca-a521-4474-9959-98ccf52a80bb"]
+ CellChangeTimes->{
+  3.739535915987698*^9, 3.7395413293819923`*^9, 3.739551498979636*^9, 
+   3.7395599757814713`*^9, 3.739560581177837*^9, {3.739560831358857*^9, 
+   3.7395608443040333`*^9}},
+ CellLabel->"Out[3]=",ExpressionUUID->"dc7a18c8-1dad-4326-a52e-e3dd79ed7a12"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -93,6 +95,47 @@ Cell["The Packages of UpSetChart", "Chapter",
   3.739535936947419*^9, 
   3.73953593755373*^9}},ExpressionUUID->"c60c5962-210c-4d0b-baf7-\
 60b835bf5140"],
+
+Cell[BoxData[
+ RowBox[{"<<", "UpSetChart`"}]], "Input",
+ CellLabel->"In[22]:=",ExpressionUUID->"677e59c6-356b-4a50-8821-800326c1d568"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"UpSetChart", "[", "sets", "]"}]], "Input",
+ CellChangeTimes->{{3.739560107448142*^9, 3.739560131176795*^9}},
+ CellLabel->"In[23]:=",ExpressionUUID->"870af91f-d2c1-4c79-92d4-15719453571b"],
+
+Cell[BoxData[
+ RowBox[{"UpSetChart", "[", 
+  RowBox[{"\[LeftAssociation]", 
+   RowBox[{
+    RowBox[{"\<\"a\"\>", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"7", ",", "77", ",", "53", ",", "95", ",", "42", ",", "41"}], 
+      "}"}]}], ",", 
+    RowBox[{"\<\"b\"\>", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+      "51", ",", "88", ",", "87", ",", "67", ",", "90", ",", "37", ",", 
+       "96"}], "}"}]}], ",", 
+    RowBox[{"\<\"c\"\>", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+      "15", ",", "87", ",", "99", ",", "6", ",", "20", ",", "87", ",", "98", 
+       ",", "68"}], "}"}]}], ",", 
+    RowBox[{"\<\"d\"\>", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"46", ",", "85", ",", "6", ",", "90"}], "}"}]}], ",", 
+    RowBox[{"\<\"e\"\>", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"72", ",", "97", ",", "15", ",", "55", ",", "87"}], "}"}]}]}], 
+   "\[RightAssociation]"}], "]"}]], "Output",
+ CellChangeTimes->{{3.739560119511291*^9, 3.7395601315218573`*^9}, {
+  3.7395602163715153`*^9, 3.7395602185127773`*^9}},
+ CellLabel->"Out[23]=",ExpressionUUID->"88137968-b0bd-49ea-82d2-906dd03243d1"]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -404,8 +447,84 @@ Cell[BoxData[
   RowBox[{"<<", "UpSetChart`Utilities`"}]}]], "Input",
  CellChangeTimes->{{3.739535264917667*^9, 3.7395355808395433`*^9}, {
   3.7395357570284863`*^9, 3.739535764267523*^9}},
- CellLabel->"In[8]:=",ExpressionUUID->"144a1db4-bce2-483b-b484-98d9e3f3e574"]
-}, Closed]],
+ CellLabel->"In[4]:=",ExpressionUUID->"144a1db4-bce2-483b-b484-98d9e3f3e574"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"EnsureLabeledSets", "[", "sets", "]"}]], "Input",
+ CellChangeTimes->{{3.7395600276653643`*^9, 3.7395600276673317`*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"43d5f70d-bb2d-492c-b9bc-dffba7d0d857"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"a\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"7", ",", "77", ",", "53", ",", "95", ",", "42", ",", "41"}], 
+     "}"}]}], ",", 
+   RowBox[{"\<\"b\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+     "51", ",", "88", ",", "87", ",", "67", ",", "90", ",", "37", ",", "96"}],
+      "}"}]}], ",", 
+   RowBox[{"\<\"c\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+     "15", ",", "87", ",", "99", ",", "6", ",", "20", ",", "98", ",", "68"}], 
+     "}"}]}], ",", 
+   RowBox[{"\<\"d\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"46", ",", "85", ",", "6", ",", "90"}], "}"}]}], ",", 
+   RowBox[{"\<\"e\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"72", ",", "97", ",", "15", ",", "55", ",", "87"}], "}"}]}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{3.739560028170987*^9},
+ CellLabel->"Out[10]=",ExpressionUUID->"975e5d66-e280-4ac0-9b5c-850bbe27596e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"ListOfListsQ", "[", "sets", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"LabeledSetsQ", "[", "sets", "]"}]}], "Input",
+ CellChangeTimes->{{3.73955998799117*^9, 3.739560011587144*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"2cdeac73-a243-4adb-beca-5dd245033c7d"],
+
+Cell[BoxData[
+ RowBox[{"ListOfListsQ", "[", 
+  RowBox[{"\[LeftAssociation]", 
+   RowBox[{
+    RowBox[{"\<\"a\"\>", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"7", ",", "77", ",", "53", ",", "95", ",", "42", ",", "41"}], 
+      "}"}]}], ",", 
+    RowBox[{"\<\"b\"\>", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+      "51", ",", "88", ",", "87", ",", "67", ",", "90", ",", "37", ",", 
+       "96"}], "}"}]}], ",", 
+    RowBox[{"\<\"c\"\>", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+      "15", ",", "87", ",", "99", ",", "6", ",", "20", ",", "87", ",", "98", 
+       ",", "68"}], "}"}]}], ",", 
+    RowBox[{"\<\"d\"\>", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"46", ",", "85", ",", "6", ",", "90"}], "}"}]}], ",", 
+    RowBox[{"\<\"e\"\>", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"72", ",", "97", ",", "15", ",", "55", ",", "87"}], "}"}]}]}], 
+   "\[RightAssociation]"}], "]"}]], "Output",
+ CellChangeTimes->{{3.739559958061363*^9, 3.739560011890028*^9}},
+ CellLabel->"Out[8]=",ExpressionUUID->"c1b11532-e9c6-4c24-8bef-17ce67ee44a9"],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{{3.739559958061363*^9, 3.739560011900413*^9}},
+ CellLabel->"Out[9]=",ExpressionUUID->"8c812a92-17bd-4bba-8fdc-355a0f5ce972"]
+}, Open  ]]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -425,16 +544,17 @@ Cell[BoxData[
   RowBox[{"<<", "UpSetChart`Calculations`"}]}]], "Input",
  CellChangeTimes->{{3.739535264917667*^9, 3.7395355808395433`*^9}, {
   3.7395357570284863`*^9, 3.739535758339485*^9}},
- CellLabel->"In[7]:=",ExpressionUUID->"698d7611-0688-46a1-a9d7-2ce40ea7561a"],
+ CellLabel->"In[4]:=",ExpressionUUID->"698d7611-0688-46a1-a9d7-2ce40ea7561a"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"calc", "=", 
-  RowBox[{"CalcThenSortAndFilter", "[", "sets", "]"}]}]], "Input",
+ StyleBox[
+  RowBox[{"calc", "=", 
+   RowBox[{"CalcThenSortAndFilter", "[", "sets", "]"}]}], "Code"]], "Code",
  CellChangeTimes->{{3.739535992763584*^9, 3.739535997315901*^9}, {
   3.7395361530181437`*^9, 3.7395361536806517`*^9}},
- CellLabel->"In[8]:=",ExpressionUUID->"bc47c4ff-dca6-4365-8ce2-de74d6e68df6"],
+ CellLabel->"In[5]:=",ExpressionUUID->"bc47c4ff-dca6-4365-8ce2-de74d6e68df6"],
 
 Cell[BoxData[
  RowBox[{"\[LeftAssociation]", 
@@ -506,9 +626,11 @@ Cell[BoxData[
        "\[Rule]", 
        RowBox[{"{", "87", "}"}]}]}], "\[RightAssociation]"}]}]}], 
   "\[RightAssociation]"}]], "Output",
- CellChangeTimes->{3.7395359978965693`*^9, 3.739536047282351*^9, 
-  3.7395361548855553`*^9, 3.7395413389373207`*^9, 3.739551550862397*^9},
- CellLabel->"Out[8]=",ExpressionUUID->"1c269f81-63c5-4ece-a759-302d5b4fb8af"]
+ CellChangeTimes->{
+  3.7395359978965693`*^9, 3.739536047282351*^9, 3.7395361548855553`*^9, 
+   3.7395413389373207`*^9, 3.739551550862397*^9, 3.739560517782083*^9, 
+   3.739560587277192*^9, {3.739560831683846*^9, 3.7395608496831493`*^9}},
+ CellLabel->"Out[5]=",ExpressionUUID->"4d57fa3d-5d3a-4758-99fc-9d631e46ef7e"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -529,7 +651,7 @@ Cell[BoxData[
   3.7395357570284863`*^9, 3.739535759219352*^9}},
  CellLabel->"In[10]:=",ExpressionUUID->"8ae21a35-a12a-4090-afc1-3daeeb793e6d"]
 }, Open  ]]
-}, Closed]],
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -547,85 +669,58 @@ Cell[BoxData[
   RowBox[{"<<", "UpSetChart`Graphics`"}]}]], "Input",
  CellChangeTimes->{{3.739535264917667*^9, 3.7395355808395433`*^9}, {
   3.7395357570284863`*^9, 3.739535760147624*^9}},
- CellLabel->"In[35]:=",ExpressionUUID->"e5885d5c-c6d9-40c9-81b6-a2445d134d3c"],
-
-Cell[CellGroupData[{
-
-Cell["Utilities", "Subsection",
- CellChangeTimes->{{3.73953609941475*^9, 
-  3.739536106667104*^9}},ExpressionUUID->"c85ad406-3fb4-4b41-ac91-\
-46ad186a2f31"],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"(*", " ", 
-   RowBox[{
-   "Returns", " ", "each", " ", "components", " ", "for", " ", "the", " ", 
-    "UpSetChart"}], " ", "*)"}], "\[IndentingNewLine]", 
-  RowBox[{"<<", "UpSetChart`GraphicsUtilities`"}]}]], "Input",
- CellChangeTimes->{{3.739535264917667*^9, 3.7395355808395433`*^9}, {
-  3.7395357570284863`*^9, 3.739535761035606*^9}, {3.739542415425537*^9, 
-  3.739542416215165*^9}, {3.739543787508369*^9, 3.739543794211645*^9}, {
-  3.7395594434211397`*^9, 
-  3.739559444234128*^9}},ExpressionUUID->"22fc01ca-f407-41df-9aa5-\
-c5228b09cd2a"],
+ CellLabel->"In[6]:=",ExpressionUUID->"e5885d5c-c6d9-40c9-81b6-a2445d134d3c"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{
-  RowBox[{"GraphicComponents", "[", 
-   RowBox[{
-    RowBox[{"calc", "[", "\"\<sets\>\"", "]"}], ",", " ", 
-    RowBox[{"calc", "[", "\"\<comparisons\>\"", "]"}]}], "]"}], "//", 
-  "Graphics"}]], "Input",
- CellChangeTimes->{{3.739536145314404*^9, 3.739536171066451*^9}, 
-   3.739541761200407*^9, {3.739543261418415*^9, 3.739543262343298*^9}, {
-   3.739543313187736*^9, 3.739543313698146*^9}, {3.739543361030469*^9, 
-   3.739543362123461*^9}, {3.7395449409849463`*^9, 3.739544942191283*^9}, {
-   3.739544975498455*^9, 3.739544977678931*^9}, {3.739545110476593*^9, 
-   3.739545111349813*^9}, {3.7395459434798594`*^9, 3.739545954576611*^9}, {
-   3.7395464139096622`*^9, 3.739546418670765*^9}},
- CellLabel->
-  "In[119]:=",ExpressionUUID->"e0e0274c-0c71-47dd-bcb3-03a3aa36e55d"],
+ RowBox[{"UpSetGraphics", "[", 
+  RowBox[{
+   RowBox[{"calc", "[", "\"\<sets\>\"", "]"}], ",", " ", 
+   RowBox[{"calc", "[", "\"\<comparisons\>\"", "]"}], ",", 
+   RowBox[{"\"\<ColorGradient\>\"", "\[Rule]", "\"\<AvocadoColors\>\""}]}], 
+  "]"}]], "Code",
+ CellChangeTimes->{{3.739559694876102*^9, 3.7395597069881153`*^9}, {
+  3.739560862297564*^9, 3.739560880221187*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"268157b9-1763-4498-82bb-c40f15406a67"],
 
 Cell[BoxData[
  GraphicsBox[{{
-    {RGBColor[0.282325, 0.661868, 0.973082], 
+    {RGBColor[0.683989, 0.830896, 0.145815], 
      TagBox[
       TooltipBox[RectangleBox[{2, 2}, {8, 4}],
        "\"Set: a\\nElements: {7, 77, 53, 95, 42, 41}\"",
        TooltipStyle->"TextStyling"],
       Annotation[#, "Set: a\nElements: {7, 77, 53, 95, 42, 41}", 
        "Tooltip"]& ]}, 
-    {RGBColor[0.527193, 0.7932440000000001, 0.9858925000000001], 
+    {RGBColor[0.8419945, 0.9076355, 0.188113], 
      TagBox[
       TooltipBox[RectangleBox[{1, 5}, {8, 7}],
        "\"Set: b\\nElements: {51, 88, 87, 67, 90, 37, 96}\"",
        TooltipStyle->"TextStyling"],
       Annotation[#, "Set: b\nElements: {51, 88, 87, 67, 90, 37, 96}", 
        "Tooltip"]& ]}, 
-    {RGBColor[0.772061, 0.92462, 0.998703], 
+    {RGBColor[1., 0.984375, 0.230411], 
      TagBox[
       TooltipBox[RectangleBox[{0, 8}, {8, 10}],
        "\"Set: c\\nElements: {15, 87, 99, 6, 20, 87, 98, 68}\"",
        TooltipStyle->"TextStyling"],
       Annotation[#, "Set: c\nElements: {15, 87, 99, 6, 20, 87, 98, 68}", 
        "Tooltip"]& ]}, 
-    {RGBColor[0.235431, 0.32765, 0.833291], 
+    {RGBColor[0.289326, 0.685107, 0.108759], 
      TagBox[
       TooltipBox[RectangleBox[{4, 11}, {8, 13}],
        "\"Set: d\\nElements: {46, 85, 6, 90}\"",
        TooltipStyle->"TextStyling"],
       Annotation[#, "Set: d\nElements: {46, 85, 6, 90}", "Tooltip"]& ]}, 
-    {RGBColor[0.258878, 0.494759, 0.9031865], 
+    {RGBColor[0.48665749999999997`, 0.7580015, 0.12728699999999998`], 
      TagBox[
       TooltipBox[RectangleBox[{3, 14}, {8, 16}],
        "\"Set: e\\nElements: {72, 97, 15, 55, 87}\"",
        TooltipStyle->"TextStyling"],
       Annotation[#, "Set: e\nElements: {72, 97, 15, 55, 87}", 
        "Tooltip"]& ]}}, {
-    {RGBColor[0.772061, 0.92462, 0.998703], 
+    {RGBColor[1., 0.984375, 0.230411], 
      TagBox[
       TooltipBox[RectangleBox[{13, 16}, {15, 22}],
        "\"Unique to: {a}\\nNumber of elements: 6\\nElements: {7, 41, 42, 53, \
@@ -634,7 +729,7 @@ Cell[BoxData[
       Annotation[#, 
        "Unique to: {a}\nNumber of elements: 6\nElements: {7, 41, 42, 53, 77, \
 95}", "Tooltip"]& ]}, 
-    {RGBColor[0.4455703333333333, 0.749452, 0.9816223333333334], 
+    {RGBColor[0.789326, 0.8820556666666667, 0.17401366666666668`], 
      TagBox[
       TooltipBox[RectangleBox[{16, 16}, {18, 21}],
        "\"Unique to: {b}\\nNumber of elements: 5\\nElements: {37, 51, 67, 88, \
@@ -643,7 +738,7 @@ Cell[BoxData[
       Annotation[#, 
        "Unique to: {b}\nNumber of elements: 5\nElements: {37, 51, 67, 88, \
 96}", "Tooltip"]& ]}, 
-    {RGBColor[0.26669366666666666`, 0.550462, 0.926485], 
+    {RGBColor[0.5524346666666666, 0.7822996666666666, 0.133463], 
      TagBox[
       TooltipBox[RectangleBox[{19, 16}, {21, 20}],
        "\"Unique to: {c}\\nNumber of elements: 4\\nElements: {20, 68, 98, 99}\
@@ -652,7 +747,7 @@ Cell[BoxData[
       Annotation[#, 
        "Unique to: {c}\nNumber of elements: 4\nElements: {20, 68, 98, 99}", 
        "Tooltip"]& ]}, 
-    {RGBColor[0.28235299999999997`, 0.1497248, 0.6790623333333333], 
+    {RGBColor[0.096442, 0.5236083333333333, 0.0862034], 
      TagBox[
       TooltipBox[RectangleBox[{22, 16}, {24, 18}],
        "\"Unique to: {d}\\nNumber of elements: 2\\nElements: {46, 85}\"",
@@ -660,7 +755,7 @@ Cell[BoxData[
       Annotation[#, 
        "Unique to: {d}\nNumber of elements: 2\nElements: {46, 85}", 
        "Tooltip"]& ]}, 
-    {RGBColor[0.235431, 0.32765, 0.833291], 
+    {RGBColor[0.289326, 0.685107, 0.108759], 
      TagBox[
       TooltipBox[RectangleBox[{25, 16}, {27, 19}],
        "\"Unique to: {e}\\nNumber of elements: 3\\nElements: {55, 72, 97}\"",
@@ -668,8 +763,7 @@ Cell[BoxData[
       Annotation[#, 
        "Unique to: {e}\nNumber of elements: 3\nElements: {55, 72, 97}", 
        "Tooltip"]& ]}, 
-    {RGBColor[
-     0.25984599999999997`, 0.040508133333333335`, 0.5018556666666667], 
+    {RGBColor[0., 0.2952393333333333, 0.04995039999999999], 
      TagBox[
       TooltipBox[RectangleBox[{28, 16}, {30, 17}],
        "\"Unique to: {b, d}\\nNumber of elements: 1\\nElements: {90}\"",
@@ -677,16 +771,14 @@ Cell[BoxData[
       Annotation[#, 
        "Unique to: {b, d}\nNumber of elements: 1\nElements: {90}", 
        "Tooltip"]& ]}, 
-    {RGBColor[
-     0.25984599999999997`, 0.040508133333333335`, 0.5018556666666667], 
+    {RGBColor[0., 0.2952393333333333, 0.04995039999999999], 
      TagBox[
       TooltipBox[RectangleBox[{31, 16}, {33, 17}],
        "\"Unique to: {c, d}\\nNumber of elements: 1\\nElements: {6}\"",
        TooltipStyle->"TextStyling"],
       Annotation[#, "Unique to: {c, d}\nNumber of elements: 1\nElements: {6}",
         "Tooltip"]& ]}, 
-    {RGBColor[
-     0.25984599999999997`, 0.040508133333333335`, 0.5018556666666667], 
+    {RGBColor[0., 0.2952393333333333, 0.04995039999999999], 
      TagBox[
       TooltipBox[RectangleBox[{34, 16}, {36, 17}],
        "\"Unique to: {c, e}\\nNumber of elements: 1\\nElements: {15}\"",
@@ -694,8 +786,7 @@ Cell[BoxData[
       Annotation[#, 
        "Unique to: {c, e}\nNumber of elements: 1\nElements: {15}", 
        "Tooltip"]& ]}, 
-    {RGBColor[
-     0.25984599999999997`, 0.040508133333333335`, 0.5018556666666667], 
+    {RGBColor[0., 0.2952393333333333, 0.04995039999999999], 
      TagBox[
       TooltipBox[RectangleBox[{37, 16}, {39, 17}],
        "\"Unique to: {b, c, e}\\nNumber of elements: 1\\nElements: {87}\"",
@@ -989,37 +1080,135 @@ Cell[BoxData[
          TooltipStyle->"TextStyling"],
         Annotation[#, "Set: e\nIntersection: {b, c, e}", "Tooltip"]& ]}}}, {
      {GrayLevel[0], 
-      RectangleBox[NCache[{Rational[55, 4], 3}, {13.75, 3}], 
-       NCache[{Rational[57, 4], 3}, {14.25, 3}]]}, 
+      TagBox[
+       TooltipBox[
+        RectangleBox[NCache[{Rational[55, 4], 3}, {13.75, 3}], 
+         NCache[{Rational[29, 2], 3}, {14.5, 3}]],
+        "\"Set: 1\\nIntersection: {a}\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "Set: 1\nIntersection: {a}", "Tooltip"]& ]}, 
      {GrayLevel[0], 
-      RectangleBox[NCache[{Rational[67, 4], 6}, {16.75, 6}], 
-       NCache[{Rational[69, 4], 6}, {17.25, 6}]]}, 
+      TagBox[
+       TooltipBox[
+        RectangleBox[NCache[{Rational[67, 4], 6}, {16.75, 6}], 
+         NCache[{Rational[35, 2], 6}, {17.5, 6}]],
+        "\"Set: 2\\nIntersection: {b}\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "Set: 2\nIntersection: {b}", "Tooltip"]& ]}, 
      {GrayLevel[0], 
-      RectangleBox[NCache[{Rational[79, 4], 9}, {19.75, 9}], 
-       NCache[{Rational[81, 4], 9}, {20.25, 9}]]}, 
+      TagBox[
+       TooltipBox[
+        RectangleBox[NCache[{Rational[79, 4], 9}, {19.75, 9}], 
+         NCache[{Rational[41, 2], 9}, {20.5, 9}]],
+        "\"Set: 3\\nIntersection: {c}\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "Set: 3\nIntersection: {c}", "Tooltip"]& ]}, 
      {GrayLevel[0], 
-      RectangleBox[NCache[{Rational[91, 4], 12}, {22.75, 12}], 
-       NCache[{Rational[93, 4], 12}, {23.25, 12}]]}, 
+      TagBox[
+       TooltipBox[
+        RectangleBox[NCache[{Rational[91, 4], 12}, {22.75, 12}], 
+         NCache[{Rational[47, 2], 12}, {23.5, 12}]],
+        "\"Set: 4\\nIntersection: {d}\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "Set: 4\nIntersection: {d}", "Tooltip"]& ]}, 
      {GrayLevel[0], 
-      RectangleBox[NCache[{Rational[103, 4], 15}, {25.75, 15}], 
-       NCache[{Rational[105, 4], 15}, {26.25, 15}]]}, 
+      TagBox[
+       TooltipBox[
+        RectangleBox[NCache[{Rational[103, 4], 15}, {25.75, 15}], 
+         NCache[{Rational[53, 2], 15}, {26.5, 15}]],
+        "\"Set: 5\\nIntersection: {e}\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "Set: 5\nIntersection: {e}", "Tooltip"]& ]}, 
      {GrayLevel[0], 
-      RectangleBox[NCache[{Rational[115, 4], 6}, {28.75, 6}], 
-       NCache[{Rational[117, 4], 12}, {29.25, 12}]]}, 
+      TagBox[
+       TooltipBox[
+        RectangleBox[NCache[{Rational[115, 4], 6}, {28.75, 6}], 
+         NCache[{Rational[59, 2], 12}, {29.5, 12}]],
+        "\"Set: 2\\nIntersection: {b, d}\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "Set: 2\nIntersection: {b, d}", "Tooltip"]& ]}, 
      {GrayLevel[0], 
-      RectangleBox[NCache[{Rational[127, 4], 9}, {31.75, 9}], 
-       NCache[{Rational[129, 4], 12}, {32.25, 12}]]}, 
+      TagBox[
+       TooltipBox[
+        RectangleBox[NCache[{Rational[127, 4], 9}, {31.75, 9}], 
+         NCache[{Rational[65, 2], 12}, {32.5, 12}]],
+        "\"Set: 3\\nIntersection: {c, d}\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "Set: 3\nIntersection: {c, d}", "Tooltip"]& ]}, 
      {GrayLevel[0], 
-      RectangleBox[NCache[{Rational[139, 4], 9}, {34.75, 9}], 
-       NCache[{Rational[141, 4], 15}, {35.25, 15}]]}, 
+      TagBox[
+       TooltipBox[
+        RectangleBox[NCache[{Rational[139, 4], 9}, {34.75, 9}], 
+         NCache[{Rational[71, 2], 15}, {35.5, 15}]],
+        "\"Set: 3\\nIntersection: {c, e}\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "Set: 3\nIntersection: {c, e}", "Tooltip"]& ]}, 
      {GrayLevel[0], 
-      RectangleBox[NCache[{Rational[151, 4], 6}, {37.75, 6}], 
-       NCache[{Rational[153, 4], 15}, {38.25, 15}]]}}}}]], "Output",
+      TagBox[
+       TooltipBox[
+        RectangleBox[NCache[{Rational[151, 4], 6}, {37.75, 6}], 
+         NCache[{Rational[77, 2], 15}, {38.5, 15}]],
+        "\"Set: 2\\nIntersection: {b, c, e}\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "Set: 2\nIntersection: {b, c, e}", 
+        "Tooltip"]& ]}}}}]], "Output",
+ CellChangeTimes->{
+  3.739559707348752*^9, {3.7395605219864063`*^9, 3.7395605381272783`*^9}, {
+   3.739560592226941*^9, 3.7395605938006268`*^9}, {3.739560810374452*^9, 
+   3.7395608806047983`*^9}},
+ CellLabel->"Out[9]=",ExpressionUUID->"29ff2c84-358b-42cb-a46a-4cb6493b545a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Utilities", "Subsection",
+ CellChangeTimes->{{3.73953609941475*^9, 
+  3.739536106667104*^9}},ExpressionUUID->"c85ad406-3fb4-4b41-ac91-\
+46ad186a2f31"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "Returns", " ", "each", " ", "components", " ", "for", " ", "the", " ", 
+    "UpSetChart"}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"<<", "UpSetChart`GraphicsUtilities`"}]}]], "Input",
+ CellChangeTimes->{{3.739535264917667*^9, 3.7395355808395433`*^9}, {
+  3.7395357570284863`*^9, 3.739535761035606*^9}, {3.739542415425537*^9, 
+  3.739542416215165*^9}, {3.739543787508369*^9, 3.739543794211645*^9}, {
+  3.7395594434211397`*^9, 
+  3.739559444234128*^9}},ExpressionUUID->"22fc01ca-f407-41df-9aa5-\
+c5228b09cd2a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"GraphicComponents", "[", 
+   RowBox[{
+    RowBox[{"calc", "[", "\"\<sets\>\"", "]"}], ",", " ", 
+    RowBox[{"calc", "[", "\"\<comparisons\>\"", "]"}]}], "]"}], "//", 
+  "Graphics"}]], "Code",
+ CellChangeTimes->{{3.739536145314404*^9, 3.739536171066451*^9}, 
+   3.739541761200407*^9, {3.739543261418415*^9, 3.739543262343298*^9}, {
+   3.739543313187736*^9, 3.739543313698146*^9}, {3.739543361030469*^9, 
+   3.739543362123461*^9}, {3.7395449409849463`*^9, 3.739544942191283*^9}, {
+   3.739544975498455*^9, 3.739544977678931*^9}, {3.739545110476593*^9, 
+   3.739545111349813*^9}, {3.7395459434798594`*^9, 3.739545954576611*^9}, {
+   3.7395464139096622`*^9, 3.739546418670765*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"e0e0274c-0c71-47dd-bcb3-03a3aa36e55d"],
+
+Cell[BoxData[
+ GraphicsBox[$CellContext`GraphicComponents[
+   $CellContext`CalcThenSortAndFilter[
+    $CellContext`DummyData[1]]["sets"], 
+   $CellContext`CalcThenSortAndFilter[
+    $CellContext`DummyData[1]]["comparisons"]]]], "Output",
  CellChangeTimes->{
   3.739546500094164*^9, 3.7395592835246277`*^9, {3.739559325491968*^9, 
-   3.739559339868825*^9}, 3.739559374329221*^9, 3.739559423141342*^9},
- CellLabel->
-  "Out[119]=",ExpressionUUID->"5537fe90-6e5d-4eb4-9bda-4305bc91cd9f"]
+   3.739559339868825*^9}, 3.739559374329221*^9, 3.739559423141342*^9, 
+   3.739560831816259*^9},
+ CellLabel->"Out[5]=",ExpressionUUID->"f41419f3-af25-428f-af1b-d8fc7f13afda"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1058,95 +1247,41 @@ Cell[BoxData[
   RowBox[{
    RowBox[{"Graphics", "[", 
     RowBox[{"#", ",", 
-     RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "]"}], "&"}]}]], "Input",
+     RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "]"}], "&"}]}]], "Code",
  CellChangeTimes->{{3.739541504881364*^9, 3.739541540429515*^9}, 
    3.7395416069691677`*^9, {3.7395589587697773`*^9, 3.7395589652834177`*^9}},
- CellLabel->
-  "In[104]:=",ExpressionUUID->"79929bef-7723-45eb-a330-6021f9dd9365"],
+ CellLabel->"In[6]:=",ExpressionUUID->"79929bef-7723-45eb-a330-6021f9dd9365"],
 
 Cell[BoxData[
- GraphicsBox[{
-   {RGBColor[0.772061, 0.92462, 0.998703], 
-    TagBox[
-     TooltipBox[RectangleBox[{2, 0}, {4, 6}],
-      "\"Unique to: {a}\\nNumber of elements: 6\\nElements: {7, 41, 42, 53, \
-77, 95}\"",
-      TooltipStyle->"TextStyling"],
-     Annotation[#, 
-      "Unique to: {a}\nNumber of elements: 6\nElements: {7, 41, 42, 53, 77, \
-95}", "Tooltip"]& ]}, 
-   {RGBColor[0.4455703333333333, 0.749452, 0.9816223333333334], 
-    TagBox[
-     TooltipBox[RectangleBox[{5, 0}, {7, 5}],
-      "\"Unique to: {b}\\nNumber of elements: 5\\nElements: {37, 51, 67, 88, \
-96}\"",
-      TooltipStyle->"TextStyling"],
-     Annotation[#, 
-      "Unique to: {b}\nNumber of elements: 5\nElements: {37, 51, 67, 88, 96}",
-       "Tooltip"]& ]}, 
-   {RGBColor[0.26669366666666666`, 0.550462, 0.926485], 
-    TagBox[
-     TooltipBox[RectangleBox[{8, 0}, {10, 4}],
-      "\"Unique to: {c}\\nNumber of elements: 4\\nElements: {20, 68, 98, \
-99}\"",
-      TooltipStyle->"TextStyling"],
-     Annotation[#, 
-      "Unique to: {c}\nNumber of elements: 4\nElements: {20, 68, 98, 99}", 
-      "Tooltip"]& ]}, 
-   {RGBColor[0.28235299999999997`, 0.1497248, 0.6790623333333333], 
-    TagBox[
-     TooltipBox[RectangleBox[{11, 0}, {13, 2}],
-      "\"Unique to: {d}\\nNumber of elements: 2\\nElements: {46, 85}\"",
-      TooltipStyle->"TextStyling"],
-     Annotation[#, 
-      "Unique to: {d}\nNumber of elements: 2\nElements: {46, 85}", 
-      "Tooltip"]& ]}, 
-   {RGBColor[0.235431, 0.32765, 0.833291], 
-    TagBox[
-     TooltipBox[RectangleBox[{14, 0}, {16, 3}],
-      "\"Unique to: {e}\\nNumber of elements: 3\\nElements: {55, 72, 97}\"",
-      TooltipStyle->"TextStyling"],
-     Annotation[#, 
-      "Unique to: {e}\nNumber of elements: 3\nElements: {55, 72, 97}", 
-      "Tooltip"]& ]}, 
-   {RGBColor[0.25984599999999997`, 0.040508133333333335`, 0.5018556666666667], 
-    TagBox[
-     TooltipBox[RectangleBox[{17, 0}, {19, 1}],
-      "\"Unique to: {b, d}\\nNumber of elements: 1\\nElements: {90}\"",
-      TooltipStyle->"TextStyling"],
-     Annotation[#, "Unique to: {b, d}\nNumber of elements: 1\nElements: {90}",
-       "Tooltip"]& ]}, 
-   {RGBColor[0.25984599999999997`, 0.040508133333333335`, 0.5018556666666667], 
-    TagBox[
-     TooltipBox[RectangleBox[{20, 0}, {22, 1}],
-      "\"Unique to: {c, d}\\nNumber of elements: 1\\nElements: {6}\"",
-      TooltipStyle->"TextStyling"],
-     Annotation[#, "Unique to: {c, d}\nNumber of elements: 1\nElements: {6}", 
-      "Tooltip"]& ]}, 
-   {RGBColor[0.25984599999999997`, 0.040508133333333335`, 0.5018556666666667], 
-    TagBox[
-     TooltipBox[RectangleBox[{23, 0}, {25, 1}],
-      "\"Unique to: {c, e}\\nNumber of elements: 1\\nElements: {15}\"",
-      TooltipStyle->"TextStyling"],
-     Annotation[#, "Unique to: {c, e}\nNumber of elements: 1\nElements: {15}",
-       "Tooltip"]& ]}, 
-   {RGBColor[0.25984599999999997`, 0.040508133333333335`, 0.5018556666666667], 
-    TagBox[
-     TooltipBox[RectangleBox[{26, 0}, {28, 1}],
-      "\"Unique to: {b, c, e}\\nNumber of elements: 1\\nElements: {87}\"",
-      TooltipStyle->"TextStyling"],
-     Annotation[#, 
-      "Unique to: {b, c, e}\nNumber of elements: 1\nElements: {87}", 
-      "Tooltip"]& ]}},
+ TemplateBox[{
+  "Keys","invrl",
+   "\"The argument \\!\\(\\*RowBox[{RowBox[{\\\"CalcThenSortAndFilter\\\", \\\
+\"[\\\", RowBox[{\\\"DummyData\\\", \\\"[\\\", \\\"1\\\", \\\"]\\\"}], \
+\\\"]\\\"}], \\\"[\\\", \\\"\\\\\\\"sets\\\\\\\"\\\", \\\"]\\\"}]\\) is not a \
+valid Association or a list of rules.\"",2,6,2,22435665993996898583,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.73956083186931*^9},
+ CellLabel->
+  "During evaluation of \
+In[6]:=",ExpressionUUID->"c0070053-04e3-48c7-86cd-15445c386c55"],
+
+Cell[BoxData[
+ GraphicsBox[$CellContext`ComparisonsBarChart[
+   $CellContext`CalcThenSortAndFilter[
+    $CellContext`DummyData[1]]["comparisons"], 
+   $CellContext`CalcThenSortAndFilter[
+    $CellContext`DummyData[1]][0], 
+   Keys[
+    $CellContext`CalcThenSortAndFilter[
+     $CellContext`DummyData[1]]["sets"]]],
   ImageSize->Tiny]], "Output",
  CellChangeTimes->{{3.739541542722171*^9, 3.739541570648857*^9}, {
    3.739541602226534*^9, 3.7395416073638763`*^9}, {3.739558877258338*^9, 
    3.739558903333213*^9}, 3.739558966190332*^9, {3.739559054618071*^9, 
-   3.739559056977291*^9}, 3.7395591057147293`*^9},
- CellLabel->
-  "Out[104]=",ExpressionUUID->"dcdf950c-1845-44de-9c7d-eba39e64f1f0"]
+   3.739559056977291*^9}, 3.7395591057147293`*^9, 3.739560831896986*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"25c97e40-27c2-4354-ae02-bdf97a9536ce"]
 }, Open  ]]
-}, Closed]],
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -1175,311 +1310,47 @@ Cell[BoxData[
   RowBox[{
    RowBox[{"Graphics", "[", 
     RowBox[{"#", ",", 
-     RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "]"}], "&"}]}]], "Input",
+     RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "]"}], "&"}]}]], "Code",
  CellChangeTimes->{{3.739541641701459*^9, 3.739541663727263*^9}, 
    3.739541694915716*^9, {3.7395530923771753`*^9, 3.7395531116777554`*^9}},
- CellLabel->"In[75]:=",ExpressionUUID->"61ef1ba0-173e-4874-aa50-c58b4fa3bf32"],
+ CellLabel->"In[7]:=",ExpressionUUID->"61ef1ba0-173e-4874-aa50-c58b4fa3bf32"],
 
 Cell[BoxData[
- GraphicsBox[{{{
-     {GrayLevel[0], 
-      TagBox[
-       TooltipBox[DiskBox[{3, 3}],
-        "\"Set: a\\nIntersection: {a}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: a\nIntersection: {a}", "Tooltip"]& ]}, 
-     {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
-      TagBox[
-       TooltipBox[DiskBox[{6, 3}],
-        "\"Set: a\\nIntersection: {b}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: a\nIntersection: {b}", "Tooltip"]& ]}, 
-     {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
-      TagBox[
-       TooltipBox[DiskBox[{9, 3}],
-        "\"Set: a\\nIntersection: {c}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: a\nIntersection: {c}", "Tooltip"]& ]}, 
-     {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
-      TagBox[
-       TooltipBox[DiskBox[{12, 3}],
-        "\"Set: a\\nIntersection: {d}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: a\nIntersection: {d}", "Tooltip"]& ]}, 
-     {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
-      TagBox[
-       TooltipBox[DiskBox[{15, 3}],
-        "\"Set: a\\nIntersection: {e}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: a\nIntersection: {e}", "Tooltip"]& ]}, 
-     {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
-      TagBox[
-       TooltipBox[DiskBox[{18, 3}],
-        "\"Set: a\\nIntersection: {b, d}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: a\nIntersection: {b, d}", "Tooltip"]& ]}, 
-     {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
-      TagBox[
-       TooltipBox[DiskBox[{21, 3}],
-        "\"Set: a\\nIntersection: {c, d}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: a\nIntersection: {c, d}", "Tooltip"]& ]}, 
-     {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
-      TagBox[
-       TooltipBox[DiskBox[{24, 3}],
-        "\"Set: a\\nIntersection: {c, e}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: a\nIntersection: {c, e}", "Tooltip"]& ]}, 
-     {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
-      TagBox[
-       TooltipBox[DiskBox[{27, 3}],
-        "\"Set: a\\nIntersection: {b, c, e}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: a\nIntersection: {b, c, e}", "Tooltip"]& ]}}, {
-     {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
-      TagBox[
-       TooltipBox[DiskBox[{3, 6}],
-        "\"Set: b\\nIntersection: {a}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: b\nIntersection: {a}", "Tooltip"]& ]}, 
-     {GrayLevel[0], 
-      TagBox[
-       TooltipBox[DiskBox[{6, 6}],
-        "\"Set: b\\nIntersection: {b}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: b\nIntersection: {b}", "Tooltip"]& ]}, 
-     {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
-      TagBox[
-       TooltipBox[DiskBox[{9, 6}],
-        "\"Set: b\\nIntersection: {c}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: b\nIntersection: {c}", "Tooltip"]& ]}, 
-     {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
-      TagBox[
-       TooltipBox[DiskBox[{12, 6}],
-        "\"Set: b\\nIntersection: {d}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: b\nIntersection: {d}", "Tooltip"]& ]}, 
-     {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
-      TagBox[
-       TooltipBox[DiskBox[{15, 6}],
-        "\"Set: b\\nIntersection: {e}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: b\nIntersection: {e}", "Tooltip"]& ]}, 
-     {GrayLevel[0], 
-      TagBox[
-       TooltipBox[DiskBox[{18, 6}],
-        "\"Set: b\\nIntersection: {b, d}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: b\nIntersection: {b, d}", "Tooltip"]& ]}, 
-     {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
-      TagBox[
-       TooltipBox[DiskBox[{21, 6}],
-        "\"Set: b\\nIntersection: {c, d}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: b\nIntersection: {c, d}", "Tooltip"]& ]}, 
-     {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
-      TagBox[
-       TooltipBox[DiskBox[{24, 6}],
-        "\"Set: b\\nIntersection: {c, e}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: b\nIntersection: {c, e}", "Tooltip"]& ]}, 
-     {GrayLevel[0], 
-      TagBox[
-       TooltipBox[DiskBox[{27, 6}],
-        "\"Set: b\\nIntersection: {b, c, e}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: b\nIntersection: {b, c, e}", "Tooltip"]& ]}}, {
-     {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
-      TagBox[
-       TooltipBox[DiskBox[{3, 9}],
-        "\"Set: c\\nIntersection: {a}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: c\nIntersection: {a}", "Tooltip"]& ]}, 
-     {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
-      TagBox[
-       TooltipBox[DiskBox[{6, 9}],
-        "\"Set: c\\nIntersection: {b}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: c\nIntersection: {b}", "Tooltip"]& ]}, 
-     {GrayLevel[0], 
-      TagBox[
-       TooltipBox[DiskBox[{9, 9}],
-        "\"Set: c\\nIntersection: {c}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: c\nIntersection: {c}", "Tooltip"]& ]}, 
-     {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
-      TagBox[
-       TooltipBox[DiskBox[{12, 9}],
-        "\"Set: c\\nIntersection: {d}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: c\nIntersection: {d}", "Tooltip"]& ]}, 
-     {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
-      TagBox[
-       TooltipBox[DiskBox[{15, 9}],
-        "\"Set: c\\nIntersection: {e}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: c\nIntersection: {e}", "Tooltip"]& ]}, 
-     {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
-      TagBox[
-       TooltipBox[DiskBox[{18, 9}],
-        "\"Set: c\\nIntersection: {b, d}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: c\nIntersection: {b, d}", "Tooltip"]& ]}, 
-     {GrayLevel[0], 
-      TagBox[
-       TooltipBox[DiskBox[{21, 9}],
-        "\"Set: c\\nIntersection: {c, d}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: c\nIntersection: {c, d}", "Tooltip"]& ]}, 
-     {GrayLevel[0], 
-      TagBox[
-       TooltipBox[DiskBox[{24, 9}],
-        "\"Set: c\\nIntersection: {c, e}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: c\nIntersection: {c, e}", "Tooltip"]& ]}, 
-     {GrayLevel[0], 
-      TagBox[
-       TooltipBox[DiskBox[{27, 9}],
-        "\"Set: c\\nIntersection: {b, c, e}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: c\nIntersection: {b, c, e}", "Tooltip"]& ]}}, {
-     {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
-      TagBox[
-       TooltipBox[DiskBox[{3, 12}],
-        "\"Set: d\\nIntersection: {a}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: d\nIntersection: {a}", "Tooltip"]& ]}, 
-     {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
-      TagBox[
-       TooltipBox[DiskBox[{6, 12}],
-        "\"Set: d\\nIntersection: {b}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: d\nIntersection: {b}", "Tooltip"]& ]}, 
-     {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
-      TagBox[
-       TooltipBox[DiskBox[{9, 12}],
-        "\"Set: d\\nIntersection: {c}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: d\nIntersection: {c}", "Tooltip"]& ]}, 
-     {GrayLevel[0], 
-      TagBox[
-       TooltipBox[DiskBox[{12, 12}],
-        "\"Set: d\\nIntersection: {d}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: d\nIntersection: {d}", "Tooltip"]& ]}, 
-     {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
-      TagBox[
-       TooltipBox[DiskBox[{15, 12}],
-        "\"Set: d\\nIntersection: {e}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: d\nIntersection: {e}", "Tooltip"]& ]}, 
-     {GrayLevel[0], 
-      TagBox[
-       TooltipBox[DiskBox[{18, 12}],
-        "\"Set: d\\nIntersection: {b, d}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: d\nIntersection: {b, d}", "Tooltip"]& ]}, 
-     {GrayLevel[0], 
-      TagBox[
-       TooltipBox[DiskBox[{21, 12}],
-        "\"Set: d\\nIntersection: {c, d}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: d\nIntersection: {c, d}", "Tooltip"]& ]}, 
-     {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
-      TagBox[
-       TooltipBox[DiskBox[{24, 12}],
-        "\"Set: d\\nIntersection: {c, e}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: d\nIntersection: {c, e}", "Tooltip"]& ]}, 
-     {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
-      TagBox[
-       TooltipBox[DiskBox[{27, 12}],
-        "\"Set: d\\nIntersection: {b, c, e}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: d\nIntersection: {b, c, e}", "Tooltip"]& ]}}, {
-     {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
-      TagBox[
-       TooltipBox[DiskBox[{3, 15}],
-        "\"Set: e\\nIntersection: {a}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: e\nIntersection: {a}", "Tooltip"]& ]}, 
-     {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
-      TagBox[
-       TooltipBox[DiskBox[{6, 15}],
-        "\"Set: e\\nIntersection: {b}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: e\nIntersection: {b}", "Tooltip"]& ]}, 
-     {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
-      TagBox[
-       TooltipBox[DiskBox[{9, 15}],
-        "\"Set: e\\nIntersection: {c}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: e\nIntersection: {c}", "Tooltip"]& ]}, 
-     {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
-      TagBox[
-       TooltipBox[DiskBox[{12, 15}],
-        "\"Set: e\\nIntersection: {d}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: e\nIntersection: {d}", "Tooltip"]& ]}, 
-     {GrayLevel[0], 
-      TagBox[
-       TooltipBox[DiskBox[{15, 15}],
-        "\"Set: e\\nIntersection: {e}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: e\nIntersection: {e}", "Tooltip"]& ]}, 
-     {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
-      TagBox[
-       TooltipBox[DiskBox[{18, 15}],
-        "\"Set: e\\nIntersection: {b, d}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: e\nIntersection: {b, d}", "Tooltip"]& ]}, 
-     {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
-      TagBox[
-       TooltipBox[DiskBox[{21, 15}],
-        "\"Set: e\\nIntersection: {c, d}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: e\nIntersection: {c, d}", "Tooltip"]& ]}, 
-     {GrayLevel[0], 
-      TagBox[
-       TooltipBox[DiskBox[{24, 15}],
-        "\"Set: e\\nIntersection: {c, e}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: e\nIntersection: {c, e}", "Tooltip"]& ]}, 
-     {GrayLevel[0], 
-      TagBox[
-       TooltipBox[DiskBox[{27, 15}],
-        "\"Set: e\\nIntersection: {b, c, e}\"",
-        TooltipStyle->"TextStyling"],
-       Annotation[#, "Set: e\nIntersection: {b, c, e}", "Tooltip"]& ]}}}, {
-    {GrayLevel[0], 
-     RectangleBox[NCache[{Rational[11, 4], 3}, {2.75, 3}], 
-      NCache[{Rational[13, 4], 3}, {3.25, 3}]]}, 
-    {GrayLevel[0], 
-     RectangleBox[NCache[{Rational[23, 4], 6}, {5.75, 6}], 
-      NCache[{Rational[25, 4], 6}, {6.25, 6}]]}, 
-    {GrayLevel[0], 
-     RectangleBox[NCache[{Rational[35, 4], 9}, {8.75, 9}], 
-      NCache[{Rational[37, 4], 9}, {9.25, 9}]]}, 
-    {GrayLevel[0], 
-     RectangleBox[NCache[{Rational[47, 4], 12}, {11.75, 12}], 
-      NCache[{Rational[49, 4], 12}, {12.25, 12}]]}, 
-    {GrayLevel[0], 
-     RectangleBox[NCache[{Rational[59, 4], 15}, {14.75, 15}], 
-      NCache[{Rational[61, 4], 15}, {15.25, 15}]]}, 
-    {GrayLevel[0], 
-     RectangleBox[NCache[{Rational[71, 4], 6}, {17.75, 6}], 
-      NCache[{Rational[73, 4], 12}, {18.25, 12}]]}, 
-    {GrayLevel[0], 
-     RectangleBox[NCache[{Rational[83, 4], 9}, {20.75, 9}], 
-      NCache[{Rational[85, 4], 12}, {21.25, 12}]]}, 
-    {GrayLevel[0], 
-     RectangleBox[NCache[{Rational[95, 4], 9}, {23.75, 9}], 
-      NCache[{Rational[97, 4], 15}, {24.25, 15}]]}, 
-    {GrayLevel[0], 
-     RectangleBox[NCache[{Rational[107, 4], 6}, {26.75, 6}], 
-      NCache[{Rational[109, 4], 15}, {27.25, 15}]]}}},
-  ImageSize->{417.78515625, Automatic}]], "Output",
+ TemplateBox[{
+  "Keys","invrl",
+   "\"The argument \\!\\(\\*RowBox[{RowBox[{\\\"CalcThenSortAndFilter\\\", \\\
+\"[\\\", RowBox[{\\\"DummyData\\\", \\\"[\\\", \\\"1\\\", \\\"]\\\"}], \
+\\\"]\\\"}], \\\"[\\\", \\\"\\\\\\\"sets\\\\\\\"\\\", \\\"]\\\"}]\\) is not a \
+valid Association or a list of rules.\"",2,7,3,22435665993996898583,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.739560831969624*^9},
+ CellLabel->
+  "During evaluation of \
+In[7]:=",ExpressionUUID->"9ad327c5-cc7a-4543-bd4e-3a76aee67981"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Keys","invrl",
+   "\"The argument \\!\\(\\*RowBox[{RowBox[{\\\"CalcThenSortAndFilter\\\", \\\
+\"[\\\", RowBox[{\\\"DummyData\\\", \\\"[\\\", \\\"1\\\", \\\"]\\\"}], \
+\\\"]\\\"}], \\\"[\\\", \\\"\\\\\\\"comparisons\\\\\\\"\\\", \\\"]\\\"}]\\) \
+is not a valid Association or a list of rules.\"",2,7,4,22435665993996898583,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.7395608319953947`*^9},
+ CellLabel->
+  "During evaluation of \
+In[7]:=",ExpressionUUID->"05e1c695-71f1-42a3-a4a5-cb1426d79f18"],
+
+Cell[BoxData[
+ GraphicsBox[$CellContext`IndicatorGrid[
+   Keys[
+    $CellContext`CalcThenSortAndFilter[
+     $CellContext`DummyData[1]]["sets"]], 
+   Keys[
+    $CellContext`CalcThenSortAndFilter[
+     $CellContext`DummyData[1]]["comparisons"]]],
+  ImageSize->Tiny]], "Output",
  CellChangeTimes->{{3.739541664304679*^9, 3.739541721787352*^9}, {
    3.739551539317114*^9, 3.7395515553793097`*^9}, 3.7395517268573303`*^9, 
    3.739551840274426*^9, 3.739551985203347*^9, {3.739552056517386*^9, 
@@ -1489,10 +1360,10 @@ Cell[BoxData[
    3.73955278334199*^9, {3.739552820094472*^9, 3.739552823073283*^9}, 
    3.7395529123144407`*^9, 3.739552963892952*^9, {3.739552996575223*^9, 
    3.739553111926178*^9}, 3.739553161454616*^9, {3.739553199215868*^9, 
-   3.73955321239023*^9}},
- CellLabel->"Out[75]=",ExpressionUUID->"84b2e7db-f60f-4086-8921-29aba26171b2"]
-}, Closed]]
-}, Closed]],
+   3.73955321239023*^9}, 3.739560832021667*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"a4637ee2-5802-459d-8f13-359ba8e9db2e"]
+}, Open  ]]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -1522,53 +1393,40 @@ Cell[BoxData[
   RowBox[{
    RowBox[{"Graphics", "[", 
     RowBox[{"#", ",", 
-     RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "]"}], "&"}]}]], "Input",
+     RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "]"}], "&"}]}]], "Code",
  CellChangeTimes->{{3.739536352513982*^9, 3.739536368402927*^9}, {
   3.739541376355523*^9, 3.739541412553732*^9}},
- CellLabel->"In[84]:=",ExpressionUUID->"591bd465-97ba-444e-b3e9-37d56685a9a5"],
+ CellLabel->"In[8]:=",ExpressionUUID->"591bd465-97ba-444e-b3e9-37d56685a9a5"],
 
 Cell[BoxData[
- GraphicsBox[{
-   {RGBColor[0.282325, 0.661868, 0.973082], 
-    TagBox[
-     TooltipBox[RectangleBox[{2, 2}, {8, 4}],
-      "\"Set: a\\nElements: {7, 77, 53, 95, 42, 41}\"",
-      TooltipStyle->"TextStyling"],
-     Annotation[#, "Set: a\nElements: {7, 77, 53, 95, 42, 41}", 
-      "Tooltip"]& ]}, 
-   {RGBColor[0.527193, 0.7932440000000001, 0.9858925000000001], 
-    TagBox[
-     TooltipBox[RectangleBox[{1, 5}, {8, 7}],
-      "\"Set: b\\nElements: {51, 88, 87, 67, 90, 37, 96}\"",
-      TooltipStyle->"TextStyling"],
-     Annotation[#, "Set: b\nElements: {51, 88, 87, 67, 90, 37, 96}", 
-      "Tooltip"]& ]}, 
-   {RGBColor[0.772061, 0.92462, 0.998703], 
-    TagBox[
-     TooltipBox[RectangleBox[{0, 8}, {8, 10}],
-      "\"Set: c\\nElements: {15, 87, 99, 6, 20, 87, 98, 68}\"",
-      TooltipStyle->"TextStyling"],
-     Annotation[#, "Set: c\nElements: {15, 87, 99, 6, 20, 87, 98, 68}", 
-      "Tooltip"]& ]}, 
-   {RGBColor[0.235431, 0.32765, 0.833291], 
-    TagBox[
-     TooltipBox[RectangleBox[{4, 11}, {8, 13}],
-      "\"Set: d\\nElements: {46, 85, 6, 90}\"",
-      TooltipStyle->"TextStyling"],
-     Annotation[#, "Set: d\nElements: {46, 85, 6, 90}", "Tooltip"]& ]}, 
-   {RGBColor[0.258878, 0.494759, 0.9031865], 
-    TagBox[
-     TooltipBox[RectangleBox[{3, 14}, {8, 16}],
-      "\"Set: e\\nElements: {72, 97, 15, 55, 87}\"",
-      TooltipStyle->"TextStyling"],
-     Annotation[#, "Set: e\nElements: {72, 97, 15, 55, 87}", "Tooltip"]& ]}},
+ TemplateBox[{
+  "Keys","invrl",
+   "\"The argument \\!\\(\\*RowBox[{RowBox[{\\\"CalcThenSortAndFilter\\\", \\\
+\"[\\\", RowBox[{\\\"DummyData\\\", \\\"[\\\", \\\"1\\\", \\\"]\\\"}], \
+\\\"]\\\"}], \\\"[\\\", \\\"\\\\\\\"sets\\\\\\\"\\\", \\\"]\\\"}]\\) is not a \
+valid Association or a list of rules.\"",2,8,5,22435665993996898583,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.7395608320839777`*^9},
+ CellLabel->
+  "During evaluation of \
+In[8]:=",ExpressionUUID->"efffbdde-3d4e-40c8-9724-2596df5df39d"],
+
+Cell[BoxData[
+ GraphicsBox[$CellContext`SetsBarChart[
+   $CellContext`CalcThenSortAndFilter[
+    $CellContext`DummyData[1]]["sets"], 
+   Keys[
+    $CellContext`CalcThenSortAndFilter[
+     $CellContext`DummyData[1]]["sets"]], 
+   $CellContext`CalcThenSortAndFilter[
+    $CellContext`DummyData[1]][0]],
   ImageSize->Tiny]], "Output",
  CellChangeTimes->{{3.7395413815000067`*^9, 3.739541412859233*^9}, 
    3.739553196115312*^9, 3.739555756908845*^9, {3.7395558478441763`*^9, 
-   3.7395558662418747`*^9}},
- CellLabel->"Out[84]=",ExpressionUUID->"d2d51ef2-8716-4ed3-afc0-4cf61fa08c95"]
+   3.7395558662418747`*^9}, 3.739560832109963*^9},
+ CellLabel->"Out[8]=",ExpressionUUID->"96b8aee2-bcf8-4770-a994-7b01dce5a6ba"]
 }, Open  ]]
-}, Closed]],
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -1597,33 +1455,37 @@ Cell[BoxData[
   RowBox[{
    RowBox[{"Graphics", "[", 
     RowBox[{"#", ",", 
-     RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "]"}], "&"}]}]], "Input",
+     RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "]"}], "&"}]}]], "Code",
  CellChangeTimes->{{3.7395414708904333`*^9, 3.739541479505228*^9}},
- CellLabel->"In[93]:=",ExpressionUUID->"1b672867-ca81-4331-a7ab-0086c98892f9"],
+ CellLabel->"In[9]:=",ExpressionUUID->"1b672867-ca81-4331-a7ab-0086c98892f9"],
 
 Cell[BoxData[
- GraphicsBox[{InsetBox[
-    StyleBox["\<\"a\"\>",
-     StripOnInput->False,
-     FontSize->12], {0, 3}, {-1, 0}], InsetBox[
-    StyleBox["\<\"b\"\>",
-     StripOnInput->False,
-     FontSize->12], {0, 6}, {-1, 0}], InsetBox[
-    StyleBox["\<\"c\"\>",
-     StripOnInput->False,
-     FontSize->12], {0, 9}, {-1, 0}], InsetBox[
-    StyleBox["\<\"d\"\>",
-     StripOnInput->False,
-     FontSize->12], {0, 12}, {-1, 0}], InsetBox[
-    StyleBox["\<\"e\"\>",
-     StripOnInput->False,
-     FontSize->12], {0, 15}, {-1, 0}]},
+ TemplateBox[{
+  "Keys","invrl",
+   "\"The argument \\!\\(\\*RowBox[{RowBox[{\\\"CalcThenSortAndFilter\\\", \\\
+\"[\\\", RowBox[{\\\"DummyData\\\", \\\"[\\\", \\\"1\\\", \\\"]\\\"}], \
+\\\"]\\\"}], \\\"[\\\", \\\"\\\\\\\"sets\\\\\\\"\\\", \\\"]\\\"}]\\) is not a \
+valid Association or a list of rules.\"",2,9,6,22435665993996898583,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.739560832182857*^9},
+ CellLabel->
+  "During evaluation of \
+In[9]:=",ExpressionUUID->"937db4bb-6bf5-42ff-94d3-55bde73761b6"],
+
+Cell[BoxData[
+ GraphicsBox[$CellContext`SetsLabels[
+   Keys[
+    $CellContext`CalcThenSortAndFilter[
+     $CellContext`DummyData[1]]["sets"]], 
+   $CellContext`CalcThenSortAndFilter[
+    $CellContext`DummyData[1]][0]],
   ImageSize->Tiny]], "Output",
  CellChangeTimes->{
-  3.7395414799148827`*^9, {3.739557400567212*^9, 3.7395574497426357`*^9}},
- CellLabel->"Out[93]=",ExpressionUUID->"e70a5e6b-45a6-4342-ac9c-b716dc04e6cf"]
+  3.7395414799148827`*^9, {3.739557400567212*^9, 3.7395574497426357`*^9}, 
+   3.739560832205205*^9},
+ CellLabel->"Out[9]=",ExpressionUUID->"5ecccef3-362f-42e7-b7a9-c0217b1f76f0"]
 }, Open  ]]
-}, Closed]]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -1648,81 +1510,103 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[583, 22, 159, 3, 98, "Title",ExpressionUUID->"200e9399-a2d9-47ae-bd24-07dd34b2df39"],
-Cell[745, 27, 419, 8, 30, "Input",ExpressionUUID->"864d6512-575a-48ad-95f9-f7cdfb5eb69a"],
-Cell[1167, 37, 372, 8, 30, "Input",ExpressionUUID->"4bcd7e13-60ce-4261-82b3-29deca244d90"],
-Cell[1542, 47, 138, 2, 30, "Input",ExpressionUUID->"7ce1fe4c-ef4c-471f-85eb-bbc427b15132"],
+Cell[745, 27, 464, 8, 30, "Input",ExpressionUUID->"864d6512-575a-48ad-95f9-f7cdfb5eb69a"],
+Cell[1212, 37, 570, 11, 30, "Input",ExpressionUUID->"26cc3eea-bf05-4154-ba9a-9dac9c68e4eb"],
 Cell[CellGroupData[{
-Cell[1705, 53, 234, 4, 30, "Input",ExpressionUUID->"34d68955-9fa9-4fe9-8f0f-7f9d1986ab5e"],
-Cell[1942, 59, 1013, 26, 37, "Output",ExpressionUUID->"e2495aca-a521-4474-9959-98ccf52a80bb"]
+Cell[1807, 52, 253, 5, 72, "Code",ExpressionUUID->"7ce1fe4c-ef4c-471f-85eb-bbc427b15132"],
+Cell[2063, 59, 1115, 28, 37, "Output",ExpressionUUID->"dc7a18c8-1dad-4326-a52e-e3dd79ed7a12"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2992, 90, 219, 4, 69, "Chapter",ExpressionUUID->"c60c5962-210c-4d0b-baf7-60b835bf5140"],
+Cell[3215, 92, 219, 4, 69, "Chapter",ExpressionUUID->"c60c5962-210c-4d0b-baf7-60b835bf5140"],
+Cell[3437, 98, 134, 2, 30, "Input",ExpressionUUID->"677e59c6-356b-4a50-8821-800326c1d568"],
 Cell[CellGroupData[{
-Cell[3236, 98, 164, 3, 67, "Section",ExpressionUUID->"90565637-0ef7-49fc-80df-b0b8fa484216"],
-Cell[3403, 103, 450, 10, 52, "Input",ExpressionUUID->"77f7b1c2-6386-4754-8c59-d0297b63e507"],
-Cell[CellGroupData[{
-Cell[3878, 117, 224, 4, 30, "Input",ExpressionUUID->"5455ddb6-837f-4a4f-89e2-52e32a9070d1"],
-Cell[4105, 123, 9661, 261, 186, "Output",ExpressionUUID->"6525ffc0-9406-4abe-9f25-09ee83a20da6"]
-}, Open  ]]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[13815, 390, 158, 3, 53, "Section",ExpressionUUID->"0cfcc3aa-99a5-4c43-aa46-685a0e397aa3"],
-Cell[13976, 395, 483, 11, 52, "Input",ExpressionUUID->"144a1db4-bce2-483b-b484-98d9e3f3e574"]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[14496, 411, 157, 3, 53, "Section",ExpressionUUID->"5bb347da-6d2b-4497-a7e4-12f193f1d10e"],
-Cell[14656, 416, 492, 11, 52, "Input",ExpressionUUID->"698d7611-0688-46a1-a9d7-2ce40ea7561a"],
-Cell[CellGroupData[{
-Cell[15173, 431, 300, 5, 30, "Input",ExpressionUUID->"bc47c4ff-dca6-4365-8ce2-de74d6e68df6"],
-Cell[15476, 438, 2789, 72, 83, "Output",ExpressionUUID->"1c269f81-63c5-4ece-a759-302d5b4fb8af"]
+Cell[3596, 104, 211, 3, 30, "Input",ExpressionUUID->"870af91f-d2c1-4c79-92d4-15719453571b"],
+Cell[3810, 109, 1104, 27, 60, "Output",ExpressionUUID->"88137968-b0bd-49ea-82d2-906dd03243d1"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[18302, 515, 169, 3, 54, "Subsection",ExpressionUUID->"a6250149-1b5b-4450-bdae-6c9bfde239c3"],
-Cell[18474, 520, 430, 9, 52, "Input",ExpressionUUID->"8ae21a35-a12a-4090-afc1-3daeeb793e6d"]
+Cell[4951, 141, 164, 3, 67, "Section",ExpressionUUID->"90565637-0ef7-49fc-80df-b0b8fa484216"],
+Cell[5118, 146, 450, 10, 52, "Input",ExpressionUUID->"77f7b1c2-6386-4754-8c59-d0297b63e507"],
+Cell[CellGroupData[{
+Cell[5593, 160, 224, 4, 30, "Input",ExpressionUUID->"5455ddb6-837f-4a4f-89e2-52e32a9070d1"],
+Cell[5820, 166, 9661, 261, 186, "Output",ExpressionUUID->"6525ffc0-9406-4abe-9f25-09ee83a20da6"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[18953, 535, 153, 3, 53, "Section",ExpressionUUID->"931f60fe-c558-44c7-91cf-f0097fd9e49d"],
-Cell[19109, 540, 426, 9, 52, "Input",ExpressionUUID->"e5885d5c-c6d9-40c9-81b6-a2445d134d3c"],
+Cell[15530, 433, 158, 3, 53, "Section",ExpressionUUID->"0cfcc3aa-99a5-4c43-aa46-685a0e397aa3"],
+Cell[15691, 438, 483, 11, 52, "Input",ExpressionUUID->"144a1db4-bce2-483b-b484-98d9e3f3e574"],
 Cell[CellGroupData[{
-Cell[19560, 553, 156, 3, 54, "Subsection",ExpressionUUID->"c85ad406-3fb4-4b41-ac91-46ad186a2f31"],
-Cell[19719, 558, 578, 12, 52, "Input",ExpressionUUID->"22fc01ca-f407-41df-9aa5-c5228b09cd2a"],
-Cell[CellGroupData[{
-Cell[20322, 574, 797, 15, 30, "Input",ExpressionUUID->"e0e0274c-0c71-47dd-bcb3-03a3aa36e55d"],
-Cell[21122, 591, 18817, 430, 209, "Output",ExpressionUUID->"5537fe90-6e5d-4eb4-9bda-4305bc91cd9f"]
+Cell[16199, 453, 222, 3, 30, "Input",ExpressionUUID->"43d5f70d-bb2d-492c-b9bc-dffba7d0d857"],
+Cell[16424, 458, 953, 25, 37, "Output",ExpressionUUID->"975e5d66-e280-4ac0-9b5c-850bbe27596e"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[39976, 1026, 160, 3, 45, "Subsubsection",ExpressionUUID->"ccd2dba9-640d-4198-a45b-6f69dfd350c6"],
-Cell[40139, 1031, 426, 10, 52, "Input",ExpressionUUID->"943c1c2e-342f-4b32-8ac3-97b93e14c9f7"],
-Cell[CellGroupData[{
-Cell[40590, 1045, 785, 19, 73, "Input",ExpressionUUID->"79929bef-7723-45eb-a330-6021f9dd9365"],
-Cell[41378, 1066, 3573, 80, 44, "Output",ExpressionUUID->"dcdf950c-1845-44de-9c7d-eba39e64f1f0"]
+Cell[17414, 488, 282, 4, 52, "Input",ExpressionUUID->"2cdeac73-a243-4adb-beca-5dd245033c7d"],
+Cell[17699, 494, 1050, 26, 60, "Output",ExpressionUUID->"c1b11532-e9c6-4c24-8bef-17ce67ee44a9"],
+Cell[18752, 522, 175, 2, 34, "Output",ExpressionUUID->"8c812a92-17bd-4bba-8fdc-355a0f5ce972"]
 }, Open  ]]
-}, Closed]],
+}, Open  ]],
 Cell[CellGroupData[{
-Cell[45000, 1152, 160, 3, 37, "Subsubsection",ExpressionUUID->"198b3403-4615-413a-81a3-945c9a0b33ea"],
-Cell[45163, 1157, 284, 4, 30, "Input",ExpressionUUID->"233832d7-7af3-4059-8a40-58bea8bd86ad"],
+Cell[18976, 530, 157, 3, 67, "Section",ExpressionUUID->"5bb347da-6d2b-4497-a7e4-12f193f1d10e"],
+Cell[19136, 535, 492, 11, 52, "Input",ExpressionUUID->"698d7611-0688-46a1-a9d7-2ce40ea7561a"],
 Cell[CellGroupData[{
-Cell[45472, 1165, 623, 15, 30, "Input",ExpressionUUID->"61ef1ba0-173e-4874-aa50-c58b4fa3bf32"],
-Cell[46098, 1182, 13748, 310, 249, "Output",ExpressionUUID->"84b2e7db-f60f-4086-8921-29aba26171b2"]
-}, Closed]]
-}, Closed]],
+Cell[19653, 550, 321, 6, 52, "Code",ExpressionUUID->"bc47c4ff-dca6-4365-8ce2-de74d6e68df6"],
+Cell[19977, 558, 2889, 74, 83, "Output",ExpressionUUID->"4d57fa3d-5d3a-4758-99fc-9d631e46ef7e"]
+}, Open  ]],
 Cell[CellGroupData[{
-Cell[59895, 1498, 162, 3, 37, "Subsubsection",ExpressionUUID->"b71c992b-8532-4959-ac48-7298346525e3"],
-Cell[60060, 1503, 283, 4, 30, "Input",ExpressionUUID->"811b1381-b629-4894-bd08-7ca525f8abc5"],
-Cell[CellGroupData[{
-Cell[60368, 1511, 681, 16, 30, "Input",ExpressionUUID->"591bd465-97ba-444e-b3e9-37d56685a9a5"],
-Cell[61052, 1529, 1737, 39, 117, "Output",ExpressionUUID->"d2d51ef2-8716-4ed3-afc0-4cf61fa08c95"]
+Cell[22903, 637, 169, 3, 54, "Subsection",ExpressionUUID->"a6250149-1b5b-4450-bdae-6c9bfde239c3"],
+Cell[23075, 642, 430, 9, 52, "Input",ExpressionUUID->"8ae21a35-a12a-4090-afc1-3daeeb793e6d"]
 }, Open  ]]
-}, Closed]],
+}, Open  ]],
 Cell[CellGroupData[{
-Cell[62838, 1574, 161, 3, 37, "Subsubsection",ExpressionUUID->"e69eed97-0b2c-45af-bd06-cdf1f831a853"],
-Cell[63002, 1579, 281, 4, 30, "Input",ExpressionUUID->"b4535f5e-d278-4bcb-b5cb-1ce90c001ddd"],
+Cell[23554, 657, 153, 3, 67, "Section",ExpressionUUID->"931f60fe-c558-44c7-91cf-f0097fd9e49d"],
+Cell[23710, 662, 425, 9, 52, "Input",ExpressionUUID->"e5885d5c-c6d9-40c9-81b6-a2445d134d3c"],
 Cell[CellGroupData[{
-Cell[63308, 1587, 578, 14, 30, "Input",ExpressionUUID->"1b672867-ca81-4331-a7ab-0086c98892f9"],
-Cell[63889, 1603, 735, 20, 117, "Output",ExpressionUUID->"e70a5e6b-45a6-4342-ac9c-b716dc04e6cf"]
+Cell[24160, 675, 464, 9, 52, "Code",ExpressionUUID->"268157b9-1763-4498-82bb-c40f15406a67"],
+Cell[24627, 686, 20403, 472, 209, "Output",ExpressionUUID->"29ff2c84-358b-42cb-a46a-4cb6493b545a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[45067, 1163, 156, 3, 54, "Subsection",ExpressionUUID->"c85ad406-3fb4-4b41-ac91-46ad186a2f31"],
+Cell[45226, 1168, 578, 12, 52, "Input",ExpressionUUID->"22fc01ca-f407-41df-9aa5-c5228b09cd2a"],
+Cell[CellGroupData[{
+Cell[45829, 1184, 791, 14, 52, "Code",ExpressionUUID->"e0e0274c-0c71-47dd-bcb3-03a3aa36e55d"],
+Cell[46623, 1200, 504, 10, 376, "Output",ExpressionUUID->"f41419f3-af25-428f-af1b-d8fc7f13afda"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[47164, 1215, 160, 3, 45, "Subsubsection",ExpressionUUID->"ccd2dba9-640d-4198-a45b-6f69dfd350c6"],
+Cell[47327, 1220, 426, 10, 52, "Input",ExpressionUUID->"943c1c2e-342f-4b32-8ac3-97b93e14c9f7"],
+Cell[CellGroupData[{
+Cell[47778, 1234, 779, 18, 91, "Code",ExpressionUUID->"79929bef-7723-45eb-a330-6021f9dd9365"],
+Cell[48560, 1254, 542, 11, 24, "Message",ExpressionUUID->"c0070053-04e3-48c7-86cd-15445c386c55"],
+Cell[49105, 1267, 709, 14, 117, "Output",ExpressionUUID->"25c97e40-27c2-4354-ae02-bdf97a9536ce"]
 }, Open  ]]
-}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[49863, 1287, 160, 3, 45, "Subsubsection",ExpressionUUID->"198b3403-4615-413a-81a3-945c9a0b33ea"],
+Cell[50026, 1292, 284, 4, 30, "Input",ExpressionUUID->"233832d7-7af3-4059-8a40-58bea8bd86ad"],
+Cell[CellGroupData[{
+Cell[50335, 1300, 621, 15, 52, "Code",ExpressionUUID->"61ef1ba0-173e-4874-aa50-c58b4fa3bf32"],
+Cell[50959, 1317, 543, 11, 24, "Message",ExpressionUUID->"9ad327c5-cc7a-4543-bd4e-3a76aee67981"],
+Cell[51505, 1330, 556, 12, 24, "Message",ExpressionUUID->"05e1c695-71f1-42a3-a4a5-cb1426d79f18"],
+Cell[52064, 1344, 1052, 19, 117, "Output",ExpressionUUID->"a4637ee2-5802-459d-8f13-359ba8e9db2e"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[53165, 1369, 162, 3, 45, "Subsubsection",ExpressionUUID->"b71c992b-8532-4959-ac48-7298346525e3"],
+Cell[53330, 1374, 283, 4, 30, "Input",ExpressionUUID->"811b1381-b629-4894-bd08-7ca525f8abc5"],
+Cell[CellGroupData[{
+Cell[53638, 1382, 679, 16, 52, "Code",ExpressionUUID->"591bd465-97ba-444e-b3e9-37d56685a9a5"],
+Cell[54320, 1400, 545, 11, 24, "Message",ExpressionUUID->"efffbdde-3d4e-40c8-9724-2596df5df39d"],
+Cell[54868, 1413, 601, 13, 117, "Output",ExpressionUUID->"96b8aee2-bcf8-4770-a994-7b01dce5a6ba"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[55518, 1432, 161, 3, 45, "Subsubsection",ExpressionUUID->"e69eed97-0b2c-45af-bd06-cdf1f831a853"],
+Cell[55682, 1437, 281, 4, 30, "Input",ExpressionUUID->"b4535f5e-d278-4bcb-b5cb-1ce90c001ddd"],
+Cell[CellGroupData[{
+Cell[55988, 1445, 576, 14, 52, "Code",ExpressionUUID->"1b672867-ca81-4331-a7ab-0086c98892f9"],
+Cell[56567, 1461, 543, 11, 24, "Message",ExpressionUUID->"937db4bb-6bf5-42ff-94d3-55bde73761b6"],
+Cell[57113, 1474, 448, 11, 117, "Output",ExpressionUUID->"5ecccef3-362f-42e7-b7a9-c0217b1f76f0"]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
