@@ -9,67 +9,75 @@ ComparisonsBarChart::usage=StringJoin[
 Begin["`Private`"]
 (* Helper function for ComparisonRectangle tooltip *)
 ComparisonBarTooltip[index_, comparisons_, setNames_] :=
-Module[
-  { text },
-  text = StringJoin[
-    "Unique to: "<>ToString[Keys[comparisons][[index]]],
-    "\nNumber of elements: "<>ToString[Length[comparisons[[index]]]],
-    "\nElements: "<>ToString[comparisons[[index]]]
-  ];
-  Return[text]
+StringJoin[
+  "Unique to: "<>ToString[Keys[comparisons][[index]]],
+  "\nNumber of elements: "<>ToString[Length[comparisons[[index]]]],
+  "\nElements: "<>ToString[comparisons[[index]]]
 ];
 
 
 
-Options[ComparisonBar] = {
-  "ColorGradient"->"DeepSeaColors",
-  "indicatorRadius"->1,
-  "spacerBetweenIndicatorsX"->1,
-  "spacerBetweenIndicatorsY"->1,
+CoordinatesOfComparisonBar[comparisonsIndex_, comparisonValue_, radius_, translate_, spacing_]:=
+{
+  (* x = (2 r + sBIX) index - r + sBSL + sBSL;
+  y = (sBIY + 2 r) Length@setNames + r + sBIG; *)
+  {
+    (2 radius + First@spacing) comparisonsIndex - radius + First@translate,
+    Last@translate
+  },
+  {
+    (2 radius + First@spacing) comparisonsIndex + (*2*) radius + First@translate,
+    Last@translate + comparisonValue
+  }
+}
 
-  "spacerBetweenSetsBarChart"->0,
-  "spacerBetweenSetsLabels"->0,
-  "spacerBetweenIndicatorGrid"->0
-};
 (* Make the rectangle  *)
-ComparisonBar[index_, comparisons_, setNames_, maxComparisonCardinality_, OptionsPattern[]] :=
+
+Options[ComparisonBar] = {
+  "ColorFunction" -> ColorData["DeepSeaColors"],
+  "Radius" -> 1,
+  "Spacing" -> {1, 1},
+  "Translate" -> {0,0}
+};
+ComparisonBar[comparisonsIndex_, comparisons_, setNames_, maxComparisonCardinality_, OptionsPattern[]] :=
 Module[
   {
-    cG = OptionValue["ColorGradient"],
-    r = OptionValue["indicatorRadius"],
-    sBIX = OptionValue["spacerBetweenIndicatorsX"],
-    sBIY = OptionValue["spacerBetweenIndicatorsY"],
-    sBSBC = OptionValue["spacerBetweenSetsBarChart"],
-    sBSL = OptionValue["spacerBetweenSetsLabels"],
-    sBIG = OptionValue["spacerBetweenIndicatorGrid"],
-
-    h = Length[comparisons[[index]]],
-    x, y,
-    text
+    value = Length[comparisons[[comparisonsIndex]]],
+    text = ComparisonBarTooltip[comparisonsIndex, comparisons, setNames]
   },
-
-  x = (2 r + sBIX) index - r + sBSL + sBSL;
-  y = (sBIY + 2 r) Length@setNames + r + sBIG;
-
-  text = ComparisonBarTooltip[index, comparisons, setNames];
   {
-    ColorData[cG][ h / maxComparisonCardinality ],
-    Tooltip[Rectangle[{x, y}, {x + 2 r, y + h}], text]
+    OptionValue["ColorFunction"][ value / maxComparisonCardinality ],
+    Tooltip[
+      Rectangle@@CoordinatesOfComparisonBar[comparisonsIndex, value,
+        OptionValue["Radius"],
+        OptionValue["Translate"],
+        OptionValue["Spacing"]
+      ],
+      text
+    ]
   }
 ];
 
 
-Options[ComparisonsBarChart] = Options[ComparisonBar];
-ComparisonsBarChart[sets_, comparisons_, maxComparisonCardinality_, opt: OptionsPattern[]] :=
+
+Options[ComparisonsBarChart] = {
+  "ColorFunction" -> ColorData["DeepSeaColors"],
+  "IndicatorRadius" -> 1,
+  "IndicatorSpacing" -> {1, 1},
+  "Translate" -> {0,0}
+};
+ComparisonsBarChart[comparisons_, maxComparisonCardinality_, setsNames_, OptionsPattern[]] :=
 Module[
-  {
-    setNames = Keys@sets,
-    options = OverwriteOptions[{opt}, ComparisonsBarChart, ComparisonBar]
-  },
+  {},
   (* Print[options]; *)
   Table[
-    ComparisonBar[j, comparisons, setNames, maxComparisonCardinality, options]
-    , {j, Length@comparisons}
+    ComparisonBar[comparisonIndex, comparisons, setsNames, maxComparisonCardinality,
+      "ColorFunction" -> OptionValue["ColorFunction"],
+      "Radius" -> OptionValue["IndicatorRadius"],
+      "Translate" -> OptionValue["Translate"],
+      "Spacing" -> OptionValue["IndicatorSpacing"]
+    ]
+    , {comparisonIndex, Length@comparisons}
   ]
 ];
 

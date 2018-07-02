@@ -7,47 +7,48 @@ SetsLabels::usage=StringJoin[
 
 Begin["`Private`"]
 
+
+CoordinatesOfSetLabel[index_, radius_, translate_, spacing_]:=
+{
+  First@translate,
+  (2 radius + Last@spacing) index + Last@translate
+}
+
+
 Options[SetLabel] = {
-  "indicatorRadius"->1,
-  "spacerBetweenIndicatorsX"->1,
-  "spacerBetweenIndicatorsY"->1,
-
-  "spacerBetweenSetsBarChart"->1,
-  "Verbose"->True,
-  "FontSize"->12
+  "Radius" -> 1,
+  "Spacing" -> {0, 1},
+  "Translate" -> {0,0}
 };
-SetLabel[index_, setNames_, maxSetCardinality_, OptionsPattern[]] :=
-Module[
-  {
-    iR = OptionValue["indicatorRadius"],
-    sBIX = OptionValue["spacerBetweenIndicatorsX"],
-    sBIY = OptionValue["spacerBetweenIndicatorsY"],
-    sBSBC = OptionValue["spacerBetweenSetsBarChart"],
-    V = OptionValue["Verbose"],
-    fS = OptionValue["FontSize"],
-
-    w = Length[sets[setNames[[index]]]],
-    x, y
-  },
-  x = maxSetCardinality + sBSBC;
-  y = (2 iR + sBIY) index;
-  {
-    Text[Style[setNames[[index]], fS], {x, y}, {-1,0}]
-  }
-];
+SetLabel[index_, setNames_, fontsize_, OptionsPattern[]] :=
+Text[
+  Style[setNames[[index]], fontsize],
+  CoordinatesOfSetLabel[index,
+    OptionValue["Radius"],
+    OptionValue["Translate"],
+    OptionValue["Spacing"]
+  ]
+  , {-1,0}
+]
 
 
-Options[SetsLabels] = Options[SetLabel];
-SetsLabels[setNames_, maxSetCardinality_, opt: OptionsPattern[]]:=
-Module[
-  {
-    options = OverwriteOptions[{opt}, SetsLabels, SetLabel]
-  },
 
-  Table[
-    SetLabel[i, setNames, maxSetCardinality, options]
-    , {i, Length@setNames}]
-];
+
+Options[SetsLabels] = {
+  "IndicatorRadius" -> 1,
+  "IndicatorSpacing" -> {1, 1},
+  "Translate" -> {0,0},
+  "FontSize" -> 12
+};
+SetsLabels[setNames_, OptionsPattern[]]:=
+Table[
+  SetLabel[i, setNames, OptionValue["FontSize"],
+  "Radius" -> OptionValue["IndicatorRadius"],
+  "Translate" -> OptionValue["Translate"],
+  "Spacing" -> OptionValue["IndicatorSpacing"]
+  ]
+  , {i, Length@setNames}]
+
 
 
 

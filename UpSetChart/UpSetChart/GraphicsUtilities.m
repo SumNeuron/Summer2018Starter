@@ -13,7 +13,7 @@ GraphicComponents::usage= StringJoin[
   "GraphicComponents[sets, comparisons]"
 ]
 Begin["`Private`"]
-$Radius = 1;
+(* $Radius = 1;
 
 $OptionsIndicatorGrid = <|
   "IndicatorRadius"->$Radius,
@@ -32,13 +32,22 @@ $OptionsSetsBarChart =  <|
 $OptionsComparisonsBarChart -> {
   "Width" -> $Radius,
   "Spacer" -> $Radius,
-  "SpacerBetweenSetsLabels" -> $Radius (*+maxSetCardinality*),
+  "SpacerBetweenSetsLabels" -> $Radius ,
   "SpacerBetweenIndicatorGrid" -> $Radius
 }
 
 
 Options[GraphicComponents] = {
-  "ColorGradient"->"DeepSeaColors"
+  "ColorGradient"->"DeepSeaColors",
+} *)
+
+Options[GraphicComponents] = {
+  "IndicatorRadius" -> 1,
+  "IndicatorSpacing" -> {1, 1},
+
+  "ComponentSpacing" -> {1, 1},
+  "ColorGradient" -> "DeepSeaColors",
+  "FontSize"->12
 }
 
 GraphicComponents[sets_, comparisons_, opt: OptionsPattern[]]:=
@@ -53,71 +62,40 @@ Module[
     internalOptions
   },
 
-  internalOptions = <|
-    "spacerBetweenSetsBarChart" -> maxSetCardinality + OptionValue["spacerBetweenIndicatorsX"],
-    "spacerBetweenIndicatorGrid" ->   OptionValue["spacerBetweenIndicatorsY"]
-  |>;
 
-
-  options = Join[Normal@internalOptions, OverwriteOptions[{opt}, GraphicComponents, SetsBarChart]];
-  sBC = SetsBarChart[sets, setsNames, maxSetCardinality, Normal@options];
-
-  options = Join[Normal@internalOptions, OverwriteOptions[{opt}, GraphicComponents, SetsLabels]];
-  sL = SetsLabels[setsNames, maxSetCardinality, Normal@options];
-
-
-  labelWidth = ImageDimensions[ImageCrop[Graphics[sL]]][[1]];
-  labelWidth = OptionValue["spacerBetweenIndicatorsX"];
-  AppendTo[internalOptions,"spacerBetweenSetsLabels" -> labelWidth];
-
-  options = DeleteDuplicatesBy[Join[Normal@internalOptions, OverwriteOptions[{opt}, GraphicComponents, ComparisonsBarChart]],First];
-  (* Print[options]; *)
-  cBC = ComparisonsBarChart[sets, comparisons, maxComparisonCardinality, options];
-
-
-  options = DeleteDuplicatesBy[Join[Normal@internalOptions, OverwriteOptions[{opt}, GraphicComponents, IndicatorGrid]],First];
-  (* Print[options]; *)
-  iG = IndicatorGrid[setsNames, comparisonsNames, options];
-
-
-  (* sBC = SetsBarChart[sets, setsNames, maxSetCardinality,
-  "ColorGradient"->OptionValue["ColorGradient"],
-  "indicatorRadius"->OptionValue["indicatorRadius"],
-  "spacerBetweenIndicatorsX"->OptionValue["spacerBetweenIndicatorsX"],
-  "spacerBetweenIndicatorsY"->OptionValue["spacerBetweenIndicatorsY"]
+  sBC = SetsBarChart[sets, setsNames, maxSetCardinality,
+    "ColorFunction" -> ColorData[OptionValue["ColorGradient"]],
+    "IndicatorRadius" -> OptionValue["IndicatorRadius"],
+    "IndicatorSpacing" -> OptionValue["IndicatorSpacing"]
+    (*, "Translate" -> OptionValue["Translate"],*)
   ];
-  sL = SetsLabels[setsNames, maxSetCardinality,
-  "ColorGradient"->OptionValue["ColorGradient"],
-  "indicatorRadius"->OptionValue["indicatorRadius"],
-  "spacerBetweenIndicatorsX"->OptionValue["spacerBetweenIndicatorsX"],
-  "spacerBetweenIndicatorsY"->OptionValue["spacerBetweenIndicatorsY"]
+  sL  = SetsLabels[setsNames,
+    "FontSize" -> OptionValue["FontSize"],
+    "IndicatorRadius" -> OptionValue["IndicatorRadius"],
+    "IndicatorSpacing" -> OptionValue["IndicatorSpacing"],
+    "Translate"->{maxSetCardinality + 2 First@OptionValue["ComponentSpacing"], 0}
   ];
 
   labelWidth = ImageDimensions[ImageCrop[Graphics[sL]]][[1]];
-  labelWidth = OptionValue["spacerBetweenIndicatorsX"];
+  labelWidth = First@OptionValue["IndicatorSpacing"];
 
-  cBC = ComparisonsBarChart[sets, comparisons, maxComparisonCardinality,
-  "ColorGradient"->OptionValue["ColorGradient"],
-  "indicatorRadius"->OptionValue["indicatorRadius"],
-  "spacerBetweenIndicatorsX"->OptionValue["spacerBetweenIndicatorsX"],
-  "spacerBetweenIndicatorsY"->OptionValue["spacerBetweenIndicatorsY"],
-
-  "spacerBetweenSetsLabels"->labelWidth,
-  "spacerBetweenIndicatorGrid"->OptionValue["spacerBetweenIndicatorsY"]
+  cBC = ComparisonsBarChart[comparisons, maxComparisonCardinality, setsNames,
+    "ColorFunction" -> ColorData[OptionValue["ColorGradient"]],
+    "IndicatorRadius" -> OptionValue["IndicatorRadius"],
+    "IndicatorSpacing" -> OptionValue["IndicatorSpacing"],
+    "Translate" -> {
+      maxSetCardinality+ labelWidth + 2 First@OptionValue["ComponentSpacing"],
+      First@OptionValue["ComponentSpacing"] + Length[setsNames] (2 OptionValue["IndicatorRadius"] + Last@OptionValue["IndicatorSpacing"])
+    }
   ];
-  iG = IndicatorGrid[setsNames, comparisonsNames,
-  "ColorGradient"->OptionValue["ColorGradient"],
-  "indicatorRadius"->OptionValue["indicatorRadius"],
-  "spacerBetweenIndicatorsX"->OptionValue["spacerBetweenIndicatorsX"],
-  "spacerBetweenIndicatorsY"->OptionValue["spacerBetweenIndicatorsY"],
-
-  "spacerBetweenSetsLabels"->labelWidth,
-  "spacerBetweenIndicatorGrid"->OptionValue["spacerBetweenIndicatorsY"],
-  "spacerBetweenSetsBarChart"->OptionValue["spacerBetweenIndicatorsX"]
-  ]; *)
-
-  (* Print[] *)
-
+  iG  = IndicatorGrid[setsNames, comparisonsNames,
+    "Translate" -> {
+      maxSetCardinality+ labelWidth + 2 First@OptionValue["ComponentSpacing"],
+      0
+    },
+    "IndicatorRadius" -> OptionValue["IndicatorRadius"],
+    "IndicatorSpacing" -> OptionValue["IndicatorSpacing"]
+  ];
   Return[{sBC, cBC, sL, iG}]
 ]
 

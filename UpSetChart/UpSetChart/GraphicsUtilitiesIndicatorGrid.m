@@ -8,138 +8,137 @@ IndicatorGrid::usage = StringJoin[
 
 Begin["`Private`"]
 (* Helper function for whether or not to fill the circle *)
-indicateQ[setIndex_, comparsionIndex_, setNames_, comparisonNames_] :=
+indicateQ[comparison_, set_] := MemberQ[comparison, set];
+TooltipOfGridDisk[comparison_, set_]:=
+StringJoin[
+  "Set: " <> ToString[set],
+  "\nIntersection: " <> ToString[comparison]
+];
+
+
+CoordinatesOfGridDisk[comparisonIndex_, setIndex_, radius_, translate_, spacing_]:=
+{
+  (2 radius + First@spacing) comparisonIndex + First@translate,
+  (2 radius + Last@spacing) setIndex + Last@translate
+}
+
+
+Options[IndicatorGridDisk] = { "Translate" -> {0, 0}, "Radius" -> 1, "Spacing" -> {1, 1} };
+IndicatorGridDisk[comparisonIndex_, setIndex_, comparisonNames_, setNames_, OptionsPattern[]] :=
 Module[
   {
-    set = setNames[[setIndex]],
-    comparison = comparisonNames[[comparsionIndex]]
+      coordinates = CoordinatesOfGridDisk[comparisonIndex, setIndex,
+        OptionValue["Radius"],
+        OptionValue["Translate"],
+        OptionValue["Spacing"]
+      ],
+      comp = comparisonNames[[comparisonIndex]],
+      set = setNames[[setIndex]],
+      text, filledQ
   },
-  Return[MemberQ[comparison, set]];
-];
-
-
-$IndicatorGridOptions = {
-  "ColorGradient"->"DeepSeaColors",
-  "indicatorRadius"->1,
-  "spacerBetweenIndicatorsX"->1,
-  "spacerBetweenIndicatorsY"->1,
-
-  "spacerBetweenSetsBarChart"->0,
-  "spacerBetweenSetsLabels"->0,
-  "spacerBetweenIndicatorGrid"->0,
-  "indicatorFilled"->Black,
-  "indicatorNotFilled"->Lighter[Lighter[Gray]]
-};
-
-Options[IndicatorGridDisk] = $IndicatorGridOptions;
-Options[IndicatorGridLine] = $IndicatorGridOptions;
-Options[IndicatorGridDisks] = Options[IndicatorGridDisk];
-Options[IndicatorGridLines] = Options[IndicatorGridLine];
-Options[IndicatorGrid] = Join[
-  Options[IndicatorGridDisk],
-  Options[IndicatorGridLine]
-];
-
-
-IndicatorGridDiskTooltip[setIndex_, comparsionIndex_, setNames_, comparisonNames_] :=
-Module[
-  { text },
-  text = StringJoin[
-    "Set: " <> ToString[setNames[[setIndex]]],
-    "\nIntersection: " <> ToString[comparisonNames[[comparsionIndex]]]
-  ];
-  Return[text]
-];
-
-
-IndicatorGridDisk[setIndex_, comparsionIndex_, setNames_, comparisonNames_, OptionsPattern[]] :=
-Module[
+  filledQ = indicateQ[comp, set];
+  text=TooltipOfGridDisk[comp, set];
   {
-
-    fillQ = indicateQ[setIndex, comparsionIndex, setNames, comparisonNames],
-
-    text,
-    cG = OptionValue["ColorGradient"],
-    r = OptionValue["indicatorRadius"],
-    sBIX = OptionValue["spacerBetweenIndicatorsX"],
-    sBIY = OptionValue["spacerBetweenIndicatorsY"],
-    sBSBC = OptionValue["spacerBetweenSetsBarChart"],
-    sBSL = OptionValue["spacerBetweenSetsLabels"],
-    sBIG = OptionValue["spacerBetweenIndicatorGrid"],
-    filled = OptionValue["indicatorFilled"],
-    notFilled = OptionValue["indicatorNotFilled"]
-  },
-
-
-  
-  x = (2 r + sBIX) comparsionIndex + sBSBC + sBSL;
-  y = (2 r + sBIY) setIndex;
-  text = IndicatorGridDiskTooltip[setIndex, comparsionIndex, setNames, comparisonNames];
-  {
-    If[fillQ, filled, notFilled],
-    Tooltip[Disk[{x, y}, r], text]
+    If[filledQ, $IndicatorFilled, $IndicatorNotFilled],
+    Tooltip[Disk[coordinates, OptionValue["Radius"]], text]
   }
-];
-
-IndicatorGridDisks[setsNames_, comparisonsNames_, opt: OptionsPattern[]] :=
-Module[
-  { options },
-  options = OverwriteOptions[{opt}, IndicatorGridDisks, IndicatorGridDisk];
-  Table[
-    IndicatorGridDisk[i, j, setsNames, comparisonsNames, options]
-   , {i, Length@setsNames}, {j, Length@comparisonsNames}]
-];
+]
 
 
-IndicatorGridLine[comparsionIndex_, setNames_, comparisonNames_, OptionsPattern[]] :=
+Options[IndicatorGridDisks] = { "Translate" -> {0, 0}, "Radius" -> 1, "Spacing" -> {1, 1} };
+IndicatorGridDisks[setsNames_, comparisonsNames_, OptionsPattern[]] :=
+Table[
+  IndicatorGridDisk[
+    comparisonIndex,
+    setIndex,
+    comparisonsNames,
+    setsNames,
+    "Radius"->OptionValue["Radius"],
+    "Translate"->OptionValue["Translate"],
+    "Spacing"->OptionValue["Spacing"]
+  ]
+ , {setIndex, Length@setsNames}, {comparisonIndex, Length@comparisonsNames}
+]
+
+
+CoordinatesOfGridLine[comparisonIndex_, setIndices_, radius_, translate_, spacing_]:=
+{
+  {
+    (2 radius + First@spacing) comparisonIndex  + First@translate  - radius / 4,
+    Min[setIndices] (2 radius + Last@spacing) + Last@translate
+  },
+  {
+    (2 radius + First@spacing) comparisonIndex  + First@translate  + radius / 2,
+    Max[setIndices] (2 radius + Last@spacing) + Last@translate
+  }
+}
+
+
+Options[IndicatorGridLine] = { "Translate" -> {0, 0}, "Radius" -> 1, "Spacing" -> {1, 1} };
+IndicatorGridLine[comparisonIndex_, setNames_, comparisonNames_, OptionsPattern[]] :=
 Module[
   {
-    setIndices = Flatten[Position[setNames, #] & /@ comparisonNames[[comparsionIndex]]],
-    x, y1, y2,
-
-    cG = OptionValue["ColorGradient"],
-    r = OptionValue["indicatorRadius"],
-    sBIX = OptionValue["spacerBetweenIndicatorsX"],
-    sBIY = OptionValue["spacerBetweenIndicatorsY"],
-    sBSBC = OptionValue["spacerBetweenSetsBarChart"],
-    sBSL = OptionValue["spacerBetweenSetsLabels"],
-    sBIG = OptionValue["spacerBetweenIndicatorGrid"],
-    filled = OptionValue["indicatorFilled"]
+    set, comp,
+    setIndices,
+    coordinates,
+    text
   },
+  comp = comparisonNames[[comparisonIndex]];
+  setIndices = Flatten[Position[setNames, #] & /@ comp];
   If[Length[setIndices]==0,Return[{}]];
-  x = (2 r + sBIX) comparsionIndex  + sBSBC + sBSL;
-  y1 = Min[setIndices] (2 r + sBIY);
-  y2 = Max[setIndices] (2 r + sBIY);
+
+  set = First@setIndices;
+  text = TooltipOfGridDisk[comp, set];
+  coordinates =
+  CoordinatesOfGridLine[
+    comparisonIndex,
+    setIndices,
+    OptionValue["Radius"],
+    OptionValue["Translate"],
+    OptionValue["Spacing"]
+  ];
 
   {
-    filled,
-    CapForm[Round],
-    (*Thickness[0.1/(radius*4)],*)
-    Thick,
-    Line[{{x, y1}, {x, y2}}]
+    Black,
+    Tooltip[Rectangle@@coordinates,text]
   }
 ];
 
-IndicatorGridLines[setsNames_, comparisonsNames_, opt: OptionsPattern[]] :=
-Module[
-  { options },
-  options = OverwriteOptions[{opt}, IndicatorGridLines, IndicatorGridLine];
-  Table[
-    IndicatorGridLine[j, setsNames, comparisonsNames, options]
-  , {j, Length@comparisonsNames}]
+
+Options[IndicatorGridLines] = { "Translate" -> {0, 0}, "Radius" -> 1, "Spacing" -> {1, 1} };
+IndicatorGridLines[setsNames_, comparisonsNames_, OptionsPattern[]] :=
+Table[
+  IndicatorGridLine[
+    comparisonIndex,
+    setsNames,
+    comparisonsNames,
+    "Radius"->OptionValue["Radius"],
+    "Translate"->OptionValue["Translate"],
+    "Spacing"->OptionValue["Spacing"]
+  ]
+, {comparisonIndex, Length@comparisonsNames}
 ];
 
 
-IndicatorGrid[setsNames_, comparisonsNames_, opt: OptionsPattern[]] :=
-Module[
-  { options },
-  options = OverwriteOptions[{opt}, IndicatorGrid, IndicatorGridDisks];
+Options[IndicatorGrid] = {
+  "Translate" -> {0, 0},
+  "IndicatorRadius" -> 1,
+  "IndicatorSpacing" -> {1, 1}
+}
+IndicatorGrid[setsNames_, comparisonsNames_, OptionsPattern[]] :=
+{
+  IndicatorGridDisks[setsNames, comparisonsNames,
+    "Radius"->OptionValue["IndicatorRadius"],
+    "Translate"->OptionValue["Translate"],
+    "Spacing"->OptionValue["IndicatorSpacing"]
+  ],
+  IndicatorGridLines[setsNames, comparisonsNames,
+    "Radius"->OptionValue["IndicatorRadius"],
+    "Translate"->OptionValue["Translate"],
+    "Spacing"->OptionValue["IndicatorSpacing"]
+  ]
+}
 
-  {
-    IndicatorGridDisks[setsNames, comparisonsNames, options],
-    IndicatorGridLines[setsNames, comparisonsNames, options]
-  }
-];
 
 
 
