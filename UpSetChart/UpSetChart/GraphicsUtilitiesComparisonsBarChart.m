@@ -8,13 +8,13 @@ ComparisonsBarChart::usage=StringJoin[
 
 Begin["`Private`"]
 (* Helper function for ComparisonRectangle tooltip *)
-ComparisonBarTooltip[comparsionIndex_, comparisons_, setNames_] :=
+ComparisonBarTooltip[index_, comparisons_, setNames_] :=
 Module[
   { text },
   text = StringJoin[
-    "Unique to: "<>ToString[Keys[comparisons][[comparsionIndex]]],
-    "\nNumber of elements: "<>ToString[Length[comparisons[[comparsionIndex]]]],
-    "\nElements: "<>ToString[comparisons[[comparsionIndex]]]
+    "Unique to: "<>ToString[Keys[comparisons][[index]]],
+    "\nNumber of elements: "<>ToString[Length[comparisons[[index]]]],
+    "\nElements: "<>ToString[comparisons[[index]]]
   ];
   Return[text]
 ];
@@ -43,15 +43,15 @@ Module[
     sBSL = OptionValue["spacerBetweenSetsLabels"],
     sBIG = OptionValue["spacerBetweenIndicatorGrid"],
 
-    h = Length[comparisons[[comparsionIndex]]],
+    h = Length[comparisons[[index]]],
     x, y,
     text
   },
 
-  x = (2 r + sBIX) comparsionIndex - r + sBSL + sBSL;
+  x = (2 r + sBIX) index - r + sBSL + sBSL;
   y = (sBIY + 2 r) Length@setNames + r + sBIG;
 
-  text = ComparisonBarTooltip[comparsionIndex, comparisons, setNames];
+  text = ComparisonBarTooltip[index, comparisons, setNames];
   {
     ColorData[cG][ h / maxComparisonCardinality ],
     Tooltip[Rectangle[{x, y}, {x + 2 r, y + h}], text]
@@ -66,7 +66,7 @@ Module[
     setNames = Keys@sets,
     options = OverwriteOptions[{opt}, ComparisonsBarChart, ComparisonBar]
   },
-
+  (* Print[options]; *)
   Table[
     ComparisonBar[j, comparisons, setNames, maxComparisonCardinality, options]
     , {j, Length@comparisons}

@@ -43,7 +43,7 @@ Options[IndicatorGrid] = Join[
 
 IndicatorGridDiskTooltip[setIndex_, comparsionIndex_, setNames_, comparisonNames_] :=
 Module[
-  { text }
+  { text },
   text = StringJoin[
     "Set: " <> ToString[setNames[[setIndex]]],
     "\nIntersection: " <> ToString[comparisonNames[[comparsionIndex]]]
@@ -71,6 +71,7 @@ Module[
   },
 
 
+  
   x = (2 r + sBIX) comparsionIndex + sBSBC + sBSL;
   y = (2 r + sBIY) setIndex;
   text = IndicatorGridDiskTooltip[setIndex, comparsionIndex, setNames, comparisonNames];
@@ -135,8 +136,8 @@ Module[
   options = OverwriteOptions[{opt}, IndicatorGrid, IndicatorGridDisks];
 
   {
-    IndicatorGridLines[setsNames, comparisonsNames, options],
-    IndicatorGridDisks[setsNames, comparisonsNames, options]
+    IndicatorGridDisks[setsNames, comparisonsNames, options],
+    IndicatorGridLines[setsNames, comparisonsNames, options]
   }
 ];
 
