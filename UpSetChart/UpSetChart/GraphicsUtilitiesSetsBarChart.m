@@ -11,6 +11,7 @@ Begin["`Private`"]
 TooltipOfSetBar[setName_, set_]:=
 StringJoin[
   "Set: " <> ToString[setName],
+  "\nNumber of elements: " <> ToString[Length@set],
   "\nElements: " <> ToString[set]
 ];
 

@@ -20,7 +20,19 @@ DummyData[2] = <|
   "h" -> {15, 34, 77, 73, 20, 60, 93, 84, 56, 45, 34, 81, 16, 91, 86, 81, 41, 81, 21, 34, 72, 18, 18, 25, 36, 68},
   "i" -> {80, 39, 59, 22, 99, 69, 27, 5, 46, 9, 81, 18, 19, 27, 30, 1, 48, 34, 54},
   "j" -> {8, 80, 17, 92, 32, 68, 49, 95, 5, 67, 3, 7, 3, 46, 83, 15, 21, 12, 42, 13, 21, 91, 7, 78, 42, 67}
-|>
+|>;
+
+
+DummyData[3] = <|
+  "Red" -> {"Strawberry", "Apple"},
+  "Green" -> {"Kiwi", "Pear", "Cucumber", "Pickle"},
+  "Tasty" -> {"Kiwi", "Pear"},
+  "Fruit" -> {"Kiwi", "Lemon", "Banana", "Strawberry", "Pear", "Apple", "Carrot"},
+  "Vegetable" -> {"Cucumber", "Pickle"}
+|>;
+
+
+
 
 RandomData::usage = "UpSetDummyData[nSets, mElements] makes nSets each with at most mElements where mElements are RandomInteger[{0,100}]."
 

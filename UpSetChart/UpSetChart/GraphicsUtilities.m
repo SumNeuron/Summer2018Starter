@@ -48,7 +48,7 @@ Module[
   ];
 
   labelWidth = ImageDimensions[ImageCrop[Graphics[sL]]][[1]];
-  labelWidth = First@OptionValue["IndicatorSpacing"];
+  (* labelWidth = First@OptionValue["IndicatorSpacing"]; *)
 
   cBC = ComparisonsBarChart[comparisons, maxComparisonCardinality, setsNames,
     "ColorFunction" -> ColorData[OptionValue["ColorGradient"]],

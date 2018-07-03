@@ -7,6 +7,7 @@ Needs["UpSetChart`CalculationsUtilities`"];
 Needs["UpSetChart`Graphics`"];
 
 UpSetChart::usage="UpSetChart[sets]";
+
 (*
 UpSetChart has two main components, the calculation of the elements unique to
 each comparison and the visualizaiton.
@@ -84,10 +85,12 @@ Options[UpSetChart] = {
 };
 
 
-UpSetChart[sets_?ListOfListsQ, opt: OptionsPattern[]]:=
-UpSetChart[EnsureLabeledSets[sets], opt];
+(* UpSetChart[sets_?ListOfListsQ, opt: OptionsPattern[]]:= *)
+(* UpSetChart[sets_, opt: OptionsPattern[]]:=
+UpSetChart[EnsureLabeledSets[sets], opt]; *)
 
-UpSetChart[sets_?LabeledSetsQ, opt: OptionsPattern[]]:=
+(* UpSetChart[sets_?LabeledSetsQ, opt: OptionsPattern[]]:= *)
+UpSetChart[sets_, opt: OptionsPattern[]]:=
 Module[
   {
     calc, options,
