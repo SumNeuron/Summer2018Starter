@@ -1,4 +1,4 @@
-BeginPackage["UpSetChart`GraphicsUtilitiesIndicatorGrid`"]
+BeginPackage["UpSetChart`Graphics`IndicatorGrid`"]
 
 Needs["UpSetChart`Utilities`"]
 

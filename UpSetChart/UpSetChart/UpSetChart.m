@@ -1,10 +1,25 @@
 BeginPackage["UpSetChart`"]
 
-Needs["UpSetChart`Utilities`"];
-Needs["UpSetChart`UniqueIntersections`"];
-Needs["UpSetChart`Calculations`"];
-Needs["UpSetChart`CalculationsUtilities`"];
-Needs["UpSetChart`Graphics`"];
+DeclarePackage["UpSetChart`Utilities`",
+  {
+    "EnsureLabeledSets", "LabeledSetsQ",
+    "EnsureSets", "ListToSet", "ListOfStringsQ", "ListOfListsQ",
+    "LabelSets", "RepeatCharacter", "NLabelsFromLibrary",
+    "OverwriteOptions"
+  }
+];
+
+DeclarePackage["UpSetChart`UniqueIntersections`", {"UniqueIntersections"}]
+DeclarePackage["UpSetChart`Calculations`", {"CalcThenSortAndFilter"}]
+DeclarePackage["UpSetChart`TestData`", {"DummyData", "RandomData"}]
+DeclarePackage["UpSetChart`Graphics`",{"UpSetGraphics"}]
+
+
+(* Needs["UpSetChart`UniqueIntersections`"]; *)
+
+
+(* DeclarePackage["TestPackage`Component2`", {"foo2","bar2"}];
+DeclarePackage["TestPackage`Component2`Subcomponent2`", {"deeperFoo2","deeperBar2"}]} *)
 
 UpSetChart::usage="UpSetChart[sets]";
 

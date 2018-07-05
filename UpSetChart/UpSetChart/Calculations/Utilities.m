@@ -1,8 +1,8 @@
-BeginPackage["UpSetChart`CalculationsUtilities`"]
+BeginPackage["UpSetChart`Calculations`Utilities`"]
 
-DropEmpty::usage=""
-SortSets::usage=""
-SortComparisons::usage=""
+DropEmpty::usage="DropEmpty[comparisons]: removes comparisons with no unique elements."
+SortSets::usage="SortSets[sets, by]: sorts sets either by name or by cardinality."
+SortComparisons::usage="SortComparisons[sets, by]: sorts sets either by name or by cardinality."
 
 Begin["`Private`"]
 
@@ -32,21 +32,21 @@ SortSets[sets_, by_:"Name"] := Module[
   Return[sets];
 ];
 
-SortComparisons[comparisons_, sets_, by_:"Name"] := Module[
+SortComparisons[comparisons_, sets_:{}, by_:"Name"] := Module[
   {
-   keys = Keys@sets
+   keys = If[Not[sets=={}], Keys@sets,  DeleteDuplicates@Flatten@Keys@comparisons]
   },
 
   (* Sort comparisons (a list of set names) by the order of the set keys. *)
   If[by == "Name",
-   Return[
-     KeySortBy[comparisons, Total[FirstPosition[keys, #] & /@ # &]]];
+    Return[
+      KeySortBy[comparisons, Total[FirstPosition[keys, #] & /@ # &]]];
    ];
 
   (* Sort comparisons (a list of set names) by the number of elements they have (descending) *)
   If[by == "Cardinality",
-   Return[Reverse[SortBy[comparisons, Length@# &]]]
-   ];
+    Return[Reverse[SortBy[comparisons, Length@# &]]]
+  ];
 
   Return[comparisons];
 ];

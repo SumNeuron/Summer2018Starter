@@ -1,4 +1,5 @@
-BeginPackage["UpSetChart`GraphicsUtilitiesSetsBarChart`"]
+BeginPackage["UpSetChart`Graphics`SetsBarChart`"]
+
 Needs["UpSetChart`Utilities`"]
 
 SetsBarChart::usage=StringJoin[
@@ -78,4 +79,5 @@ Module[
 
 
 End[]
+
 EndPackage[]

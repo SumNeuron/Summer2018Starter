@@ -1,11 +1,11 @@
-BeginPackage["UpSetChart`GraphicsUtilities`"]
+BeginPackage["UpSetChart`Graphics`Utilities`"]
 
 
 Needs["UpSetChart`Utilities`"]
-Needs["UpSetChart`GraphicsUtilitiesSetsBarChart`"]
-Needs["UpSetChart`GraphicsUtilitiesComparisonsBarChart`"]
-Needs["UpSetChart`GraphicsUtilitiesSetsLabels`"]
-Needs["UpSetChart`GraphicsUtilitiesIndicatorGrid`"]
+Needs["UpSetChart`Graphics`SetsBarChart`"]
+Needs["UpSetChart`Graphics`ComparisonsBarChart`"]
+Needs["UpSetChart`Graphics`SetsLabels`"]
+Needs["UpSetChart`Graphics`IndicatorGrid`"]
 
 
 

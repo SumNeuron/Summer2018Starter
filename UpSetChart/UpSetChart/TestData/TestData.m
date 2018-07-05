@@ -1,4 +1,4 @@
-BeginPackage["UpSetChart`Data`"]
+BeginPackage["UpSetChart`TestData`"]
 
 Needs["UpSetChart`Utilities`"];
 DummyData[1] = <|
@@ -34,13 +34,15 @@ DummyData[3] = <|
 
 
 
-RandomData::usage = "UpSetDummyData[nSets, mElements] makes nSets each with at most mElements where mElements are RandomInteger[{0,100}]."
+RandomData::usage = StringJoin[
+  "UpSetDummyData[nSets, mElements, r] makes nSets each with a random amount ",
+  "of elements (at most mElements) where mElements are RandomInteger[{0,r}]."
+]
 
 Begin["`Private`"]
-RandomData[nSets_, mElements_: 30] :=
+RandomData[nSets_, mElements_: 30, r_:100] :=
  EnsureLabeledSets[
-  Table[RandomInteger[{0,
-     100}], {nSets}, {RandomInteger[{1, mElements}]}]]
+  Table[RandomInteger[{0, r}], {nSets}, {RandomInteger[{1, mElements}]}]]
 End[]
 
 EndPackage[]
