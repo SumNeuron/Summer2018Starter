@@ -1,0 +1,117 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframDesktop 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       161,          7]
+NotebookDataLength[      3358,        109]
+NotebookOptionsPosition[      2574,         85]
+NotebookOutlinePosition[      2927,        101]
+CellTagsIndexPosition[      2884,         98]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Arbitrary Spacing", "Title",
+ CellChangeTimes->{{3.7397977742026243`*^9, 
+  3.739797776017538*^9}},ExpressionUUID->"74bffb11-5943-4216-a4e3-\
+267ffe87e691"],
+
+Cell[CellGroupData[{
+
+Cell["Constants", "Subsubsection",
+ CellChangeTimes->{{3.739782026811969*^9, 
+  3.739782027675832*^9}},ExpressionUUID->"b76f1ffc-2e05-4fe6-aaba-\
+92463d66a644"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"$BaseSpacerSize", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"$BaseObjectSize", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"$DefaultColorGradient", "=", "\"\<DeepSeaColors\>\""}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.739782001348939*^9, 3.739782016908164*^9}},
+ CellLabel->
+  "In[725]:=",ExpressionUUID->"1b709045-477e-4dee-9b29-976f189a8f56"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Passable functions", "Subsubsection",
+ CellChangeTimes->{{3.739782176063529*^9, 
+  3.739782182687707*^9}},ExpressionUUID->"1ed1067c-116c-4b1d-8fb0-\
+47aa73fa7448"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"LevelSpacerFunction", "[", 
+    RowBox[{"level_Integer", ",", 
+     RowBox[{"levelData_:", 
+      RowBox[{"{", "}"}]}]}], "]"}], ":=", 
+   RowBox[{"$BaseSpacerSize", " ", "/", "level"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"LevelSizeFunction", "[", 
+    RowBox[{"level_Integer", ",", " ", 
+     RowBox[{"levelData_:", 
+      RowBox[{"{", "}"}]}]}], "]"}], ":=", "$BaseObjectSize"}], " ", 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"LevelColorFunction", "[", 
+   RowBox[{"level_Integer", ",", 
+    RowBox[{"levelData_:", 
+     RowBox[{"{", "}"}]}], ",", 
+    RowBox[{"maxDepth_:", "1"}]}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"ColorData", "[", "$DefaultColorGradient", "]"}], "[", 
+   RowBox[{"level", "/", "maxDepth"}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.739782001348939*^9, 3.739782146711669*^9}},
+ CellLabel->
+  "In[728]:=",ExpressionUUID->"784a3a3b-709c-4f88-9069-e0bd29613a65"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{640, 687},
+WindowMargins->{{Automatic, 0}, {Automatic, -1}},
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 7, \
+2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[583, 22, 162, 3, 98, "Title",ExpressionUUID->"74bffb11-5943-4216-a4e3-267ffe87e691"],
+Cell[CellGroupData[{
+Cell[770, 29, 160, 3, 45, "Subsubsection",ExpressionUUID->"b76f1ffc-2e05-4fe6-aaba-92463d66a644"],
+Cell[933, 34, 425, 10, 73, "Input",ExpressionUUID->"1b709045-477e-4dee-9b29-976f189a8f56"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1395, 49, 169, 3, 45, "Subsubsection",ExpressionUUID->"1ed1067c-116c-4b1d-8fb0-47aa73fa7448"],
+Cell[1567, 54, 979, 27, 136, "Input",ExpressionUUID->"784a3a3b-709c-4f88-9069-e0bd29613a65"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
