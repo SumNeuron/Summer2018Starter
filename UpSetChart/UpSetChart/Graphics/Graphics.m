@@ -1,7 +1,8 @@
 BeginPackage["UpSetChart`Graphics`"]
 
 Needs["UpSetChart`Utilities`"]
-DeclarePackage["UpSetChart`Graphics`Utilities`", {"GraphicComponents"}]
+Needs["UpSetChart`Graphics`Utilities`"]
+(* DeclarePackage["UpSetChart`Graphics`Utilities`", {"GraphicComponents"}] *)
 
 
 UpSetGraphics::usage="UpSetGraphics[sets, comparisons]"

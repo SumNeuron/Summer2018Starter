@@ -1,0 +1,1731 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframDesktop 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       161,          7]
+NotebookDataLength[     69156,       1723]
+NotebookOptionsPosition[     66141,       1659]
+NotebookOutlinePosition[     66495,       1675]
+CellTagsIndexPosition[     66452,       1672]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Tabbed UpSet Chart", "Title",
+ CellChangeTimes->{{3.7398198404883547`*^9, 
+  3.739819850120076*^9}},ExpressionUUID->"32c9ae86-205c-413c-8263-\
+b816266538bf"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Quit", "[", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.7398198657868423`*^9, 3.7398198669372387`*^9}},
+ CellLabel->
+  "In[104]:=",ExpressionUUID->"651addc2-ec3b-4986-ba82-da1ee6138f07"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"$Path", "=", 
+   RowBox[{"Prepend", "[", 
+    RowBox[{"$Path", ",", 
+     RowBox[{"NotebookDirectory", "[", "]"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"<<", "UpSetChart`"}]}], "Input",
+ CellChangeTimes->{{3.739819860537328*^9, 3.739819861480348*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"6d802d34-10e7-4f93-889a-7536e7d1721e"],
+
+Cell[CellGroupData[{
+
+Cell["Load Data", "Section",
+ CellChangeTimes->{{3.7398198956826277`*^9, 
+  3.739819896817369*^9}},ExpressionUUID->"7999e3a7-128e-4803-8730-\
+86247591bf1e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"dd", "=", 
+  RowBox[{"UpSetChart`TestData`DummyData", "[", "3", "]"}]}]], "Input",
+ CellLabel->"In[3]:=",ExpressionUUID->"22374e8f-9d43-4ac5-abb3-41a69b5db2f9"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"Red\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\<\"Strawberry\"\>", ",", "\<\"Apple\"\>"}], "}"}]}], ",", 
+   RowBox[{"\<\"Green\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\<\"Kiwi\"\>", ",", "\<\"Pear\"\>", ",", "\<\"Cucumber\"\>", 
+      ",", "\<\"Pickle\"\>"}], "}"}]}], ",", 
+   RowBox[{"\<\"Tasty\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\<\"Kiwi\"\>", ",", "\<\"Pear\"\>"}], "}"}]}], ",", 
+   RowBox[{"\<\"Fruit\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\<\"Kiwi\"\>", ",", "\<\"Lemon\"\>", ",", "\<\"Banana\"\>", 
+      ",", "\<\"Strawberry\"\>", ",", "\<\"Pear\"\>", ",", "\<\"Apple\"\>", 
+      ",", "\<\"Carrot\"\>"}], "}"}]}], ",", 
+   RowBox[{"\<\"Vegetable\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\<\"Cucumber\"\>", ",", "\<\"Pickle\"\>"}], "}"}]}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{3.739822019075552*^9},
+ CellLabel->"Out[3]=",ExpressionUUID->"f2458543-7acb-4308-b47a-9e32d3492be8"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Do calculations", "Section",
+ CellChangeTimes->{{3.739819980005385*^9, 
+  3.739819981869691*^9}},ExpressionUUID->"df7d0e3a-7558-4696-bb8e-\
+734b4508a50a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"calc", "=", 
+  RowBox[{
+  "UpSetChart`Calculations`CalcThenSortAndFilter", "[", "dd", 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.7398199843928337`*^9, 3.739820013943181*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"5241f3a6-4bdc-4097-8b34-56e5262ac067"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"sets\"\>", "\[Rule]", 
+    RowBox[{"\[LeftAssociation]", 
+     RowBox[{
+      RowBox[{"\<\"Fruit\"\>", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"\<\"Kiwi\"\>", ",", "\<\"Lemon\"\>", ",", "\<\"Banana\"\>", 
+         ",", "\<\"Strawberry\"\>", ",", "\<\"Pear\"\>", ",", "\<\"Apple\"\>",
+          ",", "\<\"Carrot\"\>"}], "}"}]}], ",", 
+      RowBox[{"\<\"Green\"\>", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"\<\"Kiwi\"\>", ",", "\<\"Pear\"\>", ",", "\<\"Cucumber\"\>", 
+         ",", "\<\"Pickle\"\>"}], "}"}]}], ",", 
+      RowBox[{"\<\"Red\"\>", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"\<\"Strawberry\"\>", ",", "\<\"Apple\"\>"}], "}"}]}], ",", 
+      RowBox[{"\<\"Tasty\"\>", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"\<\"Kiwi\"\>", ",", "\<\"Pear\"\>"}], "}"}]}], ",", 
+      RowBox[{"\<\"Vegetable\"\>", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"\<\"Cucumber\"\>", ",", "\<\"Pickle\"\>"}], "}"}]}]}], 
+     "\[RightAssociation]"}]}], ",", 
+   RowBox[{"\<\"comparisons\"\>", "\[Rule]", 
+    RowBox[{"\[LeftAssociation]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"{", "\<\"Fruit\"\>", "}"}], "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"\<\"Banana\"\>", ",", "\<\"Carrot\"\>", 
+         ",", "\<\"Lemon\"\>"}], "}"}]}], ",", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\<\"Green\"\>", ",", "\<\"Vegetable\"\>"}], "}"}], "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"\<\"Cucumber\"\>", ",", "\<\"Pickle\"\>"}], "}"}]}], ",", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\<\"Red\"\>", ",", "\<\"Fruit\"\>"}], "}"}], "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"\<\"Apple\"\>", ",", "\<\"Strawberry\"\>"}], "}"}]}], ",", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\<\"Green\"\>", ",", "\<\"Tasty\"\>", ",", "\<\"Fruit\"\>"}],
+         "}"}], "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"\<\"Kiwi\"\>", ",", "\<\"Pear\"\>"}], "}"}]}]}], 
+     "\[RightAssociation]"}]}]}], "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{3.739820017807631*^9, 3.739822026842205*^9},
+ CellLabel->"Out[5]=",ExpressionUUID->"fb8a26a3-84b4-4690-9870-bc82de49c1d1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"gb", "=", 
+  RowBox[{"GroupBy", "[", 
+   RowBox[{
+    RowBox[{"calc", "[", "\"\<comparisons\>\"", "]"}], ",", 
+    RowBox[{
+     RowBox[{"Length", "[", "#", "]"}], "&"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.739820021314782*^9, 3.7398200450223017`*^9}, {
+  3.739820103265129*^9, 3.73982010373599*^9}, {3.739821616542281*^9, 
+  3.7398216315904503`*^9}, {3.7398217013777647`*^9, 3.739821712014122*^9}, {
+  3.739821976400496*^9, 3.739821992936358*^9}},
+ CellLabel->
+  "In[101]:=",ExpressionUUID->"ad992ff4-11ae-4bde-ac74-b180c3244606"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"3", "\[Rule]", 
+    RowBox[{"\[LeftAssociation]", 
+     RowBox[{
+      RowBox[{"{", "\<\"Fruit\"\>", "}"}], "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Banana\"\>", ",", "\<\"Carrot\"\>", 
+        ",", "\<\"Lemon\"\>"}], "}"}]}], "\[RightAssociation]"}]}], ",", 
+   RowBox[{"2", "\[Rule]", 
+    RowBox[{"\[LeftAssociation]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\<\"Green\"\>", ",", "\<\"Vegetable\"\>"}], "}"}], "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"\<\"Cucumber\"\>", ",", "\<\"Pickle\"\>"}], "}"}]}], ",", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\<\"Red\"\>", ",", "\<\"Fruit\"\>"}], "}"}], "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"\<\"Apple\"\>", ",", "\<\"Strawberry\"\>"}], "}"}]}], ",", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\<\"Green\"\>", ",", "\<\"Tasty\"\>", ",", "\<\"Fruit\"\>"}],
+         "}"}], "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"\<\"Kiwi\"\>", ",", "\<\"Pear\"\>"}], "}"}]}]}], 
+     "\[RightAssociation]"}]}]}], "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{3.7398219932417316`*^9},
+ CellLabel->
+  "Out[101]=",ExpressionUUID->"ee58c51c-29b1-41fe-b5de-b33e031b038c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GroupBy", "[", 
+  RowBox[{
+   RowBox[{"calc", "[", "\"\<comparisons\>\"", "]"}], ",", 
+   RowBox[{
+    RowBox[{"Length", "[", "#", "]"}], "&"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7398217389515333`*^9, 3.739821794034478*^9}},
+ CellLabel->"In[85]:=",ExpressionUUID->"616b4e56-49e1-430c-aa8e-567a281fd374"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"3", "\[Rule]", 
+    RowBox[{"\[LeftAssociation]", 
+     RowBox[{
+      RowBox[{"{", "\<\"Fruit\"\>", "}"}], "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Banana\"\>", ",", "\<\"Carrot\"\>", 
+        ",", "\<\"Lemon\"\>"}], "}"}]}], "\[RightAssociation]"}]}], ",", 
+   RowBox[{"2", "\[Rule]", 
+    RowBox[{"\[LeftAssociation]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\<\"Green\"\>", ",", "\<\"Vegetable\"\>"}], "}"}], "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"\<\"Cucumber\"\>", ",", "\<\"Pickle\"\>"}], "}"}]}], ",", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\<\"Red\"\>", ",", "\<\"Fruit\"\>"}], "}"}], "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"\<\"Apple\"\>", ",", "\<\"Strawberry\"\>"}], "}"}]}], ",", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\<\"Green\"\>", ",", "\<\"Tasty\"\>", ",", "\<\"Fruit\"\>"}],
+         "}"}], "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"\<\"Kiwi\"\>", ",", "\<\"Pear\"\>"}], "}"}]}]}], 
+     "\[RightAssociation]"}]}]}], "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{{3.739821761391436*^9, 3.739821794519333*^9}},
+ CellLabel->"Out[85]=",ExpressionUUID->"87c688d5-27f8-4e44-8206-7f476dbab960"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Key", "@", 
+  RowBox[{"calc", "[", "\"\<comparisons\>\"", "]"}]}]], "Input",
+ CellChangeTimes->{{3.739821674493099*^9, 3.739821676373761*^9}, {
+  3.739821717849318*^9, 3.739821723702574*^9}},
+ CellLabel->"In[79]:=",ExpressionUUID->"b9e500fc-d158-4273-88c3-eb9f7cea53c8"],
+
+Cell[BoxData[
+ RowBox[{"Key", "[", 
+  RowBox[{"\[LeftAssociation]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", "\<\"Fruit\"\>", "}"}], "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"\<\"Banana\"\>", ",", "\<\"Carrot\"\>", ",", "\<\"Lemon\"\>"}],
+       "}"}]}], ",", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\<\"Green\"\>", ",", "\<\"Vegetable\"\>"}], "}"}], "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"\<\"Cucumber\"\>", ",", "\<\"Pickle\"\>"}], "}"}]}], ",", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\<\"Red\"\>", ",", "\<\"Fruit\"\>"}], "}"}], "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"\<\"Apple\"\>", ",", "\<\"Strawberry\"\>"}], "}"}]}], ",", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\<\"Green\"\>", ",", "\<\"Tasty\"\>", ",", "\<\"Fruit\"\>"}], 
+      "}"}], "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"\<\"Kiwi\"\>", ",", "\<\"Pear\"\>"}], "}"}]}]}], 
+   "\[RightAssociation]"}], "]"}]], "Output",
+ CellChangeTimes->{
+  3.739821676680572*^9, {3.739821718748024*^9, 3.739821724022493*^9}},
+ CellLabel->"Out[79]=",ExpressionUUID->"b829e910-7d65-4612-8310-904ae573c9a4"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"gb", "=", 
+  RowBox[{"Map", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Association", "@@", 
+      RowBox[{"Map", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"#", "\[Rule]", " ", 
+          RowBox[{
+           RowBox[{"calc", "[", "\"\<comparisons\>\"", "]"}], "[", "#", 
+           "]"}]}], "&"}], ",", "#"}], "]"}]}], "&"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"GroupBy", "[", 
+     RowBox[{
+      RowBox[{"Keys", "@", 
+       RowBox[{"calc", "[", "\"\<comparisons\>\"", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"Length", "@", "#"}], "&"}]}], "]"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.739821943926569*^9, 3.739821944456594*^9}, {
+  3.739822005737917*^9, 3.739822007097275*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"692fd3a3-f626-4b83-bdc3-daf84650d427"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"1", "\[Rule]", 
+    RowBox[{"\[LeftAssociation]", 
+     RowBox[{
+      RowBox[{"{", "\<\"Fruit\"\>", "}"}], "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Banana\"\>", ",", "\<\"Carrot\"\>", 
+        ",", "\<\"Lemon\"\>"}], "}"}]}], "\[RightAssociation]"}]}], ",", 
+   RowBox[{"2", "\[Rule]", 
+    RowBox[{"\[LeftAssociation]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\<\"Green\"\>", ",", "\<\"Vegetable\"\>"}], "}"}], "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"\<\"Cucumber\"\>", ",", "\<\"Pickle\"\>"}], "}"}]}], ",", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\<\"Red\"\>", ",", "\<\"Fruit\"\>"}], "}"}], "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"\<\"Apple\"\>", ",", "\<\"Strawberry\"\>"}], "}"}]}]}], 
+     "\[RightAssociation]"}]}], ",", 
+   RowBox[{"3", "\[Rule]", 
+    RowBox[{"\[LeftAssociation]", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"\<\"Green\"\>", ",", "\<\"Tasty\"\>", ",", "\<\"Fruit\"\>"}], 
+       "}"}], "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Kiwi\"\>", ",", "\<\"Pear\"\>"}], "}"}]}], 
+     "\[RightAssociation]"}]}]}], "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{
+  3.739821944836791*^9, {3.7398220072782373`*^9, 3.739822029096705*^9}},
+ CellLabel->"Out[6]=",ExpressionUUID->"01632a01-e4fc-46f6-98bc-19605ca5abbe"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Calculate components by size", "Section",
+ CellChangeTimes->{{3.739819938652157*^9, 
+  3.739819953290524*^9}},ExpressionUUID->"04f66cd7-6b81-48a9-b848-\
+21364fedd7e9"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"gc", "=", "UpSetChart`Graphics`Utilities`GraphicComponents"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.7398199563946323`*^9, 3.7398199630429287`*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"67688a54-9dc7-4090-8090-b792c427d57b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"gbgc", "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Graphics", "[", 
+       RowBox[{"#", ",", 
+        RowBox[{"ImageSize", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"400", ",", "100"}], "}"}]}]}], "\[IndentingNewLine]", 
+       RowBox[{"(*", 
+        RowBox[{",", " ", 
+         RowBox[{"BaselinePosition", "\[Rule]", "Bottom"}]}], "*)"}], 
+       "\[IndentingNewLine]", 
+       RowBox[{"(*", 
+        RowBox[{",", " ", 
+         RowBox[{"AlignmentPoint", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"0", ",", "0"}], "}"}]}]}], "*)"}], "\[IndentingNewLine]", 
+       "]"}], "&"}], "/@", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"gc", "[", 
+         RowBox[{
+          RowBox[{"calc", "[", "\"\<sets\>\"", "]"}], ",", "#"}], " ", "]"}], 
+        "&"}], "/@", "gb"}], ")"}]}]}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"gbgc", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Graphics", "[", "#", "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{",", " ", 
+        RowBox[{"BaselinePosition", "\[Rule]", "Bottom"}]}], "*)"}], 
+      "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{",", " ", 
+        RowBox[{"AlignmentPoint", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0"}], "}"}]}]}], "*)"}], "\[IndentingNewLine]", 
+      "]"}], "&"}], "/@", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"gc", "[", 
+        RowBox[{
+         RowBox[{"calc", "[", "\"\<sets\>\"", "]"}], ",", "#"}], "]"}], "&"}],
+       "/@", "gb"}], ")"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.739820305830008*^9, 3.739820332431096*^9}, {
+  3.73982040775679*^9, 3.739820458137087*^9}, {3.739820509141444*^9, 
+  3.739820512711591*^9}, {3.739820589336192*^9, 3.739820633264599*^9}, {
+  3.7398208815834084`*^9, 3.739820886215626*^9}, {3.73982194991262*^9, 
+  3.739821967223604*^9}, {3.739822038501145*^9, 3.739822038705325*^9}, {
+  3.739822145590423*^9, 3.739822146076522*^9}},
+ CellLabel->"In[12]:=",ExpressionUUID->"9ffdd5ef-fe51-41a1-94eb-2cfd5226a02f"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"1", "\[Rule]", 
+    GraphicsBox[{{
+       {RGBColor[0.772061, 0.92462, 0.998703], 
+        TagBox[
+         TooltipBox[RectangleBox[{0, 2}, {7, 4}],
+          
+          "\"Set: Fruit\\nNumber of elements: 7\\nElements: {Kiwi, Lemon, \
+Banana, Strawberry, Pear, Apple, Carrot}\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, 
+          "Set: Fruit\nNumber of elements: 7\nElements: {Kiwi, Lemon, Banana, \
+Strawberry, Pear, Apple, Carrot}", "Tooltip"]& ]}, 
+       {RGBColor[
+        0.24882928571428573`, 0.42314085714285715`, 0.8732312857142858], 
+        TagBox[
+         TooltipBox[RectangleBox[{3, 5}, {7, 7}],
+          
+          "\"Set: Green\\nNumber of elements: 4\\nElements: {Kiwi, Pear, \
+Cucumber, Pickle}\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, 
+          "Set: Green\nNumber of elements: 4\nElements: {Kiwi, Pear, \
+Cucumber, Pickle}", "Tooltip"]& ]}, 
+       {RGBColor[0.29575928571428567`, 0.09888902857142857, 0.634997], 
+        TagBox[
+         TooltipBox[RectangleBox[{5, 8}, {7, 10}],
+          
+          "\"Set: Red\\nNumber of elements: 2\\nElements: {Strawberry, Apple}\
+\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, 
+          "Set: Red\nNumber of elements: 2\nElements: {Strawberry, Apple}", 
+          "Tooltip"]& ]}, 
+       {RGBColor[0.29575928571428567`, 0.09888902857142857, 0.634997], 
+        TagBox[
+         TooltipBox[RectangleBox[{5, 11}, {7, 13}],
+          "\"Set: Tasty\\nNumber of elements: 2\\nElements: {Kiwi, Pear}\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, 
+          "Set: Tasty\nNumber of elements: 2\nElements: {Kiwi, Pear}", 
+          "Tooltip"]& ]}, 
+       {RGBColor[0.29575928571428567`, 0.09888902857142857, 0.634997], 
+        TagBox[
+         TooltipBox[RectangleBox[{5, 14}, {7, 16}],
+          
+          "\"Set: Vegetable\\nNumber of elements: 2\\nElements: {Cucumber, \
+Pickle}\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, 
+          "Set: Vegetable\nNumber of elements: 2\nElements: {Cucumber, \
+Pickle}", "Tooltip"]& ]}}, 
+      {RGBColor[0.772061, 0.92462, 0.998703], 
+       TagBox[
+        TooltipBox[RectangleBox[{65, 17}, {67, 20}],
+         "\"Unique to: {Fruit}\\nNumber of elements: 3\\nElements: {Banana, \
+Carrot, Lemon}\"",
+         TooltipStyle->"TextStyling"],
+        Annotation[#, 
+         "Unique to: {Fruit}\nNumber of elements: 3\nElements: {Banana, \
+Carrot, Lemon}", "Tooltip"]& ]}, {InsetBox[
+        StyleBox["\<\"Fruit\"\>",
+         StripOnInput->False,
+         FontSize->12], {9, 3}, {-1, 0}], InsetBox[
+        StyleBox["\<\"Green\"\>",
+         StripOnInput->False,
+         FontSize->12], {9, 6}, {-1, 0}], InsetBox[
+        StyleBox["\<\"Red\"\>",
+         StripOnInput->False,
+         FontSize->12], {9, 9}, {-1, 0}], InsetBox[
+        StyleBox["\<\"Tasty\"\>",
+         StripOnInput->False,
+         FontSize->12], {9, 12}, {-1, 0}], InsetBox[
+        StyleBox["\<\"Vegetable\"\>",
+         StripOnInput->False,
+         FontSize->12], {9, 15}, {-1, 0}]}, {{
+        {GrayLevel[0], 
+         TagBox[
+          TooltipBox[DiskBox[{66, 3}],
+           "\"Set: Fruit\\nIntersection: {Fruit}\"",
+           TooltipStyle->"TextStyling"],
+          Annotation[#, "Set: Fruit\nIntersection: {Fruit}", "Tooltip"]& ]}, 
+        {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
+         TagBox[
+          TooltipBox[DiskBox[{66, 6}],
+           "\"Set: Green\\nIntersection: {Fruit}\"",
+           TooltipStyle->"TextStyling"],
+          Annotation[#, "Set: Green\nIntersection: {Fruit}", "Tooltip"]& ]}, 
+        {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
+         TagBox[
+          TooltipBox[DiskBox[{66, 9}],
+           "\"Set: Red\\nIntersection: {Fruit}\"",
+           TooltipStyle->"TextStyling"],
+          Annotation[#, "Set: Red\nIntersection: {Fruit}", "Tooltip"]& ]}, 
+        {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
+         TagBox[
+          TooltipBox[DiskBox[{66, 12}],
+           "\"Set: Tasty\\nIntersection: {Fruit}\"",
+           TooltipStyle->"TextStyling"],
+          Annotation[#, "Set: Tasty\nIntersection: {Fruit}", "Tooltip"]& ]}, 
+        {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
+         TagBox[
+          TooltipBox[DiskBox[{66, 15}],
+           "\"Set: Vegetable\\nIntersection: {Fruit}\"",
+           TooltipStyle->"TextStyling"],
+          
+          Annotation[#, "Set: Vegetable\nIntersection: {Fruit}", 
+           "Tooltip"]& ]}}, 
+       {GrayLevel[0], 
+        TagBox[
+         TooltipBox[
+          RectangleBox[NCache[{Rational[197, 3], 3}, {65.66666666666667, 3}], 
+           NCache[{Rational[199, 3], 3}, {66.33333333333333, 3}]],
+          "\"Set: 1\\nIntersection: {Fruit}\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "Set: 1\nIntersection: {Fruit}", "Tooltip"]& ]}}}]}], 
+   ",", 
+   RowBox[{"2", "\[Rule]", 
+    GraphicsBox[{{
+       {RGBColor[0.772061, 0.92462, 0.998703], 
+        TagBox[
+         TooltipBox[RectangleBox[{0, 2}, {7, 4}],
+          
+          "\"Set: Fruit\\nNumber of elements: 7\\nElements: {Kiwi, Lemon, \
+Banana, Strawberry, Pear, Apple, Carrot}\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, 
+          "Set: Fruit\nNumber of elements: 7\nElements: {Kiwi, Lemon, Banana, \
+Strawberry, Pear, Apple, Carrot}", "Tooltip"]& ]}, 
+       {RGBColor[
+        0.24882928571428573`, 0.42314085714285715`, 0.8732312857142858], 
+        TagBox[
+         TooltipBox[RectangleBox[{3, 5}, {7, 7}],
+          
+          "\"Set: Green\\nNumber of elements: 4\\nElements: {Kiwi, Pear, \
+Cucumber, Pickle}\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, 
+          
+          "Set: Green\nNumber of elements: 4\nElements: {Kiwi, Pear, \
+Cucumber, Pickle}", "Tooltip"]& ]}, 
+       {RGBColor[0.29575928571428567`, 0.09888902857142857, 0.634997], 
+        TagBox[
+         TooltipBox[RectangleBox[{5, 8}, {7, 10}],
+          
+          "\"Set: Red\\nNumber of elements: 2\\nElements: {Strawberry, Apple}\
+\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, 
+          "Set: Red\nNumber of elements: 2\nElements: {Strawberry, Apple}", 
+          "Tooltip"]& ]}, 
+       {RGBColor[0.29575928571428567`, 0.09888902857142857, 0.634997], 
+        TagBox[
+         TooltipBox[RectangleBox[{5, 11}, {7, 13}],
+          "\"Set: Tasty\\nNumber of elements: 2\\nElements: {Kiwi, Pear}\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, 
+          "Set: Tasty\nNumber of elements: 2\nElements: {Kiwi, Pear}", 
+          "Tooltip"]& ]}, 
+       {RGBColor[0.29575928571428567`, 0.09888902857142857, 0.634997], 
+        TagBox[
+         TooltipBox[RectangleBox[{5, 14}, {7, 16}],
+          
+          "\"Set: Vegetable\\nNumber of elements: 2\\nElements: {Cucumber, \
+Pickle}\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, 
+          "Set: Vegetable\nNumber of elements: 2\nElements: {Cucumber, \
+Pickle}", "Tooltip"]& ]}}, {
+       {RGBColor[0.772061, 0.92462, 0.998703], 
+        TagBox[
+         TooltipBox[RectangleBox[{65, 17}, {67, 19}],
+          
+          "\"Unique to: {Green, Vegetable}\\nNumber of elements: \
+2\\nElements: {Cucumber, Pickle}\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, 
+          "Unique to: {Green, Vegetable}\nNumber of elements: 2\nElements: \
+{Cucumber, Pickle}", "Tooltip"]& ]}, 
+       {RGBColor[0.772061, 0.92462, 0.998703], 
+        TagBox[
+         TooltipBox[RectangleBox[{68, 17}, {70, 19}],
+          
+          "\"Unique to: {Red, Fruit}\\nNumber of elements: 2\\nElements: \
+{Apple, Strawberry}\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, 
+          "Unique to: {Red, Fruit}\nNumber of elements: 2\nElements: {Apple, \
+Strawberry}", "Tooltip"]& ]}}, {InsetBox[
+        StyleBox["\<\"Fruit\"\>",
+         StripOnInput->False,
+         FontSize->12], {9, 3}, {-1, 0}], InsetBox[
+        StyleBox["\<\"Green\"\>",
+         StripOnInput->False,
+         FontSize->12], {9, 6}, {-1, 0}], InsetBox[
+        StyleBox["\<\"Red\"\>",
+         StripOnInput->False,
+         FontSize->12], {9, 9}, {-1, 0}], InsetBox[
+        StyleBox["\<\"Tasty\"\>",
+         StripOnInput->False,
+         FontSize->12], {9, 12}, {-1, 0}], InsetBox[
+        StyleBox["\<\"Vegetable\"\>",
+         StripOnInput->False,
+         FontSize->12], {9, 15}, {-1, 0}]}, {{{
+         {RGBColor[
+          0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
+          TagBox[
+           TooltipBox[DiskBox[{66, 3}],
+            "\"Set: Fruit\\nIntersection: {Green, Vegetable}\"",
+            TooltipStyle->"TextStyling"],
+           
+           Annotation[#, "Set: Fruit\nIntersection: {Green, Vegetable}", 
+            "Tooltip"]& ]}, 
+         {GrayLevel[0], 
+          TagBox[
+           TooltipBox[DiskBox[{69, 3}],
+            "\"Set: Fruit\\nIntersection: {Red, Fruit}\"",
+            TooltipStyle->"TextStyling"],
+           
+           Annotation[#, "Set: Fruit\nIntersection: {Red, Fruit}", 
+            "Tooltip"]& ]}}, {
+         {GrayLevel[0], 
+          TagBox[
+           TooltipBox[DiskBox[{66, 6}],
+            "\"Set: Green\\nIntersection: {Green, Vegetable}\"",
+            TooltipStyle->"TextStyling"],
+           
+           Annotation[#, "Set: Green\nIntersection: {Green, Vegetable}", 
+            "Tooltip"]& ]}, 
+         {RGBColor[
+          0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
+          TagBox[
+           TooltipBox[DiskBox[{69, 6}],
+            "\"Set: Green\\nIntersection: {Red, Fruit}\"",
+            TooltipStyle->"TextStyling"],
+           
+           Annotation[#, "Set: Green\nIntersection: {Red, Fruit}", 
+            "Tooltip"]& ]}}, {
+         {RGBColor[
+          0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
+          TagBox[
+           TooltipBox[DiskBox[{66, 9}],
+            "\"Set: Red\\nIntersection: {Green, Vegetable}\"",
+            TooltipStyle->"TextStyling"],
+           
+           Annotation[#, "Set: Red\nIntersection: {Green, Vegetable}", 
+            "Tooltip"]& ]}, 
+         {GrayLevel[0], 
+          TagBox[
+           TooltipBox[DiskBox[{69, 9}],
+            "\"Set: Red\\nIntersection: {Red, Fruit}\"",
+            TooltipStyle->"TextStyling"],
+           
+           Annotation[#, "Set: Red\nIntersection: {Red, Fruit}", 
+            "Tooltip"]& ]}}, {
+         {RGBColor[
+          0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
+          TagBox[
+           TooltipBox[DiskBox[{66, 12}],
+            "\"Set: Tasty\\nIntersection: {Green, Vegetable}\"",
+            TooltipStyle->"TextStyling"],
+           
+           Annotation[#, "Set: Tasty\nIntersection: {Green, Vegetable}", 
+            "Tooltip"]& ]}, 
+         {RGBColor[
+          0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
+          TagBox[
+           TooltipBox[DiskBox[{69, 12}],
+            "\"Set: Tasty\\nIntersection: {Red, Fruit}\"",
+            TooltipStyle->"TextStyling"],
+           
+           Annotation[#, "Set: Tasty\nIntersection: {Red, Fruit}", 
+            "Tooltip"]& ]}}, {
+         {GrayLevel[0], 
+          TagBox[
+           TooltipBox[DiskBox[{66, 15}],
+            "\"Set: Vegetable\\nIntersection: {Green, Vegetable}\"",
+            TooltipStyle->"TextStyling"],
+           
+           Annotation[#, "Set: Vegetable\nIntersection: {Green, Vegetable}", 
+            "Tooltip"]& ]}, 
+         {RGBColor[
+          0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
+          TagBox[
+           TooltipBox[DiskBox[{69, 15}],
+            "\"Set: Vegetable\\nIntersection: {Red, Fruit}\"",
+            TooltipStyle->"TextStyling"],
+           
+           Annotation[#, "Set: Vegetable\nIntersection: {Red, Fruit}", 
+            "Tooltip"]& ]}}}, {
+        {GrayLevel[0], 
+         TagBox[
+          
+          TooltipBox[
+           RectangleBox[NCache[{Rational[197, 3], 6}, {65.66666666666667, 6}],
+             NCache[{Rational[199, 3], 15}, {66.33333333333333, 15}]],
+           "\"Set: 2\\nIntersection: {Green, Vegetable}\"",
+           TooltipStyle->"TextStyling"],
+          
+          Annotation[#, "Set: 2\nIntersection: {Green, Vegetable}", 
+           "Tooltip"]& ]}, 
+        {GrayLevel[0], 
+         TagBox[
+          
+          TooltipBox[
+           RectangleBox[NCache[{Rational[206, 3], 3}, {68.66666666666667, 3}],
+             NCache[{Rational[208, 3], 9}, {69.33333333333333, 9}]],
+           "\"Set: 3\\nIntersection: {Red, Fruit}\"",
+           TooltipStyle->"TextStyling"],
+          
+          Annotation[#, "Set: 3\nIntersection: {Red, Fruit}", 
+           "Tooltip"]& ]}}}}]}], ",", 
+   RowBox[{"3", "\[Rule]", 
+    GraphicsBox[{{
+       {RGBColor[0.772061, 0.92462, 0.998703], 
+        TagBox[
+         TooltipBox[RectangleBox[{0, 2}, {7, 4}],
+          
+          "\"Set: Fruit\\nNumber of elements: 7\\nElements: {Kiwi, Lemon, \
+Banana, Strawberry, Pear, Apple, Carrot}\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, 
+          "Set: Fruit\nNumber of elements: 7\nElements: {Kiwi, Lemon, Banana, \
+Strawberry, Pear, Apple, Carrot}", "Tooltip"]& ]}, 
+       {RGBColor[
+        0.24882928571428573`, 0.42314085714285715`, 0.8732312857142858], 
+        TagBox[
+         TooltipBox[RectangleBox[{3, 5}, {7, 7}],
+          
+          "\"Set: Green\\nNumber of elements: 4\\nElements: {Kiwi, Pear, \
+Cucumber, Pickle}\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, 
+          "Set: Green\nNumber of elements: 4\nElements: {Kiwi, Pear, \
+Cucumber, Pickle}", "Tooltip"]& ]}, 
+       {RGBColor[0.29575928571428567`, 0.09888902857142857, 0.634997], 
+        TagBox[
+         TooltipBox[RectangleBox[{5, 8}, {7, 10}],
+          
+          "\"Set: Red\\nNumber of elements: 2\\nElements: {Strawberry, Apple}\
+\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, 
+          "Set: Red\nNumber of elements: 2\nElements: {Strawberry, Apple}", 
+          "Tooltip"]& ]}, 
+       {RGBColor[0.29575928571428567`, 0.09888902857142857, 0.634997], 
+        TagBox[
+         TooltipBox[RectangleBox[{5, 11}, {7, 13}],
+          "\"Set: Tasty\\nNumber of elements: 2\\nElements: {Kiwi, Pear}\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, 
+          "Set: Tasty\nNumber of elements: 2\nElements: {Kiwi, Pear}", 
+          "Tooltip"]& ]}, 
+       {RGBColor[0.29575928571428567`, 0.09888902857142857, 0.634997], 
+        TagBox[
+         TooltipBox[RectangleBox[{5, 14}, {7, 16}],
+          
+          "\"Set: Vegetable\\nNumber of elements: 2\\nElements: {Cucumber, \
+Pickle}\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, 
+          "Set: Vegetable\nNumber of elements: 2\nElements: {Cucumber, \
+Pickle}", "Tooltip"]& ]}}, 
+      {RGBColor[0.772061, 0.92462, 0.998703], 
+       TagBox[
+        TooltipBox[RectangleBox[{65, 17}, {67, 19}],
+         "\"Unique to: {Green, Tasty, Fruit}\\nNumber of elements: \
+2\\nElements: {Kiwi, Pear}\"",
+         TooltipStyle->"TextStyling"],
+        Annotation[#, 
+         "Unique to: {Green, Tasty, Fruit}\nNumber of elements: 2\nElements: \
+{Kiwi, Pear}", "Tooltip"]& ]}, {InsetBox[
+        StyleBox["\<\"Fruit\"\>",
+         StripOnInput->False,
+         FontSize->12], {9, 3}, {-1, 0}], InsetBox[
+        StyleBox["\<\"Green\"\>",
+         StripOnInput->False,
+         FontSize->12], {9, 6}, {-1, 0}], InsetBox[
+        StyleBox["\<\"Red\"\>",
+         StripOnInput->False,
+         FontSize->12], {9, 9}, {-1, 0}], InsetBox[
+        StyleBox["\<\"Tasty\"\>",
+         StripOnInput->False,
+         FontSize->12], {9, 12}, {-1, 0}], InsetBox[
+        StyleBox["\<\"Vegetable\"\>",
+         StripOnInput->False,
+         FontSize->12], {9, 15}, {-1, 0}]}, {{
+        {GrayLevel[0], 
+         TagBox[
+          TooltipBox[DiskBox[{66, 3}],
+           "\"Set: Fruit\\nIntersection: {Green, Tasty, Fruit}\"",
+           TooltipStyle->"TextStyling"],
+          
+          Annotation[#, "Set: Fruit\nIntersection: {Green, Tasty, Fruit}", 
+           "Tooltip"]& ]}, 
+        {GrayLevel[0], 
+         TagBox[
+          TooltipBox[DiskBox[{66, 6}],
+           "\"Set: Green\\nIntersection: {Green, Tasty, Fruit}\"",
+           TooltipStyle->"TextStyling"],
+          
+          Annotation[#, "Set: Green\nIntersection: {Green, Tasty, Fruit}", 
+           "Tooltip"]& ]}, 
+        {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
+         TagBox[
+          TooltipBox[DiskBox[{66, 9}],
+           "\"Set: Red\\nIntersection: {Green, Tasty, Fruit}\"",
+           TooltipStyle->"TextStyling"],
+          
+          Annotation[#, "Set: Red\nIntersection: {Green, Tasty, Fruit}", 
+           "Tooltip"]& ]}, 
+        {GrayLevel[0], 
+         TagBox[
+          TooltipBox[DiskBox[{66, 12}],
+           "\"Set: Tasty\\nIntersection: {Green, Tasty, Fruit}\"",
+           TooltipStyle->"TextStyling"],
+          
+          Annotation[#, "Set: Tasty\nIntersection: {Green, Tasty, Fruit}", 
+           "Tooltip"]& ]}, 
+        {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
+         TagBox[
+          TooltipBox[DiskBox[{66, 15}],
+           "\"Set: Vegetable\\nIntersection: {Green, Tasty, Fruit}\"",
+           TooltipStyle->"TextStyling"],
+          
+          Annotation[#, "Set: Vegetable\nIntersection: {Green, Tasty, Fruit}",
+            "Tooltip"]& ]}}, 
+       {GrayLevel[0], 
+        TagBox[
+         TooltipBox[
+          RectangleBox[NCache[{Rational[197, 3], 3}, {65.66666666666667, 3}], 
+           NCache[{Rational[199, 3], 12}, {66.33333333333333, 12}]],
+          "\"Set: 2\\nIntersection: {Green, Tasty, Fruit}\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "Set: 2\nIntersection: {Green, Tasty, Fruit}", 
+          "Tooltip"]& ]}}}]}]}], "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{{3.7398203088477373`*^9, 3.739820332972742*^9}, 
+   3.739820420402376*^9, 3.7398205131252747`*^9, {3.739820598798377*^9, 
+   3.7398206157725983`*^9}, {3.7398208820285892`*^9, 3.739820886617124*^9}, 
+   3.739821623571192*^9, 3.739821967517603*^9, {3.7398220109682417`*^9, 
+   3.739822039351643*^9}, 3.73982214661065*^9},
+ CellLabel->"Out[12]=",ExpressionUUID->"ac1810c7-581f-41ab-9249-3ce62f685cbd"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GraphicsColumn", "[", 
+  RowBox[{"Values", "[", "gbgc", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7398200556210957`*^9, 3.7398202114912853`*^9}, {
+  3.7398202850957403`*^9, 3.739820311176108*^9}},
+ CellLabel->"In[72]:=",ExpressionUUID->"17d7a16e-338e-4312-b649-8b75d475e197"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, InsetBox[
+    GraphicsBox[{{
+       {RGBColor[0.772061, 0.92462, 0.998703], 
+        TagBox[
+         TooltipBox[RectangleBox[{0, 2}, {7, 4}],
+          
+          "\"Set: Fruit\\nNumber of elements: 7\\nElements: {Kiwi, Lemon, \
+Banana, Strawberry, Pear, Apple, Carrot}\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, 
+          "Set: Fruit\nNumber of elements: 7\nElements: {Kiwi, Lemon, Banana, \
+Strawberry, Pear, Apple, Carrot}", "Tooltip"]& ]}, 
+       {RGBColor[
+        0.24882928571428573`, 0.42314085714285715`, 0.8732312857142858], 
+        TagBox[
+         TooltipBox[RectangleBox[{3, 5}, {7, 7}],
+          
+          "\"Set: Green\\nNumber of elements: 4\\nElements: {Kiwi, Pear, \
+Cucumber, Pickle}\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, 
+          "Set: Green\nNumber of elements: 4\nElements: {Kiwi, Pear, \
+Cucumber, Pickle}", "Tooltip"]& ]}, 
+       {RGBColor[0.29575928571428567`, 0.09888902857142857, 0.634997], 
+        TagBox[
+         TooltipBox[RectangleBox[{5, 8}, {7, 10}],
+          
+          "\"Set: Red\\nNumber of elements: 2\\nElements: {Strawberry, Apple}\
+\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, 
+          "Set: Red\nNumber of elements: 2\nElements: {Strawberry, Apple}", 
+          "Tooltip"]& ]}, 
+       {RGBColor[0.29575928571428567`, 0.09888902857142857, 0.634997], 
+        TagBox[
+         TooltipBox[RectangleBox[{5, 11}, {7, 13}],
+          "\"Set: Tasty\\nNumber of elements: 2\\nElements: {Kiwi, Pear}\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, 
+          "Set: Tasty\nNumber of elements: 2\nElements: {Kiwi, Pear}", 
+          "Tooltip"]& ]}, 
+       {RGBColor[0.29575928571428567`, 0.09888902857142857, 0.634997], 
+        TagBox[
+         TooltipBox[RectangleBox[{5, 14}, {7, 16}],
+          
+          "\"Set: Vegetable\\nNumber of elements: 2\\nElements: {Cucumber, \
+Pickle}\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, 
+          "Set: Vegetable\nNumber of elements: 2\nElements: {Cucumber, \
+Pickle}", "Tooltip"]& ]}}, {
+       {RGBColor[0.772061, 0.92462, 0.998703], 
+        TagBox[
+         TooltipBox[RectangleBox[{65, 17}, {67, 20}],
+          
+          "\"Unique to: {Fruit}\\nNumber of elements: 3\\nElements: {Banana, \
+Carrot, Lemon}\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, 
+          "Unique to: {Fruit}\nNumber of elements: 3\nElements: {Banana, \
+Carrot, Lemon}", "Tooltip"]& ]}, 
+       {RGBColor[0.26669366666666666`, 0.550462, 0.926485], 
+        TagBox[
+         TooltipBox[RectangleBox[{68, 17}, {70, 19}],
+          
+          "\"Unique to: {Green, Vegetable}\\nNumber of elements: \
+2\\nElements: {Cucumber, Pickle}\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, 
+          "Unique to: {Green, Vegetable}\nNumber of elements: 2\nElements: \
+{Cucumber, Pickle}", "Tooltip"]& ]}, 
+       {RGBColor[0.26669366666666666`, 0.550462, 0.926485], 
+        TagBox[
+         TooltipBox[RectangleBox[{71, 17}, {73, 19}],
+          
+          "\"Unique to: {Red, Fruit}\\nNumber of elements: 2\\nElements: \
+{Apple, Strawberry}\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, 
+          "Unique to: {Red, Fruit}\nNumber of elements: 2\nElements: {Apple, \
+Strawberry}", "Tooltip"]& ]}, 
+       {RGBColor[0.26669366666666666`, 0.550462, 0.926485], 
+        TagBox[
+         TooltipBox[RectangleBox[{74, 17}, {76, 19}],
+          
+          "\"Unique to: {Green, Tasty, Fruit}\\nNumber of elements: \
+2\\nElements: {Kiwi, Pear}\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, 
+          "Unique to: {Green, Tasty, Fruit}\nNumber of elements: 2\nElements: \
+{Kiwi, Pear}", "Tooltip"]& ]}}, {InsetBox[
+        StyleBox["\<\"Fruit\"\>",
+         StripOnInput->False,
+         FontSize->12], {9, 3}, {-1, 0}], InsetBox[
+        StyleBox["\<\"Green\"\>",
+         StripOnInput->False,
+         FontSize->12], {9, 6}, {-1, 0}], InsetBox[
+        StyleBox["\<\"Red\"\>",
+         StripOnInput->False,
+         FontSize->12], {9, 9}, {-1, 0}], InsetBox[
+        StyleBox["\<\"Tasty\"\>",
+         StripOnInput->False,
+         FontSize->12], {9, 12}, {-1, 0}], InsetBox[
+        StyleBox["\<\"Vegetable\"\>",
+         StripOnInput->False,
+         FontSize->12], {9, 15}, {-1, 0}]}, {{{
+         {GrayLevel[0], 
+          TagBox[
+           TooltipBox[DiskBox[{66, 3}],
+            "\"Set: Fruit\\nIntersection: {Fruit}\"",
+            TooltipStyle->"TextStyling"],
+           
+           Annotation[#, "Set: Fruit\nIntersection: {Fruit}", 
+            "Tooltip"]& ]}, 
+         {RGBColor[
+          0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
+          TagBox[
+           TooltipBox[DiskBox[{69, 3}],
+            "\"Set: Fruit\\nIntersection: {Green, Vegetable}\"",
+            TooltipStyle->"TextStyling"],
+           
+           Annotation[#, "Set: Fruit\nIntersection: {Green, Vegetable}", 
+            "Tooltip"]& ]}, 
+         {GrayLevel[0], 
+          TagBox[
+           TooltipBox[DiskBox[{72, 3}],
+            "\"Set: Fruit\\nIntersection: {Red, Fruit}\"",
+            TooltipStyle->"TextStyling"],
+           
+           Annotation[#, "Set: Fruit\nIntersection: {Red, Fruit}", 
+            "Tooltip"]& ]}, 
+         {GrayLevel[0], 
+          TagBox[
+           TooltipBox[DiskBox[{75, 3}],
+            "\"Set: Fruit\\nIntersection: {Green, Tasty, Fruit}\"",
+            TooltipStyle->"TextStyling"],
+           
+           Annotation[#, "Set: Fruit\nIntersection: {Green, Tasty, Fruit}", 
+            "Tooltip"]& ]}}, {
+         {RGBColor[
+          0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
+          TagBox[
+           TooltipBox[DiskBox[{66, 6}],
+            "\"Set: Green\\nIntersection: {Fruit}\"",
+            TooltipStyle->"TextStyling"],
+           
+           Annotation[#, "Set: Green\nIntersection: {Fruit}", 
+            "Tooltip"]& ]}, 
+         {GrayLevel[0], 
+          TagBox[
+           TooltipBox[DiskBox[{69, 6}],
+            "\"Set: Green\\nIntersection: {Green, Vegetable}\"",
+            TooltipStyle->"TextStyling"],
+           
+           Annotation[#, "Set: Green\nIntersection: {Green, Vegetable}", 
+            "Tooltip"]& ]}, 
+         {RGBColor[
+          0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
+          TagBox[
+           TooltipBox[DiskBox[{72, 6}],
+            "\"Set: Green\\nIntersection: {Red, Fruit}\"",
+            TooltipStyle->"TextStyling"],
+           
+           Annotation[#, "Set: Green\nIntersection: {Red, Fruit}", 
+            "Tooltip"]& ]}, 
+         {GrayLevel[0], 
+          TagBox[
+           TooltipBox[DiskBox[{75, 6}],
+            "\"Set: Green\\nIntersection: {Green, Tasty, Fruit}\"",
+            TooltipStyle->"TextStyling"],
+           
+           Annotation[#, "Set: Green\nIntersection: {Green, Tasty, Fruit}", 
+            "Tooltip"]& ]}}, {
+         {RGBColor[
+          0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
+          TagBox[
+           TooltipBox[DiskBox[{66, 9}],
+            "\"Set: Red\\nIntersection: {Fruit}\"",
+            TooltipStyle->"TextStyling"],
+           Annotation[#, "Set: Red\nIntersection: {Fruit}", "Tooltip"]& ]}, 
+         {RGBColor[
+          0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
+          TagBox[
+           TooltipBox[DiskBox[{69, 9}],
+            "\"Set: Red\\nIntersection: {Green, Vegetable}\"",
+            TooltipStyle->"TextStyling"],
+           
+           Annotation[#, "Set: Red\nIntersection: {Green, Vegetable}", 
+            "Tooltip"]& ]}, 
+         {GrayLevel[0], 
+          TagBox[
+           TooltipBox[DiskBox[{72, 9}],
+            "\"Set: Red\\nIntersection: {Red, Fruit}\"",
+            TooltipStyle->"TextStyling"],
+           
+           Annotation[#, "Set: Red\nIntersection: {Red, Fruit}", 
+            "Tooltip"]& ]}, 
+         {RGBColor[
+          0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
+          TagBox[
+           TooltipBox[DiskBox[{75, 9}],
+            "\"Set: Red\\nIntersection: {Green, Tasty, Fruit}\"",
+            TooltipStyle->"TextStyling"],
+           
+           Annotation[#, "Set: Red\nIntersection: {Green, Tasty, Fruit}", 
+            "Tooltip"]& ]}}, {
+         {RGBColor[
+          0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
+          TagBox[
+           TooltipBox[DiskBox[{66, 12}],
+            "\"Set: Tasty\\nIntersection: {Fruit}\"",
+            TooltipStyle->"TextStyling"],
+           
+           Annotation[#, "Set: Tasty\nIntersection: {Fruit}", 
+            "Tooltip"]& ]}, 
+         {RGBColor[
+          0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
+          TagBox[
+           TooltipBox[DiskBox[{69, 12}],
+            "\"Set: Tasty\\nIntersection: {Green, Vegetable}\"",
+            TooltipStyle->"TextStyling"],
+           
+           Annotation[#, "Set: Tasty\nIntersection: {Green, Vegetable}", 
+            "Tooltip"]& ]}, 
+         {RGBColor[
+          0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
+          TagBox[
+           TooltipBox[DiskBox[{72, 12}],
+            "\"Set: Tasty\\nIntersection: {Red, Fruit}\"",
+            TooltipStyle->"TextStyling"],
+           
+           Annotation[#, "Set: Tasty\nIntersection: {Red, Fruit}", 
+            "Tooltip"]& ]}, 
+         {GrayLevel[0], 
+          TagBox[
+           TooltipBox[DiskBox[{75, 12}],
+            "\"Set: Tasty\\nIntersection: {Green, Tasty, Fruit}\"",
+            TooltipStyle->"TextStyling"],
+           
+           Annotation[#, "Set: Tasty\nIntersection: {Green, Tasty, Fruit}", 
+            "Tooltip"]& ]}}, {
+         {RGBColor[
+          0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
+          TagBox[
+           TooltipBox[DiskBox[{66, 15}],
+            "\"Set: Vegetable\\nIntersection: {Fruit}\"",
+            TooltipStyle->"TextStyling"],
+           
+           Annotation[#, "Set: Vegetable\nIntersection: {Fruit}", 
+            "Tooltip"]& ]}, 
+         {GrayLevel[0], 
+          TagBox[
+           TooltipBox[DiskBox[{69, 15}],
+            "\"Set: Vegetable\\nIntersection: {Green, Vegetable}\"",
+            TooltipStyle->"TextStyling"],
+           
+           Annotation[#, "Set: Vegetable\nIntersection: {Green, Vegetable}", 
+            "Tooltip"]& ]}, 
+         {RGBColor[
+          0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
+          TagBox[
+           TooltipBox[DiskBox[{72, 15}],
+            "\"Set: Vegetable\\nIntersection: {Red, Fruit}\"",
+            TooltipStyle->"TextStyling"],
+           
+           Annotation[#, "Set: Vegetable\nIntersection: {Red, Fruit}", 
+            "Tooltip"]& ]}, 
+         {RGBColor[
+          0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
+          TagBox[
+           TooltipBox[DiskBox[{75, 15}],
+            "\"Set: Vegetable\\nIntersection: {Green, Tasty, Fruit}\"",
+            TooltipStyle->"TextStyling"],
+           
+           Annotation[#, 
+            "Set: Vegetable\nIntersection: {Green, Tasty, Fruit}", 
+            "Tooltip"]& ]}}}, {
+        {GrayLevel[0], 
+         TagBox[
+          
+          TooltipBox[
+           RectangleBox[NCache[{Rational[197, 3], 3}, {65.66666666666667, 3}],
+             NCache[{Rational[199, 3], 3}, {66.33333333333333, 3}]],
+           "\"Set: 1\\nIntersection: {Fruit}\"",
+           TooltipStyle->"TextStyling"],
+          Annotation[#, "Set: 1\nIntersection: {Fruit}", "Tooltip"]& ]}, 
+        {GrayLevel[0], 
+         TagBox[
+          
+          TooltipBox[
+           RectangleBox[NCache[{Rational[206, 3], 6}, {68.66666666666667, 6}],
+             NCache[{Rational[208, 3], 15}, {69.33333333333333, 15}]],
+           "\"Set: 2\\nIntersection: {Green, Vegetable}\"",
+           TooltipStyle->"TextStyling"],
+          
+          Annotation[#, "Set: 2\nIntersection: {Green, Vegetable}", 
+           "Tooltip"]& ]}, 
+        {GrayLevel[0], 
+         TagBox[
+          
+          TooltipBox[
+           RectangleBox[NCache[{Rational[215, 3], 3}, {71.66666666666667, 3}],
+             NCache[{Rational[217, 3], 9}, {72.33333333333333, 9}]],
+           "\"Set: 3\\nIntersection: {Red, Fruit}\"",
+           TooltipStyle->"TextStyling"],
+          
+          Annotation[#, "Set: 3\nIntersection: {Red, Fruit}", 
+           "Tooltip"]& ]}, 
+        {GrayLevel[0], 
+         TagBox[
+          
+          TooltipBox[
+           RectangleBox[NCache[{Rational[224, 3], 3}, {74.66666666666667, 3}],
+             NCache[{Rational[226, 3], 12}, {75.33333333333333, 12}]],
+           "\"Set: 2\\nIntersection: {Green, Tasty, Fruit}\"",
+           TooltipStyle->"TextStyling"],
+          
+          Annotation[#, "Set: 2\nIntersection: {Green, Tasty, Fruit}", 
+           "Tooltip"]& ]}}}},
+     ImageSize->{400, 100}], {210., -52.5}, 
+    ImageScaled[{0.5, 0.5}], {400, 100}], {}},
+  ContentSelectable->True,
+  ImageSize->{432., 117.},
+  PlotRangePadding->{6, 5}]], "Output",
+ CellChangeTimes->{{3.739820183095501*^9, 3.7398202118105173`*^9}, {
+   3.739820295849703*^9, 3.739820334658083*^9}, 3.739820421881521*^9, 
+   3.7398205142575293`*^9, {3.739820609490199*^9, 3.7398206171799707`*^9}, 
+   3.739821625495057*^9},
+ CellLabel->"Out[72]=",ExpressionUUID->"2f9ac7ff-47fd-4986-a6c9-612249d11cb8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TabView", "[", 
+  RowBox[{
+   RowBox[{"KeySortBy", "[", 
+    RowBox[{"gbgc", ",", 
+     RowBox[{"#", "&"}]}], "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"Alignment", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"Left", ",", "Bottom"}], "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"ContentPadding", "\[Rule]", "False"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"AutoAction", "\[Rule]", "True"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"BaselinePosition", "\[Rule]", "Bottom"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"ControlPlacement", "\[Rule]", "Left"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"ImageMargins", "\[Rule]", "0"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"FrameMargins", "\[Rule]", " ", "0"}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.739820228588119*^9, 3.73982026496332*^9}, 
+   3.739820315826037*^9, 3.739820384668065*^9, {3.7398206774998627`*^9, 
+   3.739820691993742*^9}, {3.739820733468528*^9, 3.739820745460247*^9}, {
+   3.7398208760174303`*^9, 3.739820938720645*^9}, {3.7398209782917433`*^9, 
+   3.739820982674141*^9}, {3.73982122369001*^9, 3.739821262778448*^9}, {
+   3.739822061643674*^9, 3.739822069182377*^9}, {3.739822170374918*^9, 
+   3.739822240016925*^9}, {3.739822382373713*^9, 3.7398223958913717`*^9}, {
+   3.73982243431911*^9, 3.7398224539417963`*^9}},
+ CellLabel->"In[26]:=",ExpressionUUID->"6c375753-259d-4950-9370-9132a7ba215a"],
+
+Cell[BoxData[
+ TabViewBox[{{1,"1"->
+  GraphicsBox[{{
+     {RGBColor[0.772061, 0.92462, 0.998703], 
+      TagBox[
+       TooltipBox[RectangleBox[{0, 2}, {7, 4}],
+        "\"Set: Fruit\\nNumber of elements: 7\\nElements: {Kiwi, Lemon, \
+Banana, Strawberry, Pear, Apple, Carrot}\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, 
+        "Set: Fruit\nNumber of elements: 7\nElements: {Kiwi, Lemon, Banana, \
+Strawberry, Pear, Apple, Carrot}", "Tooltip"]& ]}, 
+     {RGBColor[
+      0.24882928571428573`, 0.42314085714285715`, 0.8732312857142858], 
+      TagBox[
+       TooltipBox[RectangleBox[{3, 5}, {7, 7}],
+        "\"Set: Green\\nNumber of elements: 4\\nElements: {Kiwi, Pear, \
+Cucumber, Pickle}\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, 
+        "Set: Green\nNumber of elements: 4\nElements: {Kiwi, Pear, Cucumber, \
+Pickle}", "Tooltip"]& ]}, 
+     {RGBColor[0.29575928571428567`, 0.09888902857142857, 0.634997], 
+      TagBox[
+       TooltipBox[RectangleBox[{5, 8}, {7, 10}],
+        "\"Set: Red\\nNumber of elements: 2\\nElements: {Strawberry, Apple}\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, 
+        "Set: Red\nNumber of elements: 2\nElements: {Strawberry, Apple}", 
+        "Tooltip"]& ]}, 
+     {RGBColor[0.29575928571428567`, 0.09888902857142857, 0.634997], 
+      TagBox[
+       TooltipBox[RectangleBox[{5, 11}, {7, 13}],
+        "\"Set: Tasty\\nNumber of elements: 2\\nElements: {Kiwi, Pear}\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, 
+        "Set: Tasty\nNumber of elements: 2\nElements: {Kiwi, Pear}", 
+        "Tooltip"]& ]}, 
+     {RGBColor[0.29575928571428567`, 0.09888902857142857, 0.634997], 
+      TagBox[
+       TooltipBox[RectangleBox[{5, 14}, {7, 16}],
+        "\"Set: Vegetable\\nNumber of elements: 2\\nElements: {Cucumber, \
+Pickle}\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, 
+        "Set: Vegetable\nNumber of elements: 2\nElements: {Cucumber, Pickle}",
+         "Tooltip"]& ]}}, 
+    {RGBColor[0.772061, 0.92462, 0.998703], 
+     TagBox[
+      TooltipBox[RectangleBox[{65, 17}, {67, 20}],
+       "\"Unique to: {Fruit}\\nNumber of elements: 3\\nElements: {Banana, \
+Carrot, Lemon}\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, 
+       "Unique to: {Fruit}\nNumber of elements: 3\nElements: {Banana, Carrot, \
+Lemon}", "Tooltip"]& ]}, {InsetBox[
+      StyleBox["\<\"Fruit\"\>",
+       StripOnInput->False,
+       FontSize->12], {9, 3}, {-1, 0}], InsetBox[
+      StyleBox["\<\"Green\"\>",
+       StripOnInput->False,
+       FontSize->12], {9, 6}, {-1, 0}], InsetBox[
+      StyleBox["\<\"Red\"\>",
+       StripOnInput->False,
+       FontSize->12], {9, 9}, {-1, 0}], InsetBox[
+      StyleBox["\<\"Tasty\"\>",
+       StripOnInput->False,
+       FontSize->12], {9, 12}, {-1, 0}], InsetBox[
+      StyleBox["\<\"Vegetable\"\>",
+       StripOnInput->False,
+       FontSize->12], {9, 15}, {-1, 0}]}, {{
+      {GrayLevel[0], 
+       TagBox[
+        TooltipBox[DiskBox[{66, 3}],
+         "\"Set: Fruit\\nIntersection: {Fruit}\"",
+         TooltipStyle->"TextStyling"],
+        Annotation[#, "Set: Fruit\nIntersection: {Fruit}", "Tooltip"]& ]}, 
+      {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
+       TagBox[
+        TooltipBox[DiskBox[{66, 6}],
+         "\"Set: Green\\nIntersection: {Fruit}\"",
+         TooltipStyle->"TextStyling"],
+        Annotation[#, "Set: Green\nIntersection: {Fruit}", "Tooltip"]& ]}, 
+      {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
+       TagBox[
+        TooltipBox[DiskBox[{66, 9}],
+         "\"Set: Red\\nIntersection: {Fruit}\"",
+         TooltipStyle->"TextStyling"],
+        Annotation[#, "Set: Red\nIntersection: {Fruit}", "Tooltip"]& ]}, 
+      {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
+       TagBox[
+        TooltipBox[DiskBox[{66, 12}],
+         "\"Set: Tasty\\nIntersection: {Fruit}\"",
+         TooltipStyle->"TextStyling"],
+        Annotation[#, "Set: Tasty\nIntersection: {Fruit}", "Tooltip"]& ]}, 
+      {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
+       TagBox[
+        TooltipBox[DiskBox[{66, 15}],
+         "\"Set: Vegetable\\nIntersection: {Fruit}\"",
+         TooltipStyle->"TextStyling"],
+        Annotation[#, "Set: Vegetable\nIntersection: {Fruit}", 
+         "Tooltip"]& ]}}, 
+     {GrayLevel[0], 
+      TagBox[
+       TooltipBox[
+        RectangleBox[NCache[{Rational[197, 3], 3}, {65.66666666666667, 3}], 
+         NCache[{Rational[199, 3], 3}, {66.33333333333333, 3}]],
+        "\"Set: 1\\nIntersection: {Fruit}\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "Set: 1\nIntersection: {Fruit}", "Tooltip"]& ]}}}]}, {2,
+  "2"->
+  GraphicsBox[{{
+     {RGBColor[0.772061, 0.92462, 0.998703], 
+      TagBox[
+       TooltipBox[RectangleBox[{0, 2}, {7, 4}],
+        "\"Set: Fruit\\nNumber of elements: 7\\nElements: {Kiwi, Lemon, \
+Banana, Strawberry, Pear, Apple, Carrot}\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, 
+        "Set: Fruit\nNumber of elements: 7\nElements: {Kiwi, Lemon, Banana, \
+Strawberry, Pear, Apple, Carrot}", "Tooltip"]& ]}, 
+     {RGBColor[
+      0.24882928571428573`, 0.42314085714285715`, 0.8732312857142858], 
+      TagBox[
+       TooltipBox[RectangleBox[{3, 5}, {7, 7}],
+        "\"Set: Green\\nNumber of elements: 4\\nElements: {Kiwi, Pear, \
+Cucumber, Pickle}\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, 
+        "Set: Green\nNumber of elements: 4\nElements: {Kiwi, Pear, Cucumber, \
+Pickle}", "Tooltip"]& ]}, 
+     {RGBColor[0.29575928571428567`, 0.09888902857142857, 0.634997], 
+      TagBox[
+       TooltipBox[RectangleBox[{5, 8}, {7, 10}],
+        "\"Set: Red\\nNumber of elements: 2\\nElements: {Strawberry, Apple}\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, 
+        "Set: Red\nNumber of elements: 2\nElements: {Strawberry, Apple}", 
+        "Tooltip"]& ]}, 
+     {RGBColor[0.29575928571428567`, 0.09888902857142857, 0.634997], 
+      TagBox[
+       TooltipBox[RectangleBox[{5, 11}, {7, 13}],
+        "\"Set: Tasty\\nNumber of elements: 2\\nElements: {Kiwi, Pear}\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, 
+        "Set: Tasty\nNumber of elements: 2\nElements: {Kiwi, Pear}", 
+        "Tooltip"]& ]}, 
+     {RGBColor[0.29575928571428567`, 0.09888902857142857, 0.634997], 
+      TagBox[
+       TooltipBox[RectangleBox[{5, 14}, {7, 16}],
+        "\"Set: Vegetable\\nNumber of elements: 2\\nElements: {Cucumber, \
+Pickle}\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, 
+        "Set: Vegetable\nNumber of elements: 2\nElements: {Cucumber, Pickle}",
+         "Tooltip"]& ]}}, {
+     {RGBColor[0.772061, 0.92462, 0.998703], 
+      TagBox[
+       TooltipBox[RectangleBox[{65, 17}, {67, 19}],
+        "\"Unique to: {Green, Vegetable}\\nNumber of elements: 2\\nElements: \
+{Cucumber, Pickle}\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, 
+        "Unique to: {Green, Vegetable}\nNumber of elements: 2\nElements: \
+{Cucumber, Pickle}", "Tooltip"]& ]}, 
+     {RGBColor[0.772061, 0.92462, 0.998703], 
+      TagBox[
+       TooltipBox[RectangleBox[{68, 17}, {70, 19}],
+        "\"Unique to: {Red, Fruit}\\nNumber of elements: 2\\nElements: \
+{Apple, Strawberry}\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, 
+        "Unique to: {Red, Fruit}\nNumber of elements: 2\nElements: {Apple, \
+Strawberry}", "Tooltip"]& ]}}, {InsetBox[
+      StyleBox["\<\"Fruit\"\>",
+       StripOnInput->False,
+       FontSize->12], {9, 3}, {-1, 0}], InsetBox[
+      StyleBox["\<\"Green\"\>",
+       StripOnInput->False,
+       FontSize->12], {9, 6}, {-1, 0}], InsetBox[
+      StyleBox["\<\"Red\"\>",
+       StripOnInput->False,
+       FontSize->12], {9, 9}, {-1, 0}], InsetBox[
+      StyleBox["\<\"Tasty\"\>",
+       StripOnInput->False,
+       FontSize->12], {9, 12}, {-1, 0}], InsetBox[
+      StyleBox["\<\"Vegetable\"\>",
+       StripOnInput->False,
+       FontSize->12], {9, 15}, {-1, 0}]}, {{{
+       {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
+        
+        TagBox[
+         TooltipBox[DiskBox[{66, 3}],
+          "\"Set: Fruit\\nIntersection: {Green, Vegetable}\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "Set: Fruit\nIntersection: {Green, Vegetable}", 
+          "Tooltip"]& ]}, 
+       {GrayLevel[0], 
+        TagBox[
+         TooltipBox[DiskBox[{69, 3}],
+          "\"Set: Fruit\\nIntersection: {Red, Fruit}\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "Set: Fruit\nIntersection: {Red, Fruit}", 
+          "Tooltip"]& ]}}, {
+       {GrayLevel[0], 
+        TagBox[
+         TooltipBox[DiskBox[{66, 6}],
+          "\"Set: Green\\nIntersection: {Green, Vegetable}\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "Set: Green\nIntersection: {Green, Vegetable}", 
+          "Tooltip"]& ]}, 
+       {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
+        
+        TagBox[
+         TooltipBox[DiskBox[{69, 6}],
+          "\"Set: Green\\nIntersection: {Red, Fruit}\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "Set: Green\nIntersection: {Red, Fruit}", 
+          "Tooltip"]& ]}}, {
+       {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
+        
+        TagBox[
+         TooltipBox[DiskBox[{66, 9}],
+          "\"Set: Red\\nIntersection: {Green, Vegetable}\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "Set: Red\nIntersection: {Green, Vegetable}", 
+          "Tooltip"]& ]}, 
+       {GrayLevel[0], 
+        TagBox[
+         TooltipBox[DiskBox[{69, 9}],
+          "\"Set: Red\\nIntersection: {Red, Fruit}\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "Set: Red\nIntersection: {Red, Fruit}", 
+          "Tooltip"]& ]}}, {
+       {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
+        
+        TagBox[
+         TooltipBox[DiskBox[{66, 12}],
+          "\"Set: Tasty\\nIntersection: {Green, Vegetable}\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "Set: Tasty\nIntersection: {Green, Vegetable}", 
+          "Tooltip"]& ]}, 
+       {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
+        
+        TagBox[
+         TooltipBox[DiskBox[{69, 12}],
+          "\"Set: Tasty\\nIntersection: {Red, Fruit}\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "Set: Tasty\nIntersection: {Red, Fruit}", 
+          "Tooltip"]& ]}}, {
+       {GrayLevel[0], 
+        TagBox[
+         TooltipBox[DiskBox[{66, 15}],
+          "\"Set: Vegetable\\nIntersection: {Green, Vegetable}\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "Set: Vegetable\nIntersection: {Green, Vegetable}", 
+          "Tooltip"]& ]}, 
+       {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
+        
+        TagBox[
+         TooltipBox[DiskBox[{69, 15}],
+          "\"Set: Vegetable\\nIntersection: {Red, Fruit}\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "Set: Vegetable\nIntersection: {Red, Fruit}", 
+          "Tooltip"]& ]}}}, {
+      {GrayLevel[0], 
+       TagBox[
+        TooltipBox[
+         RectangleBox[NCache[{Rational[197, 3], 6}, {65.66666666666667, 6}], 
+          NCache[{Rational[199, 3], 15}, {66.33333333333333, 15}]],
+         "\"Set: 2\\nIntersection: {Green, Vegetable}\"",
+         TooltipStyle->"TextStyling"],
+        Annotation[#, "Set: 2\nIntersection: {Green, Vegetable}", 
+         "Tooltip"]& ]}, 
+      {GrayLevel[0], 
+       TagBox[
+        TooltipBox[
+         RectangleBox[NCache[{Rational[206, 3], 3}, {68.66666666666667, 3}], 
+          NCache[{Rational[208, 3], 9}, {69.33333333333333, 9}]],
+         "\"Set: 3\\nIntersection: {Red, Fruit}\"",
+         TooltipStyle->"TextStyling"],
+        Annotation[#, "Set: 3\nIntersection: {Red, Fruit}", 
+         "Tooltip"]& ]}}}}]}, {3,"3"->
+  GraphicsBox[{{
+     {RGBColor[0.772061, 0.92462, 0.998703], 
+      TagBox[
+       TooltipBox[RectangleBox[{0, 2}, {7, 4}],
+        "\"Set: Fruit\\nNumber of elements: 7\\nElements: {Kiwi, Lemon, \
+Banana, Strawberry, Pear, Apple, Carrot}\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, 
+        "Set: Fruit\nNumber of elements: 7\nElements: {Kiwi, Lemon, Banana, \
+Strawberry, Pear, Apple, Carrot}", "Tooltip"]& ]}, 
+     {RGBColor[
+      0.24882928571428573`, 0.42314085714285715`, 0.8732312857142858], 
+      TagBox[
+       TooltipBox[RectangleBox[{3, 5}, {7, 7}],
+        "\"Set: Green\\nNumber of elements: 4\\nElements: {Kiwi, Pear, \
+Cucumber, Pickle}\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, 
+        "Set: Green\nNumber of elements: 4\nElements: {Kiwi, Pear, Cucumber, \
+Pickle}", "Tooltip"]& ]}, 
+     {RGBColor[0.29575928571428567`, 0.09888902857142857, 0.634997], 
+      TagBox[
+       TooltipBox[RectangleBox[{5, 8}, {7, 10}],
+        "\"Set: Red\\nNumber of elements: 2\\nElements: {Strawberry, Apple}\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, 
+        "Set: Red\nNumber of elements: 2\nElements: {Strawberry, Apple}", 
+        "Tooltip"]& ]}, 
+     {RGBColor[0.29575928571428567`, 0.09888902857142857, 0.634997], 
+      TagBox[
+       TooltipBox[RectangleBox[{5, 11}, {7, 13}],
+        "\"Set: Tasty\\nNumber of elements: 2\\nElements: {Kiwi, Pear}\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, 
+        "Set: Tasty\nNumber of elements: 2\nElements: {Kiwi, Pear}", 
+        "Tooltip"]& ]}, 
+     {RGBColor[0.29575928571428567`, 0.09888902857142857, 0.634997], 
+      TagBox[
+       TooltipBox[RectangleBox[{5, 14}, {7, 16}],
+        "\"Set: Vegetable\\nNumber of elements: 2\\nElements: {Cucumber, \
+Pickle}\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, 
+        "Set: Vegetable\nNumber of elements: 2\nElements: {Cucumber, Pickle}",
+         "Tooltip"]& ]}}, 
+    {RGBColor[0.772061, 0.92462, 0.998703], 
+     TagBox[
+      TooltipBox[RectangleBox[{65, 17}, {67, 19}],
+       "\"Unique to: {Green, Tasty, Fruit}\\nNumber of elements: \
+2\\nElements: {Kiwi, Pear}\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, 
+       "Unique to: {Green, Tasty, Fruit}\nNumber of elements: 2\nElements: \
+{Kiwi, Pear}", "Tooltip"]& ]}, {InsetBox[
+      StyleBox["\<\"Fruit\"\>",
+       StripOnInput->False,
+       FontSize->12], {9, 3}, {-1, 0}], InsetBox[
+      StyleBox["\<\"Green\"\>",
+       StripOnInput->False,
+       FontSize->12], {9, 6}, {-1, 0}], InsetBox[
+      StyleBox["\<\"Red\"\>",
+       StripOnInput->False,
+       FontSize->12], {9, 9}, {-1, 0}], InsetBox[
+      StyleBox["\<\"Tasty\"\>",
+       StripOnInput->False,
+       FontSize->12], {9, 12}, {-1, 0}], InsetBox[
+      StyleBox["\<\"Vegetable\"\>",
+       StripOnInput->False,
+       FontSize->12], {9, 15}, {-1, 0}]}, {{
+      {GrayLevel[0], 
+       TagBox[
+        TooltipBox[DiskBox[{66, 3}],
+         "\"Set: Fruit\\nIntersection: {Green, Tasty, Fruit}\"",
+         TooltipStyle->"TextStyling"],
+        Annotation[#, "Set: Fruit\nIntersection: {Green, Tasty, Fruit}", 
+         "Tooltip"]& ]}, 
+      {GrayLevel[0], 
+       TagBox[
+        TooltipBox[DiskBox[{66, 6}],
+         "\"Set: Green\\nIntersection: {Green, Tasty, Fruit}\"",
+         TooltipStyle->"TextStyling"],
+        Annotation[#, "Set: Green\nIntersection: {Green, Tasty, Fruit}", 
+         "Tooltip"]& ]}, 
+      {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
+       TagBox[
+        TooltipBox[DiskBox[{66, 9}],
+         "\"Set: Red\\nIntersection: {Green, Tasty, Fruit}\"",
+         TooltipStyle->"TextStyling"],
+        Annotation[#, "Set: Red\nIntersection: {Green, Tasty, Fruit}", 
+         "Tooltip"]& ]}, 
+      {GrayLevel[0], 
+       TagBox[
+        TooltipBox[DiskBox[{66, 12}],
+         "\"Set: Tasty\\nIntersection: {Green, Tasty, Fruit}\"",
+         TooltipStyle->"TextStyling"],
+        Annotation[#, "Set: Tasty\nIntersection: {Green, Tasty, Fruit}", 
+         "Tooltip"]& ]}, 
+      {RGBColor[0.7777777777777778, 0.7777777777777778, 0.7777777777777778], 
+       TagBox[
+        TooltipBox[DiskBox[{66, 15}],
+         "\"Set: Vegetable\\nIntersection: {Green, Tasty, Fruit}\"",
+         TooltipStyle->"TextStyling"],
+        Annotation[#, "Set: Vegetable\nIntersection: {Green, Tasty, Fruit}", 
+         "Tooltip"]& ]}}, 
+     {GrayLevel[0], 
+      TagBox[
+       TooltipBox[
+        RectangleBox[NCache[{Rational[197, 3], 3}, {65.66666666666667, 3}], 
+         NCache[{Rational[199, 3], 12}, {66.33333333333333, 12}]],
+        "\"Set: 2\\nIntersection: {Green, Tasty, Fruit}\"",
+        TooltipStyle->"TextStyling"],
+       Annotation[#, "Set: 2\nIntersection: {Green, Tasty, Fruit}", 
+        "Tooltip"]& ]}}}]}}, 2,
+  Alignment->{Left, Bottom},
+  AutoAction->True,
+  BaselinePosition->Bottom,
+  ContentPadding->False,
+  ControlPlacement->Left,
+  FrameMargins->0,
+  ImageMargins->0]], "Output",
+ CellChangeTimes->{
+  3.739822240394635*^9, {3.73982238992487*^9, 3.739822396157483*^9}, {
+   3.739822434749264*^9, 3.739822454252523*^9}},
+ CellLabel->"Out[26]=",ExpressionUUID->"b0306d74-470f-4b46-b949-a45dda4d0e43"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1280, 687},
+WindowMargins->{{0, Automatic}, {Automatic, -1}},
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 7, \
+2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[583, 22, 163, 3, 98, "Title",ExpressionUUID->"32c9ae86-205c-413c-8263-b816266538bf"],
+Cell[749, 27, 223, 5, 30, "Input",ExpressionUUID->"651addc2-ec3b-4986-ba82-da1ee6138f07"],
+Cell[975, 34, 382, 9, 52, "Input",ExpressionUUID->"6d802d34-10e7-4f93-889a-7536e7d1721e"],
+Cell[CellGroupData[{
+Cell[1382, 47, 156, 3, 67, "Section",ExpressionUUID->"7999e3a7-128e-4803-8730-86247591bf1e"],
+Cell[CellGroupData[{
+Cell[1563, 54, 184, 3, 30, "Input",ExpressionUUID->"22374e8f-9d43-4ac5-abb3-41a69b5db2f9"],
+Cell[1750, 59, 1037, 23, 60, "Output",ExpressionUUID->"f2458543-7acb-4308-b47a-9e32d3492be8"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2836, 88, 160, 3, 67, "Section",ExpressionUUID->"df7d0e3a-7558-4696-bb8e-734b4508a50a"],
+Cell[CellGroupData[{
+Cell[3021, 95, 278, 6, 30, "Input",ExpressionUUID->"5241f3a6-4bdc-4097-8b34-56e5262ac067"],
+Cell[3302, 103, 2216, 51, 106, "Output",ExpressionUUID->"fb8a26a3-84b4-4690-9870-bc82de49c1d1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5555, 159, 562, 12, 30, "Input",ExpressionUUID->"ad992ff4-11ae-4bde-ac74-b180c3244606"],
+Cell[6120, 173, 1265, 32, 60, "Output",ExpressionUUID->"ee58c51c-29b1-41fe-b5de-b33e031b038c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7422, 210, 334, 7, 30, "Input",ExpressionUUID->"616b4e56-49e1-430c-aa8e-567a281fd374"],
+Cell[7759, 219, 1283, 31, 60, "Output",ExpressionUUID->"87c688d5-27f8-4e44-8206-7f476dbab960"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9079, 255, 294, 5, 30, "Input",ExpressionUUID->"b9e500fc-d158-4273-88c3-eb9f7cea53c8"],
+Cell[9376, 262, 1103, 28, 60, "Output",ExpressionUUID->"b829e910-7d65-4612-8310-904ae573c9a4"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10516, 295, 816, 22, 52, "Input",ExpressionUUID->"692fd3a3-f626-4b83-bdc3-daf84650d427"],
+Cell[11335, 319, 1399, 35, 60, "Output",ExpressionUUID->"01632a01-e4fc-46f6-98bc-19605ca5abbe"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12783, 360, 173, 3, 67, "Section",ExpressionUUID->"04f66cd7-6b81-48a9-b848-21364fedd7e9"],
+Cell[12959, 365, 265, 5, 30, "Input",ExpressionUUID->"67688a54-9dc7-4090-8090-b792c427d57b"],
+Cell[CellGroupData[{
+Cell[13249, 374, 2085, 55, 178, "Input",ExpressionUUID->"9ffdd5ef-fe51-41a1-94eb-2cfd5226a02f"],
+Cell[15337, 431, 18435, 443, 74, "Output",ExpressionUUID->"ac1810c7-581f-41ab-9249-3ce62f685cbd"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[33809, 879, 303, 5, 30, "Input",ExpressionUUID->"17d7a16e-338e-4312-b649-8b75d475e197"],
+Cell[34115, 886, 13350, 329, 134, "Output",ExpressionUUID->"2f9ac7ff-47fd-4986-a6c9-612249d11cb8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[47502, 1220, 1433, 26, 199, "Input",ExpressionUUID->"6c375753-259d-4950-9370-9132a7ba215a"],
+Cell[48938, 1248, 17163, 406, 139, "Output",ExpressionUUID->"b0306d74-470f-4b46-b949-a45dda4d0e43"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

@@ -66,11 +66,11 @@ Table[
 CoordinatesOfGridLine[comparisonIndex_, setIndices_, radius_, translate_, spacing_]:=
 {
   {
-    (2 radius + First@spacing) comparisonIndex  + First@translate  - radius / 4,
+    (2 radius + First@spacing) comparisonIndex  + First@translate  - radius / 3,
     Min[setIndices] (2 radius + Last@spacing) + Last@translate
   },
   {
-    (2 radius + First@spacing) comparisonIndex  + First@translate  + radius / 2,
+    (2 radius + First@spacing) comparisonIndex  + First@translate  + radius / 3,
     Max[setIndices] (2 radius + Last@spacing) + Last@translate
   }
 }

@@ -12,7 +12,7 @@ DeclarePackage["UpSetChart`Utilities`",
 DeclarePackage["UpSetChart`UniqueIntersections`", {"UniqueIntersections"}]
 DeclarePackage["UpSetChart`Calculations`", {"CalcThenSortAndFilter"}]
 DeclarePackage["UpSetChart`TestData`", {"DummyData", "RandomData"}]
-DeclarePackage["UpSetChart`Graphics`",{"UpSetGraphics"}]
+DeclarePackage["UpSetChart`Graphics`", {"UpSetGraphics"}]
 
 
 (* Needs["UpSetChart`UniqueIntersections`"]; *)
