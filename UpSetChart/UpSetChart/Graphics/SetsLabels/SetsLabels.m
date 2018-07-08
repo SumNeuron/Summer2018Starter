@@ -8,24 +8,22 @@ SetsLabels::usage=StringJoin[
 Begin["`Private`"]
 
 
-CoordinatesOfSetLabel[index_, radius_, translate_, spacing_]:=
+CoordinatesOfSetLabel[index_, radius_, spacing_]:=
 {
-  First@translate,
-  (2 radius + Last@spacing) index + Last@translate
+  0,
+  (2 radius + Last@spacing) index
 }
 
 
 Options[SetLabel] = {
   "Radius" -> 1,
-  "Spacing" -> {0, 1},
-  "Translate" -> {0,0}
+  "Spacing" -> {0, 1}
 };
 SetLabel[index_, setNames_, fontsize_, OptionsPattern[]] :=
 Text[
   Style[setNames[[index]], fontsize],
   CoordinatesOfSetLabel[index,
     OptionValue["Radius"],
-    OptionValue["Translate"],
     OptionValue["Spacing"]
   ]
   , {-1,0}
@@ -41,13 +39,17 @@ Options[SetsLabels] = {
   "FontSize" -> 12
 };
 SetsLabels[setNames_, OptionsPattern[]]:=
-Table[
-  SetLabel[i, setNames, OptionValue["FontSize"],
-  "Radius" -> OptionValue["IndicatorRadius"],
-  "Translate" -> OptionValue["Translate"],
-  "Spacing" -> OptionValue["IndicatorSpacing"]
-  ]
-  , {i, Length@setNames}]
+Translate[
+  Table[
+    SetLabel[
+      i, setNames, OptionValue["FontSize"],
+      "Radius" -> OptionValue["IndicatorRadius"],
+      "Spacing" -> OptionValue["IndicatorSpacing"]
+    ]
+    , {i, Length@setNames}
+  ],
+  OptionValue["Translate"]
+]
 
 
 

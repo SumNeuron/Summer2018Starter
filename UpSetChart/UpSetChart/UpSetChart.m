@@ -13,7 +13,7 @@ DeclarePackage["UpSetChart`UniqueIntersections`", {"UniqueIntersections"}]
 DeclarePackage["UpSetChart`Calculations`", {"CalcThenSortAndFilter"}]
 DeclarePackage["UpSetChart`TestData`", {"DummyData", "RandomData"}]
 DeclarePackage["UpSetChart`Graphics`", {"UpSetGraphics"}]
-
+Needs["UpSetChart`Graphics`Dynamic`"]
 
 (* Needs["UpSetChart`UniqueIntersections`"]; *)
 
@@ -21,8 +21,8 @@ DeclarePackage["UpSetChart`Graphics`", {"UpSetGraphics"}]
 (* DeclarePackage["TestPackage`Component2`", {"foo2","bar2"}];
 DeclarePackage["TestPackage`Component2`Subcomponent2`", {"deeperFoo2","deeperBar2"}]} *)
 
-UpSetChart::usage="UpSetChart[sets]";
-
+UpSetChart::usage="UpSetChart[sets]"
+DynamicUpSetChart::usage="DynamicUpSetChart[sets]"
 (*
 UpSetChart has two main components, the calculation of the elements unique to
 each comparison and the visualizaiton.
@@ -96,7 +96,9 @@ Options[UpSetChart] = {
   "DropEmpty"->True,
   "IntersectionSortBy" -> "Name",
   "SetSortBy" -> "Name",
-  "Verbose"->True
+  "Verbose"->True,
+  "TabbedByComparisonsDegreeQ"->False,
+  "ImageSize"->Automatic
 };
 
 
@@ -118,7 +120,18 @@ Module[
   fcomp = calc["comparisons"];
 
   options = OverwriteOptions[{opt}, UpSetChart, UpSetGraphics];
-  UpSetGraphics[fsets, fcomp, options]
+
+  If[
+    Not[OptionValue["TabbedByComparisonsDegreeQ"]],
+    UpSetGraphics[fsets, fcomp, options],
+    InteractiveUpSetGraphics[fsets, fcomp, options]
+  ]
+
 ]
+
+Options[DynamicUpSetChart] = Options[UpSetChart]
+DynamicUpSetChart[sets_, opt: OptionsPattern[]]:=
+DynamicUpSetChartModule[sets, opt]
+
 End[]
 EndPackage[]

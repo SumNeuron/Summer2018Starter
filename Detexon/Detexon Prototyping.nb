@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       161,          7]
-NotebookDataLength[   1068336,      20892]
-NotebookOptionsPosition[   1059237,      20731]
-NotebookOutlinePosition[   1059591,      20747]
-CellTagsIndexPosition[   1059548,      20744]
+NotebookDataLength[   1068724,      20900]
+NotebookOptionsPosition[   1059624,      20739]
+NotebookOutlinePosition[   1059977,      20755]
+CellTagsIndexPosition[   1059934,      20752]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -5489,8 +5489,8 @@ Cell[BoxData[
                     "ColorSwatchGraphics", AspectRatio -> 1, Frame -> True, 
                     FrameStyle -> GrayLevel[0.33333333333333337`], FrameTicks -> 
                     None, PlotRangePadding -> None, ImageSize -> 
-                    Dynamic[{Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
+                    Dynamic[{Automatic, 1.35 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
                     StyleBox[
                     RowBox[{"GrayLevel", "[", "0.5`", "]"}], NumberMarks -> 
                     False]], Appearance -> None, BaseStyle -> {}, 
@@ -5564,8 +5564,8 @@ Cell[BoxData[
                     "ColorSwatchGraphics", AspectRatio -> 1, Frame -> True, 
                     FrameStyle -> GrayLevel[0.33333333333333337`], FrameTicks -> 
                     None, PlotRangePadding -> None, ImageSize -> 
-                    Dynamic[{Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
+                    Dynamic[{Automatic, 1.35 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
                     StyleBox[
                     RowBox[{"GrayLevel", "[", "0.5`", "]"}], NumberMarks -> 
                     False]], Appearance -> None, BaseStyle -> {}, 
@@ -5639,8 +5639,8 @@ Cell[BoxData[
                     "ColorSwatchGraphics", AspectRatio -> 1, Frame -> True, 
                     FrameStyle -> GrayLevel[0.33333333333333337`], FrameTicks -> 
                     None, PlotRangePadding -> None, ImageSize -> 
-                    Dynamic[{Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
+                    Dynamic[{Automatic, 1.35 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
                     StyleBox[
                     RowBox[{"GrayLevel", "[", "0.5`", "]"}], NumberMarks -> 
                     False]], Appearance -> None, BaseStyle -> {}, 
@@ -5714,8 +5714,8 @@ Cell[BoxData[
                     "ColorSwatchGraphics", AspectRatio -> 1, Frame -> True, 
                     FrameStyle -> GrayLevel[0.33333333333333337`], FrameTicks -> 
                     None, PlotRangePadding -> None, ImageSize -> 
-                    Dynamic[{Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
+                    Dynamic[{Automatic, 1.35 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
                     StyleBox[
                     RowBox[{"GrayLevel", "[", "0.5`", "]"}], NumberMarks -> 
                     False]], Appearance -> None, BaseStyle -> {}, 
@@ -5789,8 +5789,8 @@ Cell[BoxData[
                     "ColorSwatchGraphics", AspectRatio -> 1, Frame -> True, 
                     FrameStyle -> GrayLevel[0.33333333333333337`], FrameTicks -> 
                     None, PlotRangePadding -> None, ImageSize -> 
-                    Dynamic[{Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
+                    Dynamic[{Automatic, 1.35 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
                     StyleBox[
                     RowBox[{"GrayLevel", "[", "0.5`", "]"}], NumberMarks -> 
                     False]], Appearance -> None, BaseStyle -> {}, 
@@ -5864,8 +5864,8 @@ Cell[BoxData[
                     "ColorSwatchGraphics", AspectRatio -> 1, Frame -> True, 
                     FrameStyle -> GrayLevel[0.33333333333333337`], FrameTicks -> 
                     None, PlotRangePadding -> None, ImageSize -> 
-                    Dynamic[{Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
+                    Dynamic[{Automatic, 1.35 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
                     StyleBox[
                     RowBox[{"GrayLevel", "[", "0.5`", "]"}], NumberMarks -> 
                     False]], Appearance -> None, BaseStyle -> {}, 
@@ -5939,8 +5939,8 @@ Cell[BoxData[
                     "ColorSwatchGraphics", AspectRatio -> 1, Frame -> True, 
                     FrameStyle -> GrayLevel[0.33333333333333337`], FrameTicks -> 
                     None, PlotRangePadding -> None, ImageSize -> 
-                    Dynamic[{Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
+                    Dynamic[{Automatic, 1.35 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
                     StyleBox[
                     RowBox[{"GrayLevel", "[", "0.5`", "]"}], NumberMarks -> 
                     False]], Appearance -> None, BaseStyle -> {}, 
@@ -6014,8 +6014,8 @@ Cell[BoxData[
                     "ColorSwatchGraphics", AspectRatio -> 1, Frame -> True, 
                     FrameStyle -> GrayLevel[0.33333333333333337`], FrameTicks -> 
                     None, PlotRangePadding -> None, ImageSize -> 
-                    Dynamic[{Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
+                    Dynamic[{Automatic, 1.35 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
                     StyleBox[
                     RowBox[{"GrayLevel", "[", "0.5`", "]"}], NumberMarks -> 
                     False]], Appearance -> None, BaseStyle -> {}, 
@@ -6089,8 +6089,8 @@ Cell[BoxData[
                     "ColorSwatchGraphics", AspectRatio -> 1, Frame -> True, 
                     FrameStyle -> GrayLevel[0.33333333333333337`], FrameTicks -> 
                     None, PlotRangePadding -> None, ImageSize -> 
-                    Dynamic[{Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
+                    Dynamic[{Automatic, 1.35 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
                     StyleBox[
                     RowBox[{"GrayLevel", "[", "0.5`", "]"}], NumberMarks -> 
                     False]], Appearance -> None, BaseStyle -> {}, 
@@ -6164,8 +6164,8 @@ Cell[BoxData[
                     "ColorSwatchGraphics", AspectRatio -> 1, Frame -> True, 
                     FrameStyle -> GrayLevel[0.33333333333333337`], FrameTicks -> 
                     None, PlotRangePadding -> None, ImageSize -> 
-                    Dynamic[{Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
+                    Dynamic[{Automatic, 1.35 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
                     StyleBox[
                     RowBox[{"GrayLevel", "[", "0.5`", "]"}], NumberMarks -> 
                     False]], Appearance -> None, BaseStyle -> {}, 
@@ -6239,8 +6239,8 @@ Cell[BoxData[
                     "ColorSwatchGraphics", AspectRatio -> 1, Frame -> True, 
                     FrameStyle -> GrayLevel[0.33333333333333337`], FrameTicks -> 
                     None, PlotRangePadding -> None, ImageSize -> 
-                    Dynamic[{Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
+                    Dynamic[{Automatic, 1.35 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
                     StyleBox[
                     RowBox[{"GrayLevel", "[", "0.5`", "]"}], NumberMarks -> 
                     False]], Appearance -> None, BaseStyle -> {}, 
@@ -6314,8 +6314,8 @@ Cell[BoxData[
                     "ColorSwatchGraphics", AspectRatio -> 1, Frame -> True, 
                     FrameStyle -> GrayLevel[0.33333333333333337`], FrameTicks -> 
                     None, PlotRangePadding -> None, ImageSize -> 
-                    Dynamic[{Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
+                    Dynamic[{Automatic, 1.35 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
                     StyleBox[
                     RowBox[{"GrayLevel", "[", "0.5`", "]"}], NumberMarks -> 
                     False]], Appearance -> None, BaseStyle -> {}, 
@@ -6389,8 +6389,8 @@ Cell[BoxData[
                     "ColorSwatchGraphics", AspectRatio -> 1, Frame -> True, 
                     FrameStyle -> GrayLevel[0.33333333333333337`], FrameTicks -> 
                     None, PlotRangePadding -> None, ImageSize -> 
-                    Dynamic[{Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
+                    Dynamic[{Automatic, 1.35 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
                     StyleBox[
                     RowBox[{"GrayLevel", "[", "0.5`", "]"}], NumberMarks -> 
                     False]], Appearance -> None, BaseStyle -> {}, 
@@ -6464,8 +6464,8 @@ Cell[BoxData[
                     "ColorSwatchGraphics", AspectRatio -> 1, Frame -> True, 
                     FrameStyle -> GrayLevel[0.33333333333333337`], FrameTicks -> 
                     None, PlotRangePadding -> None, ImageSize -> 
-                    Dynamic[{Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
+                    Dynamic[{Automatic, 1.35 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
                     StyleBox[
                     RowBox[{"GrayLevel", "[", "0.5`", "]"}], NumberMarks -> 
                     False]], Appearance -> None, BaseStyle -> {}, 
@@ -6538,8 +6538,8 @@ Cell[BoxData[
                     "ColorSwatchGraphics", AspectRatio -> 1, Frame -> True, 
                     FrameStyle -> GrayLevel[0.33333333333333337`], FrameTicks -> 
                     None, PlotRangePadding -> None, ImageSize -> 
-                    Dynamic[{Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
+                    Dynamic[{Automatic, 1.35 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
                     StyleBox[
                     RowBox[{"GrayLevel", "[", "0.5`", "]"}], NumberMarks -> 
                     False]], Appearance -> None, BaseStyle -> {}, 
@@ -6613,8 +6613,8 @@ Cell[BoxData[
                     "ColorSwatchGraphics", AspectRatio -> 1, Frame -> True, 
                     FrameStyle -> GrayLevel[0.33333333333333337`], FrameTicks -> 
                     None, PlotRangePadding -> None, ImageSize -> 
-                    Dynamic[{Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
+                    Dynamic[{Automatic, 1.35 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
                     StyleBox[
                     RowBox[{"GrayLevel", "[", "0.5`", "]"}], NumberMarks -> 
                     False]], Appearance -> None, BaseStyle -> {}, 
@@ -6688,8 +6688,8 @@ Cell[BoxData[
                     "ColorSwatchGraphics", AspectRatio -> 1, Frame -> True, 
                     FrameStyle -> GrayLevel[0.33333333333333337`], FrameTicks -> 
                     None, PlotRangePadding -> None, ImageSize -> 
-                    Dynamic[{Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
+                    Dynamic[{Automatic, 1.35 (CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification])}]], 
                     StyleBox[
                     RowBox[{"GrayLevel", "[", "0.5`", "]"}], NumberMarks -> 
                     False]], Appearance -> None, BaseStyle -> {}, 
@@ -7089,155 +7089,163 @@ Cell["Complex CNN1D Block", "Section",
 473c6cd2f0a3"],
 
 Cell[BoxData[
- RowBox[{
-  RowBox[{"AdemxappResidualCNN1DBlock", "[", 
-   RowBox[{"inputDimension_", ",", " ", "name_", ",", " ", "residualBNQ_"}], 
-   "]"}], ":=", 
-  RowBox[{"With", "[", 
-   RowBox[{
-    RowBox[{"{", "\[IndentingNewLine]", 
-     RowBox[{"scale", "=", 
-      RowBox[{"If", "[", 
-       RowBox[{"residualBNQ", ",", "2", ",", "1"}], "]"}]}], 
-     "\[IndentingNewLine]", "}"}], ",", 
-    RowBox[{"Module", "[", "\[IndentingNewLine]", 
-     RowBox[{
-      RowBox[{"{", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"residualBranch", "=", 
-         RowBox[{"{", "\[IndentingNewLine]", 
-          RowBox[{
-           RowBox[{"NetPort", "[", "\"\<Input\>\"", "]"}], "\[Rule]", 
-           RowBox[{"name", "<>", "\"\<_plus_shared\>\""}]}], 
-          "\[IndentingNewLine]", "}"}]}], ",", "\[IndentingNewLine]", 
-        RowBox[{"residualBNBranch", "=", 
-         RowBox[{"{", "\[IndentingNewLine]", 
-          RowBox[{
-           RowBox[{"name", "<>", "\"\<_ramp_shared\>\""}], "\[Rule]", " ", 
+ StyleBox[
+  RowBox[{
+   RowBox[{"AdemxappResidualCNN1DBlock", "[", 
+    RowBox[{
+    "inputDimension_", ",", " ", "name_", ",", " ", "residualBNQ_", ",", 
+     RowBox[{"kernel_:", "3"}], ",", 
+     RowBox[{"padding_:", "1"}]}], "]"}], ":=", 
+   RowBox[{"With", "[", 
+    RowBox[{
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{"scale", "=", 
+       RowBox[{"If", "[", 
+        RowBox[{"residualBNQ", ",", "2", ",", "1"}], "]"}]}], 
+      "\[IndentingNewLine]", "}"}], ",", 
+     RowBox[{"Module", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"{", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"residualBranch", "=", 
+          RowBox[{"{", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"NetPort", "[", "\"\<Input\>\"", "]"}], "\[Rule]", 
+            RowBox[{"name", "<>", "\"\<_plus_shared\>\""}]}], 
+           "\[IndentingNewLine]", "}"}]}], ",", "\[IndentingNewLine]", 
+         RowBox[{"residualBNBranch", "=", 
+          RowBox[{"{", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"name", "<>", "\"\<_ramp_shared\>\""}], "\[Rule]", " ", 
+            RowBox[{
+             RowBox[{"name", "<>", "\"\<_cnn1d_branch_1\>\""}], "\[Rule]", 
+             RowBox[{"name", "<>", "\"\<_plus_shared\>\""}]}]}], 
+           "\[IndentingNewLine]", "}"}]}], ",", "\[IndentingNewLine]", 
+         RowBox[{"mainBranch", " ", "=", " ", 
+          RowBox[{"{", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"name", "<>", "\"\<_bnl_shared\>\""}], "\[Rule]", 
+             RowBox[{"name", "<>", "\"\<_ramp_shared\>\""}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"If", "[", 
+             RowBox[{"residualBNQ", ",", "\[IndentingNewLine]", 
+              RowBox[{
+               RowBox[{"name", "<>", "\"\<_ramp_shared\>\""}], "\[Rule]", 
+               RowBox[{
+                RowBox[{"name", "<>", "\"\<_cnn1d_branch_main\>\""}], 
+                "\[Rule]", " ", 
+                RowBox[{"name", "<>", "\"\<_ramp_branch_main\>\""}]}]}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{
+               RowBox[{"name", "<>", "\"\<_ramp_shared\>\""}], "\[Rule]", 
+               RowBox[{
+                RowBox[{"name", "<>", "\"\<_cnn1d_branch_main\>\""}], 
+                "\[Rule]", 
+                RowBox[{
+                 RowBox[{"name", "<>", "\"\<_bnl_main\>\""}], "\[Rule]", " ", 
+                 
+                 RowBox[{"name", "<>", "\"\<_ramp_branch_main\>\""}]}]}]}]}], 
+             "\[IndentingNewLine]", "]"}], ",", " ", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"name", "<>", "\"\<_ramp_branch_main\>\""}], "->", 
+             RowBox[{
+              RowBox[{"name", "<>", "\"\<_cnn1d_branch_main_a\>\""}], 
+              "\[Rule]", 
+              RowBox[{"name", "<>", "\"\<_plus_shared\>\""}]}]}]}], 
+           "\[IndentingNewLine]", "}"}]}], ",", "\[IndentingNewLine]", 
+         RowBox[{"residualBranchLayers", "=", 
+          RowBox[{"<|", "|>"}]}], ",", "\[IndentingNewLine]", 
+         RowBox[{"residualBNBranchLayers", "=", 
+          RowBox[{"<|", "\[IndentingNewLine]", 
            RowBox[{
             RowBox[{"name", "<>", "\"\<_cnn1d_branch_1\>\""}], "\[Rule]", 
-            RowBox[{"name", "<>", "\"\<_plus_shared\>\""}]}]}], 
-          "\[IndentingNewLine]", "}"}]}], ",", "\[IndentingNewLine]", 
-        RowBox[{"mainBranch", " ", "=", " ", 
-         RowBox[{"{", "\[IndentingNewLine]", 
-          RowBox[{
-           RowBox[{
-            RowBox[{"name", "<>", "\"\<_bnl_shared\>\""}], "\[Rule]", 
-            RowBox[{"name", "<>", "\"\<_ramp_shared\>\""}]}], ",", 
-           "\[IndentingNewLine]", 
-           RowBox[{"If", "[", 
-            RowBox[{"residualBNQ", ",", "\[IndentingNewLine]", 
+            RowBox[{"ConvolutionLayer", "[", 
              RowBox[{
-              RowBox[{"name", "<>", "\"\<_ramp_shared\>\""}], "\[Rule]", 
-              RowBox[{
-               RowBox[{"name", "<>", "\"\<_cnn1d_branch_main\>\""}], 
-               "\[Rule]", " ", 
-               RowBox[{"name", "<>", "\"\<_ramp_branch_main\>\""}]}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{
-              RowBox[{"name", "<>", "\"\<_ramp_shared\>\""}], "\[Rule]", 
-              RowBox[{
-               RowBox[{"name", "<>", "\"\<_cnn1d_branch_main\>\""}], 
-               "\[Rule]", 
-               RowBox[{
-                RowBox[{"name", "<>", "\"\<_bnl_main\>\""}], "\[Rule]", " ", 
-                RowBox[{"name", "<>", "\"\<_ramp_branch_main\>\""}]}]}]}]}], 
-            "\[IndentingNewLine]", "]"}], ",", " ", "\[IndentingNewLine]", 
+              RowBox[{"scale", "*", 
+               RowBox[{"First", "@", "inputDimension"}]}], ",", 
+              RowBox[{"{", "1", "}"}]}], "]"}]}], "\[IndentingNewLine]", 
+           "|>"}]}], ",", "\[IndentingNewLine]", 
+         RowBox[{"mainBranchLayers", " ", "=", 
+          RowBox[{"<|", "\[IndentingNewLine]", 
            RowBox[{
-            RowBox[{"name", "<>", "\"\<_ramp_branch_main\>\""}], "->", 
+            RowBox[{
+             RowBox[{"name", "<>", "\"\<_bnl_shared\>\""}], "\[Rule]", 
+             RowBox[{"BatchNormalizationLayer", "[", 
+              RowBox[{"\"\<Input\>\"", "\[Rule]", " ", "inputDimension"}], 
+              "]"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"name", "<>", "\"\<_ramp_shared\>\""}], "\[Rule]", " ", 
+             "Ramp"}], ",", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"name", "<>", "\"\<_cnn1d_branch_main\>\""}], "\[Rule]", 
+             
+             RowBox[{"ConvolutionLayer", "[", 
+              RowBox[{
+               RowBox[{"scale", "*", 
+                RowBox[{"First", "@", "inputDimension"}]}], ",", 
+               RowBox[{"{", "kernel", "}"}], ",", 
+               RowBox[{"\"\<PaddingSize\>\"", "\[Rule]", 
+                RowBox[{"{", "padding", "}"}]}]}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"If", "[", 
+             RowBox[{"residualBNQ", ",", "Nothing", ",", 
+              RowBox[{
+               RowBox[{"name", "<>", "\"\<_bnl_main\>\""}], "\[Rule]", 
+               RowBox[{"BatchNormalizationLayer", "[", "]"}]}]}], "]"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"name", "<>", "\"\<_ramp_branch_main\>\""}], "\[Rule]", 
+             RowBox[{"ElementwiseLayer", "[", "Ramp", "]"}]}], ",", 
+            "\[IndentingNewLine]", 
             RowBox[{
              RowBox[{"name", "<>", "\"\<_cnn1d_branch_main_a\>\""}], 
              "\[Rule]", 
-             RowBox[{"name", "<>", "\"\<_plus_shared\>\""}]}]}]}], 
-          "\[IndentingNewLine]", "}"}]}], ",", "\[IndentingNewLine]", 
-        RowBox[{"residualBranchLayers", "=", 
-         RowBox[{"<|", "|>"}]}], ",", "\[IndentingNewLine]", 
-        RowBox[{"residualBNBranchLayers", "=", 
-         RowBox[{"<|", "\[IndentingNewLine]", 
-          RowBox[{
-           RowBox[{"name", "<>", "\"\<_cnn1d_branch_1\>\""}], "\[Rule]", 
-           RowBox[{"ConvolutionLayer", "[", 
+             RowBox[{"ConvolutionLayer", "[", 
+              RowBox[{
+               RowBox[{"scale", "*", 
+                RowBox[{"First", "@", "inputDimension"}]}], ",", 
+               RowBox[{"{", "kernel", "}"}], ",", 
+               RowBox[{"\"\<PaddingSize\>\"", "\[Rule]", 
+                RowBox[{"{", "padding", "}"}]}]}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
             RowBox[{
-             RowBox[{"scale", "*", 
-              RowBox[{"First", "@", "inputDimension"}]}], ",", 
-             RowBox[{"{", "1", "}"}]}], "]"}]}], "\[IndentingNewLine]", 
-          "|>"}]}], ",", "\[IndentingNewLine]", 
-        RowBox[{"mainBranchLayers", " ", "=", 
-         RowBox[{"<|", "\[IndentingNewLine]", 
+             RowBox[{"name", "<>", "\"\<_plus_shared\>\""}], "\[Rule]", 
+             RowBox[{"ThreadingLayer", "[", "Plus", "]"}]}]}], 
+           "\[IndentingNewLine]", "|>"}]}], ",", "\[IndentingNewLine]", 
+         "\[IndentingNewLine]", "layers", ",", " ", "connections"}], 
+        "\[IndentingNewLine]", "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{"residualBNQ", ",", "\[IndentingNewLine]", 
           RowBox[{
-           RowBox[{
-            RowBox[{"name", "<>", "\"\<_bnl_shared\>\""}], "\[Rule]", 
-            RowBox[{"BatchNormalizationLayer", "[", 
-             RowBox[{"\"\<Input\>\"", "\[Rule]", " ", "inputDimension"}], 
-             "]"}]}], ",", "\[IndentingNewLine]", 
-           RowBox[{
-            RowBox[{"name", "<>", "\"\<_ramp_shared\>\""}], "\[Rule]", " ", 
-            "Ramp"}], ",", "\[IndentingNewLine]", 
-           RowBox[{
-            RowBox[{"name", "<>", "\"\<_cnn1d_branch_main\>\""}], "\[Rule]", 
-            RowBox[{"ConvolutionLayer", "[", 
-             RowBox[{
-              RowBox[{"scale", "*", 
-               RowBox[{"First", "@", "inputDimension"}]}], ",", 
-              RowBox[{"{", "3", "}"}], ",", 
-              RowBox[{"\"\<PaddingSize\>\"", "\[Rule]", 
-               RowBox[{"{", "1", "}"}]}]}], "]"}]}], ",", 
-           "\[IndentingNewLine]", 
-           RowBox[{"If", "[", 
-            RowBox[{"residualBNQ", ",", "Nothing", ",", 
-             RowBox[{
-              RowBox[{"name", "<>", "\"\<_bnl_main\>\""}], "\[Rule]", 
-              RowBox[{"BatchNormalizationLayer", "[", "]"}]}]}], "]"}], ",", 
-           "\[IndentingNewLine]", 
-           RowBox[{
-            RowBox[{"name", "<>", "\"\<_ramp_branch_main\>\""}], "\[Rule]", 
-            RowBox[{"ElementwiseLayer", "[", "Ramp", "]"}]}], ",", 
-           "\[IndentingNewLine]", 
-           RowBox[{
-            RowBox[{"name", "<>", "\"\<_cnn1d_branch_main_a\>\""}], "\[Rule]", 
-            RowBox[{"ConvolutionLayer", "[", 
-             RowBox[{
-              RowBox[{"scale", "*", 
-               RowBox[{"First", "@", "inputDimension"}]}], ",", 
-              RowBox[{"{", "3", "}"}], ",", 
-              RowBox[{"\"\<PaddingSize\>\"", "\[Rule]", 
-               RowBox[{"{", "1", "}"}]}]}], "]"}]}], ",", 
-           "\[IndentingNewLine]", 
-           RowBox[{
-            RowBox[{"name", "<>", "\"\<_plus_shared\>\""}], "\[Rule]", 
-            RowBox[{"ThreadingLayer", "[", "Plus", "]"}]}]}], 
-          "\[IndentingNewLine]", "|>"}]}], ",", "\[IndentingNewLine]", 
-        "\[IndentingNewLine]", "layers", ",", " ", "connections"}], 
-       "\[IndentingNewLine]", "}"}], ",", "\[IndentingNewLine]", 
-      RowBox[{
-       RowBox[{"If", "[", 
-        RowBox[{"residualBNQ", ",", "\[IndentingNewLine]", 
-         RowBox[{
-          RowBox[{"layers", "=", 
-           RowBox[{"Join", "[", 
-            RowBox[{"mainBranchLayers", ",", "residualBNBranchLayers"}], 
-            "]"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"connections", "=", 
-           RowBox[{"Join", "[", 
-            RowBox[{"mainBranch", ",", "residualBNBranch"}], "]"}]}]}], ",", 
-         "\[IndentingNewLine]", "\[IndentingNewLine]", 
-         RowBox[{
-          RowBox[{"layers", "=", 
-           RowBox[{"Join", "[", 
-            RowBox[{"mainBranchLayers", ",", "residualBranchLayers"}], 
-            "]"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"connections", "=", 
-           RowBox[{"Join", "[", 
-            RowBox[{"mainBranch", ",", "residualBranch"}], "]"}]}]}]}], 
-        "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
-       RowBox[{"NetGraph", "[", 
-        RowBox[{"layers", ",", "connections"}], "]"}]}]}], 
-     "\[IndentingNewLine]", "]"}]}], "]"}]}]], "Input",
+           RowBox[{"layers", "=", 
+            RowBox[{"Join", "[", 
+             RowBox[{"mainBranchLayers", ",", "residualBNBranchLayers"}], 
+             "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"connections", "=", 
+            RowBox[{"Join", "[", 
+             RowBox[{"mainBranch", ",", "residualBNBranch"}], "]"}]}]}], ",", 
+          "\[IndentingNewLine]", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"layers", "=", 
+            RowBox[{"Join", "[", 
+             RowBox[{"mainBranchLayers", ",", "residualBranchLayers"}], 
+             "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"connections", "=", 
+            RowBox[{"Join", "[", 
+             RowBox[{"mainBranch", ",", "residualBranch"}], "]"}]}]}]}], 
+         "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"NetGraph", "[", 
+         RowBox[{"layers", ",", "connections"}], "]"}]}]}], 
+      "\[IndentingNewLine]", "]"}]}], "]"}]}],
+  FontWeight->"Plain"]], "Input",
  CellChangeTimes->{{3.7396157906126347`*^9, 3.739616092429044*^9}, {
   3.739616124544875*^9, 3.739616153298558*^9}, {3.73961622290722*^9, 
   3.739616340877088*^9}, {3.7396166283391314`*^9, 3.7396168499580917`*^9}, {
-  3.739616943450281*^9, 3.739617029819158*^9}},
- CellLabel->"In[62]:=",ExpressionUUID->"570c76c5-d51c-49f8-a96f-913652e9590a"]
+  3.739616943450281*^9, 3.739617029819158*^9}, {3.739827946418709*^9, 
+  3.7398279789699802`*^9}},ExpressionUUID->"570c76c5-d51c-49f8-a96f-\
+913652e9590a"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -20729,8 +20737,8 @@ Cell[BoxData["$Aborted"], "Output",
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1280, 687},
-WindowMargins->{{0, Automatic}, {Automatic, -1}},
+WindowSize->{640, 687},
+WindowMargins->{{Automatic, 0}, {Automatic, -1}},
 FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 7, \
 2018)",
 StyleDefinitions->"Default.nb"
@@ -20827,70 +20835,70 @@ Cell[CellGroupData[{
 Cell[84924, 1927, 160, 3, 67, "Section",ExpressionUUID->"89171e11-dc7f-4ff7-8996-8c87fee60ac6"],
 Cell[CellGroupData[{
 Cell[85109, 1934, 437, 9, 30, "Input",ExpressionUUID->"85f164a4-acf1-46e1-b40b-b3d96b2f32e6"],
-Cell[85549, 1945, 272114, 5044, 454, "Output",ExpressionUUID->"a0f269e3-f4ff-4a15-85ef-3ef0f222a7fc"]
+Cell[85549, 1945, 272148, 5044, 454, "Output",ExpressionUUID->"a0f269e3-f4ff-4a15-85ef-3ef0f222a7fc"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[357712, 6995, 213, 4, 67, "Section",ExpressionUUID->"16b03038-7b1b-4c98-b433-066235870d02"],
-Cell[357928, 7001, 3139, 71, 346, "Input",ExpressionUUID->"a71ff13b-2d85-4388-8178-a25e917b5851"],
-Cell[361070, 7074, 277, 5, 30, "Input",ExpressionUUID->"c58d582d-68c3-415f-a67f-a2cdfdccdff5"]
+Cell[357746, 6995, 213, 4, 67, "Section",ExpressionUUID->"16b03038-7b1b-4c98-b433-066235870d02"],
+Cell[357962, 7001, 3139, 71, 346, "Input",ExpressionUUID->"a71ff13b-2d85-4388-8178-a25e917b5851"],
+Cell[361104, 7074, 277, 5, 30, "Input",ExpressionUUID->"c58d582d-68c3-415f-a67f-a2cdfdccdff5"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[361384, 7084, 215, 4, 53, "Section",ExpressionUUID->"eaa6b792-2988-4215-969e-473c6cd2f0a3"],
-Cell[361602, 7090, 7129, 149, 913, "Input",ExpressionUUID->"570c76c5-d51c-49f8-a96f-913652e9590a"]
+Cell[361418, 7084, 215, 4, 53, "Section",ExpressionUUID->"eaa6b792-2988-4215-969e-473c6cd2f0a3"],
+Cell[361636, 7090, 7482, 157, 913, "Input",ExpressionUUID->"570c76c5-d51c-49f8-a96f-913652e9590a"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[368768, 7244, 161, 3, 67, "Section",ExpressionUUID->"3a4a1602-46f3-4a2f-82af-d38c507a14fc"],
+Cell[369155, 7252, 161, 3, 67, "Section",ExpressionUUID->"3a4a1602-46f3-4a2f-82af-d38c507a14fc"],
 Cell[CellGroupData[{
-Cell[368954, 7251, 10841, 233, 871, "Input",ExpressionUUID->"c20176ee-0a6c-4938-85c2-384f6225b031"],
-Cell[379798, 7486, 321253, 6092, 77, "Output",ExpressionUUID->"19e2faac-8886-42d5-8b23-f580bb6739ce"]
+Cell[369341, 7259, 10841, 233, 1375, "Input",ExpressionUUID->"c20176ee-0a6c-4938-85c2-384f6225b031"],
+Cell[380185, 7494, 321253, 6092, 77, "Output",ExpressionUUID->"19e2faac-8886-42d5-8b23-f580bb6739ce"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[701100, 13584, 151, 3, 67, "Section",ExpressionUUID->"a0e0327b-4f87-41ac-8413-dbf24362d29e"],
-Cell[701254, 13589, 262, 5, 30, "Input",ExpressionUUID->"8a87b8db-ada4-44cf-a57e-3dfa0d10cc0d"],
+Cell[701487, 13592, 151, 3, 67, "Section",ExpressionUUID->"a0e0327b-4f87-41ac-8413-dbf24362d29e"],
+Cell[701641, 13597, 262, 5, 30, "Input",ExpressionUUID->"8a87b8db-ada4-44cf-a57e-3dfa0d10cc0d"],
 Cell[CellGroupData[{
-Cell[701541, 13598, 899, 16, 30, "Input",ExpressionUUID->"2641428d-74d8-41e9-a5ee-b65bfe28dde1"],
-Cell[702443, 13616, 565, 9, 34, "Output",ExpressionUUID->"fc505867-5dbf-491b-a552-7291b6c9602f"]
+Cell[701928, 13606, 899, 16, 52, "Input",ExpressionUUID->"2641428d-74d8-41e9-a5ee-b65bfe28dde1"],
+Cell[702830, 13624, 565, 9, 34, "Output",ExpressionUUID->"fc505867-5dbf-491b-a552-7291b6c9602f"]
 }, Open  ]],
-Cell[703023, 13628, 531, 13, 30, "Input",ExpressionUUID->"93daba4e-06d3-4d43-aa9a-05b76834ccc8"],
+Cell[703410, 13636, 531, 13, 73, "Input",ExpressionUUID->"93daba4e-06d3-4d43-aa9a-05b76834ccc8"],
 Cell[CellGroupData[{
-Cell[703579, 13645, 313, 6, 30, "Input",ExpressionUUID->"702fadb5-f3cc-4691-8136-9d5356ff12fe"],
-Cell[703895, 13653, 625, 14, 37, "Output",ExpressionUUID->"046f8951-e60d-4914-99e1-83f28be4f6a6"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[704557, 13672, 335, 8, 30, "Input",ExpressionUUID->"7858fdb8-5a00-4a7f-9e8d-34a1be46e629"],
-Cell[704895, 13682, 316472, 5963, 77, "Output",ExpressionUUID->"3c401119-c79d-4245-a2e5-14afae8be4df"]
-}, Open  ]],
-Cell[1021382, 19648, 432, 12, 30, "Input",ExpressionUUID->"e6986eb4-151d-4f94-88b2-67131c428778"],
-Cell[CellGroupData[{
-Cell[1021839, 19664, 1146, 31, 94, "Input",ExpressionUUID->"ab6eb204-e2f8-43a1-be0a-26f5be03a5cc"],
-Cell[1022988, 19697, 300, 5, 34, "Output",ExpressionUUID->"4a838509-4a2e-4b5b-b229-4aa39bfc528e"]
+Cell[703966, 13653, 313, 6, 30, "Input",ExpressionUUID->"702fadb5-f3cc-4691-8136-9d5356ff12fe"],
+Cell[704282, 13661, 625, 14, 80, "Output",ExpressionUUID->"046f8951-e60d-4914-99e1-83f28be4f6a6"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1023325, 19707, 1343, 37, 157, "Input",ExpressionUUID->"988831a2-4fbd-4c8e-81d4-9db834bb0df0"],
-Cell[1024671, 19746, 8386, 144, 198, "Output",ExpressionUUID->"7fb27ea9-099a-4eb1-a6a5-dff39852c5e6"]
+Cell[704944, 13680, 335, 8, 30, "Input",ExpressionUUID->"7858fdb8-5a00-4a7f-9e8d-34a1be46e629"],
+Cell[705282, 13690, 316472, 5963, 77, "Output",ExpressionUUID->"3c401119-c79d-4245-a2e5-14afae8be4df"]
+}, Open  ]],
+Cell[1021769, 19656, 432, 12, 52, "Input",ExpressionUUID->"e6986eb4-151d-4f94-88b2-67131c428778"],
+Cell[CellGroupData[{
+Cell[1022226, 19672, 1146, 31, 115, "Input",ExpressionUUID->"ab6eb204-e2f8-43a1-be0a-26f5be03a5cc"],
+Cell[1023375, 19705, 300, 5, 34, "Output",ExpressionUUID->"4a838509-4a2e-4b5b-b229-4aa39bfc528e"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1033094, 19895, 153, 3, 30, "Input",ExpressionUUID->"d17a7cb6-f978-4dcd-9b62-1b9635f4e029"],
-Cell[1033250, 19900, 156, 3, 34, "Output",ExpressionUUID->"b1dfaf36-2075-4805-a774-3c42948d03a7"]
+Cell[1023712, 19715, 1343, 37, 157, "Input",ExpressionUUID->"988831a2-4fbd-4c8e-81d4-9db834bb0df0"],
+Cell[1025058, 19754, 8386, 144, 198, "Output",ExpressionUUID->"7fb27ea9-099a-4eb1-a6a5-dff39852c5e6"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1033443, 19908, 2448, 61, 346, "Input",ExpressionUUID->"4dc525a2-b791-4b1a-a1f4-867a1826c799"],
-Cell[1035894, 19971, 20391, 668, 291, "Output",ExpressionUUID->"cef91daf-525f-46f2-b0cb-0d6f4cdc4edd"]
+Cell[1033481, 19903, 153, 3, 30, "Input",ExpressionUUID->"d17a7cb6-f978-4dcd-9b62-1b9635f4e029"],
+Cell[1033637, 19908, 156, 3, 34, "Output",ExpressionUUID->"b1dfaf36-2075-4805-a774-3c42948d03a7"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1056322, 20644, 439, 12, 30, "Input",ExpressionUUID->"9e93a026-cd6c-4cd9-be2d-cbfaead352e5"],
-Cell[1056764, 20658, 413, 9, 24, "Message",ExpressionUUID->"c91ea4ff-9bcf-4e7c-a32a-925ceda21256"]
-}, Open  ]],
-Cell[1057192, 20670, 152, 3, 30, "Input",ExpressionUUID->"554af4c0-0227-4401-a144-f993d1cef12f"],
-Cell[CellGroupData[{
-Cell[1057369, 20677, 483, 12, 30, "Input",ExpressionUUID->"d3d8af9e-d471-4a4e-9bb9-1f3f9a00648f"],
-Cell[1057855, 20691, 776, 15, 24, "Message",ExpressionUUID->"6ee57dd1-2a6d-4515-885f-7a4a52be6f9c"]
+Cell[1033830, 19916, 2448, 61, 346, "Input",ExpressionUUID->"4dc525a2-b791-4b1a-a1f4-867a1826c799"],
+Cell[1036281, 19979, 20391, 668, 291, "Output",ExpressionUUID->"cef91daf-525f-46f2-b0cb-0d6f4cdc4edd"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1058668, 20711, 363, 10, 30, "Input",ExpressionUUID->"0b2d400f-67a6-45f0-8863-e04f0cb6725f"],
-Cell[1059034, 20723, 163, 3, 34, "Output",ExpressionUUID->"27db2a31-b364-4adc-8e85-a43f71569d0b"]
+Cell[1056709, 20652, 439, 12, 30, "Input",ExpressionUUID->"9e93a026-cd6c-4cd9-be2d-cbfaead352e5"],
+Cell[1057151, 20666, 413, 9, 24, "Message",ExpressionUUID->"c91ea4ff-9bcf-4e7c-a32a-925ceda21256"]
+}, Open  ]],
+Cell[1057579, 20678, 152, 3, 30, "Input",ExpressionUUID->"554af4c0-0227-4401-a144-f993d1cef12f"],
+Cell[CellGroupData[{
+Cell[1057756, 20685, 483, 12, 30, "Input",ExpressionUUID->"d3d8af9e-d471-4a4e-9bb9-1f3f9a00648f"],
+Cell[1058242, 20699, 776, 15, 24, "Message",ExpressionUUID->"6ee57dd1-2a6d-4515-885f-7a4a52be6f9c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1059055, 20719, 363, 10, 30, "Input",ExpressionUUID->"0b2d400f-67a6-45f0-8863-e04f0cb6725f"],
+Cell[1059421, 20731, 163, 3, 34, "Output",ExpressionUUID->"27db2a31-b364-4adc-8e85-a43f71569d0b"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]

@@ -3,7 +3,7 @@ BeginPackage["UpSetChart`Calculations`Utilities`"]
 DropEmpty::usage="DropEmpty[comparisons]: removes comparisons with no unique elements."
 SortSets::usage="SortSets[sets, by]: sorts sets either by name or by cardinality."
 SortComparisons::usage="SortComparisons[sets, by]: sorts sets either by name or by cardinality."
-
+GroupComparisonsByNumberOfSetsCompared::usage="GroupComparisonsByNumberOfSetsCompared[comparisons]."
 Begin["`Private`"]
 
 $ValidSortBy = {"Name", "Cardinality"};
@@ -13,13 +13,13 @@ DropEmpty[comparisons_]:=DeleteCases[comparisons, {}];
 
 SortSets[sets_, by_:"Name"] := Module[
   {
-   keys = Keys@sets
+   keys = Sort@Keys@sets
   },
 
   (* Order sets by their name *)
   If[by == "Name",
    keys = Sort[keys];
-   Return[KeySortBy[sets, FirstPosition[keys]]];
+   Return[Reverse@KeySortBy[sets, FirstPosition[keys]]];
   ];
 
   (* Order sets by how many elements they have (descending) *)
@@ -50,6 +50,13 @@ SortComparisons[comparisons_, sets_:{}, by_:"Name"] := Module[
 
   Return[comparisons];
 ];
+
+
+GroupComparisonsByNumberOfSetsCompared[comparisons_]:=
+Map[
+  Association @@ Map[# -> comparisons[#] &, #] &,
+  GroupBy[Keys@comparisons, Length@# &]
+]
 
 End[]
 EndPackage[]

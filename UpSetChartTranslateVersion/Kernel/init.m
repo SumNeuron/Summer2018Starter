@@ -1,0 +1,5 @@
+Needs["UpSetChart`"]
+Needs["UpSetChart`TestData`"]
+Needs["UpSetChart`Utilities`"]
+Needs["UpSetChart`UniqueIntersections`"]
+Needs["UpSetChart`Calculations`"]

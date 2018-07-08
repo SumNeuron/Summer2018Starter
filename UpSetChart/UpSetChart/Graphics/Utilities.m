@@ -11,7 +11,17 @@ Needs["UpSetChart`Graphics`IndicatorGrid`"]
 
 GraphicComponents::usage= StringJoin[
   "GraphicComponents[sets, comparisons]"
-]
+];
+ComponentsByGroupedComparisons::usage=StringJoin[
+  "ComponentsByGroupedComparisons[sets, groupedComparisons] ",
+  "returns list of Graphics for each grouped comparisons."
+];
+InteractiveUpSetComponents::usage=StringJoin[
+  "InteractiveUpSetComponents[sets, groupedGraphicComponents]",
+  " returns interactive UpSetChart by comparison."
+];
+
+
 Begin["`Private`"]
 Options[GraphicComponents] = {
   "IndicatorRadius" -> 1,
@@ -54,8 +64,9 @@ Module[
     "ColorFunction" -> ColorData[OptionValue["ColorGradient"]],
     "IndicatorRadius" -> OptionValue["IndicatorRadius"],
     "IndicatorSpacing" -> OptionValue["IndicatorSpacing"],
+    "Offset"->{labelWidth, 0},
     "Translate" -> {
-      maxSetCardinality+ labelWidth + 2 First@OptionValue["ComponentSpacing"],
+      maxSetCardinality + 2 First@OptionValue["ComponentSpacing"],
       OptionValue["IndicatorRadius"] +
       Last@OptionValue["ComponentSpacing"] +
       Length[setsNames] (2 OptionValue["IndicatorRadius"] + Last@OptionValue["IndicatorSpacing"])
@@ -63,14 +74,44 @@ Module[
   ];
   iG  = IndicatorGrid[setsNames, comparisonsNames,
     "Translate" -> {
-      maxSetCardinality+ labelWidth + 2 First@OptionValue["ComponentSpacing"],
+      maxSetCardinality + 2 First@OptionValue["ComponentSpacing"],
       0
     },
+    "Offset"->{labelWidth, 0},
     "IndicatorRadius" -> OptionValue["IndicatorRadius"],
     "IndicatorSpacing" -> OptionValue["IndicatorSpacing"]
   ];
   Return[{sBC, cBC, sL, iG}]
 ]
+
+Options[ComponentsByGroupedComparisons]=Options[GraphicComponents]
+ComponentsByGroupedComparisons[sets_, groupedComparisons_, opt: OptionsPattern[]]:=
+With[
+  {
+    options = OverwriteOptions[{opt}, ComponentsByGroupedComparisons, GraphicComponents]
+  },
+  Graphics[#] & /@ (GraphicComponents[sets, #, options] & /@ groupedComparisons)
+]
+
+
+
+Options[InteractiveUpSetComponents]={
+  "ImageSize" -> {Automatic, 1}
+};
+InteractiveUpSetComponents[groupedGraphicComponents_, opt: OptionsPattern[]]:=
+TabView[
+  KeySortBy[groupedGraphicComponents, # &],
+  Alignment -> {Left, Bottom},
+  ContentPadding -> False,
+  AutoAction -> True,
+  BaselinePosition -> Bottom,
+  ControlPlacement -> Left,
+  ImageMargins -> 0,
+  FrameMargins -> 0,
+  ImageSize -> OptionValue["ImageSize"]
+]
+
+
 
 End[]
 EndPackage[]

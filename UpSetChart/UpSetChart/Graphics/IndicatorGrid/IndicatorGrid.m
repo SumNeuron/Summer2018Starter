@@ -18,21 +18,23 @@ StringJoin[
 ];
 
 
-CoordinatesOfGridDisk[comparisonIndex_, setIndex_, radius_, translate_, spacing_]:=
-{
-  (2 radius + First@spacing) comparisonIndex + First@translate,
-  (2 radius + Last@spacing) setIndex + Last@translate
-}
+CoordinatesOfGridDisk[comparisonIndex_, setIndex_, radius_, spacing_, offset_]:=
+Offset[
+  offset,
+  {
+    (2 radius + First@spacing) comparisonIndex,
+    (2 radius + Last@spacing) setIndex
+  }
+]
 
-
-Options[IndicatorGridDisk] = { "Translate" -> {0, 0}, "Radius" -> 1, "Spacing" -> {1, 1} };
+Options[IndicatorGridDisk] = { "Offset" -> {0, 0}, "Radius" -> 1, "Spacing" -> {1, 1} };
 IndicatorGridDisk[comparisonIndex_, setIndex_, comparisonNames_, setNames_, OptionsPattern[]] :=
 Module[
   {
       coordinates = CoordinatesOfGridDisk[comparisonIndex, setIndex,
         OptionValue["Radius"],
-        OptionValue["Translate"],
-        OptionValue["Spacing"]
+        OptionValue["Spacing"],
+        OptionValue["Offset"]
       ],
       comp = comparisonNames[[comparisonIndex]],
       set = setNames[[setIndex]],
@@ -47,7 +49,7 @@ Module[
 ]
 
 
-Options[IndicatorGridDisks] = { "Translate" -> {0, 0}, "Radius" -> 1, "Spacing" -> {1, 1} };
+Options[IndicatorGridDisks] = { "Offset" -> {0, 0}, "Radius" -> 1, "Spacing" -> {1, 1} };
 IndicatorGridDisks[setsNames_, comparisonsNames_, OptionsPattern[]] :=
 Table[
   IndicatorGridDisk[
@@ -56,27 +58,33 @@ Table[
     comparisonsNames,
     setsNames,
     "Radius"->OptionValue["Radius"],
-    "Translate"->OptionValue["Translate"],
-    "Spacing"->OptionValue["Spacing"]
+    "Spacing"->OptionValue["Spacing"],
+    "Offset"->OptionValue["Offset"]
   ]
  , {setIndex, Length@setsNames}, {comparisonIndex, Length@comparisonsNames}
 ]
 
 
-CoordinatesOfGridLine[comparisonIndex_, setIndices_, radius_, translate_, spacing_]:=
+CoordinatesOfGridLine[comparisonIndex_, setIndices_, radius_, spacing_, offset_]:=
 {
-  {
-    (2 radius + First@spacing) comparisonIndex  + First@translate  - radius / 3,
-    Min[setIndices] (2 radius + Last@spacing) + Last@translate
-  },
-  {
-    (2 radius + First@spacing) comparisonIndex  + First@translate  + radius / 3,
-    Max[setIndices] (2 radius + Last@spacing) + Last@translate
-  }
+  Offset[
+    offset,
+    {
+      (2 radius + First@spacing) comparisonIndex  - (radius / 4),
+      Min[setIndices] (2 radius + Last@spacing)
+    }
+  ],
+  Offset[
+    offset,
+    {
+      (2 radius + First@spacing) comparisonIndex  + (2 radius / 4),
+      Max[setIndices] (2 radius + Last@spacing)
+    }
+  ]
 }
 
 
-Options[IndicatorGridLine] = { "Translate" -> {0, 0}, "Radius" -> 1, "Spacing" -> {1, 1} };
+Options[IndicatorGridLine] = { "Offset" -> {0, 0}, "Radius" -> 1, "Spacing" -> {1, 1} };
 IndicatorGridLine[comparisonIndex_, setNames_, comparisonNames_, OptionsPattern[]] :=
 Module[
   {
@@ -96,8 +104,8 @@ Module[
     comparisonIndex,
     setIndices,
     OptionValue["Radius"],
-    OptionValue["Translate"],
-    OptionValue["Spacing"]
+    OptionValue["Spacing"],
+    OptionValue["Offset"]
   ];
 
   {
@@ -107,7 +115,7 @@ Module[
 ];
 
 
-Options[IndicatorGridLines] = { "Translate" -> {0, 0}, "Radius" -> 1, "Spacing" -> {1, 1} };
+Options[IndicatorGridLines] = { "Radius" -> 1, "Spacing" -> {1, 1}, "Offset"->{0, 0} };
 IndicatorGridLines[setsNames_, comparisonsNames_, OptionsPattern[]] :=
 Table[
   IndicatorGridLine[
@@ -115,8 +123,8 @@ Table[
     setsNames,
     comparisonsNames,
     "Radius"->OptionValue["Radius"],
-    "Translate"->OptionValue["Translate"],
-    "Spacing"->OptionValue["Spacing"]
+    "Spacing"->OptionValue["Spacing"],
+    "Offset"->OptionValue["Offset"]
   ]
 , {comparisonIndex, Length@comparisonsNames}
 ];
@@ -125,21 +133,25 @@ Table[
 Options[IndicatorGrid] = {
   "Translate" -> {0, 0},
   "IndicatorRadius" -> 1,
-  "IndicatorSpacing" -> {1, 1}
+  "IndicatorSpacing" -> {1, 1},
+  "Offset"->{0, 0}
 }
 IndicatorGrid[setsNames_, comparisonsNames_, OptionsPattern[]] :=
-{
-  IndicatorGridDisks[setsNames, comparisonsNames,
-    "Radius"->OptionValue["IndicatorRadius"],
-    "Translate"->OptionValue["Translate"],
-    "Spacing"->OptionValue["IndicatorSpacing"]
-  ],
-  IndicatorGridLines[setsNames, comparisonsNames,
-    "Radius"->OptionValue["IndicatorRadius"],
-    "Translate"->OptionValue["Translate"],
-    "Spacing"->OptionValue["IndicatorSpacing"]
-  ]
-}
+Translate[
+  {
+    IndicatorGridDisks[setsNames, comparisonsNames,
+      "Radius"->OptionValue["IndicatorRadius"],
+      "Spacing"->OptionValue["IndicatorSpacing"],
+      "Offset"->OptionValue["Offset"]
+    ],
+    IndicatorGridLines[setsNames, comparisonsNames,
+      "Radius"->OptionValue["IndicatorRadius"],
+      "Spacing"->OptionValue["IndicatorSpacing"],
+      "Offset"->OptionValue["Offset"]
+    ]
+  },
+  OptionValue["Translate"]
+]
 
 
 

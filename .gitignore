@@ -12,3 +12,11 @@ __pycache__
 **/Detexon/data
 
 .idea/
+
+
+**/*.zip
+**/*.wlnet
+**/*.mx
+
+
+**/playgrounds**
