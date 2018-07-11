@@ -181,11 +181,11 @@ out="graph_net.wlnet";
 (*Layered Embedding*)
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Make Dataset and Partition*)
 
 
-n=10000000;
+n=5000000;
 nov = 10;
 poe = 0.5;
 glo = "LayeredEmbedding";
@@ -195,7 +195,7 @@ ds=MakeDataset[n,
 	"NumberOfVertices"->nov,
 	"ProbabilityOfEdge"->poe,
 	"GraphLayout"->glo,
-	"DiscretizeCoordinates"->False
+	"DiscretizeCoordinates"->True
 ];
 Print["Paritioning into Training, Validation, and Test set"];	
 pd=PartitionData[ds, ratios];
@@ -205,14 +205,16 @@ Export[FileNameJoin[{base,"data",
 	<>"_layout_"<>glo
 	<>"_n_"<>ToString[n]
 	<>"_ratios_"<>ToString[ratios]
+	<>"_discretized"
 	<>".mx"
 }],pd];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Define Linear Network*)
 
 
+Print["Defining Linear Network for"<>glo];
 inputDimension=Dimensions[First[First[ds]]];
 net = NetInitialize[NetChain[
 	{
@@ -223,7 +225,15 @@ net = NetInitialize[NetChain[
 		Ramp,
 		LinearLayer[First[inputDimension]^3*4],
 		Tanh,
+		LinearLayer[First[inputDimension]^3*4],
+		Ramp,
 		LinearLayer[First[inputDimension]^3*8],
+		Tanh,
+		LinearLayer[First[inputDimension]^3*8],
+		Ramp,
+		LinearLayer[First[inputDimension]^3*4],
+		Tanh,
+		LinearLayer[First[inputDimension]^2],
 		Ramp,
 		LinearLayer[First[inputDimension]^3],
 		Tanh,
@@ -233,7 +243,7 @@ net = NetInitialize[NetChain[
 ]];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Train Graph*)
 
 
@@ -248,23 +258,31 @@ tnet=NetTrain[
 Print["Training done."];
 
 
-netFile = FileNameJoin[{
-	base, 
-	"results", 
-	"num_v_"<>ToString[nov]
-	<>"_prob_e_"<>ToString[poe]
-	<>"_layout_"<>glo
-	<>"_n_"<>ToString[n]
-	<>"_ratios_"<>ToString[ratios]<>"_linear"
-	<>".mx"
-}]
+(* ::Section::Closed:: *)
+(*Export Net*)
+
+
+Print["Exporting Linear Network for"<>glo];
+netName=StringJoin[
+	"num_v_",ToString[nov],
+	"_prob_e_",ToString[poe],
+	"_layout_",glo,
+	"_n_",ToString[n],
+	"_ratios_",ToString[ratios],
+	"_linear"<>"_discretized"
+];
+
+netFile = FileNameJoin[{base, "results", netName<>".mx"}];
 Export[netFile,tnet]
+netFile = FileNameJoin[{base, "results", netName<>".wlnet"}];
+Export[netFile, tnet["TrainedNet"]]
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Define CNN*)
 
 
+Print["Defining CNN Network for"<>glo];
 net=NetInitialize@NetChain[
 {
 ConvolutionLayer[128,{3}, "PaddingSize"->1],
@@ -302,7 +320,7 @@ Tanh
 ]
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Train CNN*)
 
 
@@ -317,42 +335,44 @@ tnet=NetTrain[
 Print["Training done."];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Export*)
 
 
-netFile = FileNameJoin[{
-	base, 
-	"results", 
-	"num_v_"<>ToString[nov]
-	<>"_prob_e_"<>ToString[poe]
-	<>"_layout_"<>glo
-	<>"_n_"<>ToString[n]
-	<>"_ratios_"<>ToString[ratios]<>"_cnn"
-	<>".mx"
-}]
+Print["Exporting CNN Network for"<>glo];
+netName=StringJoin[
+	"num_v_",ToString[nov],
+	"_prob_e_",ToString[poe],
+	"_layout_",glo,
+	"_n_",ToString[n],
+	"_ratios_",ToString[ratios],
+	"_cnn"<>"_discretized"
+];
+netFile = FileNameJoin[{base, "results", netName<>".mx"}];
 Export[netFile,tnet]
+netFile = FileNameJoin[{base, "results", netName<>".wlnet"}];
+Export[netFile, tnet["TrainedNet"]]
 
 
 (* ::Subchapter:: *)
-(*"SpringElectricalEmbedding"*)
+(*"SpectralEmbedding"*)
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Make Dataset and Partition*)
 
 
-n=10000000;
+n=5000000;
 nov = 10;
 poe = 0.5;
-glo = "SpringElectricalEmbedding";
+glo = "SpectralEmbedding";
 ratios= {0.7, 0.2, .1};
 Print["Making Dataset"];
 ds=MakeDataset[n, 
 	"NumberOfVertices"->nov,
 	"ProbabilityOfEdge"->poe,
 	"GraphLayout"->glo,
-	"DiscretizeCoordinates"->False
+	"DiscretizeCoordinates"->True
 ];
 Print["Paritioning into Training, Validation, and Test set"];	
 pd=PartitionData[ds, ratios];
@@ -361,15 +381,16 @@ Export[FileNameJoin[{base,"data",
 	<>"_prob_e_"<>ToString[poe]
 	<>"_layout_"<>glo
 	<>"_n_"<>ToString[n]
-	<>"_ratios_"<>ToString[ratios]
+	<>"_ratios_"<>ToString[ratios]<>"_discretized"
 	<>".mx"
 }],pd];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Define Linear Network*)
 
 
+Print["Defining Linear Network for"<>glo];
 inputDimension=Dimensions[First[First[ds]]];
 net = NetInitialize[NetChain[
 	{
@@ -381,6 +402,12 @@ net = NetInitialize[NetChain[
 		LinearLayer[First[inputDimension]^3*4],
 		Tanh,
 		LinearLayer[First[inputDimension]^3*8],
+		Tanh,
+		LinearLayer[First[inputDimension]^3*8],
+		Ramp,
+		LinearLayer[First[inputDimension]^3*4],
+		Tanh,
+		LinearLayer[First[inputDimension]^2],
 		Ramp,
 		LinearLayer[First[inputDimension]^3],
 		Tanh,
@@ -390,7 +417,7 @@ net = NetInitialize[NetChain[
 ]];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Train Graph*)
 
 
@@ -405,23 +432,31 @@ tnet=NetTrain[
 Print["Training done."];
 
 
-netFile = FileNameJoin[{
-	base, 
-	"results", 
-	"num_v_"<>ToString[nov]
-	<>"_prob_e_"<>ToString[poe]
-	<>"_layout_"<>glo
-	<>"_n_"<>ToString[n]
-	<>"_ratios_"<>ToString[ratios]<>"_linear"
-	<>".mx"
-}]
+(* ::Section::Closed:: *)
+(*Export*)
+
+
+Print["Exporting Linear Network for"<>glo];
+netName=StringJoin[
+	"num_v_",ToString[nov],
+	"_prob_e_",ToString[poe],
+	"_layout_",glo,
+	"_n_",ToString[n],
+	"_ratios_",ToString[ratios],
+	"_linear"<>"_discretized"
+];
+
+netFile = FileNameJoin[{base, "results", netName<>".mx"}];
 Export[netFile,tnet]
+netFile = FileNameJoin[{base, "results", netName<>".wlnet"}];
+Export[netFile, tnet["TrainedNet"]]
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Define CNN*)
 
 
+Print["Defining CNN Network for"<>glo];
 net=NetInitialize@NetChain[
 {
 ConvolutionLayer[128,{3}, "PaddingSize"->1],
@@ -459,7 +494,7 @@ Tanh
 ]
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Train CNN*)
 
 
@@ -474,18 +509,105 @@ tnet=NetTrain[
 Print["Training done."];
 
 
+(* ::Section::Closed:: *)
+(*Export*)
+
+
+Print["Exporting CNN Network for"<>glo];
+netName=StringJoin[
+	"num_v_",ToString[nov],
+	"_prob_e_",ToString[poe],
+	"_layout_",glo,
+	"_n_",ToString[n],
+	"_ratios_",ToString[ratios],
+	"_cnn"<>"_discretized"
+];
+
+netFile = FileNameJoin[{base, "results", netName<>".mx"}];
+Export[netFile,tnet]
+netFile = FileNameJoin[{base, "results", netName<>".wlnet"}];
+Export[netFile, tnet["TrainedNet"]]
+
+
+(* ::Chapter:: *)
+(*AM for simple nets*)
+
+
+(* ::Section::Closed:: *)
+(*Make Data*)
+
+
+n=500000;
+nov = 10;
+ratios= {0.7, 0.2, .1};
+Print["Making Dataset"];
+ds=MakeSimpleQDataset[n, "NumberOfVertices"->nov];
+Print["Paritioning into Training, Validation, and Test set"];	
+pd=PartitionData[ds, ratios];
+Export[FileNameJoin[{base,"data",
+	"num_v_"<>ToString[nov]
+	<>"_n_"<>ToString[n]
+	<>"_ratios_"<>ToString[ratios]<>"_simple_q"
+	<>".mx"
+}],pd];
+
+
+(* ::Section::Closed:: *)
+(*Define Network*)
+
+
+Print["Defining CNN Network for simpleq"];
+inputDimension=Dimensions[First[First[ds]]];
+cnn=NetInitialize@NetChain[
+{
+ConvolutionLayer[128,{3}, "PaddingSize"->1],
+Tanh,
+ConvolutionLayer[256,{3}, "PaddingSize"->1],
+Ramp,
+BatchNormalizationLayer[],
+ConvolutionLayer[128,{3}],
+Tanh,
+ConvolutionLayer[64,{3}],
+Ramp,
+BatchNormalizationLayer[],
+ConvolutionLayer[32,{3}],
+Tanh,
+ConvolutionLayer[10,{3}],
+Tanh,
+AggregationLayer[Mean],
+LinearLayer[2],
+SoftmaxLayer[]
+},
+"Input"-> inputDimension,
+"Output"->NetDecoder[{"Class",{True,False}}]
+]
+
+
+(* ::Section:: *)
+(*Train net*)
+
+
+tnetr=NetTrain[
+	cnn,
+	pd["TrainingData"],
+	All,
+	ValidationSet->pd["ValidationData"],
+	TargetDevice->"GPU"
+];
+
+
 (* ::Section:: *)
 (*Export*)
 
 
-netFile = FileNameJoin[{
-	base, 
-	"results", 
-	"num_v_"<>ToString[nov]
-	<>"_prob_e_"<>ToString[poe]
-	<>"_layout_"<>glo
-	<>"_n_"<>ToString[n]
-	<>"_ratios_"<>ToString[ratios]<>"_cnn"
-	<>".mx"
-}]
-Export[netFile,tnet]
+Print["Exporting CNN Network for simpleq"];
+netName=StringJoin[
+	"num_v_",ToString[nov],
+	"_ratios_",ToString[ratios],
+	"_cnn"<>"_simple_q"
+];
+
+netFile = FileNameJoin[{base, "results", netName<>".mx"}];
+Export[netFile,tnetr]
+netFile = FileNameJoin[{base, "results", netName<>".wlnet"}];
+Export[netFile, tnetr["TrainedNet"]]
