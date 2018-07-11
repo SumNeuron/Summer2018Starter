@@ -1,0 +1,81 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframDesktop 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       161,          7]
+NotebookDataLength[      2312,         73]
+NotebookOptionsPosition[      1760,         53]
+NotebookOutlinePosition[      2114,         69]
+CellTagsIndexPosition[      2071,         66]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Project: Spacing Function", "Title",
+ CellChangeTimes->{{3.739266308387692*^9, 3.739266326651148*^9}, {
+  3.7392919262840433`*^9, 3.739291937946026*^9}, {3.7393070198350363`*^9, 
+  3.739307040721932*^9}},ExpressionUUID->"b9b6e7aa-c0ce-4a07-b151-\
+c982ff2ec9c5"],
+
+Cell[CellGroupData[{
+
+Cell["Description", "Chapter",
+ CellChangeTimes->{{3.739266334171668*^9, 
+  3.73926633528345*^9}},ExpressionUUID->"029ffe7c-aebf-4de1-bc00-\
+8bd74af1d784"],
+
+Cell[TextData[{
+ "Develop a spacing function for List (s) of arbitrary ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["nesting", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "5113afff-07bc-4d12-9cc2-3cee76b782ca"],
+ " that can be applied to categorical based charts (e.g. BarChart, \
+BoxWhiskerChart).\n1. An example of an arbitrarily nested List:\n\t{ {1, 1, \
+1}, { {2, 2, {3, 3, {4, 4, 4}, 3, 3, {4, 4, {5} }, 3 }, 2}, 1, 1 } }"
+}], "Text",
+ CellChangeTimes->{{3.739266337523518*^9, 3.7392663391957817`*^9}, {
+  3.7392919393200197`*^9, 3.739291953872344*^9}, {3.739307049049863*^9, 
+  3.739307224446509*^9}},ExpressionUUID->"35261a22-493a-4250-bf50-\
+db1d84f5b2a8"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1280, 687},
+WindowMargins->{{0, Automatic}, {Automatic, -1}},
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 7, \
+2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[583, 22, 267, 4, 98, "Title",ExpressionUUID->"b9b6e7aa-c0ce-4a07-b151-c982ff2ec9c5"],
+Cell[CellGroupData[{
+Cell[875, 30, 155, 3, 69, "Chapter",ExpressionUUID->"029ffe7c-aebf-4de1-bc00-8bd74af1d784"],
+Cell[1033, 35, 699, 14, 81, "Text",ExpressionUUID->"35261a22-493a-4250-bf50-db1d84f5b2a8"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

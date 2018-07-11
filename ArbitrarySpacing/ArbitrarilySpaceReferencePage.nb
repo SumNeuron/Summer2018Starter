@@ -1,0 +1,2844 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    128997,       2836]
+NotebookOptionsPosition[     12119,        379]
+NotebookOutlinePosition[    120877,       2677]
+CellTagsIndexPosition[    120796,       2672]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ "New in: ",
+ Cell["??", "HistoryData",
+  CellTags->"New",ExpressionUUID->"60901927-8a6f-44a8-980a-b42954671e10"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified",ExpressionUUID->"23aecd96-0afe-464e-92d3-8e8bfb610441"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete",ExpressionUUID->"67063932-d4c7-4f86-a027-dda85e764854"],
+ " | Excised in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Excised",ExpressionUUID->"248fbba8-0d97-4679-99ff-476183e06c04"]
+}], "History",
+ CellID->341476719,ExpressionUUID->"9d5312bd-21a3-4414-9810-aa4037f65fc6"],
+
+Cell["Created by: markus on 07-06-2018 14:31:16", "AuthorDate",
+ CellID->1321464559,ExpressionUUID->"d7f16aff-72aa-4e18-9d7b-d88a90ff14d0"],
+
+Cell[CellGroupData[{
+
+Cell["Categorization", "CategorizationSection",
+ CellID->1122911449,ExpressionUUID->"aab346e5-c54e-4543-bfb6-055de9d33d30"],
+
+Cell["Symbol", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->686433507,ExpressionUUID->"628529aa-75c0-47b0-aee1-60c78cad327e"],
+
+Cell["", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->605800465,ExpressionUUID->"bef83001-b92a-4b47-91bf-718662946187"],
+
+Cell["", "Categorization",
+ CellLabel->"Context",
+ CellID->468444828,ExpressionUUID->"bea189f9-73e0-4baf-b29f-7184e0cf366c"],
+
+Cell["XXXX", "Categorization",
+ CellLabel->"URI",ExpressionUUID->"e6d405af-40e0-4ab3-b0f9-eef9bc6a46a8"],
+
+Cell["XXXX", "Categorization",
+ CellLabel->"Title Modifier",
+ CellID->172747495,ExpressionUUID->"4a2472d2-19f5-4b9f-a0f2-c5a1708cd7bb"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Synonyms", "SynonymsSection",
+ CellID->1427418553,ExpressionUUID->"fb8acf4f-9285-4b8c-a747-4381fc0b9d41"],
+
+Cell["XXXX", "Synonyms",
+ CellID->1251652828,ExpressionUUID->"80d54c53-ee23-43f2-a45f-b1e852e781b1"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->477174294,ExpressionUUID->"e9878159-9f99-4959-9826-e5a3f952bf23"],
+
+Cell["XXXX", "Keywords",
+ CellID->1164421360,ExpressionUUID->"612ce670-b22f-493d-b218-797337b1a463"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Syntax Templates", "TemplatesSection",
+ CellID->1872225408,ExpressionUUID->"5cc15371-6f63-4f57-9207-32b25cb98ecc"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Additional Function Template",
+ CellID->1562036412,ExpressionUUID->"895d1c65-38f1-4125-baff-a225fcfc19c8"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Arguments Pattern",
+ CellID->158391909,ExpressionUUID->"170b786f-fb75-4556-a26a-6701da067cc2"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Local Variables",
+ CellID->1360575930,ExpressionUUID->"82a33b27-a8e0-4f8a-ba2a-5f2dee7b1bbf"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Color Equal Signs",
+ CellID->793782254,ExpressionUUID->"a0124f6d-7659-412c-a856-eefb69ed49a8"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Details", "DetailsSection",
+ CellID->307771771,ExpressionUUID->"8f9f96de-cdd4-415b-98c3-6a4a1d7a219e"],
+
+Cell["XXXX", "Details",
+ CellLabel->"Lead",
+ CellID->49458704,ExpressionUUID->"4b2f2a6b-f93c-4868-9e10-5b6968909260"],
+
+Cell["XXXX", "Details",
+ CellLabel->"Developers",
+ CellID->350963985,ExpressionUUID->"6e4a3ae1-cdf6-47cc-ad1f-759e8fe45593"],
+
+Cell["XXXX", "Details",
+ CellLabel->"Authors",
+ CellID->422270209,ExpressionUUID->"efc33df5-b775-495a-80e4-3521a78bc446"],
+
+Cell["XXXX", "Details",
+ CellLabel->"Feature Name",
+ CellID->545239557,ExpressionUUID->"1a0db4eb-149a-46f3-b25b-b280d6264af5"],
+
+Cell["XXXX", "Details",
+ CellLabel->"QA",
+ CellID->121292707,ExpressionUUID->"1050f771-3937-45cd-bf2a-bca989fc6c2c"],
+
+Cell["XXXX", "Details",
+ CellLabel->"DA",
+ CellID->29314406,ExpressionUUID->"2d37259b-d19a-4265-94d9-1062a057d814"],
+
+Cell["XXXX", "Details",
+ CellLabel->"Docs",
+ CellID->96001539,ExpressionUUID->"4e0c64af-4701-4221-b6a7-d115b2825a25"],
+
+Cell["XXXX", "Details",
+ CellLabel->"Features Page Notes",
+ CellID->123278822,ExpressionUUID->"d0039a91-8ee2-4052-8ab0-325c85db884a"],
+
+Cell["XXXX", "Details",
+ CellLabel->"Comments",
+ CellID->240026365,ExpressionUUID->"02ff136a-5412-4c7d-9f54-fb44ec7c41f5"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Security Details", "SecuritySection",
+ CellID->13551076,ExpressionUUID->"c4d92900-bc11-4614-8c83-407abdd45933"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     TemplateBox[{CheckboxBox[
+        Dynamic[
+         CurrentValue[
+          EvaluationNotebook[], {TaggingRules, "SecurityRisk"}, False]]],
+       StyleBox[
+       "\"   Potential security risk\"", FontFamily -> "Arial", FontSize -> 
+        10, StripOnInput -> False]},
+      "RowDefault"]},
+    {
+     DynamicBox[ToBoxes[
+       If[
+        TrueQ[
+         CurrentValue[
+          EvaluationNotebook[], {TaggingRules, "SecurityRisk"}]], 
+        InputField[
+         Dynamic[
+          CurrentValue[
+           EvaluationNotebook[], {TaggingRules, "SecurityExplanation"}, ""]], 
+         String, FieldHint -> "How so? (optional)", FieldSize -> {40, 5}, 
+         BaseStyle -> {FontFamily -> "Arial", FontSize -> 12}], ""], 
+       StandardForm],
+      ImageSizeCache->{0., {0., 5.}}]}
+   },
+   DefaultBaseStyle->"Column",
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Column"]], "SecurityDetails",
+ CellID->2488900,ExpressionUUID->"89fc8445-1353-4fa3-97dd-1be0f00a5de5"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["XXXX", "ObjectName",
+ CellID->1224892054,ExpressionUUID->"9e65fd4a-3b79-48c0-af70-75bef669e834"],
+
+Cell[TextData[{
+ Cell["   ", "ModInfo",ExpressionUUID->"2fdc3ed2-06fd-4227-b5c0-2a023c6c9737"],
+ Cell[BoxData[
+  RowBox[{"XXXX", "[", "]"}]], "InlineFormula",ExpressionUUID->
+  "f8ea538b-9d46-4953-98dc-da0c15517a97"],
+ " \[LineSeparator]XXXX"
+}], "Usage",
+ CellID->982511436,ExpressionUUID->"2f7b7357-db0a-477c-a3fa-e2cca7faa2b5"],
+
+Cell["XXXX", "Notes",
+ CellID->1067943069,ExpressionUUID->"c396774d-bb61-4976-8af9-595edbd6f735"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Tutorials", "TutorialsSection",
+ CellID->250839057,ExpressionUUID->"b02d4013-fc03-46fd-91f5-418756d88d93"],
+
+Cell["XXXX", "Tutorials",
+ CellID->341631938,ExpressionUUID->"e5fbfac5-d780-4a61-9aa1-c2995b34e594"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Demonstrations", "RelatedDemonstrationsSection",
+ CellID->1268215905,ExpressionUUID->"2bafa20c-ad4d-4358-9b58-1c0fa094f645"],
+
+Cell["XXXX", "RelatedDemonstrations",
+ CellID->1129518860,ExpressionUUID->"ca787c01-e02b-4f0c-b52a-b5a25070bba2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Links", "RelatedLinksSection",
+ CellID->1584193535,ExpressionUUID->"a98c198c-eaff-4f47-a52b-bde15cb67cfa"],
+
+Cell["XXXX", "RelatedLinks",
+ CellID->1038487239,ExpressionUUID->"ec84bd42-24ea-4c7d-a2df-bf8e73ab079b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["See Also", "SeeAlsoSection",
+ CellID->1255426704,ExpressionUUID->"d9364631-c239-4d65-b012-ba498b2ced33"],
+
+Cell["XXXX", "SeeAlso",
+ CellID->929782353,ExpressionUUID->"77ab00c7-f97f-445a-9882-c5a9482ccd27"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Workflows", "RelatedWorkflowsSection",
+ CellID->121236710,ExpressionUUID->"fc08db45-053b-4d9f-98c1-1ff4c0f2aaf6"],
+
+Cell["XXXX", "RelatedWorkflows",
+ CellID->294347949,ExpressionUUID->"0387d739-2698-4d59-91f8-023405a5f852"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["More About", "MoreAboutSection",
+ CellID->38303248,ExpressionUUID->"b2f57e8f-69ad-4769-b4dc-58a90c351f38"],
+
+Cell["Autogenerated", "MoreAbout",
+ CellID->1665078683,ExpressionUUID->"0862ec19-c5ba-4499-bc8f-b5b8b510794c"]
+}, Open  ]],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     StyleBox["Examples", "PrimaryExamplesSection"], 
+     ButtonBox[
+      RowBox[{
+       RowBox[{"More", " ", "Examples"}], " ", "\[RightTriangle]"}],
+      BaseStyle->"ExtendedExamplesLink",
+      ButtonData:>"ExtendedExamples"]}
+   }],
+  $Line = 0; Null]], "PrimaryExamplesSection",
+ CellID->880084151,ExpressionUUID->"ff765981-7828-4382-a532-4eb8c1f0790e"],
+
+Cell[CellGroupData[{
+
+Cell["More Examples", "ExtendedExamplesSection",
+ CellTags->"ExtendedExamples",
+ CellID->1854448968,ExpressionUUID->"456fe121-758f-4ad6-9d96-2e57a0bcf8b5"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Scope", "ExampleSection",ExpressionUUID->
+   "0fbd8662-e240-41ca-bcd9-7ca71f46b749"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->1293636265,ExpressionUUID->"3d9280dd-6661-4a8d-bbde-1d8e7123b08d"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Generalizations & Extensions", "ExampleSection",ExpressionUUID->
+   "9ea84794-8b60-479b-be45-8e0f5d33bd38"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->1020263627,ExpressionUUID->"1c6d89dc-e871-4fe5-a81e-b2c660875ccb"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Options", "ExampleSection",ExpressionUUID->
+   "4b2873af-4134-4d2b-8f7f-431a8606315f"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->2061341341,ExpressionUUID->"04ca60dd-a4a6-49b7-9f2b-b9fa2adf971b"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "XXXX", "ExampleSubsection",ExpressionUUID->
+   "fb822cb5-ebb0-4a37-a294-dd80ea66e928"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->1757724783,ExpressionUUID->"f91cb45f-63bb-4f64-86a3-b4bba17fec52"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "XXXX", "ExampleSubsection",ExpressionUUID->
+   "6c8839f6-b7d7-43e8-87cf-f5ef5eb18a58"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->1295379749,ExpressionUUID->"24525614-b8ce-4134-becc-672f4a53b772"]
+}, Closed]],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Applications", "ExampleSection",ExpressionUUID->
+   "1f73b08b-4b74-4417-a449-babb541d2fc9"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->258228157,ExpressionUUID->"8008c9d4-0511-49ea-9b70-6e997048933c"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Properties & Relations", "ExampleSection",ExpressionUUID->
+   "c1901e4c-e3d6-4047-a765-21cc4751e6fa"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->2123667759,ExpressionUUID->"168b6ea6-0048-4952-a928-8589747d3f82"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Possible Issues", "ExampleSection",ExpressionUUID->
+   "39788d3e-4b45-4f5e-bcb5-6a4faa8b0106"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->1305812373,ExpressionUUID->"a34bdd3c-150d-4dff-bab1-1495c611ad50"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Interactive Examples", "ExampleSection",ExpressionUUID->
+   "7aab9189-8700-4946-b0b1-b34d44ab3559"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->1653164318,ExpressionUUID->"3cb57427-e229-4946-a7f6-52d8568e9329"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Neat Examples", "ExampleSection",ExpressionUUID->
+   "99e7c285-de10-4553-b4ba-551b440d0f77"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->589267740,ExpressionUUID->"beada140-18bc-41a2-9272-843f037106ea"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Design Discussion", "DesignDiscussionSection",
+ CellID->1775809863,ExpressionUUID->"b6da41e9-8313-437d-80d4-645f5ac55afd"],
+
+Cell["XXXX", "DesignDiscussion",
+ CellID->308641435,ExpressionUUID->"47bd38d8-ad14-498a-b415-e633874b557b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Application Notes", "ApplicationNotesSection",
+ CellID->1163590540,ExpressionUUID->"1d63aa1c-c7e7-4d4a-ad87-c70abe264c40"],
+
+Cell["XXXX", "ApplicationNotes",
+ CellID->1480116198,ExpressionUUID->"63187b85-4f87-4a3e-bd26-2bbd7fd363a6"]
+}, Open  ]],
+
+Cell["Test Cases", "TestCasesSection",
+ CellID->725748110,ExpressionUUID->"864855e0-b22b-4280-bbbf-40c5e86c317d"],
+
+Cell[CellGroupData[{
+
+Cell["Function Essay", "FunctionEssaySection",
+ CellID->37427227,ExpressionUUID->"36a784ce-ae99-4eb9-b37b-89fbe71c4eb2"],
+
+Cell["XXXX", "FunctionEssay",
+ CellID->356990964,ExpressionUUID->"a08c1f65-c8d3-4041-b769-0fb7c3b60c2a"]
+}, Open  ]]
+},
+ScreenStyleEnvironment->"FutureObject",
+WindowSize->{700, 829},
+WindowMargins->{{253, Automatic}, {Automatic, 42}},
+TaggingRules->{
+ "DocuToolsSettingsInternal" -> {
+   "$PacletVersion" -> "0.9.1871", "$MVersion" -> "11", "$FlaggedVersion" -> 
+    10.4, "$ApplicationName" -> "Pubs", "$LinkBase" -> "Pubs", 
+    "$ApplicationDirectory" -> "C:\\Workspace\\Pubs\\", 
+    "$DocumentationDirectory" -> 
+    "C:\\Workspace\\Pubs\\Documentation\\English\\", "$UseNewPageDialog" -> 
+    ""}, "SecurityRisk" -> False, "SecurityExplanation" -> "", "Author" -> 
+  "markus", "CreationDate" -> "07-06-2018 14:31:16"},
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 20, \
+2018)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[StyleDefinitions -> "Core.nb"]], 
+   Cell[
+    StyleData[StyleDefinitions -> "StyleMenuClear.nb"]], 
+   Cell[
+    CellGroupData[{
+      Cell["Style Environment Names", "Section"], 
+      Cell[
+       StyleData[All, "Working"], PageWidth -> 650, ShowCellBracket -> True, 
+       CellBracketOptions -> {"Color" -> RGBColor[0.269993, 0.308507, 0.6]}, 
+       ShowAutoStyles -> False, ScriptMinSize -> 9, MenuSortingValue -> 1100], 
+      Cell[
+       StyleData[All, "Preview"], PageWidth -> 650, ShowCellBracket -> False, 
+       CellBracketOptions -> {"Color" -> RGBColor[0.269993, 0.308507, 0.6]}, 
+       ShowAutoStyles -> False, ScriptMinSize -> 9, MenuSortingValue -> 1200], 
+      Cell[
+       StyleData[All, "Printout"], PageWidth -> PaperWidth, ShowCellBracket -> 
+       False, ShowAutoStyles -> False, ScriptMinSize -> 5, MenuSortingValue -> 
+       1300, PrivateFontOptions -> {"FontType" -> "Outline"}], 
+      Cell[
+       StyleData[All, "InternalDocument"], PageWidth -> 650, StyleMenuListing -> 
+       None, Background -> RGBColor[0.9, 1, 0.5]], 
+      Cell[
+       StyleData[All, "ObsoleteObject"], PageWidth -> 650, StyleMenuListing -> 
+       None, Background -> RGBColor[1, 0.95, 0.8]], 
+      Cell[
+       StyleData[All, "FutureObject"], PageWidth -> 650, DockedCells -> Cell[
+         TextData[
+          StyleBox["F  U  T  U  R  E", FontWeight -> "Bold"]], "FutureFlag", 
+         Background -> RGBColor[1, 0.8, 0.9], 
+         CellFrameMargins -> {{36, Inherited}, {15, 15}}], StyleMenuListing -> 
+       None], 
+      Cell[
+       StyleData[
+       All, "ExperimentalObject", StyleDefinitions -> 
+        StyleData[All, "Working"]], PageWidth -> 650, DockedCells -> Cell[
+         TextData[
+          StyleBox[
+          "E X P E R I M E N T A L", FontWeight -> "Bold", FontColor -> 
+           GrayLevel[1], FontFamily -> "Verdana", FontSize -> 10]], 
+         "UnderDevelopment", Background -> RGBColor[0.9, 0.1, 0.1], 
+         CellFrameMargins -> {{36, Inherited}, {15, 15}}], 
+       CellBracketOptions -> {"Color" -> RGBColor[0.269993, 0.308507, 0.6]}, 
+       StyleMenuListing -> None], 
+      Cell[
+       StyleData[All, "TentativeObject"], PageWidth -> 650, StyleMenuListing -> 
+       None, Background -> RGBColor[0.85, 0.95, 1]], 
+      Cell[
+       StyleData[All, "TemporaryObject"], PageWidth -> 650, StyleMenuListing -> 
+       None, Background -> RGBColor[0.5, 1, 0.95]], 
+      Cell[
+       StyleData[All, "AwaitingFutureDesignReview"], PageWidth -> 650, 
+       StyleMenuListing -> None, Background -> RGBColor[0.9, 0.9, 1]], 
+      Cell[
+       StyleData[All, "PreviewDocument"], PageWidth -> 650, StyleMenuListing -> 
+       None, Background -> RGBColor[0.8, 0.9, 1]], 
+      Cell[
+       StyleData[All, "ExcisedObject"], PageWidth -> 650, StyleMenuListing -> 
+       None, Background -> GrayLevel[0.6]], 
+      Cell[
+       StyleData[All, "Condensed"], MenuSortingValue -> 0], 
+      Cell[
+       StyleData[All, "Presentation"], MenuSortingValue -> 0], 
+      Cell[
+       StyleData[All, "SlideShow"], MenuSortingValue -> 0]}, Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell["Notebook Options", "Section"], 
+      Cell[
+      "  The options defined for the style below will be used at the Notebook \
+level.", "Text", 
+       CellChangeTimes -> {{3.35428247134284*^9, 3.35428247821855*^9}}], 
+      Cell[
+       StyleData["Notebook"], PageHeaders -> {{None, None, None}, {None, None, 
+          Cell[
+           TextData[{
+             Cell[
+              TextData[{"Printed from the ", 
+                StyleBox["Mathematica", FontSlant -> "Italic"], 
+                " Help System "}], "PageHeader"], 
+             Cell[
+              TextData[{
+                CounterBox["Page"]}], "PageNumber"]}], 
+           CellMargins -> {{Inherited, -29}, {Inherited, Inherited}}]}}, 
+       PageFooters -> {{None, None, None}, {
+          Cell[
+           
+           TextData[{
+            "\[Copyright]1988\[Dash]2008 Wolfram Research, Inc. All rights \
+reserved."}], "PageFooter"], None, None}}, PageHeaderLines -> {False, False}, 
+       PageFooterLines -> {False, False}, 
+       PrintingOptions -> {"FacingPages" -> False}, CreateCellID -> True, 
+       CellContext -> CellGroup, CellLabelAutoDelete -> False, 
+       CellFrameLabelMargins -> 6, DefaultNewInlineCellStyle -> 
+       "InlineFormula", DefaultInlineFormatType -> 
+       "DefaultInputInlineFormatType", 
+       InputAliases -> {"ls" -> "\[LineSeparator]", ParentList}, 
+       InputAutoReplacements -> {"->" -> "->", "gridMathematica" -> FormBox[
+           RowBox[{"grid", 
+             AdjustmentBox[
+              StyleBox["Mathematica", FontSlant -> "Italic"], 
+              BoxMargins -> {{-0.175, 0}, {0, 0}}]}], TextForm], 
+         "webMathematica" -> FormBox[
+           RowBox[{"web", 
+             AdjustmentBox[
+              StyleBox["Mathematica", FontSlant -> "Italic"], 
+              BoxMargins -> {{-0.175, 0}, {0, 0}}]}], TextForm]}, 
+       TrackCellChangeTimes -> True, ShowPredictiveInterface -> False, 
+       AutoQuoteCharacters -> {}, PasteAutoQuoteCharacters -> {}, 
+       ShowStringCharacters -> True, StyleMenuListing -> None]}, Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell["Input/Output", "Section"], 
+      Cell[
+      "The cells in this section define styles used for input and output to \
+the kernel.  Be careful when modifying, renaming, or removing these styles, \
+because the front end associates special meanings with these style names.    \
+", "Text"], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Input"], ShowCellBracket -> True, 
+          CellMargins -> {{114, 4}, {3, 8}}, CellProlog -> 
+          DocuTools`WolframDocumentProlog[], CellLabelAutoDelete -> False, 
+          CellLabelMargins -> {{14, Inherited}, {Inherited, Inherited}}, 
+          MenuSortingValue -> 1200, MenuCommandKey -> "9"], 
+         Cell[
+          StyleData["Input", "Printout"], ShowCellBracket -> False, 
+          CellMargins -> {{79, 0}, {4, 6}}, FontSize -> 9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Output"], ShowCellBracket -> True, 
+          CellMargins -> {{114, 4}, {8, 2}}, CellAutoOverwrite -> True, 
+          CellLabelPositioning -> Left, CellLabelAutoDelete -> False, 
+          CellLabelMargins -> {{14, Inherited}, {Inherited, Inherited}}], 
+         Cell[
+          StyleData["Output", "Printout"], ShowCellBracket -> False, 
+          CellMargins -> {{79, 0}, {6, 4}}, FontSize -> 9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["OutputStub"], ShowCellBracket -> True, 
+          CellMargins -> {{114, 4}, {8, 2}}], 
+         Cell[
+          StyleData["OutputStub", "Printout"], ShowCellBracket -> False, 
+          CellMargins -> {{79, 0}, {6, 4}}, FontSize -> 9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["InputOnly"], ShowCellBracket -> True, 
+          CellMargins -> {{114, 4}, {3, 8}}, CellLabelAutoDelete -> False, 
+          CellLabelMargins -> {{14, Inherited}, {Inherited, Inherited}}], 
+         Cell[
+          StyleData["InputOnly", "Printout"], ShowCellBracket -> False, 
+          CellMargins -> {{79, 0}, {6, 6}}, FontSize -> 9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Message"], ShowCellBracket -> True, 
+          CellMargins -> {{114, 4}, {4, 2}}, ShowCellLabel -> False, 
+          CellLabelMargins -> {{14, Inherited}, {Inherited, Inherited}}, 
+          StyleMenuListing -> None], 
+         Cell[
+          StyleData["Message", "Printout"], CellDingbat -> None, 
+          ShowCellBracket -> False, 
+          CellMargins -> {{68, Inherited}, {Inherited, Inherited}}, FontSize -> 
+          9, FontColor -> GrayLevel[0]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Print"], PageWidth -> WindowWidth, ShowCellBracket -> 
+          True, CellMargins -> {{114, 27}, {4, 2}}, 
+          CellLabelMargins -> {{14, Inherited}, {Inherited, Inherited}}], 
+         Cell[
+          StyleData["Print", "Printout"], ShowCellBracket -> False, 
+          CellMargins -> {{68, 2}, {Inherited, Inherited}}, FontSize -> 9]}, 
+        Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Echo"], PageWidth -> WindowWidth, ShowCellBracket -> 
+          True, CellMargins -> {{114, 27}, {4, 2}}, 
+          CellLabelMargins -> {{14, Inherited}, {Inherited, Inherited}}], 
+         Cell[
+          StyleData["Echo", "Printout"], ShowCellBracket -> False, 
+          CellMargins -> {{68, 2}, {Inherited, Inherited}}, FontSize -> 9]}, 
+        Closed]], 
+      Cell[
+       StyleData["Graphics"], CellMargins -> {{80, 10}, {16, 5}}, 
+       MenuSortingValue -> None, 
+       GraphicsBoxOptions -> {ImageSizeRaw -> {{240}, {240}}}, 
+       Graphics3DBoxOptions -> {ImageSizeRaw -> {{240}, {240}}}], 
+      Cell[
+       StyleData["Graphics3D"], 
+       Graphics3DBoxOptions -> {ImageSizeRaw -> {{240}, {240}}}], 
+      Cell[
+       StyleData["GeoGraphics"], 
+       GraphicsBoxOptions -> {ImageSizeRaw -> {{280}, {280}}}, 
+       Graphics3DBoxOptions -> {ImageSizeRaw -> {{280}, {280}}}], 
+      Cell[
+       StyleData["InputDeemphasis"], Editable -> False, ShowAutoStyles -> 
+       False, FontColor -> GrayLevel[0.7500000000000001]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["CellLabel"]], 
+         Cell[
+          StyleData["CellLabel", "Printout"], FontSize -> 7, FontSlant -> 
+          "Oblique", FontColor -> GrayLevel[0]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Name"], StyleMenuListing -> None, FontFamily -> 
+          "Helvetica", FontSize -> 9, FontWeight -> "Plain", FontSlant -> 
+          "Italic", FontColor -> RGBColor[0.269993, 0.308507, 0.6]], 
+         Cell[
+          StyleData["Name", "Printout"], FontSize -> 7, FontSlant -> 
+          "Oblique", FontColor -> GrayLevel[0]]}, Closed]]}, Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell["Function Page Styles", "Section"], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["History"], Editable -> False, PageWidth -> 680, 
+          CellMargins -> {{48, 12}, {Inherited, Inherited}}, 
+          TaggingRules -> {"Tentativeable" -> False}, StyleMenuListing -> 
+          None, FontFamily -> "Verdana", FontSize -> 12, FontWeight -> 
+          "Plain", FontColor -> GrayLevel[0.300008]], 
+         Cell[
+          StyleData["History", "Printout"], 
+          CellMargins -> {{24, 12}, {Inherited, Inherited}}, FontSize -> 9]}, 
+        Closed]], 
+      Cell[
+       StyleData["HistoryData"], Editable -> True, Deletable -> False, 
+       CellSize -> {40, 14}, StyleMenuListing -> None], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["AuthorDate"], Editable -> False, Selectable -> False, 
+          Deletable -> False, PageWidth -> 680, ShowCellBracket -> False, 
+          CellMargins -> {{48, 12}, {Inherited, Inherited}}, 
+          TaggingRules -> {"Tentativeable" -> False}, StyleMenuListing -> 
+          None, FontFamily -> "Verdana", FontSize -> 9, FontWeight -> "Plain",
+           FontColor -> GrayLevel[0.300008]], 
+         Cell[
+          StyleData["AuthorDate", "Printout"], 
+          CellMargins -> {{24, 12}, {Inherited, Inherited}}, FontSize -> 9]}, 
+        Open]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["InternalFlag"], Editable -> False, Deletable -> False, 
+          PageWidth -> 680, CellMargins -> {{48, 12}, {Inherited, Inherited}},
+           StyleMenuListing -> None, FontFamily -> "Verdana", FontSize -> 10, 
+          FontWeight -> "Plain", FontColor -> GrayLevel[0.300008]], 
+         Cell[
+          StyleData["InternalFlag", "Printout"], FontSize -> 9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["FutureFlag"], Editable -> False, Deletable -> False, 
+          PageWidth -> 680, CellMargins -> {{48, 12}, {Inherited, Inherited}},
+           StyleMenuListing -> None, FontFamily -> "Verdana", FontSize -> 10, 
+          FontWeight -> "Plain", FontColor -> GrayLevel[0.300008]], 
+         Cell[
+          StyleData["FutureFlag", "Printout"], FontSize -> 9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["TemporaryFlag"], Editable -> False, Deletable -> False, 
+          PageWidth -> 680, CellMargins -> {{48, 12}, {Inherited, Inherited}},
+           StyleMenuListing -> None, FontFamily -> "Verdana", FontSize -> 10, 
+          FontWeight -> "Plain", FontColor -> GrayLevel[0.300008]], 
+         Cell[
+          StyleData["TemporaryFlag", "Printout"], FontSize -> 9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["ObsoleteFlag"], Editable -> False, Deletable -> False, 
+          PageWidth -> 680, CellMargins -> {{48, 12}, {Inherited, Inherited}},
+           StyleMenuListing -> None, FontFamily -> "Verdana", FontSize -> 10, 
+          FontWeight -> "Plain", FontColor -> GrayLevel[0.300008]], 
+         Cell[
+          StyleData["ObsoleteFlag", "Printout"], FontSize -> 9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["ExcisedFlag"], Editable -> False, Deletable -> False, 
+          PageWidth -> 680, CellMargins -> {{48, 12}, {Inherited, Inherited}},
+           StyleMenuListing -> None, FontFamily -> "Verdana", FontSize -> 10, 
+          FontWeight -> "Plain", FontColor -> GrayLevel[0.8]], 
+         Cell[
+          StyleData["ExcisedFlag", "Printout"], FontSize -> 9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["SubjectToChangeFlag"], Editable -> False, Deletable -> 
+          False, PageWidth -> 680, 
+          CellMargins -> {{48, 12}, {Inherited, Inherited}}, StyleMenuListing -> 
+          None, FontFamily -> "Verdana", FontSize -> 10, FontWeight -> 
+          "Plain", FontColor -> GrayLevel[0.300008]], 
+         Cell[
+          StyleData["SubjectToChangeFlag", "Printout"], FontSize -> 9]}, 
+        Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["AwaitingFutureDesignReviewFlag"], Editable -> False, 
+          Deletable -> False, PageWidth -> 680, 
+          CellMargins -> {{48, 12}, {Inherited, Inherited}}, StyleMenuListing -> 
+          None, FontFamily -> "Verdana", FontSize -> 10, FontWeight -> 
+          "Plain", FontColor -> GrayLevel[0.300008]], 
+         Cell[
+          StyleData["AwaitingFutureDesignReviewFlag", "Printout"], FontSize -> 
+          9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["PreviewFlag"], Editable -> False, Deletable -> False, 
+          PageWidth -> 680, CellMargins -> {{48, 12}, {Inherited, Inherited}},
+           StyleMenuListing -> None, FontFamily -> "Verdana", FontSize -> 10, 
+          FontWeight -> "Plain", FontColor -> GrayLevel[0.300008]], 
+         Cell[
+          StyleData["PreviewFlag", "Printout"], FontSize -> 9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["CategorizationSection"], 
+          CellMargins -> {{48, 80}, {2, 12}}, 
+          CellElementSpacings -> {"ClosedGroupTopMargin" -> 2}, 
+          CellGroupingRules -> {"SectionGrouping", 50}, 
+          TaggingRules -> {"Tentativeable" -> False}, DefaultNewCellStyle -> 
+          "Categorization", ParagraphSpacing -> {0.7, 0}, StyleMenuListing -> 
+          None, FontFamily -> "Verdana", FontSize -> 11, FontWeight -> "Bold",
+           FontColor -> GrayLevel[0.500008]], 
+         Cell[
+          StyleData["CategorizationSection", "Printout"], 
+          CellMargins -> {{24, 0}, {0, 8}}, Hyphenation -> True, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, FontSize -> 
+          9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Categorization"], CellMargins -> {{72, 80}, {2, 2}}, 
+          ReturnCreatesNewCell -> True, 
+          TaggingRules -> {"Tentativeable" -> False}, CellLabelPositioning -> 
+          Above, CellLabelMargins -> {{48, Inherited}, {
+            Inherited, Inherited}}, ParagraphSpacing -> {0.7, 0}, 
+          AutoItalicWords -> {}, StyleMenuListing -> None, FontFamily -> 
+          "Verdana", FontSize -> 11, FontColor -> GrayLevel[0.500008]], 
+         Cell[
+          StyleData["Categorization", "Printout"], 
+          CellMargins -> {{36, 80}, {2, 2}}, 
+          CellLabelMargins -> {{24, Inherited}, {Inherited, Inherited}}, 
+          FontSize -> 9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["SynonymsSection"], CellMargins -> {{48, 80}, {2, 12}}, 
+          CellElementSpacings -> {"ClosedGroupTopMargin" -> 2}, 
+          CellGroupingRules -> {"SectionGrouping", 50}, 
+          TaggingRules -> {"Tentativeable" -> False}, DefaultNewCellStyle -> 
+          "Synonyms", ParagraphSpacing -> {0.7000000000000002, 0}, 
+          StyleMenuListing -> None, FontFamily -> "Verdana", FontSize -> 11, 
+          FontWeight -> "Bold", FontColor -> GrayLevel[0.500008]], 
+         Cell[
+          StyleData["SynonymsSection", "Printout"], 
+          CellMargins -> {{24, 0}, {0, 8}}, Hyphenation -> True, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, FontSize -> 
+          9]}, Closed]], 
+      Cell[
+       StyleData["Synonyms"], CellMargins -> {{72, 80}, {2, 2}}, 
+       ReturnCreatesNewCell -> True, 
+       TaggingRules -> {"Tentativeable" -> False}, CellLabelPositioning -> 
+       Above, CellLabelMargins -> {{28, Inherited}, {Inherited, Inherited}}, 
+       ParagraphSpacing -> {0.7000000000000002, 0}, StyleMenuListing -> None, 
+       FontFamily -> "Verdana", FontSize -> 11, FontColor -> 
+       GrayLevel[0.500008]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["KeywordsSection"], CellMargins -> {{48, 80}, {2, 12}}, 
+          CellElementSpacings -> {"ClosedGroupTopMargin" -> 2}, 
+          CellGroupingRules -> {"SectionGrouping", 50}, 
+          TaggingRules -> {"Tentativeable" -> False}, DefaultNewCellStyle -> 
+          "Keywords", ParagraphSpacing -> {0.7000000000000001, 0}, 
+          StyleMenuListing -> None, FontFamily -> "Verdana", FontSize -> 11, 
+          FontWeight -> "Bold", FontColor -> GrayLevel[0.500008]], 
+         Cell[
+          StyleData["KeywordsSection", "Printout"], 
+          CellMargins -> {{24, 0}, {0, 8}}, Hyphenation -> True, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, FontSize -> 
+          9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Keywords"], CellMargins -> {{72, 80}, {2, 2}}, 
+          ReturnCreatesNewCell -> True, 
+          TaggingRules -> {"Tentativeable" -> False}, CellLabelPositioning -> 
+          Above, CellLabelMargins -> {{48, Inherited}, {
+            Inherited, Inherited}}, 
+          ParagraphSpacing -> {0.7000000000000001, 0}, AutoItalicWords -> {}, 
+          StyleMenuListing -> None, FontFamily -> "Verdana", FontSize -> 11, 
+          FontColor -> GrayLevel[0.500008]], 
+         Cell[
+          StyleData["Keywords", "Printout"], 
+          CellMargins -> {{36, 80}, {2, 2}}, 
+          CellLabelMargins -> {{24, Inherited}, {Inherited, Inherited}}, 
+          FontSize -> 9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData[
+          "RelatedTermsSection", StyleDefinitions -> 
+           StyleData["KeywordsSection"]], DefaultNewCellStyle -> 
+          "RelatedTerms"], 
+         Cell[
+          StyleData["RelatedTermsSection", "Printout"], 
+          CellMargins -> {{24, 0}, {0, 8}}, Hyphenation -> True, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, FontSize -> 
+          9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData[
+          "RelatedTerms", StyleDefinitions -> StyleData["Keywords"]]], 
+         Cell[
+          StyleData["RelatedTerms", "Printout"], 
+          CellMargins -> {{36, 80}, {2, 2}}, 
+          CellLabelMargins -> {{24, Inherited}, {Inherited, Inherited}}, 
+          FontSize -> 9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["DocumentStatusSection"], 
+          CellMargins -> {{48, 80}, {2, 12}}, 
+          CellElementSpacings -> {"ClosedGroupTopMargin" -> 2}, 
+          CellGroupingRules -> {"SectionGrouping", 50}, DefaultNewCellStyle -> 
+          "DocumentStatus", ParagraphSpacing -> {0.7, 0}, StyleMenuListing -> 
+          None, FontFamily -> "Verdana", FontSize -> 11, FontWeight -> "Bold",
+           FontColor -> GrayLevel[0.500008]], 
+         Cell[
+          StyleData["DocumentStatusSection", "Printout"], 
+          CellMargins -> {{24, 0}, {0, 8}}, Hyphenation -> True, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, FontSize -> 
+          9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["DocumentStatus"], CellMargins -> {{72, 80}, {2, 2}}, 
+          ReturnCreatesNewCell -> True, CellLabelPositioning -> Above, 
+          CellLabelMargins -> {{48, Inherited}, {Inherited, Inherited}}, 
+          StyleMenuListing -> None, FontFamily -> "Verdana", FontSize -> 11, 
+          FontColor -> GrayLevel[0.500008]], 
+         Cell[
+          StyleData["DocumentStatus", "Printout"], 
+          CellMargins -> {{36, 80}, {2, 2}}, 
+          CellLabelMargins -> {{24, Inherited}, {Inherited, Inherited}}, 
+          FontSize -> 9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["DetailsSection"], CellMargins -> {{48, 80}, {2, 12}}, 
+          CellElementSpacings -> {"ClosedGroupTopMargin" -> 2}, 
+          CellGroupingRules -> {"SectionGrouping", 50}, 
+          TaggingRules -> {"Tentativeable" -> False}, DefaultNewCellStyle -> 
+          "DocumentStatus", ParagraphSpacing -> {0.7, 0}, StyleMenuListing -> 
+          None, FontFamily -> "Verdana", FontSize -> 11, FontWeight -> "Bold",
+           FontColor -> GrayLevel[0.500008]], 
+         Cell[
+          StyleData["DetailsSection", "Printout"], 
+          CellMargins -> {{24, 0}, {0, 8}}, Hyphenation -> True, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, FontSize -> 
+          9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Details"], CellMargins -> {{72, 80}, {2, 2}}, 
+          TaggingRules -> {"Tentativeable" -> False}, CellLabelPositioning -> 
+          Above, CellLabelMargins -> {{48, Inherited}, {
+            Inherited, Inherited}}, StyleMenuListing -> None, FontFamily -> 
+          "Verdana", FontSize -> 11, FontColor -> GrayLevel[0.500008]], 
+         Cell[
+          StyleData["Details", "Printout"], CellMargins -> {{36, 80}, {2, 2}},
+           CellLabelMargins -> {{24, Inherited}, {Inherited, Inherited}}, 
+          FontSize -> 9]}, Closed]], 
+      Cell[
+       StyleData["SecuritySection"], CellMargins -> {{48, 80}, {2, 12}}, 
+       CellElementSpacings -> {"ClosedGroupTopMargin" -> 2}, 
+       CellGroupingRules -> {"SectionGrouping", 50}, 
+       TaggingRules -> {"Tentativeable" -> False}, DefaultNewCellStyle -> 
+       "SecurityDetails", 
+       CellChangeTimes -> {{3.670938005773263*^9, 3.6709380300696926`*^9}}, 
+       ParagraphSpacing -> {0.7, 0}, StyleMenuListing -> None, FontFamily -> 
+       "Verdana", FontSize -> 11, FontWeight -> "Bold", FontColor -> 
+       GrayLevel[0.500008]], 
+      Cell[
+       StyleData["SecurityDetails"], CellMargins -> {{68, 80}, {2, 8}}, 
+       TaggingRules -> {"Tentativeable" -> False}, CellLabelPositioning -> 
+       Above, CellLabelMargins -> {{48, Inherited}, {Inherited, Inherited}}, 
+       CellChangeTimes -> {{3.670938005773263*^9, 3.6709380300696926`*^9}}, 
+       ShowStringCharacters -> False, StyleMenuListing -> None, FontFamily -> 
+       "Arial", FontSize -> 10, FontColor -> GrayLevel[0]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["ExampleStatusSection"], 
+          CellMargins -> {{48, 80}, {2, 12}}, 
+          CellElementSpacings -> {"ClosedGroupTopMargin" -> 2}, 
+          CellGroupingRules -> {"SectionGrouping", 50}, DefaultNewCellStyle -> 
+          "ExampleStatus", ParagraphSpacing -> {0.7, 0}, StyleMenuListing -> 
+          None, FontFamily -> "Verdana", FontSize -> 11, FontWeight -> "Bold",
+           FontColor -> GrayLevel[0.500008]], 
+         Cell[
+          StyleData["ExampleStatusSection", "Printout"], 
+          CellMargins -> {{24, 0}, {0, 8}}, Hyphenation -> True, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, FontSize -> 
+          9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["ExampleStatus"], CellMargins -> {{72, 80}, {2, 2}}, 
+          ReturnCreatesNewCell -> True, CellLabelPositioning -> Above, 
+          CellLabelMargins -> {{48, Inherited}, {Inherited, Inherited}}, 
+          ShowStringCharacters -> False, StyleMenuListing -> None, FontFamily -> 
+          "Verdana", FontSize -> 11, FontColor -> GrayLevel[0.500008]], 
+         Cell[
+          StyleData["ExampleStatus", "Printout"], 
+          CellMargins -> {{36, 80}, {2, 2}}, 
+          CellLabelMargins -> {{24, Inherited}, {Inherited, Inherited}}, 
+          FontSize -> 9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["TemplatesSection"], CellMargins -> {{48, 80}, {2, 12}}, 
+          CellElementSpacings -> {"ClosedGroupTopMargin" -> 2}, 
+          CellGroupingRules -> {"SectionGrouping", 50}, 
+          TaggingRules -> {"Tentativeable" -> False}, DefaultNewCellStyle -> 
+          "Template", ParagraphSpacing -> {0.7, 0}, StyleMenuListing -> None, 
+          FontFamily -> "Verdana", FontSize -> 11, FontWeight -> "Bold", 
+          FontColor -> GrayLevel[0.500008]], 
+         Cell[
+          StyleData["TemplatesSection", "Printout"], 
+          CellMargins -> {{24, 0}, {0, 8}}, Hyphenation -> True, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, FontSize -> 
+          9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Template"], CellMargins -> {{72, 80}, {2, 2}}, 
+          ReturnCreatesNewCell -> True, 
+          CellGroupingRules -> {"SectionGrouping", 59}, 
+          TaggingRules -> {"Tentativeable" -> False}, CellLabelPositioning -> 
+          Above, CellLabelMargins -> {{48, Inherited}, {1, 8}}, 
+          CellFrameMargins -> 4, CellFrameColor -> 
+          RGBColor[0.960006, 0.910002, 0.850004], DefaultNewInlineCellStyle -> 
+          "None", DefaultFormatType -> DefaultInputFormatType, 
+          StyleMenuListing -> None, FontFamily -> "Courier", FontSize -> 10, 
+          FontWeight -> "Plain"], 
+         Cell[
+          StyleData["Template", "Printout"], 
+          CellMargins -> {{36, 80}, {2, 2}}, 
+          CellLabelMargins -> {{24, Inherited}, {Inherited, Inherited}}, 
+          FontSize -> 9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["AllowableOptionsSection"], 
+          CellMargins -> {{48, 80}, {2, 12}}, 
+          CellElementSpacings -> {"ClosedGroupTopMargin" -> 2}, 
+          CellGroupingRules -> {"SectionGrouping", 50}, DefaultNewCellStyle -> 
+          "AllowableOptions", ParagraphSpacing -> {0.7, 0}, StyleMenuListing -> 
+          None, FontFamily -> "Verdana", FontSize -> 11, FontWeight -> "Bold",
+           FontColor -> GrayLevel[0.500008]], 
+         Cell[
+          StyleData["AllowableOptionsSection", "Printout"], 
+          CellMargins -> {{24, 0}, {0, 8}}, Hyphenation -> True, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, FontSize -> 
+          9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["AllowableOptions"], CellMargins -> {{72, 80}, {2, 2}}, 
+          ReturnCreatesNewCell -> True, 
+          CellGroupingRules -> {"SectionGrouping", 59}, CellLabelPositioning -> 
+          Above, CellLabelMargins -> {{40, Inherited}, {1, 8}}, 
+          CellFrameMargins -> 4, CellFrameColor -> 
+          RGBColor[0.960006, 0.910002, 0.850004], DefaultNewInlineCellStyle -> 
+          "None", ParagraphSpacing -> {0.7, 0}, StyleMenuListing -> None, 
+          FontFamily -> "Courier", FontSize -> 10, FontWeight -> "Plain", 
+          FontSlant -> "Plain"], 
+         Cell[
+          StyleData["AllowableOptions", "Printout"], 
+          CellMargins -> {{36, 80}, {2, 2}}, 
+          CellLabelMargins -> {{24, Inherited}, {Inherited, Inherited}}, 
+          FontSize -> 9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["AttributesSection"], CellMargins -> {{48, 80}, {2, 12}}, 
+          CellElementSpacings -> {"ClosedGroupTopMargin" -> 2}, 
+          CellGroupingRules -> {"SectionGrouping", 50}, DefaultNewCellStyle -> 
+          "Attributes", ParagraphSpacing -> {0.7, 0}, StyleMenuListing -> 
+          None, FontFamily -> "Verdana", FontSize -> 11, FontWeight -> "Bold",
+           FontColor -> GrayLevel[0.500008]], 
+         Cell[
+          StyleData["AttributesSection", "Printout"], 
+          CellMargins -> {{24, 0}, {0, 8}}, Hyphenation -> True, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, FontSize -> 
+          9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Attributes"], CellMargins -> {{72, 80}, {2, 2}}, 
+          ReturnCreatesNewCell -> True, 
+          CellGroupingRules -> {"SectionGrouping", 59}, CellLabelPositioning -> 
+          Above, CellLabelMargins -> {{40, Inherited}, {1, 8}}, 
+          CellFrameMargins -> 4, CellFrameColor -> 
+          RGBColor[0.960006, 0.910002, 0.850004], DefaultNewInlineCellStyle -> 
+          "None", ParagraphSpacing -> {0.7, 0}, StyleMenuListing -> None, 
+          FontFamily -> "Courier", FontSize -> 10, FontWeight -> "Plain", 
+          FontSlant -> "Plain"], 
+         Cell[
+          StyleData["Attributes", "Printout"], 
+          CellMargins -> {{36, 80}, {2, 2}}, 
+          CellLabelMargins -> {{24, Inherited}, {Inherited, Inherited}}, 
+          FontSize -> 9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["ErrorMessagesSection"], 
+          CellMargins -> {{48, 80}, {2, 12}}, 
+          CellElementSpacings -> {"ClosedGroupTopMargin" -> 2}, 
+          CellGroupingRules -> {"SectionGrouping", 50}, 
+          ParagraphSpacing -> {0.7, 0}, StyleMenuListing -> None, FontFamily -> 
+          "Verdana", FontSize -> 11, FontWeight -> "Bold", FontColor -> 
+          GrayLevel[0.500008]], 
+         Cell[
+          StyleData["ErrorMessagesSection", "Printout"], 
+          CellMargins -> {{24, 0}, {0, 8}}, Hyphenation -> True, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, FontSize -> 
+          9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["ErrorMessages"], CellMargins -> {{72, 80}, {2, 2}}, 
+          ReturnCreatesNewCell -> True, 
+          CellGroupingRules -> {"SectionGrouping", 59}, CellLabelPositioning -> 
+          Above, CellLabelMargins -> {{40, Inherited}, {1, 8}}, 
+          CellFrameMargins -> 4, CellFrameColor -> 
+          RGBColor[0.960006, 0.910002, 0.850004], DefaultNewInlineCellStyle -> 
+          "None", StyleMenuListing -> None, FontFamily -> "Courier", FontSize -> 
+          10, FontWeight -> "Plain", FontSlant -> "Plain"], 
+         Cell[
+          StyleData["ErrorMessages", "Printout"], 
+          CellMargins -> {{36, 80}, {2, 2}}, 
+          CellLabelMargins -> {{24, Inherited}, {Inherited, Inherited}}, 
+          FontSize -> 9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["UsageMessagesSection"], 
+          CellMargins -> {{48, 80}, {2, 12}}, 
+          CellElementSpacings -> {"ClosedGroupTopMargin" -> 2}, 
+          CellGroupingRules -> {"SectionGrouping", 50}, 
+          ParagraphSpacing -> {0.7, 0}, StyleMenuListing -> None, FontFamily -> 
+          "Verdana", FontSize -> 11, FontWeight -> "Bold", FontColor -> 
+          GrayLevel[0.500008]], 
+         Cell[
+          StyleData["UsageMessagesSection", "Printout"], 
+          CellMargins -> {{24, 0}, {0, 8}}, Hyphenation -> True, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, FontSize -> 
+          9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["UsageMessages"], CellMargins -> {{72, 80}, {18, 0}}, 
+          ReturnCreatesNewCell -> True, 
+          CellGroupingRules -> {"SectionGrouping", 59}, CellFrameMargins -> 4,
+           CellFrameColor -> RGBColor[0.960006, 0.910002, 0.850004], 
+          DefaultNewInlineCellStyle -> "None", StyleMenuListing -> None, 
+          FontFamily -> "Courier", FontSize -> 10, FontWeight -> "Plain", 
+          FontSlant -> "Plain"], 
+         Cell[
+          StyleData["UsageMessages", "Printout"], 
+          CellMargins -> {{36, 80}, {16, 2}}, 
+          CellLabelMargins -> {{24, Inherited}, {Inherited, Inherited}}, 
+          FontSize -> 9]}, Closed]], 
+      Cell[
+       StyleData[
+       "TranslationsSection", StyleDefinitions -> 
+        StyleData["SynonymsSection"]], DefaultNewCellStyle -> "Translations"], 
+      Cell[
+       StyleData["Translations", StyleDefinitions -> StyleData["Synonyms"]]], 
+      
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Section"], ShowCellBracket -> True, 
+          CellMargins -> {{48, 4}, {12, 18}}, 
+          CellGroupingRules -> {"SectionGrouping", 30}, 
+          InputAutoReplacements -> {"TeX" -> FormBox[
+              StyleBox[
+               RowBox[{"T", 
+                 AdjustmentBox[
+                 "E", BoxBaselineShift -> 0.5, 
+                  BoxMargins -> {{-0.3, 0}, {0, 0}}], "X"}], "TR", 
+               SingleLetterItalics -> False], TraditionalForm], "LaTeX" -> 
+            FormBox[
+              StyleBox[
+               RowBox[{"L", 
+                 StyleBox[
+                  AdjustmentBox[
+                  "A", BoxMargins -> {{-0.5, -0.3}, {0, 0}}, 
+                   BoxBaselineShift -> -0.4], FontSize -> Smaller], "T", 
+                 AdjustmentBox[
+                 "E", BoxMargins -> {{-0.3, 0}, {0, 0}}, BoxBaselineShift -> 
+                  0.5], "X"}], "TR", SingleLetterItalics -> False], 
+              TraditionalForm]}, FontFamily -> "Verdana", FontSize -> 13, 
+          FontWeight -> "Bold", FontColor -> RGBColor[0.6, 0.45, 0.35]], 
+         Cell[
+          StyleData["Section", "Printout"], 
+          CellMargins -> {{12, 0}, {10, 16}}, PageBreakBelow -> False, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, FontSize -> 
+          11]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Status"], Editable -> False, Deletable -> False, 
+          PageWidth -> 680, CellMargins -> {{48, 12}, {0, 30}}, 
+          CellElementSpacings -> {"ClosedGroupTopMargin" -> 50}, 
+          CellGroupingRules -> {"SectionGrouping", 50}, StyleMenuListing -> 
+          None, FontFamily -> "Verdana", FontSize -> 10, FontWeight -> 
+          "Plain", FontColor -> GrayLevel[0.300008]], 
+         Cell[
+          StyleData["Status", "Printout"], FontSize -> 9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["ObjectName"], Editable -> True, ShowCellBracket -> True, 
+          CellMargins -> {{45, 12}, {10, 30}}, 
+          CellElementSpacings -> {"ClosedGroupTopMargin" -> 62}, 
+          CellGroupingRules -> {"SectionGrouping", 50}, 
+          TaggingRules -> {"Tentativeable" -> False}, CellLabelPositioning -> 
+          Above, DefaultNewCellStyle -> "Notes", DefaultNewInlineCellStyle -> 
+          "InlineMath", DefaultInlineFormatType -> 
+          "DefaultTextInlineFormatType", StyleMenuListing -> None, FontFamily -> 
+          "Verdana", FontSize -> 18, FontWeight -> "Bold", 
+          GridBoxOptions -> {
+           GridBoxAlignment -> {
+             "Columns" -> {Left, {Right}}, "ColumnsIndexed" -> {}, 
+              "Rows" -> {{Baseline}}, "RowsIndexed" -> {}}, 
+            GridBoxItemSize -> {"Columns" -> {{
+                 Scaled[0.5]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+              "RowsIndexed" -> {}}}], 
+         Cell[
+          StyleData["ObjectName", "Printout"], 
+          CellMargins -> {{24, 8}, {8, 27}}, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, FontSize -> 
+          16]}, Closed]], 
+      Cell[
+       StyleData[
+       "ObjectNameSmall", StyleDefinitions -> StyleData["ObjectName"]]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["ObjectNameAlt"], CellMargins -> {{45, 12}, {10, 30}}, 
+          CellElementSpacings -> {"ClosedGroupTopMargin" -> 62}, 
+          CellGroupingRules -> {"SectionGrouping", 50}, DefaultNewCellStyle -> 
+          "Notes", DefaultNewInlineCellStyle -> "InlineMath", 
+          DefaultInlineFormatType -> "DefaultTextInlineFormatType", 
+          StyleMenuListing -> None, FontFamily -> "Verdana", FontSize -> 18, 
+          FontWeight -> "Bold", FontColor -> RGBColor[0.4, 0.3, 0.3], 
+          GridBoxOptions -> {
+           GridBoxAlignment -> {
+             "Columns" -> {Left, {Right}}, "ColumnsIndexed" -> {}, 
+              "Rows" -> {{Baseline}}, "RowsIndexed" -> {}}, 
+            GridBoxItemSize -> {"Columns" -> {{
+                 Scaled[0.5]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+              "RowsIndexed" -> {}}}], 
+         Cell[
+          StyleData["ObjectNamealt", "Printout"], 
+          CellMargins -> {{24, 8}, {8, 27}}, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, FontSize -> 
+          16]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["FullListing"], StyleMenuListing -> None, FontFamily -> 
+          "Verdana", FontSize -> 11, FontWeight -> "Bold", FontColor -> 
+          RGBColor[0.7, 0.4, 0]], 
+         Cell[
+          StyleData["FullListing", "Printout"], FontSize -> 9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["ObsolescenceNote"], CellFrame -> True, 
+          CellMargins -> {{9, 8}, {12, 6}}, 
+          CellFrameMargins -> {{38, 12}, {12, 12}}, CellFrameColor -> 
+          RGBColor[0.9, 0.9, 0], Hyphenation -> False, 
+          ParagraphSpacing -> {0.7, 0}, StyleMenuListing -> None, FontFamily -> 
+          "Verdana", FontSize -> 11, Background -> RGBColor[1, 1, 0]], 
+         Cell[
+          StyleData["ObsolescenceNote", "Printout"], 
+          CellMargins -> {{0, 0}, {0, 0}}, 
+          CellFrameMargins -> {{24, 8}, {Inherited, Inherited}}, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, 
+          StyleMenuListing -> None, FontSize -> 10, FontWeight -> "Plain"]}, 
+        Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["AwaitingReviewNote"], Editable -> False, CellFrame -> 
+          True, CellMargins -> {{9, 8}, {12, 6}}, 
+          CellFrameMargins -> {{38, 12}, {12, 12}}, CellFrameColor -> 
+          RGBColor[0.9, 0.9, 0], Hyphenation -> False, 
+          ParagraphSpacing -> {0.7, 0}, StyleMenuListing -> None, FontFamily -> 
+          "Verdana", FontSize -> 11, Background -> RGBColor[1, 1, 0]], 
+         Cell[
+          StyleData["AwaitingReviewNote", "Printout"], 
+          CellMargins -> {{0, 0}, {0, 0}}, 
+          CellFrameMargins -> {{24, 8}, {Inherited, Inherited}}, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, 
+          StyleMenuListing -> None, FontSize -> 10, FontWeight -> "Plain"]}, 
+        Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["PreviewNote"], Editable -> False, CellFrame -> True, 
+          CellMargins -> {{9, 8}, {12, 6}}, 
+          CellFrameMargins -> {{38, 12}, {12, 12}}, CellFrameColor -> 
+          RGBColor[0.6, 0.7, 1], Hyphenation -> False, 
+          ParagraphSpacing -> {0.7, 0}, StyleMenuListing -> None, FontFamily -> 
+          "Verdana", FontSize -> 11, Background -> RGBColor[0.9, 0.98, 1]], 
+         Cell[
+          StyleData["PreviewNote", "Printout"], 
+          CellMargins -> {{0, 0}, {0, 0}}, 
+          CellFrameMargins -> {{24, 8}, {Inherited, Inherited}}, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, 
+          StyleMenuListing -> None, FontSize -> 10, FontWeight -> "Plain"]}, 
+        Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Elucidation"], Editable -> True, CellFrame -> True, 
+          ShowCellBracket -> True, CellMargins -> {{9, 8}, {12, 6}}, 
+          CellFrameMargins -> {{36, 12}, {12, 12}}, CellFrameColor -> 
+          RGBColor[0.74902, 0.694118, 0.552941], Hyphenation -> False, 
+          ParagraphSpacing -> {0.5, 0}, ParagraphIndent -> -52, 
+          StyleMenuListing -> None, FontFamily -> "Verdana", FontSize -> 11, 
+          Background -> RGBColor[0.85, 0.95, 1]], 
+         Cell[
+          StyleData["Elucidation", "Printout"], CellFrame -> 0.5, 
+          CellMargins -> {{0, 0}, {10, 5}}, 
+          CellFrameMargins -> {{24, 23}, {10, 10}}, CellFrameColor -> 
+          GrayLevel[0.5], 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, 
+          LineSpacing -> {1., 2, 2.}, ParagraphIndent -> -40, 
+          StyleMenuListing -> None, FontSize -> 10, FontWeight -> "Plain"]}, 
+        Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Usage"], Editable -> True, CellFrame -> True, 
+          ShowCellBracket -> True, CellMargins -> {{9, 8}, {12, 6}}, 
+          CellFrameMargins -> {{12, 12}, {12, 12}}, CellFrameColor -> 
+          RGBColor[0.74902, 0.694118, 0.552941], 
+          InputAutoReplacements -> {"TeX" -> FormBox[
+              StyleBox[
+               RowBox[{"T", 
+                 AdjustmentBox[
+                 "E", BoxBaselineShift -> 0.5, 
+                  BoxMargins -> {{-0.3, 0}, {0, 0}}], "X"}], "TR", 
+               SingleLetterItalics -> False], TraditionalForm], "LaTeX" -> 
+            FormBox[
+              StyleBox[
+               RowBox[{"L", 
+                 StyleBox[
+                  AdjustmentBox[
+                  "A", BoxMargins -> {{-0.5, -0.3}, {0, 0}}, 
+                   BoxBaselineShift -> -0.4], FontSize -> Smaller], "T", 
+                 AdjustmentBox[
+                 "E", BoxMargins -> {{-0.3, 0}, {0, 0}}, BoxBaselineShift -> 
+                  0.5], "X"}], "TR", SingleLetterItalics -> False], 
+              TraditionalForm], "<|" -> "\[LeftAssociation]", "|>" -> 
+            "\[RightAssociation]"}, Hyphenation -> False, 
+          ParagraphSpacing -> {0.5, 0}, ParagraphIndent -> -52, 
+          StyleMenuListing -> None, FontFamily -> "Verdana", FontSize -> 11, 
+          Background -> RGBColor[0.960784, 0.945098, 0.905882], 
+          GridBoxOptions -> {
+           GridBoxAlignment -> {
+             "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+              "Rows" -> {{Baseline}}, "RowsIndexed" -> {}}, 
+            GridBoxDividers -> {}, GridBoxItemSize -> {}, 
+            GridBoxSpacings -> {}}], 
+         Cell[
+          StyleData["Usage", "Printout"], CellFrame -> 0.5, 
+          CellMargins -> {{0, 0}, {10, 5}}, 
+          CellFrameMargins -> {{4, 23}, {10, 10}}, CellFrameColor -> 
+          GrayLevel[0.5], 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, 
+          LineSpacing -> {1., 2, 2.}, ParagraphIndent -> -40, 
+          StyleMenuListing -> None, FontSize -> 10, FontWeight -> "Plain", 
+          Background -> GrayLevel[0.95]], 
+         Cell[
+          StyleData["Usage", "InternalDocument"], Background -> 
+          RGBColor[0.9, 1, 0.5]], 
+         Cell[
+          StyleData["Usage", "ObsoleteObject"], Background -> 
+          RGBColor[1, 0.95, 0.8]], 
+         Cell[
+          StyleData["Usage", "TemporaryObject"], Background -> 
+          RGBColor[0.5, 1, 0.95]], 
+         Cell[
+          StyleData["Usage", "SubjectToChange"], Background -> 
+          RGBColor[0.9, 0.9, 1]], 
+         Cell[
+          StyleData["Usage", "AwaitingFutureDesignReview"], Background -> 
+          RGBColor[0.9, 0.9, 1]], 
+         Cell[
+          StyleData["Usage", "PreviewDocument"], Background -> 
+          RGBColor[0.8, 0.9, 1]], 
+         Cell[
+          StyleData["Usage", "ExcisedObject"], Background -> GrayLevel[0.6]]},
+         Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["ModInfo"], CellSize -> {32, Inherited}, StyleMenuListing -> 
+          None, FontFamily -> "Verdana", FontSize -> Inherited 0.9, 
+          FontWeight -> "Plain", FontColor -> 
+          RGBColor[0.269993, 0.308507, 0.6]], 
+         Cell[
+          StyleData["ModInfo", "Printout"], CellSize -> {20, Inherited}, 
+          Hyphenation -> True, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}]}, Closed]], 
+      Cell[
+       StyleData["ModInfoWrapper"], AutoSpacing -> False, StyleMenuListing -> 
+       None], 
+      Cell[
+       StyleData["DingbatMod"], CellDingbat -> None, TextAlignment -> Right, 
+       MenuSortingValue -> None], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["BrightFlag"], StyleMenuListing -> None, FontSize -> 10, 
+          FontWeight -> "Plain", FontSlant -> "Plain", FontColor -> 
+          GrayLevel[1], Background -> RGBColor[1, 0, 0], 
+          ButtonBoxOptions -> {
+           Active -> True, Appearance -> {Automatic, None}, 
+            ButtonFunction :> (DocuTools`DocLink[#, #2]& ), Evaluator -> 
+            Automatic}], 
+         Cell[
+          StyleData["BrightFlag", "Printout"], Background -> GrayLevel[0.8]]},
+         Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["BrighterFlag"], StyleMenuListing -> None, FontSize -> 12,
+           FontWeight -> "Plain", FontSlant -> "Plain", FontColor -> 
+          GrayLevel[1], Background -> RGBColor[1, 0., 0.8], 
+          ButtonBoxOptions -> {
+           Active -> True, Appearance -> {Automatic, None}, 
+            ButtonFunction :> (DocuTools`DocLink[#, #2]& ), Evaluator -> 
+            Automatic}], 
+         Cell[
+          StyleData["BrighterFlag", "Printout"], Background -> 
+          GrayLevel[0.9]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["TemplateExclusion"], StyleMenuListing -> None, 
+          Background -> RGBColor[1, 0.7, 0.7]], 
+         Cell[
+          StyleData["TemplateExclusion", "Printout"], Background -> None]}, 
+        Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["TemplateInclusion"], StyleMenuListing -> None, 
+          Background -> RGBColor[0.85, 0.95, 0.85]], 
+         Cell[
+          StyleData["TemplateInclusion", "Printout"], Background -> None]}, 
+        Closed]], 
+      Cell[
+       StyleData["ConversionSpecial"], 
+       CellBracketOptions -> {
+        "Color" -> RGBColor[0.7, 0.5, 0.8], "Thickness" -> 3}, 
+       GeneratedCellStyles -> {
+        "Graphics" -> {"Graphics", "ConversionSpecial"}, 
+         "Message" -> {"Message", "MSG", "ConversionSpecial"}, 
+         "Output" -> {"Output", "ConversionSpecial"}, 
+         "Print" -> {"Print", "ConversionSpecial"}, 
+         "PrintTemporary" -> {"PrintTemporary", "ConversionSpecial"}}, 
+       StyleMenuListing -> None], 
+      Cell[
+       StyleData["ConversionLockdown"], 
+       CellBracketOptions -> {
+        "Color" -> RGBColor[0.8, 0.5, 0.4], "Thickness" -> 3}, Evaluatable -> 
+       False, StyleMenuListing -> None], 
+      Cell[
+       StyleData["ExampleFreeze"], 
+       CellBracketOptions -> {
+        "Color" -> RGBColor[0.1, 0.26, 0.35], "Thickness" -> 4}, Evaluatable -> 
+       False, StyleMenuListing -> None], 
+      Cell[
+       StyleData["FutureExample"], 
+       CellBracketOptions -> {
+        "Color" -> RGBColor[0.9, 0.4, 0.4], "Thickness" -> 5}, 
+       GeneratedCellStyles -> {
+        "Graphics" -> {"Graphics", "FutureExample"}, 
+         "Message" -> {"Message", "MSG", "FutureExample"}, 
+         "Output" -> {"Output", "FutureExample"}, 
+         "Print" -> {"Print", "FutureExample"}, 
+         "PrintTemporary" -> {"PrintTemporary", "FutureExample"}}, 
+       CellFrameMargins -> 4, StyleMenuListing -> None, Background -> 
+       RGBColor[1, 0.9500000000000003, 0.9500000000000003]], 
+      Cell[
+       StyleData["TentativeExample"], 
+       CellBracketOptions -> {
+        "Color" -> RGBColor[
+          0.30000000000000016`, 0.6000000000000003, 0.7000000000000003], 
+         "Thickness" -> 5}, 
+       GeneratedCellStyles -> {
+        "Graphics" -> {"Graphics", "TentativeExample"}, 
+         "Message" -> {"Message", "MSG", "TentativeExample"}, 
+         "Output" -> {"Output", "TentativeExample"}, 
+         "Print" -> {"Print", "TentativeExample"}, 
+         "PrintTemporary" -> {"PrintTemporary", "TentativeExample"}}, 
+       CellFrameMargins -> 4, StyleMenuListing -> None, Background -> 
+       RGBColor[0.8500000000000003, 0.9500000000000003, 1]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["TentativeID"], StyleMenuListing -> None, FontFamily -> 
+          "Verdana", FontSize -> 9, FontWeight -> "Plain", FontColor -> 
+          RGBColor[0.10000000000000002`, 0.30000000000000016`, 0.4], 
+          Background -> GrayLevel[1]], 
+         Cell[
+          StyleData["TentativeID", "Printout"]]}, Closed]], 
+      Cell[
+       StyleData["ExcludedMaterial"], 
+       CellBracketOptions -> {
+        "Color" -> RGBColor[0.8, 0.8, 0.6], "Thickness" -> 5}, 
+       GeneratedCellStyles -> {
+        "Graphics" -> {"Graphics", "ExcludedMaterial"}, 
+         "Message" -> {"Message", "MSG", "ExcludedMaterial"}, 
+         "Output" -> {"Output", "ExcludedMaterial"}, 
+         "Print" -> {"Print", "ExcludedMaterial"}, 
+         "PrintTemporary" -> {"PrintTemporary", "ExcludedMaterial"}}, 
+       CellFrameMargins -> 4, StyleMenuListing -> None, Background -> 
+       RGBColor[0.95, 0.95, 0.8]], 
+      Cell[
+       StyleData[
+       "ContingentFutureAnnotation", StyleDefinitions -> 
+        StyleData["TextAnnotation"]], CellFrame -> {{2, 2}, {0, 2}}, 
+       CellFrameColor -> RGBColor[0.75, 0.4, 0.7], 
+       GridBoxOptions -> {
+        GridBoxAlignment -> {"Columns" -> {Left, Left, {Left}}}, 
+         GridBoxItemSize -> {"Columns" -> {
+             Scaled[0.14], 
+             Scaled[0.5], 
+             Scaled[0.2]}}, GridBoxSpacings -> {"Columns" -> {{0}}}}], 
+      Cell[
+       StyleData["ContingentFuture"], CellFrame -> {{2, 2}, {2, 0}}, 
+       CellFrameMargins -> {{Inherited, Inherited}, {Inherited, 15}}, 
+       CellFrameColor -> RGBColor[0.75, 0.4, 0.7], 
+       CellFrameLabelMargins -> {{Inherited, Inherited}, {Inherited, 0}}], 
+      Cell[
+       StyleData["EditContingencyButton"], Editable -> False, FontFamily -> 
+       "Verdana", FontSize -> 9, 
+       ButtonBoxOptions -> {
+        Active -> True, Appearance -> "DialogBox", ButtonFunction :> 
+         Module[{functions, newfcns, cell, newcell}, 
+           functions = 
+            InputString[
+             "Enter a comma-separated list of functions this cell is \
+contingent on:"]; If[
+             Not[
+              MatchQ[functions, 
+               Alternatives[$Canceled, $Failed]]], newfcns = Map[StringTrim, 
+                StringSplit[functions, ","]]; SelectionMove[
+               ParentCell[
+                ParentCell[
+                 EvaluationCell[]]], All, Cell]; cell = NotebookRead[
+                EvaluationNotebook[]]; 
+             newcell = (Needs["DocuTools`"]; 
+               DocuTools`Private`EditContingencies[cell, newfcns]); 
+             NotebookWrite[
+               EvaluationNotebook[], newcell]]], ButtonMargins -> 1, 
+         Evaluator -> Automatic, Method -> "Queued"}], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["TextAnnotation"], CellFrame -> 1, CellFrameColor -> 
+          RGBColor[0.8, 0, 0], AutoSpacing -> False, LineIndent -> Automatic, 
+          FontSize -> 11, FontWeight -> "Plain", FontColor -> 
+          RGBColor[0.4, 0.2, 0.2], Background -> GrayLevel[0.999]], 
+         Cell[
+          StyleData["TextAnnotation", "Printout"]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["TextAnnotationButton"], Editable -> False, FontFamily -> 
+          "Verdana", FontSize -> 9, 
+          ButtonBoxOptions -> {
+           Active -> True, Appearance -> "DialogBox", 
+            ButtonFunction :> (Needs["DocuTools`"]; 
+             DocuTools`GenerateAnnotationDialog[]), ButtonMargins -> 1, 
+            Evaluator -> Automatic, Method -> "Queued"}], 
+         Cell[
+          StyleData["TextAnnotationButton", "Printout"]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["TextAnnotator"], Editable -> False, FontFamily -> 
+          "Verdana", FontSize -> 9], 
+         Cell[
+          StyleData["TextAnnotator", "Printout"]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["TextAnnotationRemoveButton"], Editable -> False, 
+          FontFamily -> "Verdana", FontSize -> 9, 
+          ButtonBoxOptions -> {
+           Active -> True, Appearance -> "DialogBox", 
+            ButtonFunction :> (Needs["DocuTools`"]; 
+             DocuTools`AnnotationRemove[
+              DocuTools`CalledFromFrameLabel -> True]), ButtonMargins -> 1, 
+            Evaluator -> Automatic, Method -> "Queued"}], 
+         Cell[
+          StyleData["TextAnnotationRemoveButton", "Printout"]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Notes"], Editable -> True, CellDingbat -> None, 
+          ShowCellBracket -> True, CellMargins -> {{48, 12}, {5, 5}}, 
+          ReturnCreatesNewCell -> True, 
+          TaggingRules -> {"AddModInfo" -> True}, CellFrameLabelMargins -> 2, 
+          InputAutoReplacements -> {"TeX" -> FormBox[
+              StyleBox[
+               RowBox[{"T", 
+                 AdjustmentBox[
+                 "E", BoxBaselineShift -> 0.5, 
+                  BoxMargins -> {{-0.3, 0}, {0, 0}}], "X"}], "TR", 
+               SingleLetterItalics -> False], TraditionalForm], "LaTeX" -> 
+            FormBox[
+              StyleBox[
+               RowBox[{"L", 
+                 StyleBox[
+                  AdjustmentBox[
+                  "A", BoxMargins -> {{-0.5, -0.3}, {0, 0}}, 
+                   BoxBaselineShift -> -0.4], FontSize -> Smaller], "T", 
+                 AdjustmentBox[
+                 "E", BoxMargins -> {{-0.3, 0}, {0, 0}}, BoxBaselineShift -> 
+                  0.5], "X"}], "TR", SingleLetterItalics -> False], 
+              TraditionalForm], "gridMathematica" -> FormBox[
+              RowBox[{"grid", 
+                AdjustmentBox[
+                 StyleBox["Mathematica", FontSlant -> "Italic"], 
+                 BoxMargins -> {{-0.175, 0}, {0, 0}}]}], TextForm], 
+            "webMathematica" -> FormBox[
+              RowBox[{"web", 
+                AdjustmentBox[
+                 StyleBox["Mathematica", FontSlant -> "Italic"], 
+                 BoxMargins -> {{-0.175, 0}, {0, 0}}]}], TextForm]}, 
+          MenuSortingValue -> 700, MenuCommandKey -> "1", FontFamily -> 
+          "Verdana", FontSize -> 11], 
+         Cell[
+          StyleData["Notes", "Printout"], CellMargins -> {{24, 0}, {4, 4}}, 
+          Hyphenation -> True, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, 
+          LineSpacing -> {1., 2, 2.}, FontSize -> 9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["1ColumnTable"], PageWidth -> 700, 
+          CellMargins -> {{66, 50}, {6, 0}}, SpanMaxSize -> 1, 
+          StyleMenuListing -> None, FontFamily -> "Courier", FontSize -> 11, 
+          ButtonBoxOptions -> {Appearance -> {Automatic, None}}, 
+          GridBoxOptions -> {
+           GridBoxAlignment -> {
+             "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+              "Rows" -> {{Baseline}}, "RowsIndexed" -> {}}, 
+            GridBoxItemSize -> {"Columns" -> {{
+                 Scaled[0.999]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+              "RowsIndexed" -> {}}, GridDefaultElement -> 
+            Cell["XXXX", "TableText"]}], 
+         Cell[
+          StyleData["1ColumnTable", "Printout"], PageWidth -> PaperWidth, 
+          CellMargins -> {{2, 0}, {0, 8}}, FontSize -> 9, 
+          GridBoxOptions -> {GridBoxSpacings -> {"Columns" -> {
+                Offset[0.28], {
+                 Offset[0.56]}, 
+                Offset[0.28]}, "ColumnsIndexed" -> {}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[0.56]}, 
+                Offset[0.2]}, "RowsIndexed" -> {}}}]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["2ColumnTable"], PageWidth -> 700, 
+          CellMargins -> {{66, 50}, {6, 0}}, SpanMaxSize -> 1, 
+          StyleMenuListing -> None, FontFamily -> "Courier", FontSize -> 11, 
+          ButtonBoxOptions -> {Appearance -> {Automatic, None}}, 
+          GridBoxOptions -> {
+           GridBoxAlignment -> {
+             "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+              "Rows" -> {{Baseline}}, "RowsIndexed" -> {}}, 
+            GridBoxItemSize -> {"Columns" -> {
+                Scaled[0.4], {
+                 Scaled[0.6]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+              "RowsIndexed" -> {}}}], 
+         Cell[
+          StyleData["2ColumnTable", "Printout"], PageWidth -> PaperWidth, 
+          CellMargins -> {{2, 0}, {0, 8}}, FontSize -> 9, 
+          GridBoxOptions -> {GridBoxSpacings -> {"Columns" -> {
+                Offset[0.28], {
+                 Offset[0.56]}, 
+                Offset[0.28]}, "ColumnsIndexed" -> {}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[0.56]}, 
+                Offset[0.2]}, "RowsIndexed" -> {}}}]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["3ColumnTable"], PageWidth -> 700, 
+          CellMargins -> {{66, 50}, {6, 0}}, CellFrameColor -> 
+          RGBColor[0.74902, 0.694118, 0.552941], SpanMaxSize -> 1, 
+          StyleMenuListing -> None, FontFamily -> "Courier", FontSize -> 11, 
+          ButtonBoxOptions -> {Appearance -> {Automatic, None}}, 
+          GridBoxOptions -> {
+           GridBoxAlignment -> {
+             "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+              "Rows" -> {{Baseline}}, "RowsIndexed" -> {}}, 
+            GridBoxItemSize -> {"Columns" -> {
+                Scaled[0.28], 
+                Scaled[0.28], {
+                 Scaled[0.44]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+              "RowsIndexed" -> {}}}], 
+         Cell[
+          StyleData["3ColumnTable", "Printout"], PageWidth -> PaperWidth, 
+          CellMargins -> {{2, 0}, {0, 8}}, FontSize -> 9, 
+          GridBoxOptions -> {GridBoxSpacings -> {"Columns" -> {
+                Offset[0.28], {
+                 Offset[0.56]}, 
+                Offset[0.28]}, "ColumnsIndexed" -> {}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[0.56]}, 
+                Offset[0.2]}, "RowsIndexed" -> {}}}]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["1ColumnTableMod"], PageWidth -> 700, 
+          CellMargins -> {{40, 50}, {6, 0}}, SpanMaxSize -> 1, 
+          StyleMenuListing -> None, FontFamily -> "Courier", FontSize -> 11, 
+          ButtonBoxOptions -> {Appearance -> {Automatic, None}}, 
+          GridBoxOptions -> {
+           GridBoxAlignment -> {
+             "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+              "Rows" -> {{Baseline}}, "RowsIndexed" -> {}}, 
+            GridBoxDividers -> {
+             "Columns" -> {{False}}, "ColumnsIndexed" -> {}, 
+              "Rows" -> {False, {False}, False}, "RowsIndexed" -> {}}, 
+            GridBoxItemSize -> {"Columns" -> {
+                Scaled[0.04], {
+                 Scaled[0.966]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+              "RowsIndexed" -> {}}, GridBoxSpacings -> {"Columns" -> {
+                Offset[0.28], 
+                Offset[0.126], {
+                 Offset[0.77]}, 
+                Offset[0.28]}, "ColumnsIndexed" -> {}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[0.4]}, 
+                Offset[0.2]}, "RowsIndexed" -> {}}}], 
+         Cell[
+          StyleData["1ColumnTableMod", "Printout"], PageWidth -> PaperWidth, 
+          CellMargins -> {{2, 0}, {5, 0}}, FontSize -> 9, 
+          GridBoxOptions -> {GridBoxItemSize -> {"Columns" -> {
+                Scaled[0.078], {
+                 Scaled[0.922]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+              "RowsIndexed" -> {}}, GridBoxSpacings -> {"Columns" -> {
+                Offset[0.28], {
+                 Offset[0.56]}, 
+                Offset[0.28]}, "ColumnsIndexed" -> {}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[0.56]}, 
+                Offset[0.2]}, "RowsIndexed" -> {}}}]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["2ColumnTableMod"], PageWidth -> 700, 
+          CellMargins -> {{40, 50}, {6, 0}}, CellFrameColor -> 
+          RGBColor[0.74902, 0.694118, 0.552941], SpanMaxSize -> 1, 
+          StyleMenuListing -> None, FontFamily -> "Courier", FontSize -> 11, 
+          ButtonBoxOptions -> {Appearance -> {Automatic, None}}, 
+          GridBoxOptions -> {
+           GridBoxAlignment -> {
+             "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+              "Rows" -> {{Baseline}}, "RowsIndexed" -> {}}, 
+            GridBoxDividers -> {
+             "Columns" -> {{False}}, "ColumnsIndexed" -> {}, 
+              "Rows" -> {False, {False}, False}, "RowsIndexed" -> {}}, 
+            GridBoxItemSize -> {"Columns" -> {
+                Scaled[0.05], 
+                Scaled[0.41], {
+                 Scaled[0.54]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+              "RowsIndexed" -> {}}, GridBoxSpacings -> {"Columns" -> {
+                Offset[0.28], 
+                Offset[0.14], {
+                 Offset[0.77]}, 
+                Offset[0.28]}, "ColumnsIndexed" -> {}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[0.4]}, 
+                Offset[0.2]}, "RowsIndexed" -> {}}}], 
+         Cell[
+          StyleData["2ColumnTableMod", "Printout"], PageWidth -> PaperWidth, 
+          CellMargins -> {{2, 0}, {5, 0}}, FontSize -> 9, 
+          GridBoxOptions -> {GridBoxItemSize -> {"Columns" -> {
+                Scaled[0.079], 
+                Scaled[0.363], {
+                 Scaled[0.558]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+              "RowsIndexed" -> {}}, GridBoxSpacings -> {"Columns" -> {
+                Offset[0.28], {
+                 Offset[0.56]}, 
+                Offset[0.28]}, "ColumnsIndexed" -> {}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[0.56]}, 
+                Offset[0.2]}, "RowsIndexed" -> {}}}]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["3ColumnTableMod"], PageWidth -> 700, 
+          CellMargins -> {{40, 50}, {6, 0}}, CellFrameColor -> 
+          RGBColor[0.74902, 0.694118, 0.552941], SpanMaxSize -> 1, 
+          StyleMenuListing -> None, FontFamily -> "Courier", FontSize -> 11, 
+          ButtonBoxOptions -> {Appearance -> {Automatic, None}}, 
+          GridBoxOptions -> {
+           GridBoxAlignment -> {
+             "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+              "Rows" -> {{Baseline}}, "RowsIndexed" -> {}}, 
+            GridBoxDividers -> {
+             "Columns" -> {{False}}, "ColumnsIndexed" -> {}, 
+              "Rows" -> {False, {False}, False}, "RowsIndexed" -> {}}, 
+            GridBoxItemSize -> {"Columns" -> {
+                Scaled[0.04], 
+                Scaled[0.266], 
+                Scaled[0.26], {
+                 Scaled[0.434]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+              "RowsIndexed" -> {}}, GridBoxSpacings -> {"Columns" -> {
+                Offset[0.28], 
+                Offset[0.14], {
+                 Offset[0.77]}, 
+                Offset[0.28]}, "ColumnsIndexed" -> {}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[0.4]}, 
+                Offset[0.2]}, "RowsIndexed" -> {}}}], 
+         Cell[
+          StyleData["3ColumnTableMod", "Printout"], PageWidth -> PaperWidth, 
+          CellMargins -> {{2, 0}, {5, 0}}, FontSize -> 9, 
+          GridBoxOptions -> {GridBoxItemSize -> {"Columns" -> {
+                Scaled[0.08], 
+                Scaled[0.25], 
+                Scaled[0.25], {
+                 Scaled[0.42]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+              "RowsIndexed" -> {}}, GridBoxSpacings -> {"Columns" -> {
+                Offset[0.28], {
+                 Offset[0.56]}, 
+                Offset[0.28]}, "ColumnsIndexed" -> {}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[0.56]}, 
+                Offset[0.2]}, "RowsIndexed" -> {}}}]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["3ColumnIllustratedTableMod"], PageWidth -> 700, 
+          CellMargins -> {{40, 50}, {6, 0}}, CellFrameColor -> 
+          RGBColor[0.74902, 0.694118, 0.552941], SpanMaxSize -> 1, 
+          StyleMenuListing -> None, FontFamily -> "Courier", FontSize -> 11, 
+          ButtonBoxOptions -> {Appearance -> {Automatic, None}}, 
+          GridBoxOptions -> {
+           GridBoxAlignment -> {
+             "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+              "Rows" -> {{Baseline}}, "RowsIndexed" -> {}}, 
+            GridBoxDividers -> {
+             "Columns" -> {{False}}, "ColumnsIndexed" -> {}, 
+              "Rows" -> {False, {False}, False}, "RowsIndexed" -> {}}, 
+            GridBoxItemSize -> {"Columns" -> {
+                Scaled[0.04], 
+                Scaled[0.18], 
+                Scaled[0.26], {
+                 Scaled[0.434]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+              "RowsIndexed" -> {}}, GridBoxSpacings -> {"Columns" -> {
+                Offset[0.28], 
+                Offset[0.14], {
+                 Offset[0.77]}, 
+                Offset[0.28]}, "ColumnsIndexed" -> {}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[0.4]}, 
+                Offset[0.2]}, "RowsIndexed" -> {}}}], 
+         Cell[
+          StyleData["3ColumnIllustratedTableMod", "Printout"], PageWidth -> 
+          PaperWidth, CellMargins -> {{2, 0}, {5, 0}}, FontSize -> 9, 
+          GridBoxOptions -> {GridBoxItemSize -> {"Columns" -> {
+                Scaled[0.08], 
+                Scaled[0.25], 
+                Scaled[0.2], {
+                 Scaled[0.42]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+              "RowsIndexed" -> {}}, GridBoxSpacings -> {"Columns" -> {
+                Offset[0.28], {
+                 Offset[0.56]}, 
+                Offset[0.28]}, "ColumnsIndexed" -> {}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[0.56]}, 
+                Offset[0.2]}, "RowsIndexed" -> {}}}]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["TableText"], DefaultInlineFormatType -> 
+          "DefaultInputInlineFormatType", 
+          InputAutoReplacements -> {"TeX" -> FormBox[
+              StyleBox[
+               RowBox[{"T", 
+                 AdjustmentBox[
+                 "E", BoxBaselineShift -> 0.5, 
+                  BoxMargins -> {{-0.3, 0}, {0, 0}}], "X"}], "TR", 
+               SingleLetterItalics -> False], TraditionalForm], "LaTeX" -> 
+            FormBox[
+              StyleBox[
+               RowBox[{"L", 
+                 StyleBox[
+                  AdjustmentBox[
+                  "A", BoxMargins -> {{-0.5, -0.3}, {0, 0}}, 
+                   BoxBaselineShift -> -0.4], FontSize -> Smaller], "T", 
+                 AdjustmentBox[
+                 "E", BoxMargins -> {{-0.3, 0}, {0, 0}}, BoxBaselineShift -> 
+                  0.5], "X"}], "TR", SingleLetterItalics -> False], 
+              TraditionalForm]}, StyleMenuListing -> None, FontFamily -> 
+          "Verdana", FontSize -> Inherited 0.952], 
+         Cell[
+          StyleData["TableText", "Printout"], Hyphenation -> True, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, 
+          LineSpacing -> {1., 2, 2.}]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["InlineFormula"], 
+          HyphenationOptions -> {"HyphenationCharacter" -> "\[Continuation]"},
+           LanguageCategory -> "Formula", AutoSpacing -> True, ScriptLevel -> 
+          1, AutoMultiplicationSymbol -> False, SingleLetterItalics -> False, 
+          SpanMaxSize -> 1, StyleMenuListing -> None, FontFamily -> "Courier",
+           FontSize -> 12, 
+          ButtonBoxOptions -> {Appearance -> {Automatic, None}}, 
+          FractionBoxOptions -> {BaseStyle -> {SpanMaxSize -> Automatic}}, 
+          GridBoxOptions -> {
+           GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, 
+              "Rows" -> {{1.}}, "RowsIndexed" -> {}}}], 
+         Cell[
+          StyleData["InlineFormula", "Working"], Background -> 
+          RGBColor[1, 0.875, 0.75]], 
+         Cell[
+          StyleData["InlineFormula", "Printout"]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["InlineOutput"], CellMargins -> {{27, 4}, {0, 8}}, 
+          CellHorizontalScrolling -> True, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "\[Continuation]"},
+           LanguageCategory -> None, AutoMultiplicationSymbol -> False, 
+          StyleMenuListing -> None, FontFamily -> "Courier", FontSize -> 12], 
+         
+         Cell[
+          StyleData["InlineOutput", "Printout"], 
+          CellMargins -> {{2, 0}, {0, 8}}]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["InlineMath"], DefaultFormatType -> 
+          "DefaultTextFormatType", DefaultInlineFormatType -> 
+          "TraditionalForm", LanguageCategory -> "Formula", AutoSpacing -> 
+          True, ScriptLevel -> 1, AutoMultiplicationSymbol -> False, 
+          SingleLetterItalics -> True, SpanMaxSize -> Infinity, 
+          StyleMenuListing -> None, FontFamily -> "Times", FontSize -> 
+          1.05 Inherited, 
+          ButtonBoxOptions -> {Appearance -> {Automatic, None}}, 
+          GridBoxOptions -> {
+           GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, 
+              "Rows" -> {{1.}}, "RowsIndexed" -> {}}}], 
+         Cell[
+          StyleData["InlineMath", "Working"], Background -> 
+          RGBColor[0.875, 0.9375, 1]], 
+         Cell[
+          StyleData["InlineMath", "Printout"], 
+          CellMargins -> {{2, 0}, {0, 8}}]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Code"], CellMargins -> {{107, 10}, {5, 7}}, 
+          CellGroupingRules -> "InputGrouping", StripStyleOnPaste -> True, 
+          PageBreakWithin -> False, GroupPageBreakWithin -> False, AutoIndent -> 
+          False, ShowAutoStyles -> True, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "\[Continuation]"},
+           LineSpacing -> {1.2, 1., 2.}, AutoItalicWords -> {}, AutoSpacing -> 
+          False, ShowStringCharacters -> True, CounterIncrements -> "Code", 
+          FontFamily -> "Courier", Background -> GrayLevel[0.92]], 
+         Cell[
+          StyleData["Code", "Printout"], CellMargins -> {{39, 0}, {4, 6}}, 
+          Background -> GrayLevel[1]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Program"], CellMargins -> {{107, 10}, {5, 7}}, 
+          CellGroupingRules -> "InputGrouping", StripStyleOnPaste -> True, 
+          PageBreakWithin -> False, GroupPageBreakWithin -> False, AutoIndent -> 
+          False, ShowAutoStyles -> True, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "\[Continuation]"},
+           LineSpacing -> {1.2, 1., 2.}, AutoItalicWords -> {}, AutoSpacing -> 
+          False, ShowStringCharacters -> True, CounterIncrements -> "Code", 
+          FontFamily -> "Courier", Background -> GrayLevel[0.92]], 
+         Cell[
+          StyleData["Program", "Printout"], CellMargins -> {{39, 0}, {4, 6}}, 
+          Background -> GrayLevel[1]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["PrimaryExamplesSection"], 
+          CellFrame -> {{0, 0}, {0, 0.5}}, CellMargins -> {{48, 8}, {12, 36}},
+           CellElementSpacings -> {"ClosedGroupTopMargin" -> 60}, Evaluatable -> 
+          True, CellGroupingRules -> {"SectionGrouping", 30}, 
+          TaggingRules -> {"Tentativeable" -> False}, ShowCellLabel -> False, 
+          CellLabelAutoDelete -> True, CellFrameMargins -> 4, 
+          DefaultNewCellStyle -> "Input", ParagraphSpacing -> {0.7, 0}, 
+          StyleMenuListing -> None, FontFamily -> "Verdana", FontSize -> 11, 
+          FontWeight -> "Bold", 
+          GridBoxOptions -> {
+           GridBoxAlignment -> {
+             "Columns" -> {Left, {Right}}, "ColumnsIndexed" -> {}, 
+              "Rows" -> {{Baseline}}, "RowsIndexed" -> {}}, 
+            GridBoxItemSize -> {"Columns" -> {{
+                 Scaled[0.5]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+              "RowsIndexed" -> {}}}], 
+         Cell[
+          StyleData["PrimaryExamplesSection", "Printout"], 
+          CellMargins -> {{24, 0}, {10, 32}}, PageBreakBelow -> False, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, FontSize -> 
+          9, FontColor -> GrayLevel[0]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["ExtendedExamplesLink"], ParagraphSpacing -> {0, 3}, 
+          StyleMenuListing -> None, FontFamily -> "Verdana", FontWeight -> 
+          "Plain", FontColor -> GrayLevel[0.5], 
+          ButtonBoxOptions -> {
+           Active -> True, Appearance -> {Automatic, None}, 
+            ButtonFunction :> (FrontEndExecute[{
+               FrontEnd`NotebookLocate[#2]}]& )}], 
+         Cell[
+          StyleData["ExtendedExamplesLink", "Printout"], 
+          CellMargins -> {{24, 0}, {0, 8}}, Hyphenation -> True, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, FontSize -> 
+          9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["ExtendedExamplesSection"], 
+          CellFrame -> {{0, 0}, {0, 0.5}}, CellMargins -> {{48, 8}, {0, 36}}, 
+          CellElementSpacings -> {"ClosedGroupTopMargin" -> 36}, 
+          CellGroupingRules -> {"SectionGrouping", 30}, 
+          TaggingRules -> {"Tentativeable" -> False}, CellFrameMargins -> 4, 
+          DefaultNewCellStyle -> "Input", StyleMenuListing -> None, 
+          FontFamily -> "Verdana", FontSize -> 11, FontWeight -> "Bold", 
+          GridBoxOptions -> {
+           GridBoxAlignment -> {
+             "Columns" -> {Left, {Right}}, "ColumnsIndexed" -> {}, 
+              "Rows" -> {{Baseline}}, "RowsIndexed" -> {}}, 
+            GridBoxItemSize -> {"Columns" -> {{
+                 Scaled[0.5]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+              "RowsIndexed" -> {}}}], 
+         Cell[
+          StyleData["ExtendedExamplesSection", "Printout"], 
+          CellMargins -> {{24, 0}, {0, 32}}, PageBreakBelow -> False, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, FontSize -> 
+          9, FontColor -> GrayLevel[0]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["ExampleDelimiter"], CellMargins -> {{72, 10}, {0, 3}}, 
+          Evaluatable -> True, CellGroupingRules -> {"SectionGrouping", 58}, 
+          ShowCellLabel -> False, CellLabelAutoDelete -> True, TabFilling -> 
+          ".\[ThinSpace]", TabSpacings -> {68}, StyleMenuListing -> None, 
+          FontFamily -> "Verdana", FontSize -> 9, FontWeight -> "Plain", 
+          FontSlant -> "Plain", DefaultContext -> SectionUnique], 
+         Cell[
+          StyleData["ExampleDelimiter", "Printout"], 
+          CellMargins -> {{43, 0}, {0, 3}}, TabSpacings -> {71.3}, FontSize -> 
+          7]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["ExampleText"], CellMargins -> {{72, 40}, {0, 8}}, 
+          ReturnCreatesNewCell -> True, 
+          TaggingRules -> {"AddModInfo" -> True}, 
+          DefaultReturnCreatedCellStyle -> "Input", 
+          InputAutoReplacements -> {"TeX" -> FormBox[
+              StyleBox[
+               RowBox[{"T", 
+                 AdjustmentBox[
+                 "E", BoxBaselineShift -> 0.5, 
+                  BoxMargins -> {{-0.3, 0}, {0, 0}}], "X"}], "TR", 
+               SingleLetterItalics -> False], TraditionalForm], "LaTeX" -> 
+            FormBox[
+              StyleBox[
+               RowBox[{"L", 
+                 StyleBox[
+                  AdjustmentBox[
+                  "A", BoxMargins -> {{-0.5, -0.3}, {0, 0}}, 
+                   BoxBaselineShift -> -0.4], FontSize -> Smaller], "T", 
+                 AdjustmentBox[
+                 "E", BoxMargins -> {{-0.3, 0}, {0, 0}}, BoxBaselineShift -> 
+                  0.5], "X"}], "TR", SingleLetterItalics -> False], 
+              TraditionalForm]}, ParagraphSpacing -> {0, 6}, MenuSortingValue -> 
+          1100, MenuCommandKey -> "7", FontFamily -> "Verdana", FontSize -> 
+          10], 
+         Cell[
+          StyleData["ExampleText", "Printout"], 
+          CellMargins -> {{43, 80}, {0, 6}}, PageBreakBelow -> False, 
+          Hyphenation -> True, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, FontSize -> 
+          8, FontColor -> GrayLevel[0]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["ExampleSection"], Editable -> True, 
+          CellMargins -> {{72, 4}, {0, 16}}, Evaluatable -> True, 
+          CellGroupingRules -> {"SectionGrouping", 54}, 
+          TaggingRules -> {"Tentativeable" -> False}, ShowCellLabel -> False, 
+          CellLabelAutoDelete -> True, StyleMenuListing -> None, FontFamily -> 
+          "Verdana", FontSize -> 11, FontWeight -> "Bold", FontColor -> 
+          RGBColor[0.1, 0.2, 0.5], DefaultContext -> SectionUnique], 
+         Cell[
+          StyleData["ExampleSection", "Printout"], 
+          CellMargins -> {{43, 0}, {0, 14}}, PageBreakBelow -> False, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, FontSize -> 
+          7]}, Closed]], 
+      Cell[
+       StyleData[
+       "NotesSubsection", StyleDefinitions -> StyleData["ExampleSection"]]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["ExampleSubsection"], Editable -> True, 
+          CellMargins -> {{72, 4}, {0, 8}}, Evaluatable -> True, 
+          CellGroupingRules -> {"SectionGrouping", 56}, ShowCellLabel -> 
+          False, CellLabelAutoDelete -> True, StyleMenuListing -> None, 
+          FontFamily -> "Verdana", FontSize -> 10, FontWeight -> "Bold", 
+          FontColor -> RGBColor[0.3, 0.5, 0.7]], 
+         Cell[
+          StyleData["ExampleSubsection", "Printout"], 
+          CellMargins -> {{43, 0}, {0, 6}}, PageBreakBelow -> False, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, FontSize -> 
+          7]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["ExampleSubsubsection"], Editable -> True, 
+          CellMargins -> {{72, 4}, {0, 8}}, Evaluatable -> True, 
+          CellGroupingRules -> {"SectionGrouping", 57}, ShowCellLabel -> 
+          False, CellLabelAutoDelete -> True, StyleMenuListing -> None, 
+          FontFamily -> "Verdana", FontSize -> 9.5, FontWeight -> "Bold", 
+          FontColor -> GrayLevel[0.4]], 
+         Cell[
+          StyleData["ExampleSubsubsection", "Printout"], 
+          CellMargins -> {{43, 0}, {0, 6}}, PageBreakBelow -> False, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, FontSize -> 
+          7]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["NotebookImage"], PageWidth -> 650, 
+          CellMargins -> {{72, 12}, {8, 2}}, CellGroupingRules -> 
+          "OutputGrouping", CellFrameMargins -> {{42, 0}, {6, 6}}, Background -> 
+          RGBColor[0.94, 0.96, 0.98]], 
+         Cell[
+          StyleData["NotebookImage", "Preview"]], 
+         Cell[
+          StyleData["NotebookImage", "Printout"], 
+          CellMargins -> {{45, 0}, {6, 4}}, 
+          CellFrameMargins -> {{32, 0}, {6, 6}}, Background -> 
+          GrayLevel[0.94]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Picture"], CellMargins -> {{74, 4}, {3, 8}}, 
+          CellGroupingRules -> "GraphicsGrouping", CellHorizontalScrolling -> 
+          True, MenuSortingValue -> 1400, 
+          GraphicsBoxOptions -> {ImageSize -> Medium}, 
+          Graphics3DBoxOptions -> {ImageSize -> Medium}], 
+         Cell[
+          StyleData["Picture", "Printout"], 
+          CellMargins -> {{2, Inherited}, {4, 4}}, Magnification -> 0.65]}, 
+        Closed]], 
+      Cell[
+       StyleData["WebImage", StyleDefinitions -> StyleData["Picture"]]], 
+      Cell[
+       StyleData["Deemphasis"], ShowCellLabel -> False, CellLabelAutoDelete -> 
+       True, ShowAutoStyles -> False, FontSize -> 9, FontColor -> 
+       GrayLevel[0.75]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["ExampleLink"], StyleMenuListing -> None, FontFamily -> 
+          "Helvetica", FontSize -> Inherited 0.8, FontColor -> 
+          RGBColor[0.1, 0.1, 0.5], 
+          ButtonBoxOptions -> {
+           Active -> True, Appearance -> {Automatic, "DialogBox"}, Background -> 
+            RGBColor[0.7, 0.8, 0.9], 
+            ButtonFunction :> (DocuTools`FindExampleLink[#]& ), 
+            ButtonMinHeight -> 0.1, ButtonNote -> "Examples Link", Evaluator -> 
+            Automatic, Method -> "Preemptive"}], 
+         Cell[
+          StyleData["ExampleLink", "Printout"], 
+          CellMargins -> {{2, 80}, {0, 8}}, PageBreakBelow -> False, 
+          Hyphenation -> True, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, FontSize -> 
+          8, FontColor -> GrayLevel[0]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["ExampleBacklink"], StyleMenuListing -> None, FontFamily -> 
+          "Helvetica", FontSize -> 10, FontColor -> RGBColor[0.4, 0.5, 0.7], 
+          ButtonBoxOptions -> {
+           Active -> True, Appearance -> {Automatic, None}, 
+            ButtonFunction :> (DocuTools`FindBacklink[#]& ), ButtonMinHeight -> 
+            0.1, ButtonNote -> "Backlink to Examples Link", Evaluator -> 
+            Automatic}, FontWieght -> "Plain"], 
+         Cell[
+          StyleData["ExampleBacklink", "Printout"], 
+          CellMargins -> {{2, 80}, {0, 8}}, PageBreakBelow -> False, 
+          Hyphenation -> True, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, FontSize -> 
+          8, FontColor -> GrayLevel[0]]}, Closed]], 
+      Cell[
+       StyleData["LinkID"], StyleMenuListing -> None, FontSize -> 0.5, 
+       FontColor -> RGBColor[0.7, 0.8, 0.9]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["TutorialsSection"], CellFrame -> {{0, 0}, {0, 0.1}}, 
+          CellMargins -> {{48, 4}, {3, 24}}, 
+          CellElementSpacings -> {"ClosedGroupTopMargin" -> 60}, 
+          CellGroupingRules -> {"SectionGrouping", 30}, 
+          TaggingRules -> {"Tentativeable" -> False}, CellFrameMargins -> 4, 
+          DefaultNewCellStyle -> "Tutorials", StyleMenuListing -> None, 
+          FontFamily -> "Verdana", FontSize -> 9, FontWeight -> "Bold"], 
+         Cell[
+          StyleData["TutorialsSection", "Printout"], 
+          CellMargins -> {{24, 0}, {2, 21}}, PageBreakBelow -> False, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, FontSize -> 
+          9, FontColor -> GrayLevel[0]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Tutorials"], CellMargins -> {{74, 12}, {2, 2}}, 
+          ReturnCreatesNewCell -> True, MenuSortingValue -> 800, 
+          MenuCommandKey -> "2", FontFamily -> "Verdana", FontSize -> 9], 
+         Cell[
+          StyleData["Tutorials", "Printout"], 
+          CellMargins -> {{43, 0}, {1, 1}}, Hyphenation -> True, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, 
+          LineSpacing -> {1., 2., 2.}, FontSize -> 9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["TutorialCollectionSection"], 
+          CellFrame -> {{0, 0}, {0, 0.1}}, CellMargins -> {{48, 4}, {2, 12}}, 
+          CellGroupingRules -> {"SectionGrouping", 30}, 
+          TaggingRules -> {"Tentativeable" -> False}, CellFrameMargins -> 4, 
+          DefaultNewCellStyle -> "TutorialCollection", 
+          CellChangeTimes -> {3.480613219284178*^9}, StyleMenuListing -> None,
+           FontFamily -> "Verdana", FontSize -> 9, FontWeight -> "Bold"], 
+         Cell[
+          StyleData["TutorialCollectionSection", "Printout"], 
+          CellMargins -> {{24, 0}, {2, 21}}, PageBreakBelow -> False, 
+          CellChangeTimes -> {3.4806132192843637`*^9}, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, FontSize -> 
+          9, FontColor -> GrayLevel[0]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["TutorialCollection"], CellMargins -> {{74, 12}, {2, 2}}, 
+          ReturnCreatesNewCell -> True, FontFamily -> "Verdana", FontSize -> 
+          9], 
+         Cell[
+          StyleData["TutorialCollection", "Printout"], 
+          CellMargins -> {{43, 0}, {1, 1}}, 
+          CellChangeTimes -> {3.480613219284667*^9}, Hyphenation -> True, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, 
+          LineSpacing -> {1., 2., 2.}, FontSize -> 9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["RelatedDemonstrationsSection"], 
+          CellFrame -> {{0, 0}, {0, 0.1}}, CellMargins -> {{48, 4}, {2, 12}}, 
+          CellGroupingRules -> {"SectionGrouping", 30}, 
+          TaggingRules -> {"Tentativeable" -> False}, CellFrameMargins -> 4, 
+          DefaultNewCellStyle -> "RelatedDemonstrations", StyleMenuListing -> 
+          None, FontFamily -> "Verdana", FontSize -> 9, FontWeight -> "Bold"], 
+         Cell[
+          StyleData["RelatedDemonstrationsSection", "Printout"], 
+          CellMargins -> {{24, 0}, {1, 10}}, PageBreakBelow -> False, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, FontSize -> 
+          9, FontColor -> GrayLevel[0]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["RelatedDemonstrations"], 
+          CellMargins -> {{72, 12}, {2, 2}}, ReturnCreatesNewCell -> True, 
+          ParagraphSpacing -> {0, 3}, FontFamily -> "Verdana", FontSize -> 9], 
+         Cell[
+          StyleData["RelatedDemonstrations", "Printout"], 
+          CellMargins -> {{43, 0}, {1, 1}}, Hyphenation -> True, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, 
+          LineSpacing -> {1., 2., 2.}, FontSize -> 9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["RelatedLinksSection"], CellFrame -> {{0, 0}, {0, 0.1}}, 
+          CellMargins -> {{48, 4}, {2, 12}}, 
+          CellGroupingRules -> {"SectionGrouping", 30}, 
+          TaggingRules -> {"Tentativeable" -> False}, CellFrameMargins -> 4, 
+          DefaultNewCellStyle -> "RelatedLinks", StyleMenuListing -> None, 
+          FontFamily -> "Verdana", FontSize -> 9, FontWeight -> "Bold"], 
+         Cell[
+          StyleData["RelatedLinksSection", "Printout"], 
+          CellMargins -> {{24, 0}, {1, 10}}, PageBreakBelow -> False, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, FontSize -> 
+          9, FontColor -> GrayLevel[0]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["RelatedLinks"], CellMargins -> {{72, 12}, {2, 2}}, 
+          ReturnCreatesNewCell -> True, ParagraphSpacing -> {0, 3}, 
+          MenuSortingValue -> 900, MenuCommandKey -> "3", FontFamily -> 
+          "Verdana", FontSize -> 9], 
+         Cell[
+          StyleData["RelatedLinks", "Printout"], 
+          CellMargins -> {{43, 0}, {1, 1}}, Hyphenation -> True, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, 
+          LineSpacing -> {1., 2., 2.}, FontSize -> 9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["SeeAlsoSection"], CellFrame -> {{0, 0}, {0, 0.1}}, 
+          CellMargins -> {{48, 4}, {2, 12}}, 
+          CellElementSpacings -> {"ClosedGroupTopMargin" -> 28}, 
+          CellGroupingRules -> {"SectionGrouping", 30}, 
+          TaggingRules -> {"Tentativeable" -> False}, CellFrameMargins -> 4, 
+          DefaultNewCellStyle -> "SeeAlso", StyleMenuListing -> None, 
+          FontFamily -> "Verdana", FontSize -> 9, FontWeight -> "Bold"], 
+         Cell[
+          StyleData["SeeAlsoSection", "Printout"], 
+          CellMargins -> {{24, 0}, {1, 10}}, PageBreakBelow -> False, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, FontSize -> 
+          9, FontColor -> GrayLevel[0]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["SeeAlso"], CellMargins -> {{72, 12}, {2, 2}}, 
+          ReturnCreatesNewCell -> True, ParagraphSpacing -> {0, 3}, 
+          MenuSortingValue -> 1000, MenuCommandKey -> "4", FontFamily -> 
+          "Verdana", FontSize -> 9], 
+         Cell[
+          StyleData["SeeAlso", "Printout"], CellMargins -> {{43, 0}, {1, 1}}, 
+          Hyphenation -> True, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, 
+          LineSpacing -> {1., 2., 2.}, FontSize -> 9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["MoreAboutSection"], CellFrame -> {{0, 0}, {0, 0.1}}, 
+          CellMargins -> {{48, 4}, {2, 12}}, 
+          CellElementSpacings -> {"ClosedGroupTopMargin" -> 28}, 
+          CellGroupingRules -> {"SectionGrouping", 30}, 
+          TaggingRules -> {"Tentativeable" -> False}, CellFrameMargins -> 4, 
+          DefaultNewCellStyle -> "MoreAbout", StyleMenuListing -> None, 
+          FontFamily -> "Verdana", FontSize -> 9, FontWeight -> "Bold"], 
+         Cell[
+          StyleData["MoreAboutSection", "Printout"], 
+          CellMargins -> {{24, 0}, {1, 10}}, PageBreakBelow -> False, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, FontSize -> 
+          9, FontColor -> GrayLevel[0]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["MoreAbout"], CellMargins -> {{72, 12}, {2, 2}}, 
+          ReturnCreatesNewCell -> True, ParagraphSpacing -> {0, 3}, 
+          FontFamily -> "Verdana", FontSize -> 9], 
+         Cell[
+          StyleData["MoreAbout", "Printout"], 
+          CellMargins -> {{43, 0}, {1, 1}}, Hyphenation -> True, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, 
+          LineSpacing -> {1., 2., 2.}, FontSize -> 9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["RelatedWorkflowsSection"], 
+          CellFrame -> {{0, 0}, {0, 0.1}}, CellMargins -> {{48, 4}, {2, 12}}, 
+          CellElementSpacings -> {"ClosedGroupTopMargin" -> 28}, 
+          CellGroupingRules -> {"SectionGrouping", 30}, 
+          TaggingRules -> {"Tentativeable" -> False}, CellFrameMargins -> 4, 
+          DefaultNewCellStyle -> "RelatedWorkflows", StyleMenuListing -> None,
+           FontFamily -> "Verdana", FontSize -> 9, FontWeight -> "Bold"], 
+         Cell[
+          StyleData["RelatedWorkflowsSection", "Printout"], 
+          CellMargins -> {{24, 0}, {1, 10}}, PageBreakBelow -> False, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, FontSize -> 
+          9, FontColor -> GrayLevel[0]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["RelatedWorkflows"], CellMargins -> {{72, 12}, {2, 2}}, 
+          ReturnCreatesNewCell -> True, ParagraphSpacing -> {0, 3}, 
+          FontFamily -> "Verdana", FontSize -> 9], 
+         Cell[
+          StyleData["RelatedWorkflows", "Printout"], 
+          CellMargins -> {{43, 0}, {1, 1}}, Hyphenation -> True, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, 
+          LineSpacing -> {1., 2., 2.}, FontSize -> 9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["ExtensionsSection"], CellFrame -> {{0, 0}, {0, 0.1}}, 
+          CellMargins -> {{48, 4}, {2, 12}}, 
+          CellElementSpacings -> {"ClosedGroupTopMargin" -> 28}, 
+          CellGroupingRules -> {"SectionGrouping", 30}, 
+          TaggingRules -> {"Tentativeable" -> False}, CellFrameMargins -> 4, 
+          DefaultNewCellStyle -> "Extensions", StyleMenuListing -> None, 
+          FontFamily -> "Verdana", FontSize -> 9, FontWeight -> "Bold"], 
+         Cell[
+          StyleData["ExtensionsSection", "Printout"], 
+          CellMargins -> {{24, 0}, {1, 10}}, PageBreakBelow -> False, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, FontSize -> 
+          9, FontColor -> GrayLevel[0]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Extensions"], CellMargins -> {{72, 12}, {2, 2}}, 
+          ReturnCreatesNewCell -> True, ParagraphSpacing -> {0, 3}, 
+          FontFamily -> "Verdana", FontSize -> 9], 
+         Cell[
+          StyleData["Extensions", "Printout"], 
+          CellMargins -> {{43, 0}, {1, 1}}, Hyphenation -> True, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, 
+          LineSpacing -> {1., 2., 2.}, FontSize -> 9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["DesignDiscussionSection"], 
+          CellFrame -> {{0, 0}, {0, 0.1}}, CellMargins -> {{48, 4}, {2, 60}}, 
+          CellElementSpacings -> {"ClosedGroupTopMargin" -> 60}, 
+          CellGroupingRules -> {"SectionGrouping", 30}, 
+          TaggingRules -> {"Tentativeable" -> False}, CellFrameMargins -> 4, 
+          DefaultNewCellStyle -> "DesignDiscussion", StyleMenuListing -> None,
+           FontFamily -> "Verdana", FontSize -> 9, FontWeight -> "Bold"], 
+         Cell[
+          StyleData["DesignDiscussionSection", "Printout"], 
+          CellMargins -> {{24, 0}, {1, 54}}, PageBreakBelow -> False, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, FontSize -> 
+          9, FontColor -> GrayLevel[0]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["DesignDiscussion"], CellMargins -> {{72, 12}, {2, 2}}, 
+          ReturnCreatesNewCell -> True, MenuSortingValue -> 1300, FontFamily -> 
+          "Verdana", FontSize -> 9], 
+         Cell[
+          StyleData["DesignDiscussion", "Printout"], 
+          CellMargins -> {{43, 0}, {1, 1}}, Hyphenation -> True, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, 
+          LineSpacing -> {1., 2., 2.}, FontSize -> 9]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["ApplicationNotesSection"], 
+          CellFrame -> {{0, 0}, {0, 0.1}}, CellMargins -> {{48, 4}, {2, 12}}, 
+          CellElementSpacings -> {"ClosedGroupTopMargin" -> 28}, 
+          CellGroupingRules -> {"SectionGrouping", 30}, 
+          TaggingRules -> {"Tentativeable" -> False}, CellFrameMargins -> 4, 
+          DefaultNewCellStyle -> "ApplicationNotes", StyleMenuListing -> None,
+           FontFamily -> "Verdana", FontSize -> 9, FontWeight -> "Bold"], 
+         Cell[
+          StyleData["ApplicationNotesSection", "Printout"], 
+          CellMargins -> {{24, 0}, {1, 10}}, PageBreakBelow -> False, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, FontSize -> 
+          9, FontColor -> GrayLevel[0]]}, Open]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["ApplicationNotes"], CellMargins -> {{72, 12}, {2, 2}}, 
+          ReturnCreatesNewCell -> True, MenuSortingValue -> 1400, FontFamily -> 
+          "Verdana", FontSize -> 9], 
+         Cell[
+          StyleData["ApplicationNotes", "Printout"], 
+          CellMargins -> {{43, 0}, {1, 1}}, Hyphenation -> True, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, 
+          LineSpacing -> {1., 2., 2.}, FontSize -> 9]}, Closed]], 
+      Cell[
+       StyleData["FunctionEssaySection"], CellFrame -> {{0, 0}, {0, 0.1}}, 
+       CellMargins -> {{48, 4}, {2, 12}}, 
+       CellElementSpacings -> {"ClosedGroupTopMargin" -> 28}, 
+       CellGroupingRules -> {"SectionGrouping", 30}, 
+       TaggingRules -> {"Tentativeable" -> False}, CellFrameMargins -> 4, 
+       DefaultNewCellStyle -> "ApplicationNotes", StyleMenuListing -> None, 
+       FontFamily -> "Verdana", FontSize -> 10, FontWeight -> "Bold"], 
+      Cell[
+       StyleData["FunctionEssay"], CellMargins -> {{72, 12}, {2, 2}}, 
+       ReturnCreatesNewCell -> False, ParagraphSpacing -> 0.5, 
+       MenuSortingValue -> 1400, FontFamily -> "Arial", FontSize -> 13], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["TestCasesSection"], CellFrame -> {{0, 0}, {0, 0.1}}, 
+          CellMargins -> {{48, 4}, {2, 12}}, 
+          CellElementSpacings -> {"ClosedGroupTopMargin" -> 28}, 
+          CellGroupingRules -> {"SectionGrouping", 30}, 
+          TaggingRules -> {"Tentativeable" -> False}, CellFrameMargins -> 4, 
+          DefaultNewCellStyle -> "Input", StyleMenuListing -> None, 
+          FontFamily -> "Verdana", FontSize -> 9, FontWeight -> "Bold"], 
+         Cell[
+          StyleData["TestCasesSection", "Printout"], 
+          CellMargins -> {{24, 0}, {1, 10}}, PageBreakBelow -> False, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, FontSize -> 
+          9, FontColor -> GrayLevel[0]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["LegacyMaterialSection"], CellFrame -> {{0, 0}, {0, 0.1}},
+           CellMargins -> {{48, 4}, {2, 12}}, 
+          CellElementSpacings -> {"ClosedGroupTopMargin" -> 28}, 
+          CellGroupingRules -> {"SectionGrouping", 30}, 
+          TaggingRules -> {"Tentativeable" -> False}, CellFrameMargins -> 4, 
+          DefaultNewCellStyle -> "LegacyMaterial", StyleMenuListing -> None, 
+          FontFamily -> "Verdana", FontSize -> 9, FontWeight -> "Bold"], 
+         Cell[
+          StyleData["LegacyMaterialSection", "Printout"], 
+          CellMargins -> {{24, 0}, {1, 10}}, PageBreakBelow -> False, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, FontSize -> 
+          9, FontColor -> GrayLevel[0]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["LegacyMaterial"], CellMargins -> {{72, 12}, {2, 2}}, 
+          ParagraphSpacing -> {0, 3}, StyleMenuListing -> None, FontFamily -> 
+          "Verdana", FontSize -> 9], 
+         Cell[
+          StyleData["LegacyMaterial", "Printout"], 
+          CellMargins -> {{43, 0}, {1, 1}}, Hyphenation -> True, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "-"}, 
+          LineSpacing -> {1., 2., 2.}, FontSize -> 9]}, Closed]]}, Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell["Inline Formatting", "Section"], 
+      Cell[
+      "These styles are for modifying individual words or letters in a cell \
+exclusive of the cell tag.", "Text"], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["KeyboardChars"], StyleMenuListing -> None, FontSize -> 
+          12], 
+         Cell[
+          StyleData["KeyboardChars", "Printout"], FontSize -> 10]}, Closed]], 
+      
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["InlineCode"], Hyphenation -> True, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "\[Continuation]"},
+           AutoItalicWords -> {}, StyleMenuListing -> None, FontFamily -> 
+          "Courier", FontSize -> Inherited 1.05], 
+         Cell[
+          StyleData["InlineCode", "Printout"]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["InlineCharacterName"], ShowSpecialCharacters -> False, 
+          Hyphenation -> True, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "\[Continuation]"},
+           AutoItalicWords -> {}, StyleMenuListing -> None, FontFamily -> 
+          "Courier", FontSize -> Inherited 1.05], 
+         Cell[
+          StyleData["InlineCharacterName", "Printout"]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["FilenameExtension"], Hyphenation -> True, 
+          HyphenationOptions -> {"HyphenationCharacter" -> "\[Continuation]"},
+           AutoItalicWords -> {}, StyleMenuListing -> None, FontWeight -> 
+          "Plain"], 
+         Cell[
+          StyleData["FilenameExtension", "Printout"]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["OperatorCharacter"], Hyphenation -> True, 
+          AutoItalicWords -> {}, StyleMenuListing -> None, FontWeight -> 
+          "Plain", FontColor -> GrayLevel[0.3]], 
+         Cell[
+          StyleData["OperatorCharacter", "Printout"]]}, Closed]], 
+      Cell[
+       StyleData["MenuName"], FontFamily -> "Verdana", FontWeight -> "Bold", 
+       FontSlant -> "Plain", FontColor -> RGBColor[0.35, 0.25, 0.25]], 
+      Cell[
+       StyleData["MenuNameDelimiter"], FontFamily -> "Verdana", FontWeight -> 
+       "Bold", FontSlant -> "Plain", FontColor -> RGBColor[0.35, 0.25, 0.25]], 
+      Cell[
+       StyleData["KeyEvent"], FontFamily -> "Verdana", FontWeight -> "Bold", 
+       FontSlant -> "Plain", FontColor -> RGBColor[0.35, 0.25, 0.25], 
+       Background -> RGBColor[0.9, 0.85, 0.8]], 
+      Cell[
+       StyleData["KeyEventDelimiter"], FontSize -> Inherited + 4, FontWeight -> 
+       "Plain", FontSlant -> "Plain", FontColor -> RGBColor[0.75, 0.5, 0]], 
+      Cell[
+       StyleData["PointerEvent"], FontFamily -> "Verdana", FontWeight -> 
+       "Bold", FontSlant -> "Plain", FontColor -> RGBColor[0.35, 0.25, 0.25]], 
+      Cell[
+       StyleData["PointerEventDelimiter"], FontSize -> Inherited + 4, 
+       FontWeight -> "Plain", FontSlant -> "Plain", FontColor -> 
+       RGBColor[0.75, 0.5, 0]], 
+      Cell[
+       StyleData["DialogElementName"], FontFamily -> "Verdana", FontWeight -> 
+       "Bold", FontSlant -> "Plain", FontColor -> 
+       RGBColor[0.35, 0.25, 0.25]]}, Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell["Hyperlinks", "Section"], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["Link"], StyleMenuListing -> None, ButtonStyleMenuListing -> 
+          Automatic, FontColor -> RGBColor[0.1, 0.1, 0.5], 
+          ButtonBoxOptions -> {
+           Appearance -> {Automatic, None}, 
+            ButtonFunction :> ((Needs["DocuTools`"]; 
+             DocuTools`DocLink[#, #2])& ), ButtonNote -> ButtonData, 
+            ButtonSource -> ButtonContents, Evaluator -> Automatic}], 
+         Cell[
+          StyleData["Link", "Printout"], FontColor -> GrayLevel[0]]}, 
+        Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["MathWorldLink"], 
+          CellChangeTimes -> {3.428704684073299*^9}, StyleMenuListing -> None,
+           ButtonStyleMenuListing -> Automatic, FontColor -> 
+          RGBColor[0.1, 0.1, 0.5], 
+          ButtonBoxOptions -> {
+           Active -> True, Appearance -> {Automatic, None}, 
+            ButtonFunction :> ((Needs["DocuTools`"]; 
+             DocuTools`DocLink[DocuTools`$MathWorldPath, #, #2])& ), 
+            ButtonNote -> ButtonData, Evaluator -> Automatic}], 
+         Cell[
+          StyleData["MathWorldLink", "Printout"], 
+          CellChangeTimes -> {3.428704684073496*^9}, FontColor -> 
+          GrayLevel[0]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["FunctionsSiteLink"], 
+          CellChangeTimes -> {3.428704684073674*^9}, StyleMenuListing -> None,
+           ButtonStyleMenuListing -> Automatic, FontColor -> 
+          RGBColor[0.1, 0.1, 0.5], 
+          ButtonBoxOptions -> {
+           Active -> True, Appearance -> {Automatic, None}, 
+            ButtonFunction :> ((Needs["DocuTools`"]; 
+             DocuTools`DocLink[DocuTools`$FunctionsSitePath, #, #2])& ), 
+            ButtonNote -> ButtonData, Evaluator -> Automatic}], 
+         Cell[
+          StyleData["FunctionsSiteLink", "Printout"], 
+          CellChangeTimes -> {3.4287046840738697`*^9}, FontColor -> 
+          GrayLevel[0]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["NKSLink"], CellChangeTimes -> {3.428704684074047*^9}, 
+          StyleMenuListing -> None, ButtonStyleMenuListing -> Automatic, 
+          FontColor -> RGBColor[0.1, 0.1, 0.5], 
+          ButtonBoxOptions -> {
+           Active -> True, Appearance -> {Automatic, None}, 
+            ButtonFunction :> ((Needs["DocuTools`"]; 
+             DocuTools`DocLink[DocuTools`$NKSPath, #, #2])& ), ButtonNote -> 
+            ButtonData, Evaluator -> Automatic}], 
+         Cell[
+          StyleData["NKSLink", "Printout"], 
+          CellChangeTimes -> {3.428704684074252*^9}, FontColor -> 
+          GrayLevel[0]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["NETDocLink"], CellChangeTimes -> {3.428704684074802*^9}, 
+          StyleMenuListing -> None, ButtonStyleMenuListing -> Automatic, 
+          FontColor -> RGBColor[0.1, 0.1, 0.5], 
+          ButtonBoxOptions -> {
+           Appearance -> {Automatic, None}, 
+            ButtonFunction :> ((Needs["DocuTools`"]; NETDocLink[#, #2])& ), 
+            ButtonNote -> ButtonData, Evaluator -> Automatic}], 
+         Cell[
+          StyleData["NETDocLink", "Printout"], 
+          CellChangeTimes -> {3.428704684074998*^9}, FontColor -> 
+          GrayLevel[0]]}, Closed]]}, Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell["Page Headers and Footers", "Section"], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["PageHeader"], CellMargins -> {{0, 0}, {2, 0}}, 
+          LineSpacing -> {1, 8}, StyleMenuListing -> None, FontFamily -> 
+          "Verdana", FontSize -> 7, FontSlant -> "Italic"], 
+         Cell[
+          StyleData["PageHeader", "Printout"]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["PageNumber"], CellFrame -> {{0.5, 0}, {0, 0}}, 
+          CellMargins -> {{0, 0}, {2, 0}}, 
+          CellFrameMargins -> {{4, 4}, {12, 12}}, CellSize -> {24, Inherited},
+           LineSpacing -> {1, 8}, StyleMenuListing -> None, FontFamily -> 
+          "Verdana", FontSize -> 7, FontWeight -> "Bold"], 
+         Cell[
+          StyleData["PageNumber", "Printout"]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+          StyleData["PageFooter"], CellMargins -> {{0, 0}, {0, 2}}, 
+          StyleMenuListing -> None, FontFamily -> "Verdana", FontSize -> 6], 
+         Cell[
+          StyleData["PageFooter", "Printout"]]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell["For compatibility", "Subsection"], 
+         Cell[
+          CellGroupData[{
+            Cell[
+             StyleData["Header"], CellMargins -> {{0, 0}, {2, 0}}, 
+             StyleMenuListing -> None, FontSize -> 8, FontSlant -> "Italic"], 
+            
+            Cell[
+             StyleData["Header", "Printout"]]}, Closed]], 
+         Cell[
+          CellGroupData[{
+            Cell[
+             StyleData["Footer"], StyleMenuListing -> None, FontFamily -> 
+             "Helvetica", FontSize -> 6], 
+            Cell[
+             StyleData["Footer", "Printout"]]}, Closed]]}, Closed]]}, 
+     Closed]]}, WindowSize -> {808, 905}, 
+  WindowMargins -> {{Automatic, 336}, {Automatic, 32}}, Visible -> False, 
+  FrontEndVersion -> 
+  "11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 20, 2018)", 
+  StyleDefinitions -> "PrivateStylesheetFormatting.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "ExtendedExamples"->{
+  Cell[8443, 271, 155, 2, 56, "ExtendedExamplesSection",ExpressionUUID->"456fe121-758f-4ad6-9d96-2e57a0bcf8b5",
+   CellTags->"ExtendedExamples",
+   CellID->1854448968]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"ExtendedExamples", 120603, 2665}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 598, 14, 24, "History",ExpressionUUID->"9d5312bd-21a3-4414-9810-aa4037f65fc6",
+ CellID->341476719],
+Cell[1159, 36, 139, 1, 20, "AuthorDate",ExpressionUUID->"d7f16aff-72aa-4e18-9d7b-d88a90ff14d0",
+ CellID->1321464559],
+Cell[CellGroupData[{
+Cell[1323, 41, 123, 1, 29, "CategorizationSection",ExpressionUUID->"aab346e5-c54e-4543-bfb6-055de9d33d30",
+ CellID->1122911449],
+Cell[1449, 44, 134, 2, 70, "Categorization",ExpressionUUID->"628529aa-75c0-47b0-aee1-60c78cad327e",
+ CellID->686433507],
+Cell[1586, 48, 128, 2, 70, "Categorization",ExpressionUUID->"bef83001-b92a-4b47-91bf-718662946187",
+ CellID->605800465],
+Cell[1717, 52, 124, 2, 70, "Categorization",ExpressionUUID->"bea189f9-73e0-4baf-b29f-7184e0cf366c",
+ CellID->468444828],
+Cell[1844, 56, 104, 1, 70, "Categorization",ExpressionUUID->"e6d405af-40e0-4ab3-b0f9-eef9bc6a46a8"],
+Cell[1951, 59, 135, 2, 70, "Categorization",ExpressionUUID->"4a2472d2-19f5-4b9f-a0f2-c5a1708cd7bb",
+ CellID->172747495]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2123, 66, 111, 1, 19, "SynonymsSection",ExpressionUUID->"fb8acf4f-9285-4b8c-a747-4381fc0b9d41",
+ CellID->1427418553],
+Cell[2237, 69, 100, 1, 70, "Synonyms",ExpressionUUID->"80d54c53-ee23-43f2-a45f-b1e852e781b1",
+ CellID->1251652828]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2374, 75, 110, 1, 19, "KeywordsSection",ExpressionUUID->"e9878159-9f99-4959-9826-e5a3f952bf23",
+ CellID->477174294],
+Cell[2487, 78, 100, 1, 70, "Keywords",ExpressionUUID->"612ce670-b22f-493d-b218-797337b1a463",
+ CellID->1164421360]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2624, 84, 120, 1, 19, "TemplatesSection",ExpressionUUID->"5cc15371-6f63-4f57-9207-32b25cb98ecc",
+ CellID->1872225408],
+Cell[2747, 87, 149, 2, 70, "Template",ExpressionUUID->"895d1c65-38f1-4125-baff-a225fcfc19c8",
+ CellID->1562036412],
+Cell[2899, 91, 137, 2, 70, "Template",ExpressionUUID->"170b786f-fb75-4556-a26a-6701da067cc2",
+ CellID->158391909],
+Cell[3039, 95, 136, 2, 70, "Template",ExpressionUUID->"82a33b27-a8e0-4f8a-ba2a-5f2dee7b1bbf",
+ CellID->1360575930],
+Cell[3178, 99, 137, 2, 70, "Template",ExpressionUUID->"a0124f6d-7659-412c-a856-eefb69ed49a8",
+ CellID->793782254]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[3352, 106, 108, 1, 19, "DetailsSection",ExpressionUUID->"8f9f96de-cdd4-415b-98c3-6a4a1d7a219e",
+ CellID->307771771],
+Cell[3463, 109, 117, 2, 70, "Details",ExpressionUUID->"4b2f2a6b-f93c-4868-9e10-5b6968909260",
+ CellID->49458704],
+Cell[3583, 113, 124, 2, 70, "Details",ExpressionUUID->"6e4a3ae1-cdf6-47cc-ad1f-759e8fe45593",
+ CellID->350963985],
+Cell[3710, 117, 121, 2, 70, "Details",ExpressionUUID->"efc33df5-b775-495a-80e4-3521a78bc446",
+ CellID->422270209],
+Cell[3834, 121, 126, 2, 70, "Details",ExpressionUUID->"1a0db4eb-149a-46f3-b25b-b280d6264af5",
+ CellID->545239557],
+Cell[3963, 125, 116, 2, 70, "Details",ExpressionUUID->"1050f771-3937-45cd-bf2a-bca989fc6c2c",
+ CellID->121292707],
+Cell[4082, 129, 115, 2, 70, "Details",ExpressionUUID->"2d37259b-d19a-4265-94d9-1062a057d814",
+ CellID->29314406],
+Cell[4200, 133, 117, 2, 70, "Details",ExpressionUUID->"4e0c64af-4701-4221-b6a7-d115b2825a25",
+ CellID->96001539],
+Cell[4320, 137, 133, 2, 70, "Details",ExpressionUUID->"d0039a91-8ee2-4052-8ab0-325c85db884a",
+ CellID->123278822],
+Cell[4456, 141, 122, 2, 70, "Details",ExpressionUUID->"02ff136a-5412-4c7d-9f54-fb44ec7c41f5",
+ CellID->240026365]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[4615, 148, 117, 1, 19, "SecuritySection",ExpressionUUID->"c4d92900-bc11-4614-8c83-407abdd45933",
+ CellID->13551076],
+Cell[4735, 151, 1094, 30, 70, "SecurityDetails",ExpressionUUID->"89fc8445-1353-4fa3-97dd-1be0f00a5de5",
+ CellID->2488900]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[5866, 186, 102, 1, 63, "ObjectName",ExpressionUUID->"9e65fd4a-3b79-48c0-af70-75bef669e834",
+ CellID->1224892054],
+Cell[5971, 189, 330, 7, 76, "Usage",ExpressionUUID->"2f7b7357-db0a-477c-a3fa-e2cca7faa2b5",
+ CellID->982511436],
+Cell[6304, 198, 97, 1, 25, "Notes",ExpressionUUID->"c396774d-bb61-4976-8af9-595edbd6f735",
+ CellID->1067943069]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6438, 204, 112, 1, 44, "TutorialsSection",ExpressionUUID->"b02d4013-fc03-46fd-91f5-418756d88d93",
+ CellID->250839057],
+Cell[6553, 207, 100, 1, 16, "Tutorials",ExpressionUUID->"e5fbfac5-d780-4a61-9aa1-c2995b34e594",
+ CellID->341631938]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6690, 213, 138, 1, 31, "RelatedDemonstrationsSection",ExpressionUUID->"2bafa20c-ad4d-4358-9b58-1c0fa094f645",
+ CellID->1268215905],
+Cell[6831, 216, 113, 1, 16, "RelatedDemonstrations",ExpressionUUID->"ca787c01-e02b-4f0c-b52a-b5a25070bba2",
+ CellID->1129518860]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6981, 222, 120, 1, 31, "RelatedLinksSection",ExpressionUUID->"a98c198c-eaff-4f47-a52b-bde15cb67cfa",
+ CellID->1584193535],
+Cell[7104, 225, 104, 1, 16, "RelatedLinks",ExpressionUUID->"ec84bd42-24ea-4c7d-a2df-bf8e73ab079b",
+ CellID->1038487239]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7245, 231, 110, 1, 31, "SeeAlsoSection",ExpressionUUID->"d9364631-c239-4d65-b012-ba498b2ced33",
+ CellID->1255426704],
+Cell[7358, 234, 98, 1, 16, "SeeAlso",ExpressionUUID->"77ab00c7-f97f-445a-9882-c5a9482ccd27",
+ CellID->929782353]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7493, 240, 127, 1, 31, "RelatedWorkflowsSection",ExpressionUUID->"fc08db45-053b-4d9f-98c1-1ff4c0f2aaf6",
+ CellID->121236710],
+Cell[7623, 243, 107, 1, 16, "RelatedWorkflows",ExpressionUUID->"0387d739-2698-4d59-91f8-023405a5f852",
+ CellID->294347949]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7767, 249, 112, 1, 31, "MoreAboutSection",ExpressionUUID->"b2f57e8f-69ad-4769-b4dc-58a90c351f38",
+ CellID->38303248],
+Cell[7882, 252, 110, 1, 16, "MoreAbout",ExpressionUUID->"0862ec19-c5ba-4499-bc8f-b5b8b510794c",
+ CellID->1665078683]
+}, Open  ]],
+Cell[8007, 256, 411, 11, 70, "PrimaryExamplesSection",ExpressionUUID->"ff765981-7828-4382-a532-4eb8c1f0790e",
+ CellID->880084151],
+Cell[CellGroupData[{
+Cell[8443, 271, 155, 2, 56, "ExtendedExamplesSection",ExpressionUUID->"456fe121-758f-4ad6-9d96-2e57a0bcf8b5",
+ CellTags->"ExtendedExamples",
+ CellID->1854448968],
+Cell[8601, 275, 242, 5, 33, "ExampleSection",ExpressionUUID->"3d9280dd-6661-4a8d-bbde-1d8e7123b08d",
+ CellID->1293636265],
+Cell[8846, 282, 265, 5, 21, "ExampleSection",ExpressionUUID->"1c6d89dc-e871-4fe5-a81e-b2c660875ccb",
+ CellID->1020263627],
+Cell[CellGroupData[{
+Cell[9136, 291, 244, 5, 21, "ExampleSection",ExpressionUUID->"04ca60dd-a4a6-49b7-9f2b-b9fa2adf971b",
+ CellID->2061341341],
+Cell[9383, 298, 247, 5, 70, "ExampleSubsection",ExpressionUUID->"f91cb45f-63bb-4f64-86a3-b4bba17fec52",
+ CellID->1757724783],
+Cell[9633, 305, 247, 5, 70, "ExampleSubsection",ExpressionUUID->"24525614-b8ce-4134-becc-672f4a53b772",
+ CellID->1295379749]
+}, Closed]],
+Cell[9895, 313, 248, 5, 21, "ExampleSection",ExpressionUUID->"8008c9d4-0511-49ea-9b70-6e997048933c",
+ CellID->258228157],
+Cell[10146, 320, 259, 5, 21, "ExampleSection",ExpressionUUID->"168b6ea6-0048-4952-a928-8589747d3f82",
+ CellID->2123667759],
+Cell[10408, 327, 252, 5, 21, "ExampleSection",ExpressionUUID->"a34bdd3c-150d-4dff-bab1-1495c611ad50",
+ CellID->1305812373],
+Cell[10663, 334, 257, 5, 21, "ExampleSection",ExpressionUUID->"3cb57427-e229-4946-a7f6-52d8568e9329",
+ CellID->1653164318],
+Cell[10923, 341, 249, 5, 21, "ExampleSection",ExpressionUUID->"beada140-18bc-41a2-9272-843f037106ea",
+ CellID->589267740]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11209, 351, 128, 1, 79, "DesignDiscussionSection",ExpressionUUID->"b6da41e9-8313-437d-80d4-645f5ac55afd",
+ CellID->1775809863],
+Cell[11340, 354, 107, 1, 16, "DesignDiscussion",ExpressionUUID->"47bd38d8-ad14-498a-b415-e633874b557b",
+ CellID->308641435]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11484, 360, 128, 1, 31, "ApplicationNotesSection",ExpressionUUID->"1d63aa1c-c7e7-4d4a-ad87-c70abe264c40",
+ CellID->1163590540],
+Cell[11615, 363, 108, 1, 16, "ApplicationNotes",ExpressionUUID->"63187b85-4f87-4a3e-bd26-2bbd7fd363a6",
+ CellID->1480116198]
+}, Open  ]],
+Cell[11738, 367, 113, 1, 31, "TestCasesSection",ExpressionUUID->"864855e0-b22b-4280-bbbf-40c5e86c317d",
+ CellID->725748110],
+Cell[CellGroupData[{
+Cell[11876, 372, 120, 1, 33, "FunctionEssaySection",ExpressionUUID->"36a784ce-ae99-4eb9-b37b-89fbe71c4eb2",
+ CellID->37427227],
+Cell[11999, 375, 104, 1, 19, "FunctionEssay",ExpressionUUID->"a08c1f65-c8d3-4041-b769-0fb7c3b60c2a",
+ CellID->356990964]
+}, Open  ]]
+}
+]
+*)
+
